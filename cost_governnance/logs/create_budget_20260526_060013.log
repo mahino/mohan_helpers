@@ -1,0 +1,130 @@
+2026-05-26 06:00:13 - create_budget - INFO - ================================================================================
+2026-05-26 06:00:13 - create_budget - INFO - Script: create_budget
+2026-05-26 06:00:13 - create_budget - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/create_budget_20260526_060013.log
+2026-05-26 06:00:13 - create_budget - INFO - ================================================================================
+2026-05-26 06:00:13 - create_budget - INFO - ================================================================================
+2026-05-26 06:00:13 - create_budget - INFO - Starting Budget Creation Process
+2026-05-26 06:00:13 - create_budget - INFO - ================================================================================
+2026-05-26 06:00:13 - create_budget - INFO - Configuration:
+2026-05-26 06:00:13 - create_budget - INFO -   - Base URL: https://ncm.services.nconprem-10-53-56-44.ccpnx.com
+2026-05-26 06:00:13 - create_budget - INFO -   - Budget name prefix: budget_1
+2026-05-26 06:00:13 - create_budget - INFO -   - Recipients per budget: 5
+2026-05-26 06:00:13 - create_budget - INFO - ================================================================================
+2026-05-26 06:00:13 - create_budget - INFO - Fetching resource groups...
+2026-05-26 06:00:13 - create_budget - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets/listResourceGroups
+2026-05-26 06:00:15 - create_budget - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets/listResourceGroups
+2026-05-26 06:00:15 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 06:00:15 - create_budget - INFO - [TIME TAKEN] 1.0185 seconds (1018.49 ms)
+2026-05-26 06:00:15 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 06:00:15 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "data": [
+    {
+      "buId": "d4dd577b-d807-472a-ae9a-1c3b8184713c",
+      "buName": "Business_Unit_1",
+      "alreadyBudgeted": false,
+      "sessions": [
+        2026,
+        2027
+      ],
+      "ccUnits": [
+        {
+          "ccId": "4a6ca8cf-4c71-4401-afa0-a83527f227d7",
+          "ccName": "CC_HomePCAccount_0e796_AppFamily_Backup_612596",
+          "alreadyBudgeted": true,
+          "sessions": [],
+          "editable": true
+        },
+        {
+          "ccId": "a895d3c0-254f-48d0-96ed-3208e1f3ba32",
+          "ccName": "CC_HomePCAccount_0e796_AppType_Default_612596",
+          "alreadyBudgeted": false,
+          "sessions": [
+            2026,
+            2027
+          ],
+          "editable": true
+        }
+      ],
+      "editable": true
+    },
+    {
+      "buId": "9ca0f9fb-d239-4a7d-9a4c-bc28e6f53b7d",
+      "buName": "Business_Unit_2",
+      "alreadyBudgeted": true,
+      "sessions": [],
+      "ccUnits": [
+        {
+          "ccId": "44e37342-e21a-46e9-8c61-72b159995b72",
+          "ccName": "CC_HomePCAccount_0e796_CalmApplication_4erafsd_612596",
+          "alreadyBudgeted": true,
+          "sessions": [],
+          "editable": true
+        },
+        {
+          "ccId": "a566ebe3-9460-484b-a4c4-83dd0d0d7d46",
+          "ccName": "CC_HomePCAccount_0e796_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596",
+          "alreadyBudgeted": false,
+          "sessions": [
+            2026,
+            2027
+          ],
+          "editable": true
+        }
+      ],
+      "editable": true
+    },
+    {
+      "buId": "29247eb3-6db2-4998-b554-d50d903cbe91",
+      "buName": "Business_Unit_3",
+      "alreadyBudgeted": false,
+      "sessions": [
+        2026,
+        2027
+      ],
+      "ccUnits": [
+        {
+          "ccId": "3754cf10-2c30-4751-ab13-d075fe3746ad",
+          "ccName": "CC_HomePCAccount_0e796_CalmProject_Nucalm_07p3_612596",
+          "alreadyBudgeted": false,
+          "sessions": [
+            2026,
+            2027
+          ],
+  
+... (truncated)
+2026-05-26 06:00:15 - create_budget - INFO - Fetched 32 resource groups
+2026-05-26 06:00:15 - create_budget - INFO - Fetching user list...
+2026-05-26 06:00:15 - create_budget - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/users/list
+2026-05-26 06:00:15 - create_budget - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/users/list
+2026-05-26 06:00:15 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 06:00:15 - create_budget - INFO - [TIME TAKEN] 0.7146 seconds (714.60 ms)
+2026-05-26 06:00:15 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 06:00:15 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "users": []
+}
+2026-05-26 06:00:15 - create_budget - INFO - Fetched 0 users for recipients
+2026-05-26 06:00:15 - create_budget - WARNING - No users found for recipients. Budgets will be created without recipients.
+2026-05-26 06:00:15 - create_budget - INFO - Planning to create: 31 BU budgets + 85 CC budgets = 116 total
+2026-05-26 06:00:15 - create_budget - INFO - ================================================================================
+2026-05-26 06:00:15 - create_budget - INFO - [1/116] Creating BU budget: budget_1_Business_Unit_1
+2026-05-26 06:00:15 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 06:00:15 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_1", "financialYearStartMonth": "6", "resourceGroups": {"businessUnit": ["d4dd577b-d807-472a-ae9a-1c3b8184713c"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 06:00:15 - create_budget - INFO - 
+2026-05-26 06:00:15 - create_budget - INFO - ================================================================================================================================================================
+2026-05-26 06:00:15 - create_budget - INFO - API METRICS CONSOLIDATED REPORT
+2026-05-26 06:00:15 - create_budget - INFO - ================================================================================================================================================================
+2026-05-26 06:00:15 - create_budget - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-05-26 06:00:15 - create_budget - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-26 06:00:15 - create_budget - INFO - GET      | /v1/cg/global/budgets/listResourceGroups           |       1 |      - |    1018.49 |    1018.49 |    1018.49 |    1018.49 |    1018.49
+2026-05-26 06:00:15 - create_budget - INFO - GET      | /v1/cg/users/list                                  |       1 |      - |     714.60 |     714.60 |     714.60 |     714.60 |     714.60
+2026-05-26 06:00:15 - create_budget - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-26 06:00:15 - create_budget - INFO - Total API Calls: 2 | Unique Endpoints: 2 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-05-26 06:00:15 - create_budget - INFO - ================================================================================================================================================================
+2026-05-26 06:00:15 - create_budget - INFO - 
+2026-05-26 06:00:15 - create_budget - INFO - STATUS CODE BREAKDOWN:
+2026-05-26 06:00:15 - create_budget - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-26 06:00:15 - create_budget - INFO - GET    /v1/cg/global/budgets/listResourceGroups   | 200: 1
+2026-05-26 06:00:15 - create_budget - INFO - GET    /v1/cg/users/list                          | 200: 1
+2026-05-26 06:00:15 - create_budget - INFO - ================================================================================================================================================================

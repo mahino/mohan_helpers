@@ -1,0 +1,3988 @@
+================================================================================
+VM Power Status Change Script Started
+Timestamp: 2026-04-14 09:31:47
+Log file: vm_power_status_change_20260414_093147.log
+Action: POWER ON (--action / VM_POWER_ACTION)
+Parallel power-on + IP wait: up to 4 VMs at a time (VM_POWER_PARALLEL)
+PC base URL: https://10.53.55.225:9440
+================================================================================
+
+
+================================================================================
+Processing batch [1/8] - Offset: 0
+================================================================================
+
+--- VM [1] ---
+INFO: Get vm [auto_pc_69d7dabc3602366fe8b3b3940]
+UUID: bae2052d-5253-42da-a673-c3056ba7bb2d
+Power State: on
+
+--- VM [2] ---
+INFO: Get vm [ferw-041]
+UUID: 5e907346-e631-4032-5d87-316b698a787c
+Power State: on
+
+--- VM [3] ---
+INFO: Get vm [ferw-042]
+UUID: 93d71e15-a7fa-4f0e-5fac-800bfc6d04ac
+Power State: off
+
+--- VM [4] ---
+INFO: Get vm [ferw-043]
+UUID: cd3cdeb3-56af-4d36-73d8-c8eceb72e008
+Power State: off
+
+--- VM [5] ---
+INFO: Get vm [ferw-044]
+UUID: eca89944-42e6-4f2d-79ec-5206208e4167
+Power State: off
+
+--- VM [6] ---
+INFO: Get vm [ferw-045]
+UUID: 45ef5d08-d03d-4954-5f1d-ce6cbd2a48fa
+Power State: off
+
+--- VM [7] ---
+INFO: Get vm [ferw-046]
+UUID: 7f07b5c0-fc3e-4719-4441-f347e0efad53
+Power State: off
+
+--- VM [8] ---
+INFO: Get vm [ferw-047]
+UUID: 8490656a-7f1d-492a-5b12-5428aaee4a4a
+Power State: off
+
+--- VM [9] ---
+INFO: Get vm [ferw-048]
+UUID: 99acaa4b-d917-4dd4-464f-573352a25060
+Power State: off
+
+--- VM [10] ---
+INFO: Get vm [ferw-049]
+UUID: ad199eb4-e8c7-4efd-4924-ec9df64820fa
+Power State: off
+
+--- VM [11] ---
+INFO: Get vm [ferw-050]
+UUID: b77e11bb-5f0b-4ddb-6a9a-69ad07dbc1f3
+Power State: off
+
+--- VM [12] ---
+INFO: Get vm [ferw-051]
+UUID: c11e4e80-b2c0-4a00-5720-1166ced782f7
+Power State: off
+
+--- VM [13] ---
+INFO: Get vm [ferw-052]
+UUID: 8928a5d4-b32e-4deb-6444-9dc897c0b0e6
+Power State: off
+
+--- VM [14] ---
+INFO: Get vm [ferw-053]
+UUID: 4efb8360-e343-4d2c-6d5a-545c8cf32f2f
+Power State: off
+
+--- VM [15] ---
+INFO: Get vm [ferw-054]
+UUID: 37ede60b-6312-4412-51a2-6249f21f155f
+Power State: off
+
+--- VM [16] ---
+INFO: Get vm [ferw-055]
+UUID: 6806457f-1936-48e9-5233-24edb598314d
+Power State: off
+
+--- VM [17] ---
+INFO: Get vm [ferw-056]
+UUID: 844aac98-0f29-4097-4c68-aacfcb138e3c
+Power State: off
+
+--- VM [18] ---
+INFO: Get vm [ferw-057]
+UUID: c630889f-ac8d-46dc-46f0-3f5ac17ced80
+Power State: off
+
+--- VM [19] ---
+INFO: Get vm [ferw-058]
+UUID: 852299ba-3cb3-4857-5622-9c5371f4b82c
+Power State: off
+
+--- VM [20] ---
+INFO: Get vm [ferw-059]
+UUID: 945aadd4-1eab-4557-6138-8e969b9d1912
+Power State: off
+
+--- VM [21] ---
+INFO: Get vm [ferw-060]
+UUID: b392ecdb-033b-440c-40fa-c8f6334832de
+Power State: off
+
+--- VM [22] ---
+INFO: Get vm [ferw-061]
+UUID: f31b52f9-0d62-4094-50f8-e5686ca98530
+Power State: off
+
+--- VM [23] ---
+INFO: Get vm [ferw-062]
+UUID: 94b7c099-3ea2-422c-5258-e8537c8fc930
+Power State: off
+
+--- VM [24] ---
+INFO: Get vm [ferw-063]
+UUID: 68eaf5aa-99de-4fca-5322-d48e5edb0cf1
+Power State: off
+
+--- VM [25] ---
+INFO: Get vm [ferw-064]
+UUID: d8d62d19-d1e9-4366-68f6-491b7c5f5a72
+Power State: off
+
+--- VM [26] ---
+INFO: Get vm [ferw-065]
+UUID: 565b259a-c044-473d-6e22-54f1827a5bb8
+Power State: off
+
+--- VM [27] ---
+INFO: Get vm [ferw-066]
+UUID: 2d10e550-9962-4f63-706c-20694364bf26
+Power State: off
+
+--- VM [28] ---
+INFO: Get vm [ferw-067]
+UUID: 3accb44f-3ec8-4a84-712f-e0f1ffae3490
+Power State: off
+
+--- VM [29] ---
+INFO: Get vm [ferw-068]
+UUID: a62c8e0f-4a59-4c6b-62eb-31e9437dfeaa
+Power State: off
+
+--- VM [30] ---
+INFO: Get vm [ferw-069]
+UUID: e38a02dd-4185-4ebf-79bb-cdf25ad3ac4f
+Power State: off
+
+--- VM [31] ---
+INFO: Get vm [ferw-070]
+UUID: 6cca555e-8bad-44ed-4561-dfa8f81101ac
+Power State: off
+
+--- VM [32] ---
+INFO: Get vm [ferw-071]
+UUID: a16b0082-9dc0-458f-58e3-e9589b73e3ac
+Power State: off
+
+--- VM [33] ---
+INFO: Get vm [ferw-072]
+UUID: f11dcdaa-9fc2-43ad-5db2-eef6588cae76
+Power State: off
+
+--- VM [34] ---
+INFO: Get vm [ferw-073]
+UUID: 96973275-c02a-4f5e-50d0-df8d841caaac
+Power State: off
+
+--- VM [35] ---
+INFO: Get vm [ferw-074]
+UUID: d492c702-d83d-4354-7c53-fd907677a5e8
+Power State: off
+
+--- VM [36] ---
+INFO: Get vm [ferw-075]
+UUID: 53a9864f-ca0b-463b-628b-6ff712773a8b
+Power State: off
+
+--- VM [37] ---
+INFO: Get vm [ferw-076]
+UUID: 65828d90-c597-45da-480a-9b7623f95d95
+Power State: off
+
+--- VM [38] ---
+INFO: Get vm [ferw-077]
+UUID: 5153e39a-0d22-4d9a-70d0-c6fd16cc19bb
+Power State: off
+
+--- VM [39] ---
+INFO: Get vm [ferw-078]
+UUID: b708ad5d-a4e2-4ceb-43e3-30110f9c1cba
+Power State: off
+
+--- VM [40] ---
+INFO: Get vm [ferw-079]
+UUID: 4f172d52-e241-460e-4463-b69e1f758d38
+Power State: off
+
+--- VM [41] ---
+INFO: Get vm [ferw-080]
+UUID: cdb88b6f-e3aa-44e4-4445-9b7e684bcdf7
+Power State: off
+
+--- VM [42] ---
+INFO: Get vm [ferw-081]
+UUID: 136377ff-a5ff-4724-5b87-6a3ab5b05a6a
+Power State: off
+
+--- VM [43] ---
+INFO: Get vm [ferw-082]
+UUID: fe4cae5b-cc91-446b-6b03-0a61204e405d
+Power State: off
+
+--- VM [44] ---
+INFO: Get vm [ferw-083]
+UUID: 561ed671-60c7-41f1-49d1-59c4f9d45186
+Power State: off
+
+--- VM [45] ---
+INFO: Get vm [ferw-084]
+UUID: b070fc07-4c3e-4468-762e-bd95136234ab
+Power State: off
+
+--- VM [46] ---
+INFO: Get vm [ferw-085]
+UUID: 128c7d1c-0a6e-43a8-4a93-53b51ac64426
+Power State: off
+
+--- VM [47] ---
+INFO: Get vm [ferw-086]
+UUID: caa33d6a-6da2-44cc-52ad-38aaae2dd37b
+Power State: off
+
+--- VM [48] ---
+INFO: Get vm [ferw-087]
+UUID: 2bd783c2-fdfe-4e86-4197-f0bc0a932ebb
+Power State: off
+
+--- VM [49] ---
+INFO: Get vm [ferw-088]
+UUID: 0982e6b2-d558-41e2-4cc8-a58e5bb76795
+Power State: off
+
+--- VM [50] ---
+INFO: Get vm [ferw-089]
+UUID: 44a53f93-b9b3-454f-469b-0add0d340e8c
+Power State: off
+
+--- VM [51] ---
+INFO: Get vm [ferw-090]
+UUID: 62373378-e332-4b2e-4337-9dac50357409
+Power State: off
+
+--- VM [52] ---
+INFO: Get vm [ferw-091]
+UUID: e74258cc-ea4a-472f-5ba6-dce93b073f30
+Power State: off
+
+--- VM [53] ---
+INFO: Get vm [ferw-092]
+UUID: d78d96cf-45a6-4276-6d5d-cf521b13d931
+Power State: off
+
+--- VM [54] ---
+INFO: Get vm [ferw-093]
+UUID: e1277546-19ff-4154-5dd0-60ab751066c3
+Power State: off
+
+--- VM [55] ---
+INFO: Get vm [ferw-094]
+UUID: f0cad2c2-1950-4a3c-5cb3-665b288382cc
+Power State: off
+
+--- VM [56] ---
+INFO: Get vm [ferw-095]
+UUID: d3a63e14-8e20-468b-5600-e295d8cd250c
+Power State: off
+
+--- VM [57] ---
+INFO: Get vm [ferw-096]
+UUID: 2eda7dfc-2d22-4f72-60d6-cb02a0b49dda
+Power State: off
+
+--- VM [58] ---
+INFO: Get vm [ferw-097]
+UUID: 8274f01a-efc6-49f4-7aaa-8079c1d852a5
+Power State: off
+
+--- VM [59] ---
+INFO: Get vm [ferw-098]
+UUID: 4404a9d6-1ccf-4e44-44c8-4d919f9f5f03
+Power State: off
+
+--- VM [60] ---
+INFO: Get vm [ferw-099]
+UUID: 2eae714a-a368-4df1-4170-54ca9c60b3f4
+Power State: off
+
+--- VM [61] ---
+INFO: Get vm [ferw-100]
+UUID: 78303a55-a7d9-469a-7bf5-c5525c546c53
+Power State: off
+
+--- VM [62] ---
+INFO: Get vm [ferw-101]
+UUID: 3a6b802d-e78d-474e-6718-fc77dec40456
+Power State: off
+
+--- VM [63] ---
+INFO: Get vm [ferw-102]
+UUID: 49399fd2-176e-4709-7f9f-6befbdbcac0e
+Power State: off
+
+--- VM [64] ---
+INFO: Get vm [ferw-103]
+UUID: 93ab1cdf-1b52-4dd9-53f9-31cdaa240b1d
+Power State: off
+
+--- VM [65] ---
+INFO: Get vm [ferw-104]
+UUID: 742fdfbe-5602-4120-61b0-3630359e2dd4
+Power State: off
+
+--- VM [66] ---
+INFO: Get vm [ferw-105]
+UUID: 97639613-b015-4029-7948-14c5b86ca5c4
+Power State: off
+
+--- VM [67] ---
+INFO: Get vm [ferw-106]
+UUID: be6eb4a4-6477-4b04-6ced-6db4ecc476c9
+Power State: off
+
+--- VM [68] ---
+INFO: Get vm [ferw-107]
+UUID: 3943acff-93ec-400c-5b2d-7fb58893e670
+Power State: off
+
+--- VM [69] ---
+INFO: Get vm [ferw-108]
+UUID: 83aa3da3-364e-43da-679c-009639a14490
+Power State: off
+
+--- VM [70] ---
+INFO: Get vm [ferw-109]
+UUID: 9572c5d9-439a-4df3-5d7a-d2e203fbbede
+Power State: off
+
+--- VM [71] ---
+INFO: Get vm [ferw-110]
+UUID: 1625f93a-a56e-44cb-7a18-ceed8b8e07e6
+Power State: off
+
+--- VM [72] ---
+INFO: Get vm [ferw-111]
+UUID: 6446f3ee-fba1-4420-74b3-99041d32590c
+Power State: off
+
+--- VM [73] ---
+INFO: Get vm [ferw-112]
+UUID: 1bf6133a-f0d9-4e43-7518-f5ab8d669dc8
+Power State: off
+
+--- VM [74] ---
+INFO: Get vm [ferw-113]
+UUID: bdc79892-5023-4f6e-4eee-1ab3ec463315
+Power State: off
+
+--- VM [75] ---
+INFO: Get vm [ferw-114]
+UUID: 6fd08ccf-a824-419c-6017-bf41f8064bf2
+Power State: off
+
+--- VM [76] ---
+INFO: Get vm [ferw-115]
+UUID: 9ed64080-aa7b-4a65-5a43-053e02ff0afb
+Power State: off
+
+--- VM [77] ---
+INFO: Get vm [ferw-116]
+UUID: 24e2c244-02b5-4d6e-66d1-971f7a6c9bcf
+Power State: off
+
+--- VM [78] ---
+INFO: Get vm [ferw-117]
+UUID: 60423300-4277-4c4e-5be7-c216e18cb88d
+Power State: off
+
+--- VM [79] ---
+INFO: Get vm [ferw-118]
+UUID: 535f6995-633c-4b0a-4f05-abb3a262fd98
+Power State: off
+
+--- VM [80] ---
+INFO: Get vm [ferw-119]
+UUID: d7c51d63-6c5f-4c6d-46b4-5eb74122e041
+Power State: off
+
+--- VM [81] ---
+INFO: Get vm [ferw-120]
+UUID: 8964b409-5367-49e8-5e94-c4e9889729bf
+Power State: off
+
+--- VM [82] ---
+INFO: Get vm [ferw-121]
+UUID: 9964ea5f-752c-43ff-46ea-561a03ed0437
+Power State: off
+
+--- VM [83] ---
+INFO: Get vm [ferw-122]
+UUID: ab38dc8c-ed91-4355-7e70-a4bac123afc6
+Power State: off
+
+--- VM [84] ---
+INFO: Get vm [ferw-123]
+UUID: c8615ab2-55c3-4d00-7f76-720002706957
+Power State: off
+
+--- VM [85] ---
+INFO: Get vm [ferw-124]
+UUID: b8e64111-94b7-408d-56ce-85f02d68dcb2
+Power State: off
+
+--- VM [86] ---
+INFO: Get vm [ferw-125]
+UUID: 493ecdb2-ba08-4058-6917-fd8a62169174
+Power State: off
+
+--- VM [87] ---
+INFO: Get vm [ferw-126]
+UUID: 0f3ed6bd-3e7e-4a05-419c-093612ac6365
+Power State: off
+
+--- VM [88] ---
+INFO: Get vm [ferw-127]
+UUID: 70be05ae-8788-44d3-467a-2c96fb39a74e
+Power State: off
+
+--- VM [89] ---
+INFO: Get vm [ferw-128]
+UUID: 5b051890-b4ec-4d2e-567f-e8b2b4c8a6c5
+Power State: off
+
+--- VM [90] ---
+INFO: Get vm [ferw-129]
+UUID: 2897072e-2e44-4096-5c88-de072bc37e49
+Power State: off
+
+--- VM [91] ---
+INFO: Get vm [ferw-130]
+UUID: 6ce5d483-5073-4b7d-7d39-5f3815bf01b7
+Power State: off
+
+--- VM [92] ---
+INFO: Get vm [ferw-131]
+UUID: af5fdd68-c3c8-44b9-778e-8340c0acf3fe
+Power State: off
+
+--- VM [93] ---
+INFO: Get vm [ferw-132]
+UUID: be1b8959-4af5-4639-5f6c-df015112c5ef
+Power State: off
+
+--- VM [94] ---
+INFO: Get vm [ferw-133]
+UUID: f2135508-fd95-4ab7-5a50-f8275f8bb544
+Power State: off
+
+--- VM [95] ---
+INFO: Get vm [ferw-134]
+UUID: d2534e23-e9a4-4b04-4a2e-d48e07359614
+Power State: off
+
+--- VM [96] ---
+INFO: Get vm [ferw-135]
+UUID: 419a628d-3244-419f-6521-8ca92309969d
+Power State: off
+
+--- VM [97] ---
+INFO: Get vm [ferw-136]
+UUID: 68df0ac6-9a56-456e-7450-5227ad02381b
+Power State: off
+
+--- VM [98] ---
+INFO: Get vm [ferw-137]
+UUID: 9cf71ab9-f995-45ce-6ed0-81114766e078
+Power State: off
+
+--- VM [99] ---
+INFO: Get vm [ferw-138]
+UUID: 3c15acbd-c7c7-4222-4e33-14a7c0891f78
+Power State: off
+
+--- VM [100] ---
+INFO: Get vm [ferw-139]
+UUID: defac94d-bbba-4c7e-6b4a-1771d8c3df49
+Power State: off
+
+--- VM [101] ---
+INFO: Get vm [ferw-140]
+UUID: 78655f18-04f8-4982-6ad6-7a800549090c
+Power State: off
+
+--- VM [102] ---
+INFO: Get vm [ferw-141]
+UUID: fd8c25e5-ba2a-4a5a-7761-5e69f14bdb2a
+Power State: off
+
+--- VM [103] ---
+INFO: Get vm [ferw-142]
+UUID: b6d37a48-e5e2-4d7f-41c8-1e529e410965
+Power State: off
+
+--- VM [104] ---
+INFO: Get vm [ferw-143]
+UUID: 18d6ed02-5211-470f-4e22-dcef12642d44
+Power State: off
+
+--- VM [105] ---
+INFO: Get vm [ferw-144]
+UUID: 7450fe43-48da-4524-6445-bdcda4fcafb9
+Power State: off
+
+--- VM [106] ---
+INFO: Get vm [ferw-145]
+UUID: b65656fc-cf47-472f-61b6-419a2575fdad
+Power State: off
+
+--- VM [107] ---
+INFO: Get vm [ferw-146]
+UUID: c6cddc9b-326c-4215-59bd-52b3927647ec
+Power State: off
+
+--- VM [108] ---
+INFO: Get vm [ferw-147]
+UUID: d63ea09c-8f54-4da8-5ded-01ec25ea3f47
+Power State: off
+
+--- VM [109] ---
+INFO: Get vm [ferw-148]
+UUID: 4e2ec35b-ab89-403f-43cf-b9375960a83d
+Power State: off
+
+--- VM [110] ---
+INFO: Get vm [ferw-149]
+UUID: 4151beec-3e7a-40f7-4e16-1d1cfedaad62
+Power State: off
+
+--- VM [111] ---
+INFO: Get vm [ferw-150]
+UUID: 1e9580d6-61ff-4389-51a0-61c9c65eefc1
+Power State: off
+
+--- VM [112] ---
+INFO: Get vm [ferw-151]
+UUID: 4866dc21-8d2a-4409-613b-fda1a4af5212
+Power State: off
+
+--- VM [113] ---
+INFO: Get vm [ferw-152]
+UUID: 957ab596-831c-41de-4456-f58e3b1f24b8
+Power State: off
+
+--- VM [114] ---
+INFO: Get vm [ferw-153]
+UUID: d59217bf-03b9-47c5-7ebd-d4f674daf4ec
+Power State: off
+
+--- VM [115] ---
+INFO: Get vm [ferw-154]
+UUID: bdba5b5a-e0b0-4da0-689b-37bea59ad9a9
+Power State: off
+
+--- VM [116] ---
+INFO: Get vm [ferw-155]
+UUID: 8ba1f6f5-1aeb-4b03-65c7-5f06dcd3f7a9
+Power State: off
+
+--- VM [117] ---
+INFO: Get vm [ferw-156]
+UUID: f47bbc3c-f0a1-4737-6d9e-cc03c2c2c67f
+Power State: off
+
+--- VM [118] ---
+INFO: Get vm [ferw-157]
+UUID: b36b68ba-53f9-4989-67f6-4ce7f9cf1922
+Power State: off
+
+--- VM [119] ---
+INFO: Get vm [ferw-158]
+UUID: 0695914b-ea4a-4c46-6515-3a97c5f06929
+Power State: off
+
+--- VM [120] ---
+INFO: Get vm [ferw-159]
+UUID: c668807d-28a0-48e4-5a87-e9eed67a981f
+Power State: off
+
+--- VM [121] ---
+INFO: Get vm [ferw-160]
+UUID: 3ca42ccc-8aa9-4c2a-4b1e-51b85e9a6346
+Power State: off
+
+--- VM [122] ---
+INFO: Get vm [ferw-161]
+UUID: 2025cbff-73c0-4a95-5579-6183084860ae
+Power State: off
+
+--- VM [123] ---
+INFO: Get vm [ferw-162]
+UUID: c3f27dc3-d165-44d5-4c9a-1ad8a21e1296
+Power State: off
+
+--- VM [124] ---
+INFO: Get vm [ferw-163]
+UUID: a7e7d5b0-f6e6-4e02-5f4a-868a804f70f8
+Power State: off
+
+--- VM [125] ---
+INFO: Get vm [ferw-164]
+UUID: a644dacf-c05e-4952-74cf-ef2dd47bca63
+Power State: off
+
+--- VM [126] ---
+INFO: Get vm [ferw-165]
+UUID: 0dd9b36d-3d74-4953-722f-e4ca19d8f173
+Power State: off
+
+--- VM [127] ---
+INFO: Get vm [ferw-166]
+UUID: 474e27f5-fd0a-427e-46b4-5a04ae1a6541
+Power State: off
+
+--- VM [128] ---
+INFO: Get vm [ferw-167]
+UUID: b7d22c55-d9a7-4aab-7a29-cf11fd2393e6
+Power State: off
+
+--- VM [129] ---
+INFO: Get vm [ferw-168]
+UUID: 2dd09af4-c07a-4dcc-64b2-4664fd8e5635
+Power State: off
+
+--- VM [130] ---
+INFO: Get vm [ferw-169]
+UUID: ba8b763a-759d-42e6-79a5-1e78a3d222c5
+Power State: off
+
+--- VM [131] ---
+INFO: Get vm [ferw-170]
+UUID: 3f99dc8b-a38f-4728-48b6-33ea61307295
+Power State: off
+
+--- VM [132] ---
+INFO: Get vm [ferw-171]
+UUID: 521badc9-9f6f-475d-732f-8041d594a130
+Power State: off
+
+--- VM [133] ---
+INFO: Get vm [ferw-172]
+UUID: 5a493ed7-9e1c-49c6-7c6a-77afaa9065dc
+Power State: off
+
+--- VM [134] ---
+INFO: Get vm [ferw-173]
+UUID: 3093dcbc-6c41-4285-7a95-be393afbf3cb
+Power State: off
+
+--- VM [135] ---
+INFO: Get vm [ferw-174]
+UUID: 85e77983-d57a-45e4-46f6-0b02e6c1c274
+Power State: off
+
+--- VM [136] ---
+INFO: Get vm [ferw-175]
+UUID: 7ce54f5a-64c6-4fd5-7210-9c13d9178937
+Power State: off
+
+--- VM [137] ---
+INFO: Get vm [ferw-176]
+UUID: 35e6c4e2-def1-474a-4668-aec6e7826b43
+Power State: off
+
+--- VM [138] ---
+INFO: Get vm [ferw-177]
+UUID: 6a817b18-1966-4e38-4672-598caa06b868
+Power State: off
+
+--- VM [139] ---
+INFO: Get vm [ferw-178]
+UUID: 55b9b5be-3f76-431f-5da0-bf16b5811098
+Power State: off
+
+--- VM [140] ---
+INFO: Get vm [ferw-179]
+UUID: afca5ac6-56a1-4d41-7a64-3eed72975f69
+Power State: off
+
+--- VM [141] ---
+INFO: Get vm [ferw-180]
+UUID: b9066e43-c644-42ae-7849-85b8c70ba535
+Power State: off
+
+--- VM [142] ---
+INFO: Get vm [ferw-181]
+UUID: ee8521d8-8344-47c8-574f-1a8f3a7a6e9b
+Power State: off
+
+--- VM [143] ---
+INFO: Get vm [ferw-182]
+UUID: 02cf17ef-0963-47f5-524c-cfec6ed7b461
+Power State: off
+
+--- VM [144] ---
+INFO: Get vm [ferw-183]
+UUID: d4b0c17f-db16-4ab7-57b8-2708c142cb08
+Power State: off
+
+--- VM [145] ---
+INFO: Get vm [ferw-184]
+UUID: 5064d0cf-6bd6-4180-7ebb-ed2f719154f7
+Power State: off
+
+--- VM [146] ---
+INFO: Get vm [ferw-185]
+UUID: 6b98e596-bc85-41c2-6d18-5399380fc2d3
+Power State: off
+
+--- VM [147] ---
+INFO: Get vm [ferw-186]
+UUID: 9f8d8cc6-f2fc-4f3b-409c-6d796a701f1e
+Power State: off
+
+--- VM [148] ---
+INFO: Get vm [ferw-187]
+UUID: 1a63321b-b02c-44d9-555d-832b8e269356
+Power State: off
+
+--- VM [149] ---
+INFO: Get vm [ferw-188]
+UUID: d35e3e99-c0cd-4e2b-73b4-2adee8558bf4
+Power State: off
+
+--- VM [150] ---
+INFO: Get vm [ferw-189]
+UUID: eb720998-edf1-4a7f-5517-703b6045f72b
+Power State: off
+
+--- VM [151] ---
+INFO: Get vm [ferw-190]
+UUID: 45dd0aab-5618-4aa3-6705-4b59853dac92
+Power State: off
+
+--- VM [152] ---
+INFO: Get vm [ferw-191]
+UUID: 4a6b886c-5c6a-40fd-445a-ec975fca2519
+Power State: off
+
+--- VM [153] ---
+INFO: Get vm [ferw-192]
+UUID: a7526e10-4989-4ad5-7896-ca3d6e975270
+Power State: off
+
+--- VM [154] ---
+INFO: Get vm [ferw-193]
+UUID: aa996cb3-1fb8-469d-70ac-e4301a09813f
+Power State: off
+
+--- VM [155] ---
+INFO: Get vm [ferw-194]
+UUID: 0787402e-d78c-4da7-5f4c-8d8259b83be7
+Power State: off
+
+--- VM [156] ---
+INFO: Get vm [ferw-195]
+UUID: 22da1f87-3ba2-4984-7586-1fd6d9e48e84
+Power State: off
+
+--- VM [157] ---
+INFO: Get vm [ferw-196]
+UUID: 08024734-21b8-455f-7827-5eb5f680a515
+Power State: off
+
+--- VM [158] ---
+INFO: Get vm [ferw-197]
+UUID: a99a9a43-242c-4fa1-5f4d-da13d339833c
+Power State: off
+
+--- VM [159] ---
+INFO: Get vm [ferw-198]
+UUID: 8373e82f-9023-4bca-609e-413792c7a5fb
+Power State: off
+
+--- VM [160] ---
+INFO: Get vm [ferw-199]
+UUID: dce1652c-a099-403b-539d-b8bddf681e42
+Power State: off
+
+--- VM [161] ---
+INFO: Get vm [ferw-200]
+UUID: cfd88c50-1b6d-4b99-5fd3-1697ebf22c00
+Power State: off
+
+--- VM [162] ---
+INFO: Get vm [ferw-201]
+UUID: f8b11baa-367f-4bb8-4a4c-4e7a3bf605fa
+Power State: off
+
+--- VM [163] ---
+INFO: Get vm [ferw-202]
+UUID: b8978102-6e77-4ed1-4c84-75982ac27817
+Power State: off
+
+--- VM [164] ---
+INFO: Get vm [ferw-203]
+UUID: eacf78c7-0214-442e-43f9-b7312e3642d0
+Power State: off
+
+--- VM [165] ---
+INFO: Get vm [ferw-204]
+UUID: 4b7cbb34-b6b0-4f3a-40fe-3320585f3c0b
+Power State: off
+
+--- VM [166] ---
+INFO: Get vm [ferw-205]
+UUID: c7e65251-6812-4a93-405f-36d6d18ef1a2
+Power State: off
+
+--- VM [167] ---
+INFO: Get vm [ferw-206]
+UUID: d02f339d-38c4-4c02-4e9f-590d3a6f306d
+Power State: off
+
+--- VM [168] ---
+INFO: Get vm [ferw-207]
+UUID: 9cd1f4db-4007-47f7-6137-f0bd885a4e67
+Power State: off
+
+--- VM [169] ---
+INFO: Get vm [ferw-208]
+UUID: 07a67645-65b7-4acd-5d87-213f300237fa
+Power State: off
+
+--- VM [170] ---
+INFO: Get vm [ferw-209]
+UUID: 1a299898-3c06-4509-451b-8b1dcd69cf4a
+Power State: off
+
+--- VM [171] ---
+INFO: Get vm [ferw-210]
+UUID: eb43cdb6-04ca-4326-469a-12ff49fa16f3
+Power State: off
+
+--- VM [172] ---
+INFO: Get vm [ferw-211]
+UUID: cdd0282e-eaba-4c19-496f-90a5f835fd3b
+Power State: off
+
+--- VM [173] ---
+INFO: Get vm [ferw-212]
+UUID: 89e5ef5d-daa7-4b1d-6423-49ab810cd0f3
+Power State: off
+
+--- VM [174] ---
+INFO: Get vm [ferw-213]
+UUID: 188691f8-ecfc-41d3-7c6a-9d13ba60836d
+Power State: off
+
+--- VM [175] ---
+INFO: Get vm [ferw-214]
+UUID: fe1b63fa-c0d4-47e9-743a-36c3384c0c49
+Power State: off
+
+--- VM [176] ---
+INFO: Get vm [ferw-215]
+UUID: 71b95eed-2bef-4021-5b16-6b866b76d9fe
+Power State: off
+
+--- VM [177] ---
+INFO: Get vm [ferw-216]
+UUID: 16dcbde3-86ec-470b-4b42-9134778b4412
+Power State: off
+
+--- VM [178] ---
+INFO: Get vm [ferw-217]
+UUID: 7f633c45-624e-415e-4936-ae08aaf1e785
+Power State: off
+
+--- VM [179] ---
+INFO: Get vm [ferw-218]
+UUID: 057ecf73-e447-4010-65a5-cb03e1207183
+Power State: off
+
+--- VM [180] ---
+INFO: Get vm [ferw-219]
+UUID: bab2a0b6-488d-4003-695a-253bc7f7df6a
+Power State: off
+
+--- VM [181] ---
+INFO: Get vm [ferw-220]
+UUID: 353ee371-aaae-4580-5b50-71db0e374fce
+Power State: off
+
+--- VM [182] ---
+INFO: Get vm [ferw-221]
+UUID: d1767abc-5d71-41ef-4034-b4e9445080c4
+Power State: off
+
+--- VM [183] ---
+INFO: Get vm [ferw-222]
+UUID: 490cf54c-4950-4e5a-53de-f0febd5c119b
+Power State: off
+
+--- VM [184] ---
+INFO: Get vm [ferw-223]
+UUID: cea3f87d-bc1b-432d-582a-e1f0c9e3ecc9
+Power State: off
+
+--- VM [185] ---
+INFO: Get vm [ferw-224]
+UUID: ae5818f8-a442-4248-7b88-3c9ab407519d
+Power State: off
+
+--- VM [186] ---
+INFO: Get vm [ferw-225]
+UUID: 0f5889a2-5c4d-4991-65dd-0595e6c9c3e6
+Power State: off
+
+--- VM [187] ---
+INFO: Get vm [ferw-226]
+UUID: bc034e82-b269-4b83-637c-b6a39c0437b4
+Power State: off
+
+--- VM [188] ---
+INFO: Get vm [ferw-227]
+UUID: 1a1c6cc4-8622-45a7-731d-d82ef91842a8
+Power State: off
+
+--- VM [189] ---
+INFO: Get vm [ferw-228]
+UUID: 9634d8c2-03ef-4b04-6c9b-8babe688c7a4
+Power State: off
+
+--- VM [190] ---
+INFO: Get vm [ferw-229]
+UUID: 24c0700f-25ee-43b9-5513-6cf279213ea4
+Power State: off
+
+--- VM [191] ---
+INFO: Get vm [ferw-230]
+UUID: 1d5b1e7b-175d-4cfb-517d-8b8c6d726652
+Power State: off
+
+--- VM [192] ---
+INFO: Get vm [ferw-231]
+UUID: c9ece0cb-dec9-452d-67da-d00f0bda3037
+Power State: off
+
+--- VM [193] ---
+INFO: Get vm [ferw-232]
+UUID: 19697f40-77a9-48ec-732c-3e2309487373
+Power State: off
+
+--- VM [194] ---
+INFO: Get vm [ferw-233]
+UUID: 1603bc5a-0b9d-4be0-72b2-3200ffe51b3f
+Power State: off
+
+--- VM [195] ---
+INFO: Get vm [ferw-234]
+UUID: aec0d5ef-17bb-4f0b-7c9c-23036ad38d4b
+Power State: off
+
+--- VM [196] ---
+INFO: Get vm [ferw-235]
+UUID: 4d57b17e-0c21-4427-6d30-db9e0cbc3f78
+Power State: off
+
+--- VM [197] ---
+INFO: Get vm [ferw-236]
+UUID: 1713c87c-5af6-4c04-7ec2-aa6704744375
+Power State: off
+
+--- VM [198] ---
+INFO: Get vm [ferw-237]
+UUID: 87a52e40-34b5-475d-5844-3fba7dd52df5
+Power State: off
+
+--- VM [199] ---
+INFO: Get vm [ferw-238]
+UUID: b76b9c44-6060-4931-7265-291b438464f3
+Power State: off
+
+--- VM [200] ---
+INFO: Get vm [ferw-239]
+UUID: 5b3dc222-c723-4283-75b3-fee7253f2a49
+Power State: off
+
+--- VM [201] ---
+INFO: Get vm [ferw-240]
+UUID: 380a5bf5-6ef2-49c2-6365-8445ad30a8a8
+Power State: off
+
+--- VM [202] ---
+INFO: Get vm [ferw-241]
+UUID: 6510d61e-893d-402f-7d2a-00a827ba1358
+Power State: off
+
+--- VM [203] ---
+INFO: Get vm [ferw-242]
+UUID: bc5dc3fd-9918-4fae-5797-3b40b394eee7
+Power State: off
+
+--- VM [204] ---
+INFO: Get vm [ferw-243]
+UUID: 43b65675-0d86-41d6-49e5-49333d28f2af
+Power State: off
+
+--- VM [205] ---
+INFO: Get vm [ferw-244]
+UUID: e59e6a07-ba94-45e5-71ee-619ced6ef387
+Power State: off
+
+--- VM [206] ---
+INFO: Get vm [ferw-245]
+UUID: 157afb7f-6884-4194-7080-c62d38f17d6f
+Power State: off
+
+--- VM [207] ---
+INFO: Get vm [ferw-246]
+UUID: ebcafc37-3394-4e60-50fd-2772ad1edf58
+Power State: off
+
+--- VM [208] ---
+INFO: Get vm [ferw-247]
+UUID: b3c5a861-f3a6-47d7-4f38-7f3c6355bc54
+Power State: off
+
+--- VM [209] ---
+INFO: Get vm [ferw-248]
+UUID: 4f273eb9-b0f8-43d3-469b-b62a3d3a78bd
+Power State: off
+
+--- VM [210] ---
+INFO: Get vm [ferw-249]
+UUID: 984d8f2b-3780-41fe-7cff-2a3159012bbc
+Power State: off
+
+--- VM [211] ---
+INFO: Get vm [ferw-250]
+UUID: b2268aa0-ca42-4fd6-5f17-168b90c17ce6
+Power State: off
+
+--- VM [212] ---
+INFO: Get vm [ferw-251]
+UUID: 22e053f5-a9d0-4dd7-7d92-98c82e05dbd0
+Power State: off
+
+--- VM [213] ---
+INFO: Get vm [ferw-252]
+UUID: 7c24332b-19f8-4595-612e-ea52d3ec30f9
+Power State: off
+
+--- VM [214] ---
+INFO: Get vm [ferw-253]
+UUID: 228c15fe-8d78-415a-5090-72d163144946
+Power State: off
+
+--- VM [215] ---
+INFO: Get vm [ferw-254]
+UUID: afa981fb-ba9a-4eaa-5a23-f56c49fe1c9c
+Power State: off
+
+--- VM [216] ---
+INFO: Get vm [ferw-255]
+UUID: 78d35e3a-7c93-48a7-6a09-9093e7ada49f
+Power State: off
+
+--- VM [217] ---
+INFO: Get vm [ferw-256]
+UUID: e1497b61-f356-478b-6a09-cc3667b0dc6c
+Power State: off
+
+--- VM [218] ---
+INFO: Get vm [ferw-257]
+UUID: 3a082f1b-cbd3-48ac-727b-7b98080c5936
+Power State: off
+
+--- VM [219] ---
+INFO: Get vm [ferw-258]
+UUID: e337bfe0-f7bb-4abf-68ce-9fe9dd0be21d
+Power State: off
+
+--- VM [220] ---
+INFO: Get vm [ferw-259]
+UUID: 1fc8eaef-35e4-4524-6f28-b1b779b5d634
+Power State: off
+
+--- VM [221] ---
+INFO: Get vm [ferw-260]
+UUID: 4d1449ee-51f5-4567-4dbd-d9360b94e42d
+Power State: off
+
+--- VM [222] ---
+INFO: Get vm [ferw-261]
+UUID: 0a6f3455-94ad-4b5f-5f0c-46a344241421
+Power State: off
+
+--- VM [223] ---
+INFO: Get vm [ferw-262]
+UUID: 31cc5082-4dae-4104-5206-d4b4a13c6d44
+Power State: off
+
+--- VM [224] ---
+INFO: Get vm [ferw-263]
+UUID: 7e1fd23e-6474-4cc5-63a4-5c92b7df1715
+Power State: off
+
+--- VM [225] ---
+INFO: Get vm [ferw-264]
+UUID: dc8476cd-8041-47c8-4b5d-56a546f66f92
+Power State: off
+
+--- VM [226] ---
+INFO: Get vm [ferw-265]
+UUID: 0fc5c874-853d-421e-671a-620a0183694d
+Power State: off
+
+--- VM [227] ---
+INFO: Get vm [ferw-266]
+UUID: b040bf70-f147-4ae0-51a8-6b5de2f29d48
+Power State: off
+
+--- VM [228] ---
+INFO: Get vm [ferw-267]
+UUID: 49887389-99ac-47b0-5e32-f281d4dd2874
+Power State: off
+
+--- VM [229] ---
+INFO: Get vm [ferw-268]
+UUID: 898b6e8b-0744-4936-5f08-c3f90ddc584f
+Power State: off
+
+--- VM [230] ---
+INFO: Get vm [ferw-269]
+UUID: 595b296e-4e7c-49b1-66d0-92f0fb936c57
+Power State: off
+
+--- VM [231] ---
+INFO: Get vm [ferw-270]
+UUID: 05ff5883-177b-498a-40a7-5d4934800a5b
+Power State: off
+
+--- VM [232] ---
+INFO: Get vm [ferw-271]
+UUID: d2a2b713-891e-4064-6487-384a52569766
+Power State: off
+
+--- VM [233] ---
+INFO: Get vm [ferw-272]
+UUID: 7f7b5a34-874f-4786-68f8-08b75ea467c8
+Power State: off
+
+--- VM [234] ---
+INFO: Get vm [ferw-273]
+UUID: 54430465-1d63-4d67-7200-08dc958c778f
+Power State: off
+
+--- VM [235] ---
+INFO: Get vm [ferw-274]
+UUID: 0179a271-0e8e-4d0d-598f-ba0c89116564
+Power State: off
+
+--- VM [236] ---
+INFO: Get vm [ferw-275]
+UUID: c8aed7e1-cdae-4db6-6eee-196bfd06352f
+Power State: off
+
+--- VM [237] ---
+INFO: Get vm [ferw-276]
+UUID: 035ae1da-7ac3-49cd-5330-002c75ec5324
+Power State: off
+
+--- VM [238] ---
+INFO: Get vm [ferw-277]
+UUID: 8955adb9-c7a0-4dd4-7422-077ce95218d5
+Power State: off
+
+--- VM [239] ---
+INFO: Get vm [ferw-278]
+UUID: 06fc017f-d1ce-49b1-7cfe-9301bf708aa7
+Power State: off
+
+--- VM [240] ---
+INFO: Get vm [ferw-279]
+UUID: e4252d45-c459-4b96-4f90-9b1d4292bf25
+Power State: off
+
+--- VM [241] ---
+INFO: Get vm [ferw-280]
+UUID: e469e5e6-fa30-43d5-5e15-b85c740ab7f3
+Power State: off
+
+--- VM [242] ---
+INFO: Get vm [ferw-281]
+UUID: 13e2106e-5b90-458b-596b-04c485c77836
+Power State: off
+
+--- VM [243] ---
+INFO: Get vm [ferw-282]
+UUID: a3ca92f0-24c2-4dd4-434c-7d8535fdd6af
+Power State: off
+
+--- VM [244] ---
+INFO: Get vm [ferw-283]
+UUID: ede4e2bb-8f52-419b-65be-99d6167058f5
+Power State: off
+
+--- VM [245] ---
+INFO: Get vm [ferw-284]
+UUID: 0565de19-2b82-474d-5773-7e94e386b34b
+Power State: off
+
+--- VM [246] ---
+INFO: Get vm [ferw-285]
+UUID: c44a706a-c4f0-48d5-6a03-cf059a6ab124
+Power State: off
+
+--- VM [247] ---
+INFO: Get vm [ferw-286]
+UUID: bc9f8b4c-b252-4356-55ef-6c06846532e6
+Power State: off
+
+--- VM [248] ---
+INFO: Get vm [ferw-287]
+UUID: 265d022c-96a9-4b06-5878-4163635ca631
+Power State: off
+
+--- VM [249] ---
+INFO: Get vm [ferw-288]
+UUID: 56fd2a98-a895-4c84-5306-a6ee514709b4
+Power State: off
+
+--- VM [250] ---
+INFO: Get vm [ferw-289]
+UUID: edf7731e-2723-44fd-6a98-bad446e630d7
+Power State: off
+
+--- VM [251] ---
+INFO: Get vm [ferw-290]
+UUID: 8542baaa-fa5e-470a-6a66-41f2178ecdd7
+Power State: off
+
+--- VM [252] ---
+INFO: Get vm [ferw-291]
+UUID: 7cb4c589-c53c-48c3-7759-6cb9f7ec6e3b
+Power State: off
+
+--- VM [253] ---
+INFO: Get vm [ferw-292]
+UUID: 8d2bfbeb-3867-4dbd-5b55-2ea9f8528311
+Power State: off
+
+--- VM [254] ---
+INFO: Get vm [ferw-293]
+UUID: c466e052-effc-4067-6623-21fd0c07369f
+Power State: off
+
+--- VM [255] ---
+INFO: Get vm [ferw-294]
+UUID: c175ec58-5bb0-40ff-438c-11f105f66a29
+Power State: off
+
+--- VM [256] ---
+INFO: Get vm [ferw-295]
+UUID: 749783cf-8648-4a57-764d-4fd186e78edf
+Power State: off
+
+--- VM [257] ---
+INFO: Get vm [ferw-296]
+UUID: cd8f8644-cd48-464c-7327-4b093fcb5071
+Power State: off
+
+--- VM [258] ---
+INFO: Get vm [ferw-297]
+UUID: 50c8c610-687c-4d25-452f-17bdc718885d
+Power State: off
+
+--- VM [259] ---
+INFO: Get vm [ferw-298]
+UUID: 00ef35f4-319d-403e-59be-82efb157f4d6
+Power State: off
+
+--- VM [260] ---
+INFO: Get vm [ferw-299]
+UUID: 667c29a2-c5cc-45bc-7ed2-68fcf5779180
+Power State: off
+
+--- VM [261] ---
+INFO: Get vm [ferw-300]
+UUID: 219a169a-0960-4e78-56e7-12ebae8a2dc5
+Power State: off
+
+--- VM [262] ---
+INFO: Get vm [ferw-301]
+UUID: 0991eeae-5363-43c4-72c8-c56ed005b5bf
+Power State: off
+
+--- VM [263] ---
+INFO: Get vm [ferw-302]
+UUID: 090d1fd4-a6c7-4561-6359-83ab25e8ee40
+Power State: off
+
+--- VM [264] ---
+INFO: Get vm [ferw-303]
+UUID: 35e42986-1eb3-4bba-5b46-3bb2cf22d0ec
+Power State: off
+
+--- VM [265] ---
+INFO: Get vm [ferw-304]
+UUID: 4f63af69-ae99-4ee8-6139-53748fd0e161
+Power State: off
+
+--- VM [266] ---
+INFO: Get vm [ferw-305]
+UUID: 68d02ea7-4524-4aa0-4745-502840b07076
+Power State: off
+
+--- VM [267] ---
+INFO: Get vm [ferw-306]
+UUID: 1c09aa91-e502-4944-4d94-9fa845db4f0f
+Power State: off
+
+--- VM [268] ---
+INFO: Get vm [ferw-307]
+UUID: 574c7c9d-4068-42bb-4c4d-46c3275140ea
+Power State: off
+
+--- VM [269] ---
+INFO: Get vm [ferw-308]
+UUID: f0237817-5de5-4077-71e9-fc4a97e86581
+Power State: off
+
+--- VM [270] ---
+INFO: Get vm [ferw-309]
+UUID: a1cfc7d0-e643-471e-4c4f-0e2552279aba
+Power State: off
+
+--- VM [271] ---
+INFO: Get vm [ferw-310]
+UUID: 6a4a5704-579a-4268-73e2-739b9cd8f951
+Power State: off
+
+--- VM [272] ---
+INFO: Get vm [ferw-311]
+UUID: b8fced06-649f-4035-452d-f1c5aa19af83
+Power State: off
+
+--- VM [273] ---
+INFO: Get vm [ferw-312]
+UUID: 3a70430e-6f56-4eab-42ed-9220ad360d23
+Power State: off
+
+--- VM [274] ---
+INFO: Get vm [ferw-313]
+UUID: 18841376-9efc-4001-4d62-f9e291cbc95a
+Power State: off
+
+--- VM [275] ---
+INFO: Get vm [ferw-314]
+UUID: 3f2d882d-a1d3-4318-7da4-34b15c88de1d
+Power State: off
+
+--- VM [276] ---
+INFO: Get vm [ferw-315]
+UUID: ac36c497-e89e-4664-6608-274cb066f978
+Power State: off
+
+--- VM [277] ---
+INFO: Get vm [ferw-316]
+UUID: 929f533c-73f0-4fb6-4bba-6f5a7eb5cf97
+Power State: off
+
+--- VM [278] ---
+INFO: Get vm [ferw-317]
+UUID: 2d4dc8a5-754f-4bb6-72d3-a86c0716dd00
+Power State: off
+
+--- VM [279] ---
+INFO: Get vm [ferw-318]
+UUID: 5a0f7155-a80d-4015-53a4-d7b1aab3abd4
+Power State: off
+
+--- VM [280] ---
+INFO: Get vm [ferw-319]
+UUID: 01ba8652-aee4-452b-611b-b572119dd358
+Power State: off
+
+--- VM [281] ---
+INFO: Get vm [ferw-320]
+UUID: c1ba7109-8212-4dcf-4650-7b559ed79a0b
+Power State: off
+
+--- VM [282] ---
+INFO: Get vm [ferw-321]
+UUID: 6d23bcd0-c6ef-4a9b-5a44-77c72c524085
+Power State: off
+
+--- VM [283] ---
+INFO: Get vm [ferw-322]
+UUID: 9b5fa7eb-4e04-4798-6766-638f7debef09
+Power State: off
+
+--- VM [284] ---
+INFO: Get vm [ferw-323]
+UUID: bceb5949-ca01-48fb-6782-3c28561d569d
+Power State: off
+
+--- VM [285] ---
+INFO: Get vm [ferw-324]
+UUID: eb3533cd-6b1d-47fd-734d-3dc19b4d650a
+Power State: off
+
+--- VM [286] ---
+INFO: Get vm [ferw-325]
+UUID: 2ea1917f-e5ce-409c-7d5e-1541f024311a
+Power State: off
+
+--- VM [287] ---
+INFO: Get vm [ferw-326]
+UUID: 661e5ee9-8385-4265-6832-f1d90670159d
+Power State: off
+
+--- VM [288] ---
+INFO: Get vm [ferw-327]
+UUID: e9666bee-6ebf-4202-413f-915f079e8a93
+Power State: off
+
+--- VM [289] ---
+INFO: Get vm [ferw-328]
+UUID: 77935aea-b352-4995-7d9b-845ecaed0c02
+Power State: off
+
+--- VM [290] ---
+INFO: Get vm [ferw-329]
+UUID: 60afd38c-8443-4c4b-6375-d5d0e0c74c50
+Power State: off
+
+--- VM [291] ---
+INFO: Get vm [ferw-330]
+UUID: 9dbf9143-4cf6-4e0b-56a1-1e51850eaf09
+Power State: off
+
+--- VM [292] ---
+INFO: Get vm [ferw-331]
+UUID: 56a3f39a-49ed-4ab5-759d-f775631a7e94
+Power State: off
+
+--- VM [293] ---
+INFO: Get vm [ferw-332]
+UUID: 89a5d85c-1766-4c2b-6e2c-04f03209e547
+Power State: off
+
+--- VM [294] ---
+INFO: Get vm [ferw-333]
+UUID: 8a2a20c3-5128-4501-5af4-a1c9a891447d
+Power State: off
+
+--- VM [295] ---
+INFO: Get vm [ferw-334]
+UUID: 245ac2ad-3e2f-4513-660d-1c9e0ed51611
+Power State: off
+
+--- VM [296] ---
+INFO: Get vm [ferw-335]
+UUID: 5202ee48-5b19-4009-7285-f0a0bb69b1b5
+Power State: off
+
+--- VM [297] ---
+INFO: Get vm [ferw-336]
+UUID: b8c830fa-079f-4bd4-4a86-021562e14f46
+Power State: off
+
+--- VM [298] ---
+INFO: Get vm [ferw-337]
+UUID: d1f43295-618b-48b8-6ea7-ee695185792f
+Power State: off
+
+--- VM [299] ---
+INFO: Get vm [ferw-338]
+UUID: 24e8323f-8166-4565-5b81-5aaf4db83bd5
+Power State: off
+
+--- VM [300] ---
+INFO: Get vm [ferw-339]
+UUID: 1dbf17b5-dea2-44b1-6e4d-6ea1ec38214b
+Power State: off
+
+--- VM [301] ---
+INFO: Get vm [ferw-340]
+UUID: d69de1e3-a5a0-40dc-6bd9-0505aa446b65
+Power State: off
+
+--- VM [302] ---
+INFO: Get vm [ferw-341]
+UUID: dda792ab-6d54-423f-7577-00d596a3318e
+Power State: off
+
+--- VM [303] ---
+INFO: Get vm [ferw-342]
+UUID: 6eaff5d2-eaa5-43c9-44d3-dd155a9c8f91
+Power State: off
+
+--- VM [304] ---
+INFO: Get vm [ferw-343]
+UUID: 10e857d2-8aba-4c83-4782-228f57f5b5bf
+Power State: off
+
+--- VM [305] ---
+INFO: Get vm [ferw-344]
+UUID: 860e4cf2-e9c6-46c2-789a-83442c4e7ff9
+Power State: off
+
+--- VM [306] ---
+INFO: Get vm [ferw-345]
+UUID: 3f684307-6633-43f4-4793-face9b3dc4fd
+Power State: off
+
+--- VM [307] ---
+INFO: Get vm [ferw-346]
+UUID: 0c0695d7-ef56-45a5-65f0-627e682e7ab4
+Power State: off
+
+--- VM [308] ---
+INFO: Get vm [ferw-347]
+UUID: 90960d50-bcca-4aea-5539-d5ee34b48508
+Power State: off
+
+--- VM [309] ---
+INFO: Get vm [ferw-348]
+UUID: 155725d2-9f15-430a-51a4-aa88a4a7abd0
+Power State: off
+
+--- VM [310] ---
+INFO: Get vm [ferw-349]
+UUID: 9ad705f0-8bca-4e72-4ba2-2e5f1bfa94e4
+Power State: off
+
+--- VM [311] ---
+INFO: Get vm [ferw-350]
+UUID: 557bf2ec-83b8-4c8d-6329-b018e264562f
+Power State: off
+
+--- VM [312] ---
+INFO: Get vm [ferw-351]
+UUID: b06dd4bf-1b64-4400-7a5b-c769b6d345f0
+Power State: off
+
+--- VM [313] ---
+INFO: Get vm [ferw-352]
+UUID: 6a68c779-4e16-4174-6fae-acdb90bac135
+Power State: off
+
+--- VM [314] ---
+INFO: Get vm [ferw-353]
+UUID: fc7b46bc-8acf-4a8a-40a7-81eae7596c1c
+Power State: off
+
+--- VM [315] ---
+INFO: Get vm [ferw-354]
+UUID: 5fc3345a-062c-42e3-734b-847a24ba5616
+Power State: off
+
+--- VM [316] ---
+INFO: Get vm [ferw-355]
+UUID: ab6ac76e-4071-4475-7a4a-4dce34789012
+Power State: off
+
+--- VM [317] ---
+INFO: Get vm [ferw-356]
+UUID: 736ef4af-7423-42cb-4c80-0536d710bde9
+Power State: off
+
+--- VM [318] ---
+INFO: Get vm [ferw-357]
+UUID: 250b4e9a-6ecb-4c5d-5af8-68cc92dd5b26
+Power State: off
+
+--- VM [319] ---
+INFO: Get vm [ferw-358]
+UUID: 92a0dc18-a811-45fb-4017-dfca8d88efe6
+Power State: off
+
+--- VM [320] ---
+INFO: Get vm [ferw-359]
+UUID: 0d46254d-2c2e-4716-736e-c2a5be4241b8
+Power State: off
+
+--- VM [321] ---
+INFO: Get vm [ferw-360]
+UUID: 9a645f0f-6cc7-4f14-6502-4299bcabada4
+Power State: off
+
+--- VM [322] ---
+INFO: Get vm [ferw-361]
+UUID: f9acc1da-44a2-44f0-7b9b-223fc10e0f39
+Power State: off
+
+--- VM [323] ---
+INFO: Get vm [ferw-362]
+UUID: 1d1edf8c-190b-4dea-6ffa-875f92e78c6e
+Power State: off
+
+--- VM [324] ---
+INFO: Get vm [ferw-363]
+UUID: f13281df-46a8-48b0-7b04-601d23c6abcf
+Power State: off
+
+--- VM [325] ---
+INFO: Get vm [ferw-364]
+UUID: cd440c77-e1a9-4317-6d04-1f68fa79cbec
+Power State: off
+
+--- VM [326] ---
+INFO: Get vm [ferw-365]
+UUID: 4b90bf9a-2277-4961-7511-a151e15d31e9
+Power State: off
+
+--- VM [327] ---
+INFO: Get vm [ferw-366]
+UUID: 74180f9d-9a1b-4414-6e62-a20fb721a0c6
+Power State: off
+
+--- VM [328] ---
+INFO: Get vm [ferw-367]
+UUID: fbdfad08-4db0-494f-5fdb-cd38a16cd886
+Power State: off
+
+--- VM [329] ---
+INFO: Get vm [ferw-368]
+UUID: 82f0fb61-7286-4e79-6578-a632ed866234
+Power State: off
+
+--- VM [330] ---
+INFO: Get vm [ferw-369]
+UUID: fc318132-8c43-4006-4994-ce06867d3932
+Power State: off
+
+--- VM [331] ---
+INFO: Get vm [ferw-370]
+UUID: c8ce3a2e-bdf4-409a-43ba-7f307b6e846e
+Power State: off
+
+--- VM [332] ---
+INFO: Get vm [ferw-371]
+UUID: 1c57e3f5-ad3e-490a-53b5-3daa09ab78db
+Power State: off
+
+--- VM [333] ---
+INFO: Get vm [ferw-372]
+UUID: 68f6322a-324d-416d-7523-a79e116aa338
+Power State: off
+
+--- VM [334] ---
+INFO: Get vm [ferw-373]
+UUID: 2e77993a-8c4f-4f13-6906-bd0168d982de
+Power State: off
+
+--- VM [335] ---
+INFO: Get vm [ferw-374]
+UUID: 5a878896-59db-40aa-5eb5-d9c6c5d98779
+Power State: off
+
+--- VM [336] ---
+INFO: Get vm [ferw-375]
+UUID: 2dafef16-7cd0-43f8-4f6e-51a3fe9da1e9
+Power State: off
+
+--- VM [337] ---
+INFO: Get vm [ferw-376]
+UUID: 194554f2-2290-458b-4ccf-bb7ec9177241
+Power State: off
+
+--- VM [338] ---
+INFO: Get vm [ferw-377]
+UUID: 77cdee41-10c8-4546-77c4-aaac82a34774
+Power State: off
+
+--- VM [339] ---
+INFO: Get vm [ferw-378]
+UUID: e1ecefd5-758e-4ef4-773e-ab6ec46381b0
+Power State: off
+
+--- VM [340] ---
+INFO: Get vm [ferw-379]
+UUID: 50f00c4d-70a9-4cd4-66a0-2e0bd08766c3
+Power State: off
+
+--- VM [341] ---
+INFO: Get vm [ferw-380]
+UUID: f705f53c-b782-40a2-4889-1e0d853e5d74
+Power State: off
+
+--- VM [342] ---
+INFO: Get vm [ferw-381]
+UUID: 000dcf43-d153-4756-48cd-99e1c13b13df
+Power State: off
+
+--- VM [343] ---
+INFO: Get vm [ferw-382]
+UUID: 19d359f9-f487-4bff-6369-3c4c581be93d
+Power State: off
+
+--- VM [344] ---
+INFO: Get vm [ferw-383]
+UUID: 225160b3-73ca-449f-5b11-130294cbc013
+Power State: off
+
+--- VM [345] ---
+INFO: Get vm [ferw-384]
+UUID: 4e554b09-3a4d-4ce1-791e-2d83b19c348a
+Power State: off
+
+--- VM [346] ---
+INFO: Get vm [ferw-385]
+UUID: f95f4a93-1a03-4804-4f60-1ce0a5805336
+Power State: off
+
+--- VM [347] ---
+INFO: Get vm [ferw-386]
+UUID: ad3ea3d8-4cc3-448d-50e8-22460f1ed7ad
+Power State: off
+
+--- VM [348] ---
+INFO: Get vm [ferw-387]
+UUID: 04019f46-69d7-4957-5a5b-16553f40bf51
+Power State: off
+
+--- VM [349] ---
+INFO: Get vm [ferw-388]
+UUID: 8906120d-3fc0-4cb6-582e-d1cbf672707e
+Power State: off
+
+--- VM [350] ---
+INFO: Get vm [ferw-389]
+UUID: 015b427b-9749-4675-6af3-5973a13373fb
+Power State: off
+
+--- VM [351] ---
+INFO: Get vm [ferw-390]
+UUID: 64e2c017-6a0b-4118-6d5c-b42e49bc634e
+Power State: off
+
+--- VM [352] ---
+INFO: Get vm [ferw-391]
+UUID: ffe9a9d3-3de4-4826-6a72-976c3189e98b
+Power State: off
+
+--- VM [353] ---
+INFO: Get vm [ferw-392]
+UUID: 189679a3-ce26-4bfa-7759-91df788b9c71
+Power State: off
+
+--- VM [354] ---
+INFO: Get vm [ferw-393]
+UUID: 430cea5e-d2fb-4b52-56df-0397f6fb4f61
+Power State: off
+
+--- VM [355] ---
+INFO: Get vm [ferw-394]
+UUID: de214553-80f1-47f0-65cb-1364f3ef858f
+Power State: off
+
+--- VM [356] ---
+INFO: Get vm [ferw-395]
+UUID: 53f249c4-2bb0-4f41-66c6-e58b3a50a2c8
+Power State: off
+
+--- VM [357] ---
+INFO: Get vm [ferw-396]
+UUID: f33cf1ce-4d17-483b-47fc-ea14432a9be7
+Power State: off
+
+--- VM [358] ---
+INFO: Get vm [ferw-397]
+UUID: 3417d0a6-cc09-489f-797f-11d2a1d61c9b
+Power State: off
+
+--- VM [359] ---
+INFO: Get vm [ferw-398]
+UUID: dfffebc9-ca26-4488-5f96-9bab69f7b3fe
+Power State: off
+
+--- VM [360] ---
+INFO: Get vm [ferw-399]
+UUID: 307ef0f1-85dc-4d9a-6862-001a9cf80634
+Power State: off
+
+--- VM [361] ---
+INFO: Get vm [ferw-400]
+UUID: 7abd5fc1-9a22-43a1-7bb9-f9211e9daac8
+Power State: off
+
+--- VM [362] ---
+INFO: Get vm [ferw-401]
+UUID: 1f4b3cc9-3f36-435a-6b02-f39fcd5d9a3b
+Power State: off
+
+--- VM [363] ---
+INFO: Get vm [ferw-402]
+UUID: b034f02c-c4cb-4918-4126-f2a2795fe47e
+Power State: off
+
+--- VM [364] ---
+INFO: Get vm [ferw-403]
+UUID: 7cc94115-0485-48f0-4075-bbdb5496e6e0
+Power State: off
+
+--- VM [365] ---
+INFO: Get vm [ferw-404]
+UUID: a2c9fa30-7b3d-4496-7ff0-dad49d4f5550
+Power State: off
+
+--- VM [366] ---
+INFO: Get vm [ferw-405]
+UUID: 956df508-5581-438a-5f44-8ddcc65b8b62
+Power State: off
+
+--- VM [367] ---
+INFO: Get vm [ferw-406]
+UUID: a5bea6cd-432c-4bf3-526b-9cf0059a402c
+Power State: off
+
+--- VM [368] ---
+INFO: Get vm [ferw-407]
+UUID: a7fa6f4c-2ac9-4e16-6a18-9f42977ffae1
+Power State: off
+
+--- VM [369] ---
+INFO: Get vm [ferw-408]
+UUID: a61f144c-3f30-49db-77a3-69b79476459a
+Power State: off
+
+--- VM [370] ---
+INFO: Get vm [ferw-409]
+UUID: 9709cfa8-98cd-4366-73b8-33457ce256ef
+Power State: off
+
+--- VM [371] ---
+INFO: Get vm [ferw-410]
+UUID: c955844d-aa59-4bae-78bf-cd4712a59fe3
+Power State: off
+
+--- VM [372] ---
+INFO: Get vm [ferw-411]
+UUID: 7e19fa34-9b44-41c2-7b02-328f9a879dc2
+Power State: off
+
+--- VM [373] ---
+INFO: Get vm [ferw-412]
+UUID: f7672134-1483-490f-7bfc-39aa54b9deb8
+Power State: off
+
+--- VM [374] ---
+INFO: Get vm [ferw-413]
+UUID: d1eba5e4-0f83-413b-41a7-4270f318b987
+Power State: off
+
+--- VM [375] ---
+INFO: Get vm [ferw-414]
+UUID: 2733b340-ba00-48c0-4c2e-bbeae95cadf6
+Power State: off
+
+--- VM [376] ---
+INFO: Get vm [ferw-415]
+UUID: dd8494f2-b902-4213-5e3e-f501db96a9a5
+Power State: off
+
+--- VM [377] ---
+INFO: Get vm [ferw-416]
+UUID: 6c7dc868-89ce-4b10-4570-354268882296
+Power State: off
+
+--- VM [378] ---
+INFO: Get vm [ferw-417]
+UUID: 6c74b6c6-5aa8-4de6-42a1-c4249a4adbce
+Power State: off
+
+--- VM [379] ---
+INFO: Get vm [ferw-418]
+UUID: fdb5352b-9d36-4193-5529-d11bdf2fb698
+Power State: off
+
+--- VM [380] ---
+INFO: Get vm [ferw-419]
+UUID: 85f770a9-85a5-4550-7883-647b124fb9bc
+Power State: off
+
+--- VM [381] ---
+INFO: Get vm [ferw-420]
+UUID: 8b285e40-3180-444e-7773-e2cacd7e901e
+Power State: off
+
+--- VM [382] ---
+INFO: Get vm [ferw-421]
+UUID: 3940cbff-b406-4800-660e-1c6a61e2f317
+Power State: off
+
+--- VM [383] ---
+INFO: Get vm [ferw-422]
+UUID: 0e612266-a76a-49db-4e7a-90fd09a34f60
+Power State: off
+
+--- VM [384] ---
+INFO: Get vm [ferw-423]
+UUID: a00cc58d-1db9-48f0-6401-235069b2fff4
+Power State: off
+
+--- VM [385] ---
+INFO: Get vm [ferw-424]
+UUID: 78002585-5df0-4c8c-6751-a4dd5e067298
+Power State: off
+
+--- VM [386] ---
+INFO: Get vm [ferw-425]
+UUID: fe681a1b-12d7-4074-6bf3-c03c6c074678
+Power State: off
+
+--- VM [387] ---
+INFO: Get vm [ferw-426]
+UUID: 08959675-a4f5-414a-7b66-6f6ed7a461a2
+Power State: off
+
+--- VM [388] ---
+INFO: Get vm [ferw-427]
+UUID: 871067f1-f2ff-4372-5815-361432c63b26
+Power State: off
+
+--- VM [389] ---
+INFO: Get vm [ferw-428]
+UUID: 6dfefacb-7a6f-4c7c-6fa5-c01cf7712b0c
+Power State: off
+
+--- VM [390] ---
+INFO: Get vm [ferw-429]
+UUID: 82f1cba4-7428-4007-4b88-cf405294cbb2
+Power State: off
+
+--- VM [391] ---
+INFO: Get vm [ferw-430]
+UUID: a36c2998-6632-4e56-58ca-a0d8005d9472
+Power State: off
+
+--- VM [392] ---
+INFO: Get vm [ferw-431]
+UUID: 2486bd7e-fd2c-472f-462b-ea63cdb5a15a
+Power State: off
+
+--- VM [393] ---
+INFO: Get vm [ferw-432]
+UUID: 64d672c4-6c6c-4429-7d13-55fa40f44ffa
+Power State: off
+
+--- VM [394] ---
+INFO: Get vm [ferw-433]
+UUID: 6ffc1b8e-cbbb-446f-65d1-4e669f73b19a
+Power State: off
+
+--- VM [395] ---
+INFO: Get vm [ferw-434]
+UUID: fcb76690-68ec-4d52-5026-9963e187f6ae
+Power State: off
+
+--- VM [396] ---
+INFO: Get vm [ferw-435]
+UUID: 0a76741a-a318-43fd-7eb8-17eb6dd87730
+Power State: off
+
+--- VM [397] ---
+INFO: Get vm [ferw-436]
+UUID: b963160a-7e7e-45cb-68f6-a5ee686389cd
+Power State: off
+
+--- VM [398] ---
+INFO: Get vm [ferw-437]
+UUID: 1a0270ff-a371-4d2f-7be0-5a79d18eab0f
+Power State: off
+
+--- VM [399] ---
+INFO: Get vm [ferw-438]
+UUID: af0a0f78-4f88-4065-7289-2d211a4d4318
+Power State: off
+
+--- VM [400] ---
+INFO: Get vm [ferw-439]
+UUID: e6020231-813a-4e7f-5aca-6b4d4cc06616
+Power State: off
+
+--- VM [401] ---
+INFO: Get vm [ferw-440]
+UUID: 97b9005d-7b55-4762-6ed4-e10993525f4b
+Power State: off
+
+--- VM [402] ---
+INFO: Get vm [ferw-441]
+UUID: 584b05ba-49af-4b89-4834-3d55fbefc2a7
+Power State: off
+
+--- VM [403] ---
+INFO: Get vm [ferw-442]
+UUID: f2386a2b-bbe6-450a-6d49-e567c88f8705
+Power State: off
+
+--- VM [404] ---
+INFO: Get vm [ferw-443]
+UUID: e14ff44f-a810-4cc9-4385-ffeaf2814175
+Power State: off
+
+--- VM [405] ---
+INFO: Get vm [ferw-444]
+UUID: 42ce2ad7-5e62-41ad-7f19-9a01399a2191
+Power State: off
+
+--- VM [406] ---
+INFO: Get vm [ferw-445]
+UUID: 568accb4-fd5e-4bc4-62a0-e747b99cdef3
+Power State: off
+
+--- VM [407] ---
+INFO: Get vm [ferw-446]
+UUID: 2db58be2-eaf7-466e-4327-4751bffcdc74
+Power State: off
+
+--- VM [408] ---
+INFO: Get vm [ferw-447]
+UUID: f49065ef-63ec-4192-701f-988886861b73
+Power State: off
+
+--- VM [409] ---
+INFO: Get vm [ferw-448]
+UUID: 7c197a71-c80e-4bf5-44e6-7520714f6921
+Power State: off
+
+--- VM [410] ---
+INFO: Get vm [ferw-449]
+UUID: 688e251d-1f78-4fa1-4878-f78736a63b3a
+Power State: off
+
+--- VM [411] ---
+INFO: Get vm [ferw-450]
+UUID: 22e38cb7-4647-4297-6509-a39057cabb0f
+Power State: off
+
+--- VM [412] ---
+INFO: Get vm [ferw-451]
+UUID: 8fe7e4e0-487d-4056-6aad-9eacba943f61
+Power State: off
+
+--- VM [413] ---
+INFO: Get vm [ferw-452]
+UUID: e648f775-ea79-4842-70c9-d419cfd15745
+Power State: off
+
+--- VM [414] ---
+INFO: Get vm [ferw-453]
+UUID: 29d13564-96c3-4ef4-5e10-c0cfd7d18361
+Power State: off
+
+--- VM [415] ---
+INFO: Get vm [ferw-454]
+UUID: 6514f1ba-9d2c-4540-4434-3e5dc913bdc4
+Power State: off
+
+--- VM [416] ---
+INFO: Get vm [ferw-455]
+UUID: 3de4b377-ce33-443c-63e1-891e368438d9
+Power State: off
+
+--- VM [417] ---
+INFO: Get vm [ferw-456]
+UUID: 5f0c5b29-531e-4a82-6a2a-8e233a0a2232
+Power State: off
+
+--- VM [418] ---
+INFO: Get vm [ferw-457]
+UUID: 2b4135fc-83df-44c2-50b2-47d00201437c
+Power State: off
+
+--- VM [419] ---
+INFO: Get vm [ferw-458]
+UUID: 193daa13-788c-4579-5f51-427c2478fb16
+Power State: off
+
+--- VM [420] ---
+INFO: Get vm [ferw-459]
+UUID: 88e0ec1c-5d1a-4fb6-7cba-a12871cacae7
+Power State: off
+
+--- VM [421] ---
+INFO: Get vm [ferw-460]
+UUID: 82b65009-1da9-4490-7afd-dda45a22ce51
+Power State: off
+
+--- VM [422] ---
+INFO: Get vm [ferw-461]
+UUID: 379d62dd-8db2-4359-670b-eb558e570a7f
+Power State: off
+
+--- VM [423] ---
+INFO: Get vm [ferw-462]
+UUID: f934e284-f519-49f9-7067-e2feafc39095
+Power State: off
+
+--- VM [424] ---
+INFO: Get vm [ferw-463]
+UUID: 18d072a3-f081-451b-5f78-6ade135317a7
+Power State: off
+
+--- VM [425] ---
+INFO: Get vm [ferw-464]
+UUID: 9b544586-547d-45cd-4506-0554456b7891
+Power State: off
+
+--- VM [426] ---
+INFO: Get vm [ferw-465]
+UUID: b50f7295-9cc6-4617-68b7-122c72d51c5a
+Power State: off
+
+--- VM [427] ---
+INFO: Get vm [ferw-466]
+UUID: b142daab-efa7-4b5f-40e6-c0f17672e582
+Power State: off
+
+--- VM [428] ---
+INFO: Get vm [ferw-467]
+UUID: d5dfab41-e42c-437b-6415-034961d8983e
+Power State: off
+
+--- VM [429] ---
+INFO: Get vm [ferw-468]
+UUID: 625427ae-0473-4fee-531c-fc6925ea1912
+Power State: off
+
+--- VM [430] ---
+INFO: Get vm [ferw-469]
+UUID: d9eb8cf2-5c40-4a5d-583a-1bf42e900e41
+Power State: off
+
+--- VM [431] ---
+INFO: Get vm [ferw-470]
+UUID: 5460abc9-3cb7-4cf7-4d37-0e8553671ac0
+Power State: off
+
+--- VM [432] ---
+INFO: Get vm [ferw-471]
+UUID: 8ad468ff-17b6-43a5-66fa-c124eb2860c9
+Power State: off
+
+--- VM [433] ---
+INFO: Get vm [ferw-472]
+UUID: c46bfb43-d873-4665-4b6a-7d4a35c9f09a
+Power State: off
+
+--- VM [434] ---
+INFO: Get vm [ferw-473]
+UUID: 35ead851-8afe-4a9e-472d-9dd166b42bf7
+Power State: off
+
+--- VM [435] ---
+INFO: Get vm [ferw-474]
+UUID: 4a791183-9254-4eed-51a9-90a1763c9027
+Power State: off
+
+--- VM [436] ---
+INFO: Get vm [ferw-475]
+UUID: 39778d85-0081-4b41-49e1-bfbd8fb0651f
+Power State: off
+
+--- VM [437] ---
+INFO: Get vm [ferw-476]
+UUID: 0e1d7486-9ea2-430f-4e32-35d9c980584c
+Power State: off
+
+--- VM [438] ---
+INFO: Get vm [ferw-477]
+UUID: 916ba26d-eca7-400b-7527-154e2604f9b1
+Power State: off
+
+--- VM [439] ---
+INFO: Get vm [ferw-478]
+UUID: 70bed41a-2947-4b60-7219-7d36a1b54990
+Power State: off
+
+--- VM [440] ---
+INFO: Get vm [ferw-479]
+UUID: 39cce500-ebc7-4fcd-402a-a66eb1882329
+Power State: off
+
+--- VM [441] ---
+INFO: Get vm [ferw-480]
+UUID: 4dc776b7-ad93-4c37-4ea9-1166bd479dd5
+Power State: off
+
+--- VM [442] ---
+INFO: Get vm [ferw-481]
+UUID: fda81c5c-9d07-4807-4f9d-66e82cdf3665
+Power State: off
+
+--- VM [443] ---
+INFO: Get vm [ferw-482]
+UUID: 2e300bdd-11a6-42ae-4271-73853d2382f6
+Power State: off
+
+--- VM [444] ---
+INFO: Get vm [ferw-483]
+UUID: bac8fa60-1d57-45ad-69ba-b9c045bde39e
+Power State: off
+
+--- VM [445] ---
+INFO: Get vm [ferw-484]
+UUID: a7a2dd0e-f61d-4f4d-70a8-3ea2bb7d0081
+Power State: off
+
+--- VM [446] ---
+INFO: Get vm [ferw-485]
+UUID: 962e0b05-c251-4494-6302-45cef551e38d
+Power State: off
+
+--- VM [447] ---
+INFO: Get vm [ferw-486]
+UUID: 3d8017ce-b289-4f74-427d-c1cabd6d38d2
+Power State: off
+
+--- VM [448] ---
+INFO: Get vm [ferw-487]
+UUID: d35922c2-cb91-4b50-576d-20ee4d12b954
+Power State: off
+
+--- VM [449] ---
+INFO: Get vm [ferw-488]
+UUID: 7ad877fc-5a84-495e-57a1-36742071d3ac
+Power State: off
+
+--- VM [450] ---
+INFO: Get vm [ferw-489]
+UUID: d688969f-defe-4532-464f-aecf00eee341
+Power State: off
+
+--- VM [451] ---
+INFO: Get vm [ferw-490]
+UUID: 1f397ac0-5f7c-41a1-7adf-dbecfa45019f
+Power State: off
+
+--- VM [452] ---
+INFO: Get vm [ferw-491]
+UUID: 3c757168-010d-4a73-7afc-4c38b68b6b16
+Power State: off
+
+--- VM [453] ---
+INFO: Get vm [ferw-492]
+UUID: 608961f7-c69b-44d2-427b-65f3e866b88d
+Power State: off
+
+--- VM [454] ---
+INFO: Get vm [ferw-493]
+UUID: 077dfd2e-f646-4891-68b7-423335b23260
+Power State: off
+
+--- VM [455] ---
+INFO: Get vm [ferw-494]
+UUID: ecbb7918-c3e7-4ce0-6a85-3d319e6e22e7
+Power State: off
+
+--- VM [456] ---
+INFO: Get vm [ferw-495]
+UUID: f651b1ac-c9c0-4426-52ca-82121f7783b6
+Power State: off
+
+--- VM [457] ---
+INFO: Get vm [ferw-496]
+UUID: 408377b5-89b0-4b3f-6ec4-6dd62e39c614
+Power State: off
+
+--- VM [458] ---
+INFO: Get vm [ferw-497]
+UUID: 1201ba7f-0f7a-4935-7598-571955df879a
+Power State: off
+
+--- VM [459] ---
+INFO: Get vm [ferw-498]
+UUID: e4792be1-2c62-49ed-71d3-62a596c44b38
+Power State: off
+
+--- VM [460] ---
+INFO: Get vm [ferw-499]
+UUID: 89eee217-acd8-4e6a-708a-1bd0ea8347ce
+Power State: off
+
+--- VM [461] ---
+INFO: Get vm [ferw-500]
+UUID: 60dbb4a0-3b11-4ce2-4cc1-84d07c2b04c1
+Power State: off
+
+--- VM [462] ---
+INFO: Get vm [ferw-501]
+UUID: 213dbd62-96b4-4748-78d3-035aed81f7bf
+Power State: off
+
+--- VM [463] ---
+INFO: Get vm [ferw-502]
+UUID: 43f065eb-4f6c-4c83-4a36-01ee3e192352
+Power State: off
+
+--- VM [464] ---
+INFO: Get vm [ferw-503]
+UUID: d7569391-17d5-48b1-57bc-9be811561c40
+Power State: off
+
+--- VM [465] ---
+INFO: Get vm [ferw-504]
+UUID: 49be04ce-7725-4da8-7d0e-94739321e029
+Power State: off
+
+--- VM [466] ---
+INFO: Get vm [ferw-505]
+UUID: e980c4a0-5b63-47c9-675d-e6287014408d
+Power State: off
+
+--- VM [467] ---
+INFO: Get vm [ferw-506]
+UUID: 5c279892-9086-48f3-4a74-3c734e9fe14f
+Power State: off
+
+--- VM [468] ---
+INFO: Get vm [ferw-507]
+UUID: 52c6e784-1de7-451e-673a-ef2932c4ed93
+Power State: off
+
+--- VM [469] ---
+INFO: Get vm [ferw-508]
+UUID: 89e359a2-c90f-455b-4f8e-5bbba14896d1
+Power State: off
+
+--- VM [470] ---
+INFO: Get vm [ferw-509]
+UUID: d33d3628-c0a3-44ec-51c9-2c82086b7a06
+Power State: off
+
+--- VM [471] ---
+INFO: Get vm [ferw-510]
+UUID: 27529fed-e44b-4d35-6e55-8e9a2293f28a
+Power State: off
+
+--- VM [472] ---
+INFO: Get vm [ferw-511]
+UUID: 8bf8b5c1-8291-4788-65b1-f3183a93e655
+Power State: off
+
+--- VM [473] ---
+INFO: Get vm [ferw-512]
+UUID: c87105ec-1382-42ae-4fd8-48c7edc29706
+Power State: off
+
+--- VM [474] ---
+INFO: Get vm [ferw-513]
+UUID: eb4c9a79-f8ff-450d-4203-3631f127124f
+Power State: off
+
+--- VM [475] ---
+INFO: Get vm [ferw-514]
+UUID: 920dce7c-db0a-4691-5642-6ddcd1afd8a1
+Power State: off
+
+--- VM [476] ---
+INFO: Get vm [ferw-515]
+UUID: 84e08565-dbd1-43e4-7ae5-bed574423527
+Power State: off
+
+--- VM [477] ---
+INFO: Get vm [ferw-516]
+UUID: c38d6647-16ad-44e7-5a83-ac84e170a1df
+Power State: off
+
+--- VM [478] ---
+INFO: Get vm [ferw-517]
+UUID: edaadc87-f6bb-4b61-7e95-5b28334e1aa8
+Power State: off
+
+--- VM [479] ---
+INFO: Get vm [ferw-518]
+UUID: e49efc94-30b7-4425-7058-bf6fb2aff32a
+Power State: off
+
+--- VM [480] ---
+INFO: Get vm [ferw-519]
+UUID: f0ed463c-03c1-4aea-4581-c0a8ceb7ef45
+Power State: off
+
+--- VM [481] ---
+INFO: Get vm [ferw-520]
+UUID: c1c87c4c-672c-4226-7d96-0babaf32535c
+Power State: off
+
+--- VM [482] ---
+INFO: Get vm [ferw-521]
+UUID: ef366fd4-9c24-45d1-67c1-540a0a500140
+Power State: off
+
+--- VM [483] ---
+INFO: Get vm [ferw-522]
+UUID: d3387b19-331a-41e3-4b9a-6ded9cbe59ab
+Power State: off
+
+--- VM [484] ---
+INFO: Get vm [ferw-523]
+UUID: 1c389b17-a1bf-4839-4fa5-e22fcd844774
+Power State: off
+
+--- VM [485] ---
+INFO: Get vm [ferw-524]
+UUID: 987ca796-d590-4e39-4872-61ddddb7f230
+Power State: off
+
+--- VM [486] ---
+INFO: Get vm [ferw-525]
+UUID: 3e311225-1ac5-452f-7c21-163147f04152
+Power State: off
+
+--- VM [487] ---
+INFO: Get vm [ferw-526]
+UUID: 17a083bd-5678-4189-75af-4925ef387688
+Power State: off
+
+--- VM [488] ---
+INFO: Get vm [ferw-527]
+UUID: 55068c14-00ed-4679-59e7-dbaca0a7e257
+Power State: off
+
+--- VM [489] ---
+INFO: Get vm [ferw-528]
+UUID: 9146a92a-713b-43ed-7177-0268153d735d
+Power State: off
+
+--- VM [490] ---
+INFO: Get vm [ferw-529]
+UUID: 9dbfce7f-f2a3-49cc-4e12-6e7501298266
+Power State: off
+
+--- VM [491] ---
+INFO: Get vm [ferw-530]
+UUID: 0388c70e-c28b-471c-56ea-33e541e6fa1c
+Power State: off
+
+--- VM [492] ---
+INFO: Get vm [ferw-531]
+UUID: b3403885-a419-40a4-731e-48d5c9d1acdd
+Power State: off
+
+--- VM [493] ---
+INFO: Get vm [ferw-532]
+UUID: 76457f61-64fc-4cc6-7990-37853a41aa76
+Power State: off
+
+--- VM [494] ---
+INFO: Get vm [ferw-533]
+UUID: 412ad638-2042-4fe8-5d96-25382176e309
+Power State: off
+
+--- VM [495] ---
+INFO: Get vm [ferw-534]
+UUID: 4d3f3ffe-0de6-4e71-62f0-6dd76a836812
+Power State: off
+
+--- VM [496] ---
+INFO: Get vm [ferw-535]
+UUID: afb33280-4b51-4f02-7dc7-875100d2cc41
+Power State: off
+
+--- VM [497] ---
+INFO: Get vm [ferw-536]
+UUID: 6dd18db3-84eb-4519-46ab-d7b1aece09c2
+Power State: off
+
+--- VM [498] ---
+INFO: Get vm [ferw-537]
+UUID: 6031881f-f07e-451a-4005-94fdfba96709
+Power State: off
+
+--- VM [499] ---
+INFO: Get vm [ferw-538]
+UUID: a7e04062-eeee-4ece-6a57-416b1af3e19a
+Power State: off
+
+--- VM [500] ---
+INFO: Get vm [ferw-539]
+UUID: b10f07c1-f520-4255-5ab2-765a150d98b0
+Power State: off
+
+Batch 1: powering on 498 VM(s) with up to 4 concurrent workers…
+INFO: Powering on for vm [ferw-042]
+INFO: Powering on for vm [ferw-043]
+INFO: Powering on for vm [ferw-044]
+INFO: Powering on for vm [ferw-045]
+DEBUG [ferw-044] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:c3c91da0-548c-526d-b5ca-e086423556ba"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-042] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d80b8d5e-f926-5026-977c-4f4dab5f7b8f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-043] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:676d57e8-109e-50a4-8dd0-19aa7f1e74dc"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-044] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-042] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-043] (Attempt 1/10)
+DEBUG [ferw-045] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e9025b3b-f5c3-54d8-a23c-445cb6668a75"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-045] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-044] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-043] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-045] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-042] (Attempt 2/10)
+INFO: VM [ferw-044] powered on
+INFO: VM [ferw-044] got ip [10.53.50.232]
+INFO: Powering on for vm [ferw-046]
+RESULT OK: ferw-044 (eca89944…)
+DEBUG [ferw-046] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b1c89a01-712d-5c7f-b9cc-bb3b4aacf37e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-043] powered on
+INFO: VM [ferw-042] powered on
+INFO: VM [ferw-045] powered on
+INFO: waiting for powering on for VM [ferw-046] (Attempt 1/10)
+INFO: VM [ferw-045] got ip [10.53.26.123]
+INFO: Powering on for vm [ferw-047]
+RESULT OK: ferw-045 (45ef5d08…)
+INFO: VM [ferw-043] got ip [10.53.45.210]
+INFO: Powering on for vm [ferw-048]
+RESULT OK: ferw-043 (cd3cdeb3…)
+INFO: VM [ferw-042] got ip [10.53.51.234]
+INFO: Powering on for vm [ferw-049]
+RESULT OK: ferw-042 (93d71e15…)
+DEBUG [ferw-047] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:ae491d34-a1fc-567e-bf7b-39dcfd19bb44"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-049] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5d155f73-7d24-594c-93ee-b0150084c1ce"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-048] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:151b8892-03ca-548e-824d-daa905e21c7a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-047] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-048] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-049] (Attempt 1/10)
+INFO: VM [ferw-046] powered on
+INFO: VM [ferw-046] got ip [10.53.35.64]
+INFO: Powering on for vm [ferw-050]
+RESULT OK: ferw-046 (7f07b5c0…)
+DEBUG [ferw-050] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:cfb930a6-1141-50e9-affd-b9f568bc31b1"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-050] (Attempt 1/10)
+INFO: VM [ferw-047] powered on
+INFO: VM [ferw-047] got ip [10.53.27.127]
+INFO: Powering on for vm [ferw-051]
+RESULT OK: ferw-047 (8490656a…)
+INFO: VM [ferw-048] powered on
+INFO: VM [ferw-049] powered on
+DEBUG [ferw-051] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:c1ca938c-59ce-5154-afaf-2c1199b269d2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-049] got ip [10.53.21.192]
+INFO: Powering on for vm [ferw-052]
+RESULT OK: ferw-049 (ad199eb4…)
+INFO: VM [ferw-048] got ip [10.53.10.166]
+INFO: Powering on for vm [ferw-053]
+RESULT OK: ferw-048 (99acaa4b…)
+INFO: waiting for powering on for VM [ferw-051] (Attempt 1/10)
+DEBUG [ferw-053] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:eef70cc3-aeb3-5c2e-bfbb-4228e6e2ef06"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-052] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:38a8de63-7d5b-59ca-872f-0079a0aedf1f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-053] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-052] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-050] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-051] (Attempt 2/10)
+INFO: VM [ferw-053] powered on
+INFO: VM [ferw-052] powered on
+INFO: VM [ferw-050] powered on
+INFO: VM [ferw-053] got ip [10.53.11.241]
+INFO: Powering on for vm [ferw-054]
+RESULT OK: ferw-053 (4efb8360…)
+INFO: VM [ferw-050] got ip [10.53.35.187]
+INFO: VM [ferw-052] got ip [10.53.27.141]
+INFO: Powering on for vm [ferw-055]
+RESULT OK: ferw-050 (b77e11bb…)
+INFO: Powering on for vm [ferw-056]
+RESULT OK: ferw-052 (8928a5d4…)
+DEBUG [ferw-054] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:204703a2-5216-5b4d-9096-41cefd348546"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-056] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:accd898a-59a7-5ef9-a22d-a36613524012"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-054] (Attempt 1/10)
+DEBUG [ferw-055] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:885c0ed8-66ec-5fe1-99e5-c6352931f79e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-056] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-055] (Attempt 1/10)
+INFO: VM [ferw-051] powered on
+INFO: VM [ferw-051] got ip [10.53.32.238]
+INFO: Powering on for vm [ferw-057]
+RESULT OK: ferw-051 (c11e4e80…)
+DEBUG [ferw-057] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:fecd0be9-cb84-535c-ae71-2adeaa913a6e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-057] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-054] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-056] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-055] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-057] (Attempt 2/10)
+INFO: VM [ferw-054] powered on
+INFO: VM [ferw-056] powered on
+INFO: VM [ferw-054] got ip [10.53.19.199]
+INFO: Powering on for vm [ferw-058]
+RESULT OK: ferw-054 (37ede60b…)
+INFO: waiting for powering on for VM [ferw-055] (Attempt 3/10)
+INFO: VM [ferw-056] got ip [10.53.38.60]
+INFO: Powering on for vm [ferw-059]
+RESULT OK: ferw-056 (844aac98…)
+DEBUG [ferw-058] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3b5f764f-60ca-555a-b5ef-ee2c84fdab3b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-059] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:652a82c9-f098-57bc-b0b8-8df7a1985212"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-058] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-059] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-057] (Attempt 3/10)
+INFO: VM [ferw-055] powered on
+INFO: VM [ferw-055] got ip [10.53.46.117]
+INFO: Powering on for vm [ferw-060]
+RESULT OK: ferw-055 (6806457f…)
+INFO: waiting for powering on for VM [ferw-058] (Attempt 2/10)
+DEBUG [ferw-060] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:0cdbf8eb-8c35-5842-8565-9191827ef913"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-059] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-060] (Attempt 1/10)
+INFO: VM [ferw-057] powered on
+INFO: VM [ferw-057] got ip [10.53.40.53]
+INFO: Powering on for vm [ferw-061]
+RESULT OK: ferw-057 (c630889f…)
+DEBUG [ferw-061] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b8903fd9-4bc4-5b45-88e7-9385c5aeb842"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-061] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-058] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-059] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-060] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-061] (Attempt 2/10)
+INFO: VM [ferw-058] powered on
+INFO: VM [ferw-059] powered on
+INFO: VM [ferw-058] got ip [10.53.32.100]
+INFO: Powering on for vm [ferw-062]
+RESULT OK: ferw-058 (852299ba…)
+INFO: VM [ferw-059] got ip [10.53.42.1]
+INFO: Powering on for vm [ferw-063]
+RESULT OK: ferw-059 (945aadd4…)
+INFO: VM [ferw-060] powered on
+DEBUG [ferw-062] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:ea683bc3-d604-58aa-a735-ac1b1c9b5b8b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-063] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e48531e7-a480-5019-9d0c-0fe79e0b75ee"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-060] got ip [10.53.30.210]
+INFO: Powering on for vm [ferw-064]
+RESULT OK: ferw-060 (b392ecdb…)
+INFO: waiting for powering on for VM [ferw-063] (Attempt 1/10)
+INFO: VM [ferw-061] powered on
+DEBUG [ferw-064] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:4ba94c40-f6a6-5d50-ac69-fac84f58867b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-062] (Attempt 1/10)
+INFO: VM [ferw-061] got ip [10.53.47.145]
+INFO: Powering on for vm [ferw-065]
+RESULT OK: ferw-061 (f31b52f9…)
+INFO: waiting for powering on for VM [ferw-064] (Attempt 1/10)
+DEBUG [ferw-065] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:1f37fee1-7206-583e-a203-7d3c9449ff54"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-065] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-063] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-062] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-064] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-065] (Attempt 2/10)
+INFO: VM [ferw-063] powered on
+INFO: VM [ferw-063] got ip [10.53.40.176]
+INFO: Powering on for vm [ferw-066]
+RESULT OK: ferw-063 (68eaf5aa…)
+INFO: VM [ferw-062] powered on
+INFO: VM [ferw-064] powered on
+DEBUG [ferw-066] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d9dfd0e1-af1f-5e8c-8d68-f30ddaec15c1"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-064] got ip [10.53.39.193]
+INFO: Powering on for vm [ferw-067]
+RESULT OK: ferw-064 (d8d62d19…)
+INFO: VM [ferw-062] got ip [10.53.15.2]
+INFO: Powering on for vm [ferw-068]
+RESULT OK: ferw-062 (94b7c099…)
+INFO: VM [ferw-065] powered on
+DEBUG [ferw-067] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2c234f42-fa78-5209-ba85-199717a70a4c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-066] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-067] (Attempt 1/10)
+INFO: VM [ferw-065] got ip [10.53.53.57]
+INFO: Powering on for vm [ferw-069]
+RESULT OK: ferw-065 (565b259a…)
+DEBUG [ferw-068] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:1d628299-fad7-5ed1-9773-c75747aeb880"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-068] (Attempt 1/10)
+DEBUG [ferw-069] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e62a2e53-10d4-535d-9357-caf1ff442b7b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-069] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-066] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-067] (Attempt 2/10)
+INFO: VM [ferw-068] powered on
+INFO: VM [ferw-068] got ip [10.53.51.129]
+INFO: Powering on for vm [ferw-070]
+RESULT OK: ferw-068 (a62c8e0f…)
+INFO: waiting for powering on for VM [ferw-069] (Attempt 2/10)
+DEBUG [ferw-070] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:edddb4f1-df90-5c21-a6d5-21a851bb9f8c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-070] (Attempt 1/10)
+INFO: VM [ferw-066] powered on
+INFO: VM [ferw-066] got ip [10.53.41.230]
+INFO: Powering on for vm [ferw-071]
+RESULT OK: ferw-066 (2d10e550…)
+INFO: VM [ferw-067] powered on
+DEBUG [ferw-071] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:7f827102-3781-5478-99de-5d2ecd65bdc9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-067] got ip [10.53.50.203]
+INFO: Powering on for vm [ferw-072]
+RESULT OK: ferw-067 (3accb44f…)
+INFO: waiting for powering on for VM [ferw-071] (Attempt 1/10)
+DEBUG [ferw-072] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:cf14e174-2e10-5f0e-bf17-539a8d616cf4"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-069] powered on
+INFO: waiting for powering on for VM [ferw-072] (Attempt 1/10)
+INFO: VM [ferw-069] got ip [10.53.36.229]
+INFO: Powering on for vm [ferw-073]
+RESULT OK: ferw-069 (e38a02dd…)
+INFO: waiting for powering on for VM [ferw-070] (Attempt 2/10)
+DEBUG [ferw-073] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:62647fd9-885c-5835-b603-d0f1296d79bb"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-073] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-071] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-072] (Attempt 2/10)
+INFO: VM [ferw-070] powered on
+INFO: VM [ferw-070] got ip [10.53.42.27]
+INFO: Powering on for vm [ferw-074]
+RESULT OK: ferw-070 (6cca555e…)
+DEBUG [ferw-074] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:00a05fb4-4182-512f-b154-1cb4bc05fb70"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-073] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-074] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-071] (Attempt 3/10)
+INFO: VM [ferw-072] powered on
+INFO: VM [ferw-072] got ip [10.53.10.159]
+INFO: Powering on for vm [ferw-075]
+RESULT OK: ferw-072 (f11dcdaa…)
+DEBUG [ferw-075] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8e895964-1f16-5e83-97a0-d2df02612a37"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-073] powered on
+INFO: waiting for powering on for VM [ferw-075] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-074] (Attempt 2/10)
+INFO: VM [ferw-073] got ip [10.53.31.36]
+INFO: Powering on for vm [ferw-076]
+RESULT OK: ferw-073 (96973275…)
+DEBUG [ferw-076] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:ddecb63d-a5f1-5d7c-93a6-ea563f51bfbc"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-076] (Attempt 1/10)
+INFO: VM [ferw-071] powered on
+INFO: VM [ferw-071] got ip [10.53.42.118]
+INFO: Powering on for vm [ferw-077]
+RESULT OK: ferw-071 (a16b0082…)
+DEBUG [ferw-077] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:676119c1-2d2d-5946-8e64-8592828eff63"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-077] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-075] (Attempt 2/10)
+INFO: VM [ferw-074] powered on
+INFO: VM [ferw-074] got ip [10.53.34.35]
+INFO: Powering on for vm [ferw-078]
+RESULT OK: ferw-074 (d492c702…)
+DEBUG [ferw-078] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:6f5f8698-49cc-59b6-818f-8c4c87626fe3"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-078] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-076] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-077] (Attempt 2/10)
+INFO: VM [ferw-075] powered on
+INFO: VM [ferw-075] got ip [10.53.2.16]
+INFO: Powering on for vm [ferw-079]
+RESULT OK: ferw-075 (53a9864f…)
+DEBUG [ferw-079] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:4965fc30-6e41-5463-a866-92d7bd8cf3bf"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-079] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-078] (Attempt 2/10)
+INFO: VM [ferw-076] powered on
+INFO: VM [ferw-076] got ip [10.53.32.169]
+INFO: Powering on for vm [ferw-080]
+RESULT OK: ferw-076 (65828d90…)
+DEBUG [ferw-080] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d86e0fc1-bd36-5152-9845-f94993e90713"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-080] (Attempt 1/10)
+INFO: VM [ferw-077] powered on
+INFO: VM [ferw-077] got ip [10.53.39.121]
+INFO: Powering on for vm [ferw-081]
+RESULT OK: ferw-077 (5153e39a…)
+DEBUG [ferw-081] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:dd27577f-c300-5f72-b3e2-36e40d420b55"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-081] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-079] (Attempt 2/10)
+INFO: VM [ferw-078] powered on
+INFO: VM [ferw-078] got ip [10.53.32.224]
+INFO: Powering on for vm [ferw-082]
+RESULT OK: ferw-078 (b708ad5d…)
+DEBUG [ferw-082] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:bdaae1d2-369c-5caf-97ca-1b0239a4d312"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-080] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-082] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-081] (Attempt 2/10)
+INFO: VM [ferw-079] powered on
+INFO: VM [ferw-079] got ip [10.53.52.169]
+INFO: Powering on for vm [ferw-083]
+RESULT OK: ferw-079 (4f172d52…)
+DEBUG [ferw-083] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5b733e76-6efb-59a7-b4df-45ad154ce275"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-083] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-080] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-082] (Attempt 2/10)
+INFO: VM [ferw-081] powered on
+INFO: VM [ferw-081] got ip [10.53.39.80]
+INFO: Powering on for vm [ferw-084]
+RESULT OK: ferw-081 (136377ff…)
+DEBUG [ferw-084] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:c7aad941-c961-57d8-ae20-c65d016d6486"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-084] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-083] (Attempt 2/10)
+INFO: VM [ferw-080] powered on
+INFO: VM [ferw-082] powered on
+INFO: VM [ferw-080] got ip [10.53.10.102]
+INFO: Powering on for vm [ferw-085]
+RESULT OK: ferw-080 (cdb88b6f…)
+INFO: VM [ferw-082] got ip [10.53.18.127]
+INFO: Powering on for vm [ferw-086]
+RESULT OK: ferw-082 (fe4cae5b…)
+DEBUG [ferw-085] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:27d79c4b-7c5c-5c5d-ae1c-db2d371e0045"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-086] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8d50b157-78e4-577d-a132-c9e8f7a1aaf8"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-085] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-086] (Attempt 1/10)
+INFO: VM [ferw-084] powered on
+INFO: VM [ferw-084] got ip [10.53.32.196]
+INFO: Powering on for vm [ferw-087]
+RESULT OK: ferw-084 (b070fc07…)
+INFO: VM [ferw-083] powered on
+DEBUG [ferw-087] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e90acfa5-7115-5d5e-b3ad-566c45fcb274"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-083] got ip [10.53.51.239]
+INFO: Powering on for vm [ferw-088]
+RESULT OK: ferw-083 (561ed671…)
+INFO: waiting for powering on for VM [ferw-087] (Attempt 1/10)
+DEBUG [ferw-088] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e255c9be-6d2a-5eff-84d3-203598892522"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-088] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-085] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-086] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-087] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-088] (Attempt 2/10)
+INFO: VM [ferw-085] powered on
+INFO: VM [ferw-085] got ip [10.53.45.223]
+INFO: Powering on for vm [ferw-089]
+RESULT OK: ferw-085 (128c7d1c…)
+INFO: VM [ferw-086] powered on
+INFO: VM [ferw-086] got ip [10.53.28.226]
+INFO: Powering on for vm [ferw-090]
+RESULT OK: ferw-086 (caa33d6a…)
+DEBUG [ferw-089] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:159e8f39-95fd-50e5-b2a2-222ebbccb0b4"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-090] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5745b1f9-bc32-5846-aadb-fc384843baf2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-089] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-090] (Attempt 1/10)
+INFO: VM [ferw-087] powered on
+INFO: VM [ferw-087] got ip [10.53.48.178]
+INFO: Powering on for vm [ferw-091]
+RESULT OK: ferw-087 (2bd783c2…)
+DEBUG [ferw-091] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e49afcbe-b5eb-5eb7-bc70-fd1b76fb6fd9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-088] powered on
+INFO: waiting for powering on for VM [ferw-091] (Attempt 1/10)
+INFO: VM [ferw-088] got ip [10.53.33.30]
+INFO: Powering on for vm [ferw-092]
+RESULT OK: ferw-088 (0982e6b2…)
+DEBUG [ferw-092] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:923abec8-62bd-5a82-856f-ca38ce951ea5"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-092] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-089] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-090] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-091] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-092] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-089] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-090] (Attempt 3/10)
+INFO: VM [ferw-091] powered on
+INFO: VM [ferw-091] got ip [10.53.33.65]
+INFO: Powering on for vm [ferw-093]
+RESULT OK: ferw-091 (e74258cc…)
+DEBUG [ferw-093] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8b79c640-9281-5e61-bc2e-08eb1be0eef5"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-093] (Attempt 1/10)
+INFO: VM [ferw-092] powered on
+INFO: VM [ferw-089] powered on
+INFO: VM [ferw-092] got ip [10.53.1.3]
+INFO: Powering on for vm [ferw-094]
+RESULT OK: ferw-092 (d78d96cf…)
+INFO: VM [ferw-090] powered on
+DEBUG [ferw-094] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2a81a113-1896-5d6b-9921-59f417a74d92"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-089] got ip [10.53.13.63]
+INFO: VM [ferw-090] got ip [10.53.11.151]
+INFO: Powering on for vm [ferw-095]
+RESULT OK: ferw-089 (44a53f93…)
+INFO: Powering on for vm [ferw-096]
+RESULT OK: ferw-090 (62373378…)
+INFO: waiting for powering on for VM [ferw-094] (Attempt 1/10)
+DEBUG [ferw-095] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:7bdfc0bb-3aa4-5414-837a-c35fc43c1bb4"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-096] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8f4e0422-9ce4-5a95-9772-106eacd2059b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-095] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-096] (Attempt 1/10)
+INFO: VM [ferw-093] powered on
+INFO: VM [ferw-093] got ip [10.53.53.215]
+INFO: Powering on for vm [ferw-097]
+RESULT OK: ferw-093 (e1277546…)
+DEBUG [ferw-097] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:93bff3a3-7ecd-5cbd-942b-5678a072e22a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-097] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-094] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-095] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-096] (Attempt 2/10)
+INFO: VM [ferw-097] powered on
+INFO: VM [ferw-097] got ip [10.53.25.44]
+INFO: Powering on for vm [ferw-098]
+RESULT OK: ferw-097 (8274f01a…)
+INFO: VM [ferw-094] powered on
+DEBUG [ferw-098] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8ea053a5-dd87-5d10-aceb-d20df0b336dc"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-098] (Attempt 1/10)
+INFO: VM [ferw-094] got ip [10.53.2.246]
+INFO: Powering on for vm [ferw-099]
+RESULT OK: ferw-094 (f0cad2c2…)
+DEBUG [ferw-099] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5cd43f3b-9ea4-5d99-b972-dc70cd464c43"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-096] powered on
+INFO: VM [ferw-095] powered on
+INFO: waiting for powering on for VM [ferw-099] (Attempt 1/10)
+INFO: VM [ferw-095] got ip [10.53.21.140]
+INFO: VM [ferw-096] got ip [10.53.39.82]
+INFO: Powering on for vm [ferw-100]
+RESULT OK: ferw-095 (d3a63e14…)
+INFO: Powering on for vm [ferw-101]
+RESULT OK: ferw-096 (2eda7dfc…)
+DEBUG [ferw-100] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:00b64865-11c9-56d9-a009-e7845cfdb7a1"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-101] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:808c784e-f5bc-5eed-9e93-8ad598f617a0"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-100] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-101] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-098] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-099] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-101] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-100] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-098] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-099] (Attempt 3/10)
+INFO: VM [ferw-101] powered on
+INFO: VM [ferw-101] got ip [10.53.0.119]
+INFO: Powering on for vm [ferw-102]
+RESULT OK: ferw-101 (3a6b802d…)
+INFO: VM [ferw-100] powered on
+DEBUG [ferw-102] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:4e53f253-0d93-5a85-8985-7e51fa63efed"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-102] (Attempt 1/10)
+INFO: VM [ferw-100] got ip [10.53.16.193]
+INFO: Powering on for vm [ferw-103]
+RESULT OK: ferw-100 (78303a55…)
+INFO: VM [ferw-098] powered on
+DEBUG [ferw-103] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5a1d628e-af62-5088-b620-061103afc908"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-098] got ip [10.53.7.77]
+INFO: Powering on for vm [ferw-104]
+RESULT OK: ferw-098 (4404a9d6…)
+INFO: waiting for powering on for VM [ferw-103] (Attempt 1/10)
+INFO: VM [ferw-099] powered on
+DEBUG [ferw-104] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:332ab3ec-5785-57fe-b48a-f98f55fdbac9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-099] got ip [10.53.16.6]
+INFO: Powering on for vm [ferw-105]
+RESULT OK: ferw-099 (2eae714a…)
+INFO: waiting for powering on for VM [ferw-104] (Attempt 1/10)
+DEBUG [ferw-105] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:cf8adf61-dba1-50cb-adfa-7ed61ecbe0e7"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-105] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-102] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-103] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-104] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-105] (Attempt 2/10)
+INFO: VM [ferw-102] powered on
+INFO: VM [ferw-102] got ip [10.53.19.160]
+INFO: Powering on for vm [ferw-106]
+RESULT OK: ferw-102 (49399fd2…)
+DEBUG [ferw-106] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:93ac32fa-ab25-5d11-9062-0fbabc863195"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-103] powered on
+INFO: waiting for powering on for VM [ferw-106] (Attempt 1/10)
+INFO: VM [ferw-103] got ip [10.53.51.45]
+INFO: Powering on for vm [ferw-107]
+RESULT OK: ferw-103 (93ab1cdf…)
+DEBUG [ferw-107] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:1bce0b2d-d34b-58ef-8e55-8fdfa0da010f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-104] powered on
+INFO: waiting for powering on for VM [ferw-107] (Attempt 1/10)
+INFO: VM [ferw-105] powered on
+INFO: VM [ferw-104] got ip [10.53.3.8]
+INFO: Powering on for vm [ferw-108]
+RESULT OK: ferw-104 (742fdfbe…)
+INFO: VM [ferw-105] got ip [10.53.15.45]
+INFO: Powering on for vm [ferw-109]
+RESULT OK: ferw-105 (97639613…)
+DEBUG [ferw-108] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:de49d759-c9c5-580a-aa17-b04c5b3c874c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-109] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b9843588-84c3-5fe6-b2ec-83164be40cd4"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-109] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-108] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-106] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-107] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-109] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-108] (Attempt 2/10)
+INFO: VM [ferw-106] powered on
+INFO: VM [ferw-106] got ip [10.53.18.120]
+INFO: Powering on for vm [ferw-110]
+RESULT OK: ferw-106 (be6eb4a4…)
+INFO: VM [ferw-107] powered on
+DEBUG [ferw-110] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:850e4b53-a742-52f1-8323-8c7b59d3324e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-107] got ip [10.53.9.119]
+INFO: Powering on for vm [ferw-111]
+RESULT OK: ferw-107 (3943acff…)
+INFO: waiting for powering on for VM [ferw-110] (Attempt 1/10)
+DEBUG [ferw-111] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:dad0a0ad-59a0-566e-9ccd-c4e9a8af7b09"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-111] (Attempt 1/10)
+INFO: VM [ferw-109] powered on
+INFO: VM [ferw-108] powered on
+INFO: VM [ferw-108] got ip [10.53.13.33]
+INFO: Powering on for vm [ferw-112]
+RESULT OK: ferw-108 (83aa3da3…)
+INFO: VM [ferw-109] got ip [10.53.8.88]
+INFO: Powering on for vm [ferw-113]
+RESULT OK: ferw-109 (9572c5d9…)
+DEBUG [ferw-112] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:30118d6f-ecc4-5236-9ebb-6067b21169b1"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-113] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:93125758-2158-5f4a-bea5-b411f375aca1"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-113] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-112] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-110] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-111] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-113] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-112] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-110] (Attempt 3/10)
+INFO: VM [ferw-111] powered on
+INFO: VM [ferw-111] got ip [10.53.25.3]
+INFO: Powering on for vm [ferw-114]
+RESULT OK: ferw-111 (6446f3ee…)
+DEBUG [ferw-114] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:33508668-4372-53fb-88b0-6fd6ebd43b21"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-114] (Attempt 1/10)
+INFO: VM [ferw-113] powered on
+INFO: VM [ferw-112] powered on
+INFO: VM [ferw-113] got ip [10.53.1.63]
+INFO: Powering on for vm [ferw-115]
+RESULT OK: ferw-113 (bdc79892…)
+INFO: VM [ferw-110] powered on
+INFO: VM [ferw-112] got ip [10.53.20.240]
+INFO: Powering on for vm [ferw-116]
+RESULT OK: ferw-112 (1bf6133a…)
+DEBUG [ferw-115] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8caf25de-5d83-5d92-b9f5-2e9575e54288"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-110] got ip [10.53.46.90]
+INFO: Powering on for vm [ferw-117]
+RESULT OK: ferw-110 (1625f93a…)
+DEBUG [ferw-116] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:f049cd6c-1deb-5981-a1c5-732baff3d962"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-115] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-116] (Attempt 1/10)
+DEBUG [ferw-117] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:adc100af-caa6-567a-8ba6-62bc5436e34e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-117] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-114] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-115] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-116] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-117] (Attempt 2/10)
+INFO: VM [ferw-114] powered on
+INFO: VM [ferw-114] got ip [10.53.43.176]
+INFO: Powering on for vm [ferw-118]
+RESULT OK: ferw-114 (6fd08ccf…)
+DEBUG [ferw-118] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:6da06146-0f19-5ddd-b4db-ed617c1d81a0"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-118] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-115] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-116] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-117] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-118] (Attempt 2/10)
+INFO: VM [ferw-115] powered on
+INFO: VM [ferw-116] powered on
+INFO: VM [ferw-115] got ip [10.53.3.204]
+INFO: Powering on for vm [ferw-119]
+RESULT OK: ferw-115 (9ed64080…)
+INFO: VM [ferw-117] powered on
+INFO: VM [ferw-116] got ip [10.53.23.218]
+INFO: Powering on for vm [ferw-120]
+RESULT OK: ferw-116 (24e2c244…)
+DEBUG [ferw-119] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:7d0c7ea7-9807-5456-bd94-722304fef99c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-117] got ip [10.53.27.233]
+INFO: Powering on for vm [ferw-121]
+RESULT OK: ferw-117 (60423300…)
+DEBUG [ferw-120] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:0df67018-51d9-51fb-b4fd-1a478a711185"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-119] (Attempt 1/10)
+DEBUG [ferw-121] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:39ef881c-4482-5506-8cdf-7e5e1542407d"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-120] (Attempt 1/10)
+INFO: VM [ferw-118] powered on
+INFO: waiting for powering on for VM [ferw-121] (Attempt 1/10)
+INFO: VM [ferw-118] got ip [10.53.41.175]
+INFO: Powering on for vm [ferw-122]
+RESULT OK: ferw-118 (535f6995…)
+DEBUG [ferw-122] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8b50d575-a4bd-582e-9937-5b50bf426f61"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-122] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-119] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-120] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-121] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-122] (Attempt 2/10)
+INFO: VM [ferw-119] powered on
+INFO: VM [ferw-119] got ip [10.53.45.102]
+INFO: Powering on for vm [ferw-123]
+RESULT OK: ferw-119 (d7c51d63…)
+INFO: VM [ferw-120] powered on
+DEBUG [ferw-123] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:793d768f-8fda-56b8-9eb2-c1a3571a1551"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-121] powered on
+INFO: VM [ferw-120] got ip [10.53.6.16]
+INFO: Powering on for vm [ferw-124]
+RESULT OK: ferw-120 (8964b409…)
+INFO: waiting for powering on for VM [ferw-123] (Attempt 1/10)
+INFO: VM [ferw-122] powered on
+INFO: VM [ferw-121] got ip [10.53.24.38]
+INFO: Powering on for vm [ferw-125]
+RESULT OK: ferw-121 (9964ea5f…)
+DEBUG [ferw-124] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:090e2078-c460-5d9e-8952-a2bd554f4e6f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-122] got ip [10.53.28.228]
+INFO: Powering on for vm [ferw-126]
+RESULT OK: ferw-122 (ab38dc8c…)
+DEBUG [ferw-125] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e1d0bc9e-b89c-5eb8-a7ec-370eba0a5304"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-124] (Attempt 1/10)
+DEBUG [ferw-126] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3c890d2d-91a1-53f4-8bcc-53b2843c00f8"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-125] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-126] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-123] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-125] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-124] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-126] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-123] (Attempt 3/10)
+INFO: VM [ferw-124] powered on
+INFO: VM [ferw-125] powered on
+INFO: VM [ferw-126] powered on
+INFO: VM [ferw-124] got ip [10.53.9.48]
+INFO: Powering on for vm [ferw-127]
+RESULT OK: ferw-124 (b8e64111…)
+INFO: VM [ferw-126] got ip [10.53.8.210]
+INFO: Powering on for vm [ferw-128]
+RESULT OK: ferw-126 (0f3ed6bd…)
+INFO: VM [ferw-125] got ip [10.53.18.177]
+INFO: Powering on for vm [ferw-129]
+RESULT OK: ferw-125 (493ecdb2…)
+DEBUG [ferw-129] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b322f8a1-1841-5100-aefa-ca84483ba688"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-123] powered on
+DEBUG [ferw-128] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3f79b2bd-434c-5aa3-a130-a502da378286"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-127] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:913037a7-ce9b-5373-b83a-41d4b523d67b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-129] (Attempt 1/10)
+INFO: VM [ferw-123] got ip [10.53.32.174]
+INFO: Powering on for vm [ferw-130]
+RESULT OK: ferw-123 (c8615ab2…)
+INFO: waiting for powering on for VM [ferw-128] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-127] (Attempt 1/10)
+DEBUG [ferw-130] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:617bf584-b440-57da-be43-93cdd16e214c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-130] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-129] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-128] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-127] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-130] (Attempt 2/10)
+INFO: VM [ferw-129] powered on
+INFO: VM [ferw-129] got ip [10.53.26.253]
+INFO: Powering on for vm [ferw-131]
+RESULT OK: ferw-129 (2897072e…)
+DEBUG [ferw-131] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:75185013-0385-504a-83c6-081ce4055196"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-127] powered on
+INFO: VM [ferw-128] powered on
+INFO: waiting for powering on for VM [ferw-131] (Attempt 1/10)
+INFO: VM [ferw-130] powered on
+INFO: VM [ferw-127] got ip [10.53.3.176]
+INFO: Powering on for vm [ferw-132]
+RESULT OK: ferw-127 (70be05ae…)
+INFO: VM [ferw-128] got ip [10.53.8.171]
+INFO: Powering on for vm [ferw-133]
+RESULT OK: ferw-128 (5b051890…)
+INFO: VM [ferw-130] got ip [10.53.12.90]
+INFO: Powering on for vm [ferw-134]
+RESULT OK: ferw-130 (6ce5d483…)
+DEBUG [ferw-134] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:c49ef874-e913-5bff-b7ef-39ac6bf20822"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-132] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:11f6decd-625e-5f6d-9873-cff0ca78714e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-133] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5041be40-6db5-5627-b3d0-238fc5c9001f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-134] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-132] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-133] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-131] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-134] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-132] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-133] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-131] (Attempt 3/10)
+INFO: VM [ferw-134] powered on
+INFO: VM [ferw-134] got ip [10.53.19.74]
+INFO: Powering on for vm [ferw-135]
+RESULT OK: ferw-134 (d2534e23…)
+INFO: VM [ferw-132] powered on
+INFO: VM [ferw-133] powered on
+DEBUG [ferw-135] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:74dded01-02da-52d4-9233-3cc2348433c2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-132] got ip [10.53.42.226]
+INFO: Powering on for vm [ferw-136]
+RESULT OK: ferw-132 (be1b8959…)
+INFO: waiting for powering on for VM [ferw-135] (Attempt 1/10)
+INFO: VM [ferw-133] got ip [10.53.51.17]
+INFO: Powering on for vm [ferw-137]
+RESULT OK: ferw-133 (f2135508…)
+INFO: VM [ferw-131] powered on
+DEBUG [ferw-137] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:67526d4b-316a-5b82-bf9f-ba86ea9b3e45"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-136] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d8538e6a-a261-5db1-a954-e32836886f7e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-131] got ip [10.53.37.173]
+INFO: Powering on for vm [ferw-138]
+RESULT OK: ferw-131 (af5fdd68…)
+INFO: waiting for powering on for VM [ferw-136] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-137] (Attempt 1/10)
+DEBUG [ferw-138] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:29c8366a-0c3f-5f1c-b2a6-5d3f91379a42"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-138] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-135] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-137] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-136] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-138] (Attempt 2/10)
+INFO: VM [ferw-135] powered on
+INFO: VM [ferw-135] got ip [10.53.31.137]
+INFO: Powering on for vm [ferw-139]
+RESULT OK: ferw-135 (419a628d…)
+DEBUG [ferw-139] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d082b168-1520-51be-91bc-0d6f2bc1a0e9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-139] (Attempt 1/10)
+INFO: VM [ferw-136] powered on
+INFO: VM [ferw-137] powered on
+INFO: VM [ferw-136] got ip [10.53.33.13]
+INFO: Powering on for vm [ferw-140]
+RESULT OK: ferw-136 (68df0ac6…)
+INFO: VM [ferw-138] powered on
+INFO: VM [ferw-137] got ip [10.53.42.29]
+INFO: Powering on for vm [ferw-141]
+RESULT OK: ferw-137 (9cf71ab9…)
+DEBUG [ferw-140] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:95f9ff74-7658-591f-b4bb-740e0343cb62"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-138] got ip [10.53.13.99]
+INFO: Powering on for vm [ferw-142]
+RESULT OK: ferw-138 (3c15acbd…)
+DEBUG [ferw-141] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:53202081-6cb2-5719-aa24-2721e0fed1b3"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-140] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-141] (Attempt 1/10)
+DEBUG [ferw-142] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:1fc7d87b-fccf-574c-8341-8c6027fad0ab"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-142] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-139] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-140] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-141] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-142] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-139] (Attempt 3/10)
+INFO: VM [ferw-140] powered on
+INFO: VM [ferw-141] powered on
+INFO: VM [ferw-141] got ip [10.53.39.133]
+INFO: Powering on for vm [ferw-143]
+RESULT OK: ferw-141 (fd8c25e5…)
+INFO: VM [ferw-140] got ip [10.53.23.132]
+INFO: Powering on for vm [ferw-144]
+RESULT OK: ferw-140 (78655f18…)
+DEBUG [ferw-143] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:6a0229a1-11ab-5db6-a00c-73934d71056e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-142] powered on
+INFO: VM [ferw-142] got ip [10.53.43.19]
+INFO: Powering on for vm [ferw-145]
+RESULT OK: ferw-142 (b6d37a48…)
+INFO: waiting for powering on for VM [ferw-143] (Attempt 1/10)
+DEBUG [ferw-144] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:a20d157b-dd86-5533-8557-2ea009bb8634"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-139] powered on
+INFO: VM [ferw-139] got ip [10.53.35.194]
+INFO: Powering on for vm [ferw-146]
+RESULT OK: ferw-139 (defac94d…)
+DEBUG [ferw-145] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:4a8b6fc4-0c36-5e31-beeb-7ebf1f09951a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-144] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-145] (Attempt 1/10)
+DEBUG [ferw-146] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5a0bedcb-89a0-5b2a-b262-fa473543e344"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-146] (Attempt 1/10)
+INFO: VM [ferw-143] powered on
+INFO: waiting for powering on for VM [ferw-144] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-146] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-145] (Attempt 2/10)
+INFO: VM [ferw-143] got ip [10.53.9.162]
+INFO: Powering on for vm [ferw-147]
+RESULT OK: ferw-143 (18d6ed02…)
+DEBUG [ferw-147] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:317b9225-482d-52de-823b-d3613ce5c3e2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-147] (Attempt 1/10)
+INFO: VM [ferw-144] powered on
+INFO: VM [ferw-144] got ip [10.53.10.35]
+INFO: Powering on for vm [ferw-148]
+RESULT OK: ferw-144 (7450fe43…)
+INFO: VM [ferw-146] powered on
+INFO: VM [ferw-145] powered on
+DEBUG [ferw-148] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:167cc450-9201-5b8e-88e9-23930d71d50b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-146] got ip [10.53.36.19]
+INFO: Powering on for vm [ferw-149]
+RESULT OK: ferw-146 (c6cddc9b…)
+INFO: waiting for powering on for VM [ferw-148] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-147] (Attempt 2/10)
+INFO: VM [ferw-145] got ip [10.53.31.180]
+INFO: Powering on for vm [ferw-150]
+RESULT OK: ferw-145 (b65656fc…)
+DEBUG [ferw-149] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2eb89e64-48c8-50af-840b-78fda9db12c2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-150] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:869119c6-928b-5b51-b03c-faa403c89d88"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-149] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-150] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-148] (Attempt 2/10)
+INFO: VM [ferw-147] powered on
+INFO: VM [ferw-147] got ip [10.53.49.217]
+INFO: Powering on for vm [ferw-151]
+RESULT OK: ferw-147 (d63ea09c…)
+INFO: waiting for powering on for VM [ferw-149] (Attempt 2/10)
+DEBUG [ferw-151] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:1d3ab72c-d1d8-5761-9104-66b2ca7a45fc"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-150] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-151] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-148] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-149] (Attempt 3/10)
+INFO: VM [ferw-150] powered on
+INFO: waiting for powering on for VM [ferw-151] (Attempt 2/10)
+INFO: VM [ferw-150] got ip [10.53.48.155]
+INFO: Powering on for vm [ferw-152]
+RESULT OK: ferw-150 (1e9580d6…)
+DEBUG [ferw-152] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:fbf652fa-9923-51b6-8f2a-b9dc4a1a0823"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-152] (Attempt 1/10)
+INFO: VM [ferw-148] powered on
+INFO: VM [ferw-148] got ip [10.53.48.249]
+INFO: Powering on for vm [ferw-153]
+RESULT OK: ferw-148 (4e2ec35b…)
+DEBUG [ferw-153] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:19d84284-e5c8-5015-b1b1-2eb0901ae843"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-153] (Attempt 1/10)
+INFO: VM [ferw-149] powered on
+INFO: VM [ferw-149] got ip [10.53.37.151]
+INFO: Powering on for vm [ferw-154]
+RESULT OK: ferw-149 (4151beec…)
+DEBUG [ferw-154] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:58f23e29-05ad-5d55-b391-98931417816b"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-151] powered on
+INFO: VM [ferw-151] got ip [10.53.32.37]
+INFO: Powering on for vm [ferw-155]
+RESULT OK: ferw-151 (4866dc21…)
+INFO: waiting for powering on for VM [ferw-154] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-152] (Attempt 2/10)
+DEBUG [ferw-155] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:1e4a8f63-0ae0-54fc-bef6-fc3d091ab6d5"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-155] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-153] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-154] (Attempt 2/10)
+INFO: VM [ferw-152] powered on
+INFO: VM [ferw-152] got ip [10.53.49.246]
+INFO: Powering on for vm [ferw-156]
+RESULT OK: ferw-152 (957ab596…)
+INFO: waiting for powering on for VM [ferw-155] (Attempt 2/10)
+DEBUG [ferw-156] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:16b872c8-1ab2-53dd-9ec8-4aa3deeddbea"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-153] powered on
+INFO: waiting for powering on for VM [ferw-156] (Attempt 1/10)
+INFO: VM [ferw-153] got ip [10.53.51.59]
+INFO: Powering on for vm [ferw-157]
+RESULT OK: ferw-153 (d59217bf…)
+DEBUG [ferw-157] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:0014fada-90b6-5f9e-94e5-88778226b65a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-157] (Attempt 1/10)
+INFO: VM [ferw-154] powered on
+INFO: VM [ferw-154] got ip [10.53.30.158]
+INFO: Powering on for vm [ferw-158]
+RESULT OK: ferw-154 (bdba5b5a…)
+INFO: VM [ferw-155] powered on
+INFO: VM [ferw-155] got ip [10.53.3.194]
+INFO: Powering on for vm [ferw-159]
+RESULT OK: ferw-155 (8ba1f6f5…)
+DEBUG [ferw-158] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2c8ea123-f7ec-5f29-9959-515afb6858a0"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-159] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:ede27fbe-eea0-52d0-8289-d9239c99cec4"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-156] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-158] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-159] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-157] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-156] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-159] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-158] (Attempt 2/10)
+INFO: VM [ferw-157] powered on
+INFO: VM [ferw-157] got ip [10.53.30.116]
+INFO: Powering on for vm [ferw-160]
+RESULT OK: ferw-157 (b36b68ba…)
+DEBUG [ferw-160] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e7ca9e54-618e-51b8-8dcc-fca8d9e3cce2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-160] (Attempt 1/10)
+INFO: VM [ferw-156] powered on
+INFO: VM [ferw-156] got ip [10.53.6.202]
+INFO: Powering on for vm [ferw-161]
+RESULT OK: ferw-156 (f47bbc3c…)
+INFO: VM [ferw-159] powered on
+DEBUG [ferw-161] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:4de6b823-0345-5822-9f63-010e9abd6550"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-159] got ip [10.53.26.110]
+INFO: Powering on for vm [ferw-162]
+RESULT OK: ferw-159 (c668807d…)
+INFO: VM [ferw-158] powered on
+INFO: waiting for powering on for VM [ferw-161] (Attempt 1/10)
+INFO: VM [ferw-158] got ip [10.53.9.4]
+INFO: Powering on for vm [ferw-163]
+RESULT OK: ferw-158 (0695914b…)
+DEBUG [ferw-162] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:94967b00-7a16-5d34-b9da-778b651acf96"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-163] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:86bbe436-cc17-550a-8ee1-f53f567d25f1"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-162] (Attempt 1/10)
+INFO: VM [ferw-160] powered on
+INFO: waiting for powering on for VM [ferw-163] (Attempt 1/10)
+INFO: VM [ferw-160] got ip [10.53.41.194]
+INFO: Powering on for vm [ferw-164]
+RESULT OK: ferw-160 (3ca42ccc…)
+DEBUG [ferw-164] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:13f9be69-5e41-51bd-9709-220ad022b1ec"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-164] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-161] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-162] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-163] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-164] (Attempt 2/10)
+INFO: VM [ferw-161] powered on
+INFO: VM [ferw-161] got ip [10.53.52.107]
+INFO: Powering on for vm [ferw-165]
+RESULT OK: ferw-161 (2025cbff…)
+INFO: VM [ferw-162] powered on
+DEBUG [ferw-165] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:f57be72e-605d-53da-9d9d-d9a9c734b362"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-163] powered on
+INFO: VM [ferw-165] powered on
+INFO: VM [ferw-165] got ip [10.53.15.57]
+INFO: Powering on for vm [ferw-166]
+RESULT OK: ferw-165 (0dd9b36d…)
+INFO: VM [ferw-163] got ip [10.53.24.189]
+INFO: Powering on for vm [ferw-167]
+RESULT OK: ferw-163 (a7e7d5b0…)
+INFO: VM [ferw-162] got ip [10.53.48.4]
+INFO: Powering on for vm [ferw-168]
+RESULT OK: ferw-162 (c3f27dc3…)
+INFO: VM [ferw-164] powered on
+DEBUG [ferw-166] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:ea0791a4-4b11-5d16-a83e-c6f5c27e0da8"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-167] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e4c4fb82-8df7-577c-b8c3-ba6f3ada8e42"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-164] got ip [10.53.47.86]
+INFO: Powering on for vm [ferw-169]
+RESULT OK: ferw-164 (a644dacf…)
+INFO: waiting for powering on for VM [ferw-166] (Attempt 1/10)
+DEBUG [ferw-168] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b44696ec-79f2-5db4-9912-d7ad7741dd5a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-167] (Attempt 1/10)
+DEBUG [ferw-169] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:0f1870f9-0a23-5a83-a3b3-e9354eeb541f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-168] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-169] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-166] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-167] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-168] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-169] (Attempt 2/10)
+INFO: VM [ferw-166] powered on
+INFO: VM [ferw-166] got ip [10.53.34.94]
+INFO: Powering on for vm [ferw-170]
+RESULT OK: ferw-166 (474e27f5…)
+INFO: VM [ferw-168] powered on
+INFO: VM [ferw-167] powered on
+INFO: VM [ferw-167] got ip [10.53.40.138]
+INFO: Powering on for vm [ferw-171]
+RESULT OK: ferw-167 (b7d22c55…)
+INFO: VM [ferw-168] got ip [10.53.40.45]
+INFO: Powering on for vm [ferw-172]
+RESULT OK: ferw-168 (2dd09af4…)
+DEBUG [ferw-170] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:e9bc01ed-6252-5847-8a56-3e26a0f12edb"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-171] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3814e48c-3d6c-5dab-b540-dab92b3af5a9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-169] powered on
+INFO: waiting for powering on for VM [ferw-170] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-171] (Attempt 1/10)
+DEBUG [ferw-172] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:282287e6-dc08-56d3-8e62-f554c6c76e2a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-169] got ip [10.53.46.186]
+INFO: Powering on for vm [ferw-173]
+RESULT OK: ferw-169 (ba8b763a…)
+INFO: waiting for powering on for VM [ferw-172] (Attempt 1/10)
+DEBUG [ferw-173] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:07868f3d-9036-579f-b87e-b1f9389192d9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-173] (Attempt 1/10)
+INFO: VM [ferw-170] powered on
+INFO: VM [ferw-171] powered on
+INFO: VM [ferw-170] got ip [10.53.1.232]
+INFO: Powering on for vm [ferw-174]
+RESULT OK: ferw-170 (3f99dc8b…)
+INFO: VM [ferw-172] powered on
+INFO: VM [ferw-171] got ip [10.53.30.188]
+INFO: Powering on for vm [ferw-175]
+RESULT OK: ferw-171 (521badc9…)
+INFO: VM [ferw-173] powered on
+INFO: VM [ferw-172] got ip [10.53.41.4]
+INFO: Powering on for vm [ferw-176]
+RESULT OK: ferw-172 (5a493ed7…)
+DEBUG [ferw-174] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d87a0590-e12e-5a16-9259-322d869d25b4"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-173] got ip [10.53.33.69]
+INFO: Powering on for vm [ferw-177]
+RESULT OK: ferw-173 (3093dcbc…)
+DEBUG [ferw-175] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:15ce5ac3-6aac-51a3-8c02-b4e0241c6aed"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-176] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:23818edf-f622-57ba-98e9-ec3527abf1e4"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-174] (Attempt 1/10)
+DEBUG [ferw-177] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2799e745-e26e-552d-a99d-afb8685d88c0"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-175] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-176] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-177] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-174] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-175] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-176] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-177] (Attempt 2/10)
+INFO: VM [ferw-174] powered on
+INFO: VM [ferw-174] got ip [10.53.23.181]
+INFO: Powering on for vm [ferw-178]
+RESULT OK: ferw-174 (85e77983…)
+INFO: VM [ferw-175] powered on
+INFO: VM [ferw-176] powered on
+INFO: VM [ferw-177] powered on
+INFO: VM [ferw-175] got ip [10.53.5.83]
+INFO: Powering on for vm [ferw-179]
+RESULT OK: ferw-175 (7ce54f5a…)
+INFO: VM [ferw-176] got ip [10.53.8.22]
+INFO: Powering on for vm [ferw-180]
+RESULT OK: ferw-176 (35e6c4e2…)
+DEBUG [ferw-178] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d99a8d95-525e-5092-9f64-5ec44a76bfc5"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-178] (Attempt 1/10)
+DEBUG [ferw-180] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d99fc8b4-e06c-5f9a-be56-2931617e7a8c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-179] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:221e9a0b-8ee6-5b45-9eab-8d3f39724109"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-177] got ip [10.53.24.226]
+INFO: Powering on for vm [ferw-181]
+RESULT OK: ferw-177 (6a817b18…)
+INFO: waiting for powering on for VM [ferw-179] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-180] (Attempt 1/10)
+DEBUG [ferw-181] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:6d2bafee-90c2-51b9-ab30-d24c158ef3d0"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-181] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-178] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-179] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-180] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-181] (Attempt 2/10)
+INFO: VM [ferw-178] powered on
+INFO: VM [ferw-178] got ip [10.53.4.168]
+INFO: Powering on for vm [ferw-182]
+RESULT OK: ferw-178 (55b9b5be…)
+INFO: VM [ferw-179] powered on
+DEBUG [ferw-182] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:6f1bee32-dea2-56d5-aa9a-cae4caa42bc2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-180] powered on
+INFO: VM [ferw-180] got ip [10.53.9.161]
+INFO: Powering on for vm [ferw-183]
+RESULT OK: ferw-180 (b9066e43…)
+INFO: VM [ferw-179] got ip [10.53.33.208]
+INFO: Powering on for vm [ferw-184]
+RESULT OK: ferw-179 (afca5ac6…)
+INFO: waiting for powering on for VM [ferw-182] (Attempt 1/10)
+INFO: VM [ferw-181] powered on
+DEBUG [ferw-183] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:0563fbae-cd80-5c76-bd3a-6b12562d328f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-181] got ip [10.53.42.197]
+INFO: Powering on for vm [ferw-185]
+RESULT OK: ferw-181 (ee8521d8…)
+DEBUG [ferw-184] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:0ed83114-3e93-5704-9385-17637075b7a3"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-183] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-184] (Attempt 1/10)
+DEBUG [ferw-185] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3c9f7305-dd53-5fd9-9269-c66a52f86c7e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-185] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-182] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-183] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-184] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-185] (Attempt 2/10)
+INFO: VM [ferw-182] powered on
+INFO: VM [ferw-182] got ip [10.53.3.69]
+INFO: Powering on for vm [ferw-186]
+RESULT OK: ferw-182 (02cf17ef…)
+DEBUG [ferw-186] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b73b0c5e-c798-5ed8-8aef-abda2edf7c2f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-183] powered on
+INFO: waiting for powering on for VM [ferw-186] (Attempt 1/10)
+INFO: VM [ferw-183] got ip [10.53.16.209]
+INFO: Powering on for vm [ferw-187]
+RESULT OK: ferw-183 (d4b0c17f…)
+INFO: waiting for powering on for VM [ferw-184] (Attempt 3/10)
+INFO: VM [ferw-185] powered on
+DEBUG [ferw-187] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:63b461a0-8732-5672-a872-6b29e0227cb2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-185] got ip [10.53.45.191]
+INFO: Powering on for vm [ferw-188]
+RESULT OK: ferw-185 (6b98e596…)
+INFO: waiting for powering on for VM [ferw-187] (Attempt 1/10)
+DEBUG [ferw-188] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b00bab04-eaf7-596d-94e1-6d1b300d31ae"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-188] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-186] (Attempt 2/10)
+INFO: VM [ferw-184] powered on
+INFO: VM [ferw-184] got ip [10.53.34.29]
+INFO: Powering on for vm [ferw-189]
+RESULT OK: ferw-184 (5064d0cf…)
+DEBUG [ferw-189] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:358e25ba-bbb9-5204-b292-13cb4311fd5e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-187] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-189] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-188] (Attempt 2/10)
+INFO: VM [ferw-186] powered on
+INFO: VM [ferw-186] got ip [10.53.19.11]
+INFO: Powering on for vm [ferw-190]
+RESULT OK: ferw-186 (9f8d8cc6…)
+DEBUG [ferw-190] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:1cd05cd4-1305-510d-bd6d-33b742b57228"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-190] (Attempt 1/10)
+INFO: VM [ferw-187] powered on
+INFO: waiting for powering on for VM [ferw-189] (Attempt 2/10)
+INFO: VM [ferw-188] powered on
+INFO: VM [ferw-187] got ip [10.53.16.187]
+INFO: Powering on for vm [ferw-191]
+RESULT OK: ferw-187 (1a63321b…)
+INFO: VM [ferw-188] got ip [10.53.24.23]
+INFO: Powering on for vm [ferw-192]
+RESULT OK: ferw-188 (d35e3e99…)
+DEBUG [ferw-191] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:91c96fe1-0961-52a0-9ccd-15b0d61c7bb3"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-192] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2bc60eb0-455f-5d54-a5d6-2d69ed853e2f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-191] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-192] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-190] (Attempt 2/10)
+INFO: VM [ferw-189] powered on
+INFO: VM [ferw-189] got ip [10.53.30.8]
+INFO: Powering on for vm [ferw-193]
+RESULT OK: ferw-189 (eb720998…)
+DEBUG [ferw-193] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:758caf1d-7085-596d-934a-1fa61e8e6a15"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-193] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-191] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-192] (Attempt 2/10)
+INFO: VM [ferw-190] powered on
+INFO: VM [ferw-190] got ip [10.53.20.191]
+INFO: Powering on for vm [ferw-194]
+RESULT OK: ferw-190 (45dd0aab…)
+DEBUG [ferw-194] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:f23c6e3a-ba6b-54ba-9379-8705bba4f505"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-194] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-193] (Attempt 2/10)
+INFO: VM [ferw-191] powered on
+INFO: VM [ferw-192] powered on
+INFO: VM [ferw-191] got ip [10.53.37.99]
+INFO: Powering on for vm [ferw-195]
+RESULT OK: ferw-191 (4a6b886c…)
+INFO: VM [ferw-192] got ip [10.53.27.249]
+INFO: Powering on for vm [ferw-196]
+RESULT OK: ferw-192 (a7526e10…)
+DEBUG [ferw-195] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:0104f5f9-0adf-5565-8973-4931198aae19"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-196] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:707e88df-bec4-5750-9520-5c61251480d6"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-195] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-196] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-194] (Attempt 2/10)
+INFO: VM [ferw-193] powered on
+INFO: VM [ferw-193] got ip [10.53.4.209]
+INFO: Powering on for vm [ferw-197]
+RESULT OK: ferw-193 (aa996cb3…)
+DEBUG [ferw-197] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:a972fe78-9985-5253-8b21-91f415687734"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-197] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-195] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-196] (Attempt 2/10)
+INFO: VM [ferw-194] powered on
+INFO: VM [ferw-194] got ip [10.53.23.84]
+INFO: Powering on for vm [ferw-198]
+RESULT OK: ferw-194 (0787402e…)
+DEBUG [ferw-198] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d6384286-0a13-528d-a216-98938d7a6acf"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-198] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-197] (Attempt 2/10)
+INFO: VM [ferw-195] powered on
+INFO: VM [ferw-196] powered on
+INFO: VM [ferw-195] got ip [10.53.27.60]
+INFO: Powering on for vm [ferw-199]
+RESULT OK: ferw-195 (22da1f87…)
+INFO: VM [ferw-196] got ip [10.53.5.174]
+INFO: Powering on for vm [ferw-200]
+RESULT OK: ferw-196 (08024734…)
+DEBUG [ferw-199] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d4ea9a02-150c-5f86-99e7-a577fd4b7b4e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-200] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:87f682a9-069f-5884-97a8-b67acde32cbc"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-199] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-200] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-198] (Attempt 2/10)
+INFO: VM [ferw-197] powered on
+INFO: VM [ferw-197] got ip [10.53.46.94]
+INFO: Powering on for vm [ferw-201]
+RESULT OK: ferw-197 (a99a9a43…)
+DEBUG [ferw-201] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3c0d545d-84c2-57cb-a9d7-7c1ea9f74db7"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-201] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-199] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-200] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-198] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-201] (Attempt 2/10)
+INFO: VM [ferw-199] powered on
+INFO: VM [ferw-200] powered on
+INFO: VM [ferw-199] got ip [10.53.22.59]
+INFO: Powering on for vm [ferw-202]
+RESULT OK: ferw-199 (dce1652c…)
+INFO: VM [ferw-198] powered on
+INFO: VM [ferw-200] got ip [10.53.46.9]
+INFO: Powering on for vm [ferw-203]
+RESULT OK: ferw-200 (cfd88c50…)
+INFO: VM [ferw-198] got ip [10.53.28.87]
+INFO: Powering on for vm [ferw-204]
+RESULT OK: ferw-198 (8373e82f…)
+DEBUG [ferw-202] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:62779ac5-ca93-52ef-b086-738f8a914340"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-203] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:6824f73d-7121-5a70-96c1-06755bab884e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-204] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:36054200-baf4-5502-9b26-c04173a39cd9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-202] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-203] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-204] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-201] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-202] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-203] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-204] (Attempt 2/10)
+INFO: VM [ferw-201] powered on
+INFO: VM [ferw-201] got ip [10.53.46.113]
+INFO: Powering on for vm [ferw-205]
+RESULT OK: ferw-201 (f8b11baa…)
+DEBUG [ferw-205] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:02348c65-7a25-5246-8abe-dbe94f0eba31"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-205] (Attempt 1/10)
+INFO: VM [ferw-202] powered on
+INFO: VM [ferw-203] powered on
+INFO: VM [ferw-202] got ip [10.53.18.49]
+INFO: Powering on for vm [ferw-206]
+RESULT OK: ferw-202 (b8978102…)
+INFO: VM [ferw-204] powered on
+INFO: VM [ferw-203] got ip [10.53.29.51]
+INFO: Powering on for vm [ferw-207]
+RESULT OK: ferw-203 (eacf78c7…)
+DEBUG [ferw-206] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:bfaeed32-3fe1-5003-ab18-2e4e1b73d591"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-204] got ip [10.53.10.196]
+INFO: Powering on for vm [ferw-208]
+RESULT OK: ferw-204 (4b7cbb34…)
+DEBUG [ferw-207] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3080357a-c628-52c7-b87d-e97ae773518e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-206] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-205] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-207] (Attempt 1/10)
+DEBUG [ferw-208] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2b261ba0-a502-5be2-a1c1-ddcb37f3e25a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-208] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-206] (Attempt 2/10)
+INFO: VM [ferw-205] powered on
+INFO: VM [ferw-205] got ip [10.53.53.108]
+INFO: Powering on for vm [ferw-209]
+RESULT OK: ferw-205 (c7e65251…)
+INFO: waiting for powering on for VM [ferw-207] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-208] (Attempt 2/10)
+DEBUG [ferw-209] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b2f442b6-e172-5d23-b620-1d94d64bbd3f"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-209] (Attempt 1/10)
+INFO: VM [ferw-206] powered on
+INFO: VM [ferw-206] got ip [10.53.18.48]
+INFO: Powering on for vm [ferw-210]
+RESULT OK: ferw-206 (d02f339d…)
+DEBUG [ferw-210] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:687517cf-92d5-58d1-a4b9-e42fe6431ccd"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-207] powered on
+INFO: waiting for powering on for VM [ferw-210] (Attempt 1/10)
+INFO: VM [ferw-207] got ip [10.53.25.84]
+INFO: Powering on for vm [ferw-211]
+RESULT OK: ferw-207 (9cd1f4db…)
+INFO: VM [ferw-208] powered on
+INFO: waiting for powering on for VM [ferw-209] (Attempt 2/10)
+DEBUG [ferw-211] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2693aec1-6b26-54ae-83fc-b5bd576326b9"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-208] got ip [10.53.28.189]
+INFO: Powering on for vm [ferw-212]
+RESULT OK: ferw-208 (07a67645…)
+INFO: waiting for powering on for VM [ferw-211] (Attempt 1/10)
+DEBUG [ferw-212] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:40d6cf35-2e55-5147-bfab-e0c7bd052809"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-212] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-210] (Attempt 2/10)
+INFO: VM [ferw-209] powered on
+INFO: VM [ferw-209] got ip [10.53.46.80]
+INFO: Powering on for vm [ferw-213]
+RESULT OK: ferw-209 (1a299898…)
+DEBUG [ferw-213] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:488d5762-4723-54c8-b2bb-aaed43a81307"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-211] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-213] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-212] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-210] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-211] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-213] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-212] (Attempt 3/10)
+INFO: VM [ferw-210] powered on
+INFO: VM [ferw-210] got ip [10.53.28.224]
+INFO: Powering on for vm [ferw-214]
+RESULT OK: ferw-210 (eb43cdb6…)
+DEBUG [ferw-214] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:432e64dc-5197-5cf9-9682-0ce77d9a70ac"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-214] (Attempt 1/10)
+INFO: VM [ferw-213] powered on
+INFO: VM [ferw-211] powered on
+INFO: VM [ferw-213] got ip [10.53.36.210]
+INFO: Powering on for vm [ferw-215]
+RESULT OK: ferw-213 (188691f8…)
+INFO: VM [ferw-212] powered on
+INFO: VM [ferw-211] got ip [10.53.42.254]
+INFO: Powering on for vm [ferw-216]
+RESULT OK: ferw-211 (cdd0282e…)
+INFO: VM [ferw-212] got ip [10.53.18.4]
+INFO: Powering on for vm [ferw-217]
+RESULT OK: ferw-212 (89e5ef5d…)
+DEBUG [ferw-216] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:bed972e5-b1f2-57bf-b3f4-df2de8b0f094"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-215] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:229370e4-e2c8-563d-9882-4ed3e99edb47"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-217] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:fddef093-22d1-5b03-9031-af2a5d465d25"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-216] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-215] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-217] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-214] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-216] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-215] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-217] (Attempt 2/10)
+INFO: VM [ferw-214] powered on
+INFO: VM [ferw-214] got ip [10.53.28.35]
+INFO: Powering on for vm [ferw-218]
+RESULT OK: ferw-214 (fe1b63fa…)
+DEBUG [ferw-218] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2c286cb4-8de4-5dec-80db-56c138e25d9a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-218] (Attempt 1/10)
+INFO: VM [ferw-216] powered on
+INFO: VM [ferw-216] got ip [10.53.51.143]
+INFO: Powering on for vm [ferw-219]
+RESULT OK: ferw-216 (16dcbde3…)
+INFO: VM [ferw-215] powered on
+INFO: VM [ferw-217] powered on
+INFO: VM [ferw-215] got ip [10.53.21.252]
+INFO: Powering on for vm [ferw-220]
+RESULT OK: ferw-215 (71b95eed…)
+DEBUG [ferw-219] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:293d5126-1be5-5714-96d9-3ae23544ab46"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-217] got ip [10.53.21.251]
+INFO: Powering on for vm [ferw-221]
+RESULT OK: ferw-217 (7f633c45…)
+DEBUG [ferw-220] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:89f70efd-ac8b-58f4-b9b5-7e0f53706765"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-219] (Attempt 1/10)
+DEBUG [ferw-221] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:129af580-a66d-5f47-863a-f6ac8c3f251e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-220] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-221] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-218] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-219] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-220] (Attempt 2/10)
+INFO: VM [ferw-218] powered on
+INFO: waiting for powering on for VM [ferw-221] (Attempt 2/10)
+INFO: VM [ferw-218] got ip [10.53.35.248]
+INFO: Powering on for vm [ferw-222]
+RESULT OK: ferw-218 (057ecf73…)
+DEBUG [ferw-222] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:54bbd440-1839-5bc4-8dea-3e3df24d8e05"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-222] (Attempt 1/10)
+INFO: VM [ferw-219] powered on
+INFO: waiting for powering on for VM [ferw-220] (Attempt 3/10)
+INFO: VM [ferw-219] got ip [10.53.50.247]
+INFO: Powering on for vm [ferw-223]
+RESULT OK: ferw-219 (bab2a0b6…)
+INFO: waiting for powering on for VM [ferw-221] (Attempt 3/10)
+DEBUG [ferw-223] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:5c04980d-9c40-5ed9-b16e-fc2416121ddb"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-223] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-222] (Attempt 2/10)
+INFO: VM [ferw-220] powered on
+INFO: VM [ferw-220] got ip [10.53.16.116]
+INFO: Powering on for vm [ferw-224]
+RESULT OK: ferw-220 (353ee371…)
+DEBUG [ferw-224] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b281f2c2-b141-5931-ba3e-61c21c74e671"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-221] powered on
+INFO: waiting for powering on for VM [ferw-224] (Attempt 1/10)
+INFO: VM [ferw-221] got ip [10.53.30.24]
+INFO: Powering on for vm [ferw-225]
+RESULT OK: ferw-221 (d1767abc…)
+INFO: VM [ferw-222] powered on
+INFO: VM [ferw-223] powered on
+DEBUG [ferw-225] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:4915491f-4c90-5934-b0fb-be7647daa613"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-222] got ip [10.53.50.79]
+INFO: Powering on for vm [ferw-226]
+RESULT OK: ferw-222 (490cf54c…)
+INFO: VM [ferw-223] got ip [10.53.36.240]
+INFO: Powering on for vm [ferw-227]
+RESULT OK: ferw-223 (cea3f87d…)
+DEBUG [ferw-226] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:9fbcb018-d4ef-51cb-8d91-e0cb44305c60"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-225] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-226] (Attempt 1/10)
+DEBUG [ferw-227] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8782eac6-cf5b-535d-a9ed-47557c8ceafc"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-227] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-224] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-225] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-226] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-227] (Attempt 2/10)
+INFO: VM [ferw-224] powered on
+INFO: VM [ferw-224] got ip [10.53.1.17]
+INFO: Powering on for vm [ferw-228]
+RESULT OK: ferw-224 (ae5818f8…)
+DEBUG [ferw-228] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:ec886cc5-620a-5c96-b046-089adb9138ca"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-228] (Attempt 1/10)
+INFO: VM [ferw-225] powered on
+INFO: VM [ferw-225] got ip [10.53.12.85]
+INFO: Powering on for vm [ferw-229]
+RESULT OK: ferw-225 (0f5889a2…)
+INFO: VM [ferw-226] powered on
+DEBUG [ferw-229] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:69e458b2-abda-50b9-9ad2-8d02d46df545"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-227] powered on
+INFO: VM [ferw-226] got ip [10.53.3.133]
+INFO: Powering on for vm [ferw-230]
+RESULT OK: ferw-226 (bc034e82…)
+INFO: VM [ferw-227] got ip [10.53.10.47]
+INFO: Powering on for vm [ferw-231]
+RESULT OK: ferw-227 (1a1c6cc4…)
+INFO: waiting for powering on for VM [ferw-229] (Attempt 1/10)
+DEBUG [ferw-231] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:b507a411-a83a-5acd-ab52-8a6b768d6770"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-230] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:65f6a25e-f0c6-5dae-958e-35986de1a5ca"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-231] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-230] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-228] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-229] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-231] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-230] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-228] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-229] (Attempt 3/10)
+INFO: VM [ferw-230] powered on
+INFO: VM [ferw-228] powered on
+INFO: VM [ferw-231] powered on
+INFO: VM [ferw-230] got ip [10.53.43.207]
+INFO: Powering on for vm [ferw-232]
+RESULT OK: ferw-230 (1d5b1e7b…)
+INFO: VM [ferw-231] got ip [10.53.29.236]
+INFO: Powering on for vm [ferw-233]
+RESULT OK: ferw-231 (c9ece0cb…)
+INFO: VM [ferw-228] got ip [10.53.21.74]
+INFO: Powering on for vm [ferw-234]
+RESULT OK: ferw-228 (9634d8c2…)
+DEBUG [ferw-232] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:55df962d-360c-5234-becf-42434f5ee10a"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-229] powered on
+DEBUG [ferw-233] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d2735743-21c8-53c2-a63d-6eb08e81008c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-234] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2b3c2041-078a-52e7-b9ad-0bcfd4396123"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-229] got ip [10.53.29.91]
+INFO: Powering on for vm [ferw-235]
+RESULT OK: ferw-229 (24c0700f…)
+INFO: waiting for powering on for VM [ferw-232] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-233] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-234] (Attempt 1/10)
+DEBUG [ferw-235] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:8b6e865a-f271-5ca2-b4cf-666174828410"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-235] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-232] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-233] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-234] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-235] (Attempt 2/10)
+INFO: VM [ferw-232] powered on
+INFO: VM [ferw-233] powered on
+INFO: VM [ferw-232] got ip [10.53.45.138]
+INFO: Powering on for vm [ferw-236]
+RESULT OK: ferw-232 (19697f40…)
+INFO: waiting for powering on for VM [ferw-234] (Attempt 3/10)
+INFO: VM [ferw-233] got ip [10.53.35.88]
+INFO: Powering on for vm [ferw-237]
+RESULT OK: ferw-233 (1603bc5a…)
+DEBUG [ferw-236] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:91dc3f7d-6b65-51d2-af42-c60a7d657ddb"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-235] powered on
+DEBUG [ferw-237] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:08c89622-5bec-5cea-89e8-61796751d129"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-236] (Attempt 1/10)
+INFO: VM [ferw-235] got ip [10.53.53.198]
+INFO: Powering on for vm [ferw-238]
+RESULT OK: ferw-235 (4d57b17e…)
+INFO: waiting for powering on for VM [ferw-237] (Attempt 1/10)
+DEBUG [ferw-238] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:3d1232d0-b492-53c7-9031-41668baa4d2e"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-238] (Attempt 1/10)
+INFO: VM [ferw-234] powered on
+INFO: VM [ferw-234] got ip [10.53.39.52]
+INFO: Powering on for vm [ferw-239]
+RESULT OK: ferw-234 (aec0d5ef…)
+DEBUG [ferw-239] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:14549a79-4567-543c-848b-1274ceec028c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-236] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-239] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-237] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-238] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-239] (Attempt 2/10)
+INFO: VM [ferw-236] powered on
+INFO: VM [ferw-237] powered on
+INFO: VM [ferw-236] got ip [10.53.1.163]
+INFO: Powering on for vm [ferw-240]
+RESULT OK: ferw-236 (1713c87c…)
+INFO: VM [ferw-239] powered on
+INFO: VM [ferw-238] powered on
+INFO: VM [ferw-237] got ip [10.53.4.7]
+INFO: Powering on for vm [ferw-241]
+RESULT OK: ferw-237 (87a52e40…)
+INFO: VM [ferw-239] got ip [10.53.45.181]
+INFO: Powering on for vm [ferw-242]
+RESULT OK: ferw-239 (5b3dc222…)
+DEBUG [ferw-240] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:d7c2b2f9-c286-5bfa-b6fc-e28e233fe4e5"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-238] got ip [10.53.16.73]
+INFO: Powering on for vm [ferw-243]
+RESULT OK: ferw-238 (b76b9c44…)
+DEBUG [ferw-241] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:7089b3e9-2534-5cfa-9e99-6c1b21aadc34"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-240] (Attempt 1/10)
+DEBUG [ferw-243] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:93304311-ed0b-5d32-a132-cc440159c877"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-241] (Attempt 1/10)
+DEBUG [ferw-242] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:84233de2-c2f7-5514-910a-66c442574fcf"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-243] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-242] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-240] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-241] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-243] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-242] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-240] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-241] (Attempt 3/10)
+INFO: waiting for powering on for VM [ferw-243] (Attempt 3/10)
+INFO: VM [ferw-242] powered on
+INFO: VM [ferw-242] got ip [10.53.36.17]
+INFO: Powering on for vm [ferw-244]
+RESULT OK: ferw-242 (bc5dc3fd…)
+DEBUG [ferw-244] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:90cec983-a47f-565a-8da1-4d672d93d2ea"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-244] (Attempt 1/10)
+INFO: VM [ferw-240] powered on
+INFO: VM [ferw-240] got ip [10.53.24.229]
+INFO: Powering on for vm [ferw-245]
+RESULT OK: ferw-240 (380a5bf5…)
+DEBUG [ferw-245] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:65894f04-890f-5344-87a7-2e1fe95b1f67"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: VM [ferw-241] powered on
+INFO: waiting for powering on for VM [ferw-245] (Attempt 1/10)
+INFO: VM [ferw-243] powered on
+INFO: VM [ferw-241] got ip [10.53.38.26]
+INFO: Powering on for vm [ferw-246]
+RESULT OK: ferw-241 (6510d61e…)
+INFO: VM [ferw-243] got ip [10.53.15.46]
+INFO: Powering on for vm [ferw-247]
+RESULT OK: ferw-243 (43b65675…)
+INFO: waiting for powering on for VM [ferw-244] (Attempt 2/10)
+DEBUG [ferw-247] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:4e417633-f9c0-5dd2-bb4f-e01d0da496c2"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+DEBUG [ferw-246] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:2ad6ad46-ea28-5e67-9e55-79e295c93d60"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-247] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-245] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-246] (Attempt 1/10)
+INFO: VM [ferw-244] powered on
+INFO: VM [ferw-244] got ip [10.53.47.117]
+INFO: Powering on for vm [ferw-248]
+RESULT OK: ferw-244 (e59e6a07…)
+DEBUG [ferw-248] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:631b03c1-39ca-58a0-ac11-c132a6daf39c"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-247] (Attempt 2/10)
+INFO: VM [ferw-245] powered on
+INFO: waiting for powering on for VM [ferw-246] (Attempt 2/10)
+INFO: waiting for powering on for VM [ferw-248] (Attempt 1/10)
+INFO: VM [ferw-245] got ip [10.53.21.80]
+INFO: Powering on for vm [ferw-249]
+RESULT OK: ferw-245 (157afb7f…)
+DEBUG [ferw-249] POST power-on: b'{"data":{"$reserved":{"$fv":"v4.r2"},"$objectType":"prism.v4.config.TaskReference","extId":"ZXJnb24=:88ea3195-940e-5ba5-a7a2-aa90164f0502"},"$reserved":{"$fv":"v4.r3"},"$objectType":"vmm.v4.ahv.config.PowerOnVmApiResponse"}'
+INFO: waiting for powering on for VM [ferw-249] (Attempt 1/10)
+INFO: waiting for powering on for VM [ferw-247] (Attempt 3/10)
+
+
+Script interrupted by user
+
+================================================================================
+SUMMARY
+================================================================================
+Total VMs Processed: 500
+VMs queued for power ON: 498
+Power-on + IP wait succeeded: 204
+Power-on + IP wait failed: 0
+================================================================================
+Log saved to: vm_power_status_change_20260414_093147.log
+Completed at: 2026-04-14 10:45:35
+================================================================================

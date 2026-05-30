@@ -1,0 +1,603 @@
+{
+  "reference_project": {
+    "name": "multi-cluster-service-scale",
+    "accounts": [
+      "9bac6180-9112-4d2c-c8e8-304b09bb7232",
+      "df1416e1-b7da-a6b5-03fa-ceedb0ff8cc7",
+      "d207a9f0-83c9-ed5a-a82d-78db9bf9a7c2",
+      "93a29619-7e42-2125-df4a-171d218d5244",
+      "5268e859-8177-41cc-b5cd-ceac001a1ddd",
+      "ff51b347-b828-7611-7507-4b13539d8966"
+    ],
+    "networks": [
+      "ae10aa8a-ee65-472b-bd2d-8c508ae24088",
+      "387368f5-51f7-4433-ba4e-d3e5f55407e9",
+      "75314e4f-eaa9-4b25-9eda-091b33513c9d",
+      "d7c2475a-8ea3-431c-ab97-f58cd43f7e17",
+      "80b29b1e-e419-4686-9b64-f0eee3dc6eeb",
+      "0468324a-101c-4e10-ab92-0f406b276709",
+      "d9910cec-6c62-421c-95c4-2437b647d647",
+      "f0f85659-c071-4fd6-bb05-df1a45448a15",
+      "0176f17c-8db2-49ba-b99d-16aa9e65ed8f",
+      "773f2652-d729-445d-9a6d-1390fa47154d",
+      "e8fe3000-8410-4308-9299-062d1ded1ca5",
+      "5c146a1e-7839-4cf5-84aa-9d9dee7543b5",
+      "ef70b4c6-e822-4212-bed1-2e0d91931d28",
+      "6502f67f-bd02-49e3-a55a-a37846198e2b",
+      "caf59b43-36f8-43d3-999e-c117631a5666",
+      "10bc5e02-5088-4795-aea0-18f0566a841b",
+      "4d3fb742-333b-4167-9a36-0e600dea43be",
+      "15eba41d-4145-408f-bb53-c4bd9f764d55",
+      "9b4fe007-9704-48b9-9327-819eb1d1c8b0"
+    ],
+    "clusters": [
+      "00065035-b0c9-5144-07ad-7cc255864212",
+      "0006512b-4ec7-542a-07b2-5254001746c8",
+      "00065129-a59e-edd7-5ae5-52540022d0cd",
+      "00063ef3-95ee-0a07-0549-eeaa0f16f415",
+      "0006525e-4987-690e-6ada-7cc25530e93d",
+      "00065129-a8c3-9954-0561-5254000ba60f",
+      "00065035-daa1-70e4-7faf-ac1f6b61e0cf",
+      "00063e14-2abb-48c1-04c5-38fe9f3c9f30",
+      "00065031-3c14-1b72-7e15-7cc2558641c8",
+      "0006512b-4b33-27a8-74fd-5254002aeb88"
+    ]
+  },
+  "projects": [
+    {
+      "name": "grfwadscx",
+      "uuid": "9c6d151f-513f-433c-8094-25f1c7bd1066",
+      "missing_accounts": [
+        "ff51b347-b828-7611-7507-4b13539d8966",
+        "93a29619-7e42-2125-df4a-171d218d5244",
+        "d207a9f0-83c9-ed5a-a82d-78db9bf9a7c2",
+        "df1416e1-b7da-a6b5-03fa-ceedb0ff8cc7"
+      ],
+      "missing_networks": [
+        "ae10aa8a-ee65-472b-bd2d-8c508ae24088",
+        "ef70b4c6-e822-4212-bed1-2e0d91931d28",
+        "387368f5-51f7-4433-ba4e-d3e5f55407e9",
+        "6502f67f-bd02-49e3-a55a-a37846198e2b",
+        "75314e4f-eaa9-4b25-9eda-091b33513c9d",
+        "d7c2475a-8ea3-431c-ab97-f58cd43f7e17",
+        "80b29b1e-e419-4686-9b64-f0eee3dc6eeb",
+        "0468324a-101c-4e10-ab92-0f406b276709",
+        "d9910cec-6c62-421c-95c4-2437b647d647",
+        "caf59b43-36f8-43d3-999e-c117631a5666",
+        "10bc5e02-5088-4795-aea0-18f0566a841b",
+        "f0f85659-c071-4fd6-bb05-df1a45448a15",
+        "15eba41d-4145-408f-bb53-c4bd9f764d55",
+        "9b4fe007-9704-48b9-9327-819eb1d1c8b0",
+        "0176f17c-8db2-49ba-b99d-16aa9e65ed8f",
+        "773f2652-d729-445d-9a6d-1390fa47154d"
+      ],
+      "missing_clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212",
+        "00065129-a59e-edd7-5ae5-52540022d0cd",
+        "00065129-a8c3-9954-0561-5254000ba60f",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf",
+        "0006512b-4b33-27a8-74fd-5254002aeb88",
+        "0006512b-4ec7-542a-07b2-5254001746c8",
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ],
+      "missing_accounts_count": 4,
+      "missing_networks_count": 16,
+      "missing_clusters_count": 7
+    },
+    {
+      "name": "multi-cluster-service-scale",
+      "uuid": "dbd4a6f8-244e-432f-b7a0-b013ec6e802c",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_16_55_j21m",
+      "uuid": "9427fa64-da04-439a-905e-debbd73bb32c",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_22_27_b2xq",
+      "uuid": "986ec924-0d96-4de8-a384-349f12ed9360",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_22_28_43wl",
+      "uuid": "68117cdd-fad9-4d84-8811-c5a8cc80e769",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_22_28_tmrh",
+      "uuid": "61a32683-d6d6-468e-aa83-3fb4359b3cda",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_22_29_7sza",
+      "uuid": "9eeacb50-a83e-4981-8212-67c12208c61f",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_22_29_hseb",
+      "uuid": "52441dd5-15d3-4a6d-ac90-1fa3b16a5e68",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_23_54_9ioo",
+      "uuid": "b15623f4-cc8d-4d15-855e-1f25c2bb4ab7",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_23_57_34lw",
+      "uuid": "cd7e1913-cd2d-4b20-92dc-f2ca687837e9",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_24_16_xywy",
+      "uuid": "117e6a7f-2e73-48f4-a772-72ff33a2cbd5",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_24_25_df1t",
+      "uuid": "acf9e7a6-86c6-466c-92f9-39e95842258b",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_24_25_gxss",
+      "uuid": "b6224353-4391-4772-be99-f8d2b61d4914",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_25_16_twc4",
+      "uuid": "5ebdc915-7a97-4f4a-8f5a-34ea80332aef",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_25_27_c641",
+      "uuid": "62e27622-e729-44fc-b7bd-948adc9df717",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_25_40_skq0",
+      "uuid": "086c6f0c-bcca-445e-b2df-bf7f7e6b5753",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_25_53_h4ly",
+      "uuid": "7b7b743d-ea51-400a-8328-1c19574fb19c",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_25_55_pgy3",
+      "uuid": "efbac12c-6f39-4775-97a3-24a64a0e8285",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_26_42_7rmj",
+      "uuid": "7497a370-80ac-4fe7-9f2a-e33909d3e5e6",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_26_52_2f8k",
+      "uuid": "4aec72e2-a983-48d9-890a-039bfcf26c52",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_27_07_tzpd",
+      "uuid": "03dd6df5-a830-4930-8300-08e4b12f0a43",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_27_20_dal1",
+      "uuid": "0072d59f-fe0a-40c5-896f-e6d105849d98",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_27_26_ge48",
+      "uuid": "5c7b9f7a-5214-4fbc-ab86-dbcf152ff364",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_28_32_5vmv",
+      "uuid": "fff00c6a-5dcb-4305-bae5-8388281f09ad",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_28_39_kb6g",
+      "uuid": "bf1a521e-bc3b-41f6-92bb-2f6848c112f9",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_28_49_mqb0",
+      "uuid": "18cf00cd-ae27-4153-a468-86845c53140e",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_28_59_dknb",
+      "uuid": "de76d348-53a2-4551-bb54-54e6025e8b2e",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_29_01_t8jl",
+      "uuid": "d7f34913-fbd4-43cd-af7f-73264c5360c7",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_30_08_d3ik",
+      "uuid": "119c5f4d-0fcc-4cdb-ab81-ca0da88f3ef8",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_30_10_yt74",
+      "uuid": "4ecc1b70-634a-4f2e-9fcf-c003a3d692e2",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_30_32_35g9",
+      "uuid": "047ac10a-1f19-459c-b10d-b5070ecb3abe",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_30_47_xvdc",
+      "uuid": "fc59643e-b27e-45ae-9b83-20137e9cf6dc",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_30_48_fmrf",
+      "uuid": "6516765f-12b5-47a0-ba29-2afebd660730",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_31_46_mkhc",
+      "uuid": "843dabf3-451d-48a1-81ae-71a67ef570ea",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_31_47_vvat",
+      "uuid": "854ae26c-afa3-4558-b3b2-57b7bb01175c",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_32_04_ii07",
+      "uuid": "f1463042-c6b9-42be-8819-5db2e17f73ad",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_32_23_5nga",
+      "uuid": "b5ff288b-2f7b-4068-9c06-e0605b4a05b7",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_32_33_pqpe",
+      "uuid": "6f5ab514-1656-4f1b-b6f0-9c50f1db3b5c",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_33_19_tb0u",
+      "uuid": "2bfb3a77-3f06-4bd6-9edf-f40d3c592731",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_33_27_o9ug",
+      "uuid": "8f605aa7-7902-4eb4-bf41-0b7cee357c2d",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_33_47_8s41",
+      "uuid": "89d3d3b5-cce2-4d8b-a264-a4e6309fac02",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_34_03_izzi",
+      "uuid": "10a95458-cd15-46b8-b6cb-4eb8325371f9",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_34_05_ln0k",
+      "uuid": "dcdccd08-1141-4948-832c-d8d347fcd820",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_35_04_xjxy",
+      "uuid": "b90eab0c-1a3e-4f6c-a1a1-9c7300d6e58f",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_35_09_3tau",
+      "uuid": "469179a5-2ec4-44a0-aea8-91c8239a431a",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_35_36_87vv",
+      "uuid": "5d259589-ee6f-43c5-873b-2e250895bb0b",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_35_53_9zj8",
+      "uuid": "54f9bf76-4f3d-4cb4-a5a1-f9dfcb2a3577",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_35_56_pfjh",
+      "uuid": "77ef9ab1-319a-48b1-86d1-c1a2f40bded2",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_36_28_nv7b",
+      "uuid": "37e92fc8-9619-4313-bc0d-439e323c518b",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_36_50_vb29",
+      "uuid": "a4b98c7f-3af5-4971-be50-aff44492d1c2",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "Nucalm_10_37_18_csx4",
+      "uuid": "e8839a7b-d1da-46d4-986f-7b384a482518",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    },
+    {
+      "name": "TestP1",
+      "uuid": "5e8af0a9-be7c-448e-aaaa-04384f5bd7bc",
+      "missing_accounts": [],
+      "missing_networks": [],
+      "missing_clusters": [],
+      "missing_accounts_count": 0,
+      "missing_networks_count": 0,
+      "missing_clusters_count": 0
+    }
+  ],
+  "summary": {
+    "total_projects": 52,
+    "projects_missing_resources": 1,
+    "projects_complete": 51
+  }
+}

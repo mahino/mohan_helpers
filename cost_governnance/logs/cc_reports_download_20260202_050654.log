@@ -1,0 +1,118 @@
+2026-02-02 05:06:54 - cc_reports_download - INFO - ================================================================================
+2026-02-02 05:06:54 - cc_reports_download - INFO - Script: cc_reports_download
+2026-02-02 05:06:54 - cc_reports_download - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/cc_reports_download_20260202_050654.log
+2026-02-02 05:06:54 - cc_reports_download - INFO - ================================================================================
+2026-02-02 05:06:54 - cc_reports_download - INFO - ====================================================================================================
+2026-02-02 05:06:54 - cc_reports_download - INFO - NCM COST CENTER REPORTS DOWNLOAD SCRIPT - SEQUENTIAL MODE
+2026-02-02 05:06:54 - cc_reports_download - INFO - ====================================================================================================
+2026-02-02 05:06:54 - cc_reports_download - INFO - Target URL: https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/reports/download
+2026-02-02 05:06:54 - cc_reports_download - INFO - Max Downloads: 1000
+2026-02-02 05:06:54 - cc_reports_download - INFO - Rate Limit: 3 requests, then sleep 60s
+2026-02-02 05:06:54 - cc_reports_download - INFO - Rate Limit Sleep (on 429): 60s
+2026-02-02 05:06:54 - cc_reports_download - INFO - ====================================================================================================
+2026-02-02 05:06:54 - cc_reports_download - INFO - Session started at: 2026-02-02 05:06:54
+2026-02-02 05:06:54 - cc_reports_download - INFO - 
+2026-02-02 05:06:54 - cc_reports_download - INFO - ------------------------------------------------------------
+2026-02-02 05:06:54 - cc_reports_download - INFO - REPORT 1/1000
+2026-02-02 05:06:54 - cc_reports_download - INFO - ------------------------------------------------------------
+2026-02-02 05:06:54 - cc_reports_download - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/reports/download
+2026-02-02 05:06:54 - cc_reports_download - INFO - [REQUEST JSON PAYLOAD]
+{
+  "reportConfig": {
+    "reportType": "GLOBAL_CHARGEBACK",
+    "dataSource": {
+      "resourceGroupIds": [],
+      "category": "ALLOCATED",
+      "resourceGroupType": "ALL_BU_CC",
+      "filters": {},
+      "groupBy": "businessUnitsAndCostCenters"
+    },
+    "reportPeriod": {
+      "timeUnit": "CUSTOM"
+    },
+    "timeRange": {
+      "startTime": 1769904000,
+      "endTime": 1772323199
+    },
+    "reportTemplateDetails": {
+      "fileType": "XLS"
+    }
+  }
+}
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - ============================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - Script interrupted by user (Ctrl+C)
+2026-02-02 05:06:56 - cc_reports_download - INFO - ============================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - Session ended at: 2026-02-02 05:06:56
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - ====================================================================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - FINAL SUMMARY - SEQUENTIAL MODE
+2026-02-02 05:06:56 - cc_reports_download - INFO - ====================================================================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - Total Successful Downloads: 0/1000
+2026-02-02 05:06:56 - cc_reports_download - INFO - Rate Limit Hits (429): 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - ====================================================================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - ========================================================================================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - DETAILED API PERFORMANCE METRICS REPORT
+2026-02-02 05:06:56 - cc_reports_download - INFO - ========================================================================================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - Session Duration: 1.60 seconds (0.03 minutes)
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - DOWNLOAD API (/v1/reports/download) METRICS
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - Download API Response Times (ms):
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Count: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Min: 0.00 | Max: 0.00 | Avg: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Median (P50): 0.00 | Std Dev: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   P75: 0.00 | P90: 0.00 | P95: 0.00 | P98: 0.00 | P99: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Total Time: 0.00 ms (0.00 s)
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - Download API Status Codes:
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - STATUS CHECK API (/v1/reports/download/status) METRICS
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - Status API Response Times (ms):
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Count: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Min: 0.00 | Max: 0.00 | Avg: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Median (P50): 0.00 | Std Dev: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   P75: 0.00 | P90: 0.00 | P95: 0.00 | P98: 0.00 | P99: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Total Time: 0.00 ms (0.00 s)
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - Status API Status Codes:
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - END-TO-END REPORT PROCESSING METRICS
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - Report Processing Times (ms):
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Count: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Min: 0.00 | Max: 0.00 | Avg: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Median (P50): 0.00 | Std Dev: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   P75: 0.00 | P90: 0.00 | P95: 0.00 | P98: 0.00 | P99: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO -   Total Time: 0.00 ms (0.00 s)
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - SUCCESS/FAILURE SUMMARY
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - Total Download Attempts: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - ✓ Successful: 0 (0.0%)
+2026-02-02 05:06:56 - cc_reports_download - INFO - ✗ Failed: 0 (0.0%)
+2026-02-02 05:06:56 - cc_reports_download - INFO - ⚠ Rate Limited (429): 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - ⚠ Download API Errors: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - ⚠ Status Check API Errors: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - API CALL COUNTS
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - Total Download API Calls: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - Total Status Check API Calls: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - Total API Calls: 0
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - THROUGHPUT METRICS
+2026-02-02 05:06:56 - cc_reports_download - INFO - --------------------------------------------------------------------------------
+2026-02-02 05:06:56 - cc_reports_download - INFO - Reports per Minute: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO - API Calls per Minute: 0.00
+2026-02-02 05:06:56 - cc_reports_download - INFO - 
+2026-02-02 05:06:56 - cc_reports_download - INFO - ========================================================================================================================
+2026-02-02 05:06:56 - cc_reports_download - INFO - No API calls recorded.

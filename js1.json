@@ -1,0 +1,541 @@
+{
+  "entity_type_definition_list": [
+    {
+      "entity_type_name": "hermes_message",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+    },
+    {
+      "entity_type_name": "report_config",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "report_template",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "generated_report",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "common_report_config",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "report_view",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "vulcan_scheduled_entity",
+      "collect_attributes": true,
+      "collection_condition": {
+          "lhs": { 
+              "comparison_expr": {
+                "lhs": {
+                  "leaf": {
+                    "column": "status"
+                  }
+                },
+                "operator": "kEQ",
+                "rhs": {
+                  "leaf": {
+                    "value": {
+                      "int64_value": 1
+                    }
+                  }
+                }
+              }
+          },
+          "operator": "kAnd",
+          "rhs": {
+              "comparison_expr": {
+                "lhs": {
+                  "leaf": {
+                    "column": "entity_type"
+                  }
+                },
+                "operator": "kEQ",
+                "rhs": {
+                  "leaf": {
+                    "value": {
+                      "str_value": "report_config"
+                    }
+                  }
+                }
+              }
+          }
+        }
+    },
+    {
+      "entity_type_name": "analysis_session",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "widget",
+      "collect_attributes": true,
+      "collection_condition": {
+        "comparison_expr": {
+          "lhs": {
+            "leaf": {
+              "column": "parent_type"
+            }
+          },
+          "operator": "kEQ",
+          "rhs": {
+            "leaf": {
+              "value": {
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "entity_type_name": "action_rule",
+      "collect_attributes": true,
+      "collection_condition": {
+        "comparison_expr": {
+          "lhs": {
+            "leaf": {
+              "column": "is_prepackaged"
+            }
+          },
+          "operator": "kEQ",
+          "rhs": {
+            "leaf": {
+              "value": {
+                "boolValue": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "entity_type_name": "action_rule_result",
+      "collect_attributes": true,
+      "max_entities_per_batch": 10,
+      "collection_condition": {
+        "comparison_expr": {
+          "lhs": {
+            "leaf": {
+              "column": "_created_timestamp_usecs_"
+            }
+          },
+          "operator": "kGT",
+          "rhs": {
+            "leaf": {
+              "value": {
+                "int64Value": "$(current_time_usecs - 172800000000)"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "entity_type_name": "action_template",
+      "collect_attributes": true,
+      "collection_condition": {
+        "comparison_expr": {
+          "lhs": {
+            "leaf": {
+              "column": "is_blank_template"
+            }
+          },
+          "operator": "kNE",
+          "rhs": {
+            "leaf": {
+              "value": {
+                "boolValue": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "entity_type_name": "external_entity_config",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000,
+      "collection_condition": {
+        "comparison_expr": {
+          "lhs": {
+            "leaf": {
+              "column": "data_provider_name"
+            }
+          },
+          "operator": "kNE",
+          "rhs": {
+            "leaf": {
+              "value": {
+                "str_value": "nutanix_netflow"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "entity_type_name": "external_entity_shareable_config",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "capacity_scenario",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "xfit_policy",
+      "collect_attributes": true
+    },        
+    {
+      "entity_type_name": "ignore_window",
+      "collect_attributes": true
+    },
+    {
+      "entity_type_name": "resource_consumption",
+      "collect_attributes": true
+    },
+  
+  {
+      "entity_type_name": "nucalm_service_upgrade_history",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "management_server_account",
+      "collect_attributes": true,
+      "max_entities_per_batch": 500
+  },
+  {
+      "entity_type_name": "nucalm_secret",
+      "collect_attributes": true,
+      "max_entities_per_batch": 400
+  },
+  {
+      "entity_type_name": "nucalm_config_spec",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_config_runnable_spec",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_consumption",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_job",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_app_profile_instance",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1
+  },
+  {
+      "entity_type_name": "nucalm_package",
+      "collect_attributes": true,
+      "max_entities_per_batch": 400
+  },
+  {
+      "entity_type_name": "nucalm_deployment_cfg",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_substrate_element",
+      "collect_attributes": true,
+      "max_entities_per_batch": 200
+  },
+  {
+      "entity_type_name": "nucalm_snapshot_group",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_nutanix_snapshot_info",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_vcenter_snapshot_info",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_endpoint",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_provider",
+      "collect_attributes": true,
+      "max_entities_per_batch": 20
+  },
+  {
+      "entity_type_name": "nucalm_resource_type",
+      "collect_attributes": true,
+      "max_entities_per_batch": 70
+  },
+  {
+      "entity_type_name": "nucalm_platform_instance_element",
+      "collect_attributes": true,
+      "max_entities_per_batch": 200
+  },
+  {
+      "entity_type_name": "nucalm_recovery_plan_job_sync_status",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_credential",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_package_element",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_substrate_cfg",
+      "collect_attributes": true,
+      "max_entities_per_batch": 200
+  },
+  {
+      "entity_type_name": "nucalm_loadbalancer_cfg",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_package_cfg",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_application_cfg",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_loadbalancer",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_deployment",
+      "collect_attributes": true,
+      "max_entities_per_batch": 400
+  },
+  {
+      "entity_type_name": "nucalm_price_item",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_price_item_status",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_app_blueprint",
+      "collect_attributes": true,
+      "max_entities_per_batch": 30
+  },
+  {
+      "entity_type_name": "nucalm_library_task",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_library_variable",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_tunnel",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_network_group",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_service_element",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_action_run",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_service_cfg",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_deployment_element",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_published_service",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_published_service_cfg",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_service",
+      "collect_attributes": true,
+      "max_entities_per_batch": 400
+  },
+  {
+      "entity_type_name": "nucalm_stats",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_budget",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_application",
+      "collect_attributes": true,
+      "max_entities_per_batch": 120
+  },
+  {
+      "entity_type_name": "nucalm_app_beam_status",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_app_protection_status",
+      "collect_attributes": true,
+      "max_entities_per_batch": 860
+  },
+  {
+      "entity_type_name": "nucalm_feature",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nc_user_preference",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nc_system_preference",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_replication_connection",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_app_protection_policy",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_app_protection_rule",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_app_failover_status",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_lifecycle",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_substrate",
+      "collect_attributes": true,
+      "max_entities_per_batch": 200
+  },
+  {
+      "entity_type_name": "nucalm_environment",
+      "collect_attributes": true,
+      "max_entities_per_batch": 350
+  },
+  {
+      "entity_type_name": "nucalm_policy",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_approval_request",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_user_file",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_account_data",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "pe_vcenter_cluster_map",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_run_log",
+      "collect_attributes": true,
+      "max_entities_per_batch": 40
+  },
+  {
+      "entity_type_name": "nucalm_variable",
+      "collect_attributes": true,
+      "max_entities_per_batch": 200
+  },
+  {
+      "entity_type_name": "nucalm_action",
+      "collect_attributes": true,
+      "max_entities_per_batch": 500
+  },
+  {
+      "entity_type_name": "nucalm_task",
+      "collect_attributes": true,
+      "max_entities_per_batch": 200
+  },
+  {
+      "entity_type_name": "nucalm_runbook",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_cost",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  },
+  {
+      "entity_type_name": "nucalm_policy_rule",
+      "collect_attributes": true,
+      "max_entities_per_batch": 1000
+  }
+  ]
+}

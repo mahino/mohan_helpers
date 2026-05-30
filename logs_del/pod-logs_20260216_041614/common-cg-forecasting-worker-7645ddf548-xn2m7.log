@@ -1,0 +1,253 @@
+========================================
+Pod: common-cg-forecasting-worker-7645ddf548-xn2m7
+Namespace: ncm-cg
+Status: Running
+Containers: common-cg-forecasting-worker
+Collected at: Mon Feb 16 04:16:19 GMT 2026
+========================================
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+[2026-02-07T10:02:58.272Z] INFO  main Application:53 [] Starting Application v1.0 using Java 21.0.10 with PID 1 (/opt/beam/cg-common-forecasting-worker-1.0.jar started by root in /)
+[2026-02-07T10:02:58.381Z] INFO  main Application:658 [] The following 1 profile is active: "default"
+[2026-02-07T10:03:37.674Z] INFO  main JettyServletWebServerFactory:176 [] Server initialized with port: 1212
+[2026-02-07T10:03:37.976Z] INFO  main Server:555 [] jetty-12.0.29; built: 2025-10-16T15:15:43.982Z; git: 8dbd9865cc7407d735084a181cc3f21205872b70; jvm 21.0.10+7-LTS
+[2026-02-07T10:03:38.971Z] INFO  main application:2934 [] Initializing Spring embedded WebApplicationContext
+[2026-02-07T10:03:38.974Z] INFO  main ServletWebServerApplicationContext:301 [] Root WebApplicationContext: initialization completed in 39399 ms
+[2026-02-07T10:03:45.877Z] INFO  main DefaultSessionIdManager:328 [] Session workerName=node0
+[2026-02-07T10:03:46.171Z] INFO  main ContextHandler:789 [] Started osbwej.JettyEmbeddedWebAppContext@42b4df5a{application,/,b=file:/tmp/jetty-docbase.1212.6564266682502033986/,a=AVAILABLE,h=oeje10s.SessionHandler@9f1ca74{STARTED}}
+[2026-02-07T10:03:46.172Z] INFO  main ServletContextHandler:1055 [] Started osbwej.JettyEmbeddedWebAppContext@42b4df5a{application,/,b=file:/tmp/jetty-docbase.1212.6564266682502033986/,a=AVAILABLE,h=oeje10s.SessionHandler@9f1ca74{STARTED}}
+[2026-02-07T10:03:46.177Z] INFO  main Server:612 [] Started oejs.Server@120350eb{STARTING}[12.0.29,sto=0] @80953ms
+[2026-02-07T10:03:53.679Z] INFO  main WorkflowServiceStubsImpl:86 [] Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=1, target=ncm-platform-temporal-frontend.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:7233}}
+[2026-02-07T10:03:54.973Z] INFO  main BeanConfig:52 [] Creating ObjectMapper bean with NON_NULL serialization inclusion.
+[2026-02-07T10:04:18.578Z] INFO  main EndpointLinksResolver:60 [] Exposing 4 endpoints beneath base path ''
+[2026-02-07T10:04:19.871Z] INFO  main application:2934 [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-02-07T10:04:19.872Z] INFO  main DispatcherServlet:532 [] Initializing Servlet 'dispatcherServlet'
+[2026-02-07T10:04:19.874Z] INFO  main DispatcherServlet:554 [] Completed initialization in 2 ms
+[2026-02-07T10:04:20.171Z] INFO  main AbstractConnector:326 [] Started ServerConnector@594fae8e{HTTP/1.1, (http/1.1)}{0.0.0.0:1212}
+[2026-02-07T10:04:20.175Z] INFO  main JettyWebServer:169 [] Jetty started on port 1212 (http/1.1) with context path '/'
+[2026-02-07T10:04:20.571Z] INFO  main Application:59 [] Started Application in 92.197 seconds (process running for 115.347)
+[2026-02-07T10:04:20.776Z] INFO  main Application:38 [] Initialising Temporal Workers
+[2026-02-07T10:04:26.677Z] INFO  main Poller:93 [] start: Poller{name=Workflow Poller taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg", identity=1@common-cg-forecasting-worker-7645ddf548-xn2m7}
+[2026-02-07T10:04:26.876Z] INFO  main Poller:93 [] start: Poller{name=Activity Poller taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg", identity=1@common-cg-forecasting-worker-7645ddf548-xn2m7}
+[2026-02-07T10:04:27.073Z] INFO  main Poller:93 [] start: Poller{name=Workflow Poller taskQueue="expired_budget_process(smsp-stage)", namespace="ncm-cg", identity=1@common-cg-forecasting-worker-7645ddf548-xn2m7}
+[2026-02-07T10:04:27.171Z] INFO  main Poller:93 [] start: Poller{name=Activity Poller taskQueue="expired_budget_process(smsp-stage)", namespace="ncm-cg", identity=1@common-cg-forecasting-worker-7645ddf548-xn2m7}
+[2026-02-07T10:04:27.274Z] INFO  main Poller:93 [] start: Poller{name=Workflow Poller taskQueue="multicloud-ml-forecast(smsp-stage)", namespace="ncm-cg", identity=1@common-cg-forecasting-worker-7645ddf548-xn2m7}
+[2026-02-07T10:04:27.276Z] INFO  main Poller:93 [] start: Poller{name=Activity Poller taskQueue="multicloud-ml-forecast(smsp-stage)", namespace="ncm-cg", identity=1@common-cg-forecasting-worker-7645ddf548-xn2m7}
+[2026-02-07T10:12:04.974Z] WARN  Workflow Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 ReplayWorkflowTaskHandler:300 [] Workflow task processing failure. startedEventId=3, WorkflowId=019c3796-0f40-7ea4-a74d-2eae70765ae5_47, RunId=019c3796-3e58-74a8-a0a7-03d3e9a29b9f. If seen continuously the workflow might be stuck.
+io.temporal.internal.statemachines.InternalWorkflowTaskException: Failure handling event 3 of type 'EVENT_TYPE_WORKFLOW_TASK_STARTED' during execution. {WorkflowTaskStartedEventId=3, CurrentStartedEventId=3}
+	at io.temporal.internal.statemachines.WorkflowStateMachines.createEventProcessingException(WorkflowStateMachines.java:436) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.handleEventsBatch(WorkflowStateMachines.java:338) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.handleEvent(WorkflowStateMachines.java:297) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.replay.ReplayWorkflowRunTaskHandler.applyServerHistory(ReplayWorkflowRunTaskHandler.java:257) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.replay.ReplayWorkflowRunTaskHandler.handleWorkflowTaskImpl(ReplayWorkflowRunTaskHandler.java:239) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.replay.ReplayWorkflowRunTaskHandler.handleWorkflowTask(ReplayWorkflowRunTaskHandler.java:165) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.replay.ReplayWorkflowTaskHandler.handleWorkflowTaskWithQuery(ReplayWorkflowTaskHandler.java:135) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.replay.ReplayWorkflowTaskHandler.handleWorkflowTask(ReplayWorkflowTaskHandler.java:100) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.worker.WorkflowWorker$TaskHandlerImpl.handleTask(WorkflowWorker.java:476) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.worker.WorkflowWorker$TaskHandlerImpl.handle(WorkflowWorker.java:367) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.worker.WorkflowWorker$TaskHandlerImpl.handle(WorkflowWorker.java:307) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.worker.PollTaskExecutor.lambda$process$1(PollTaskExecutor.java:96) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.RuntimeException: WorkflowTask: failure executing SCHEDULED->WORKFLOW_TASK_STARTED, transition history is [CREATED->WORKFLOW_TASK_SCHEDULED]
+	at io.temporal.internal.statemachines.StateMachine.executeTransition(StateMachine.java:163) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.StateMachine.handleHistoryEvent(StateMachine.java:103) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.EntityStateMachineBase.handleEvent(EntityStateMachineBase.java:84) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.EntityStateMachineInitialCommand.handleEvent(EntityStateMachineInitialCommand.java:70) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.handleSingleEvent(WorkflowStateMachines.java:487) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.handleEventsBatch(WorkflowStateMachines.java:336) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	... 13 more
+Caused by: io.temporal.internal.sync.PotentialDeadlockException: [TMPRL1101] Potential deadlock detected. Workflow thread "workflow-method-019c3796-0f40-7ea4-a74d-2eae70765ae5_47-019c3796-3e58-74a8-a0a7-03d3e9a29b9f" didn't yield control for over a second. {detectionTimestamp=1770459124879, threadDumpTimestamp=1770459124882} 
+
+workflow-method-019c3796-0f40-7ea4-a74d-2eae70765ae5_47-019c3796-3e58-74a8-a0a7-03d3e9a29b9f
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:524)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:427)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:421)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:420)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593)
+	at org.springframework.boot.loader.net.protocol.jar.JarUrlClassLoader.loadClass(JarUrlClassLoader.java:107)
+	at org.springframework.boot.loader.launch.LaunchedClassLoader.loadClass(LaunchedClassLoader.java:91)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at io.temporal.internal.sync.ActivityStubBase.execute(ActivityStubBase.java:40)
+	at io.temporal.internal.sync.ActivityInvocationHandler.lambda$getActivityFunc$0(ActivityInvocationHandler.java:83)
+	at io.temporal.internal.sync.ActivityInvocationHandlerBase.invoke(ActivityInvocationHandlerBase.java:68)
+	at jdk.proxy2/jdk.proxy2.$Proxy122.billingPostProcessTask(Unknown Source)
+	at com.nutanix.beam.temporal.billing.workflow.BillingPostProcessWorkflowImpl.process(BillingPostProcessWorkflowImpl.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation$RootWorkflowInboundCallsInterceptor.execute(POJOWorkflowImplementationFactory.java:395)
+	at io.temporal.internal.sync.POJOWorkflowImplementationFactory$POJOWorkflowImplementation.execute(POJOWorkflowImplementationFactory.java:356)
+	at io.temporal.internal.sync.WorkflowExecutionHandler.runWorkflowMethod(WorkflowExecutionHandler.java:71)
+	at io.temporal.internal.sync.SyncWorkflow.lambda$start$0(SyncWorkflow.java:144)
+	at io.temporal.internal.sync.CancellationScopeImpl.run(CancellationScopeImpl.java:103)
+	at io.temporal.internal.sync.WorkflowThreadImpl$RunnableWrapper.run(WorkflowThreadImpl.java:107)
+	at io.temporal.worker.ActiveThreadReportingExecutor.lambda$submit$0(ActiveThreadReportingExecutor.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+	at io.temporal.internal.sync.WorkflowThreadContext.runUntilBlocked(WorkflowThreadContext.java:261) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.sync.WorkflowThreadImpl.runUntilBlocked(WorkflowThreadImpl.java:302) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.sync.DeterministicRunnerImpl.runUntilAllBlocked(DeterministicRunnerImpl.java:229) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.sync.SyncWorkflow.eventLoop(SyncWorkflow.java:216) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.replay.ReplayWorkflowExecutor.eventLoop(ReplayWorkflowExecutor.java:105) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.replay.ReplayWorkflowRunTaskHandler$StatesMachinesCallbackImpl.eventLoop(ReplayWorkflowRunTaskHandler.java:418) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.eventLoop(WorkflowStateMachines.java:779) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.access$700(WorkflowStateMachines.java:55) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines$WorkflowTaskCommandsListener.workflowTaskStarted(WorkflowStateMachines.java:1378) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowTaskStateMachine.handleCompleted(WorkflowTaskStateMachine.java:139) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowTaskStateMachine.handleStarted(WorkflowTaskStateMachine.java:129) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.FixedTransitionAction.apply(FixedTransitionAction.java:46) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.StateMachine.executeTransition(StateMachine.java:159) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.StateMachine.handleHistoryEvent(StateMachine.java:103) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.EntityStateMachineBase.handleEvent(EntityStateMachineBase.java:84) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.EntityStateMachineInitialCommand.handleEvent(EntityStateMachineInitialCommand.java:70) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.handleSingleEvent(WorkflowStateMachines.java:487) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	at io.temporal.internal.statemachines.WorkflowStateMachines.handleEventsBatch(WorkflowStateMachines.java:336) ~[temporal-sdk-1.28.4.jar!/:1.28.4]
+	... 13 more
+[2026-02-07T10:12:07.576Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:97 [] Fetch customer Details : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:07.577Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:110 [] Chargeback is not updated for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:07.577Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:256 [] Submitting NX Post processing jobs for customerHash : [59d5de78-a964-5746-8c6e-677c4c7a79df] tenantId: [59d5de78-a964-5746-8c6e-677c4c7a79df]
+[2026-02-07T10:12:09.149Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:264 [] Pushing multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:09.273Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 TemporalClient:26 [] Pushed Task successfully to temporal with queueName multicloud-ml-forecast(smsp-stage) workflowName MlForecastWorkflow workflowID 8d7f5a75-0a04-4449-a331-a400995cf6a2
+[2026-02-07T10:12:09.273Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:271 [] Pushed multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:09.274Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:273 [] Pushing expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:09.274Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BudgetInitiatorProcessor:33 [] Pushing expired budget process job for ,customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:09.287Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 TemporalClient:26 [] Pushed Task successfully to temporal with queueName expired_budget_process(smsp-stage) workflowName ExpiredBudgetWorkflow workflowID 4b28f6d4-3090-4858-a18c-1dfa13e4f4b8
+[2026-02-07T10:12:09.370Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:280 [] Pushed expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:09.370Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:282 [] Updating budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:09.371Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BudgetInitiatorProcessor:42 [] Updating budget status and setting system estimate for active budgets for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:09.673Z] INFO  Activity Executor taskQueue="multicloud-ml-forecast(smsp-stage)", namespace="ncm-cg": 1 MultiCloudForecastTaskConsumer:46 [] Pushing multi-cloud forecast process job for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:10.847Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:289 [] Updated budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:10.847Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:291 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:10.847Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 CurrencyFallbackInitiatorProcessor:19 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.128Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 CurrencyFallbackInitiatorProcessor:21 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.128Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:298 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.129Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:300 [] Pushing Currency Custom Rates fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.129Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 CurrencyFallbackInitiatorProcessor:26 [] Pushing Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.333Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 CurrencyFallbackInitiatorProcessor:28 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.333Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:307 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.334Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:309 [] Pushing Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.334Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 CurrencyFallbackInitiatorProcessor:33 [] Pushing Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.544Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 CurrencyFallbackInitiatorProcessor:35 [] Pushed Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-07T10:12:11.545Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 1 BillingPostProcessInitatorTaskConsumer:316 [] Pushed Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:19.776Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:97 [] Fetch customer Details : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:19.776Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:110 [] Chargeback is not updated for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:19.777Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:256 [] Submitting NX Post processing jobs for customerHash : [59d5de78-a964-5746-8c6e-677c4c7a79df] tenantId: [59d5de78-a964-5746-8c6e-677c4c7a79df]
+[2026-02-11T00:05:21.370Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:264 [] Pushing multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:21.386Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 TemporalClient:26 [] Pushed Task successfully to temporal with queueName multicloud-ml-forecast(smsp-stage) workflowName MlForecastWorkflow workflowID f7031b9a-e062-4fa4-a0ff-9859220a549e
+[2026-02-11T00:05:21.386Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:271 [] Pushed multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:21.470Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:273 [] Pushing expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:21.470Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BudgetInitiatorProcessor:33 [] Pushing expired budget process job for ,customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:21.570Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 TemporalClient:26 [] Pushed Task successfully to temporal with queueName expired_budget_process(smsp-stage) workflowName ExpiredBudgetWorkflow workflowID 5778a45c-6a42-4581-9ee6-c5167a2ceab6
+[2026-02-11T00:05:21.571Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:280 [] Pushed expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:21.571Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:282 [] Updating budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:21.572Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BudgetInitiatorProcessor:42 [] Updating budget status and setting system estimate for active budgets for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:21.672Z] INFO  Activity Executor taskQueue="multicloud-ml-forecast(smsp-stage)", namespace="ncm-cg": 2 MultiCloudForecastTaskConsumer:46 [] Pushing multi-cloud forecast process job for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.759Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:289 [] Updated budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.759Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:291 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.759Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 CurrencyFallbackInitiatorProcessor:19 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.852Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 CurrencyFallbackInitiatorProcessor:21 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.852Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:298 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.853Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:300 [] Pushing Currency Custom Rates fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.853Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 CurrencyFallbackInitiatorProcessor:26 [] Pushing Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.971Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 CurrencyFallbackInitiatorProcessor:28 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.972Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:307 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.972Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:309 [] Pushing Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:22.972Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 CurrencyFallbackInitiatorProcessor:33 [] Pushing Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:23.273Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 CurrencyFallbackInitiatorProcessor:35 [] Pushed Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T00:05:23.273Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 2 BillingPostProcessInitatorTaskConsumer:316 [] Pushed Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:36.975Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:97 [] Fetch customer Details : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:36.975Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:110 [] Chargeback is not updated for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:36.975Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:256 [] Submitting NX Post processing jobs for customerHash : [59d5de78-a964-5746-8c6e-677c4c7a79df] tenantId: [59d5de78-a964-5746-8c6e-677c4c7a79df]
+[2026-02-11T01:04:37.230Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:264 [] Pushing multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.243Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 TemporalClient:26 [] Pushed Task successfully to temporal with queueName multicloud-ml-forecast(smsp-stage) workflowName MlForecastWorkflow workflowID ed037cb3-ed7e-47d6-adce-721a62d2fe75
+[2026-02-11T01:04:37.244Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:271 [] Pushed multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.244Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:273 [] Pushing expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.244Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BudgetInitiatorProcessor:33 [] Pushing expired budget process job for ,customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.257Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 TemporalClient:26 [] Pushed Task successfully to temporal with queueName expired_budget_process(smsp-stage) workflowName ExpiredBudgetWorkflow workflowID 34255a8b-225e-4584-bace-125d2e5a7e93
+[2026-02-11T01:04:37.258Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:280 [] Pushed expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.258Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:282 [] Updating budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.258Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BudgetInitiatorProcessor:42 [] Updating budget status and setting system estimate for active budgets for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.371Z] INFO  Activity Executor taskQueue="multicloud-ml-forecast(smsp-stage)", namespace="ncm-cg": 3 MultiCloudForecastTaskConsumer:46 [] Pushing multi-cloud forecast process job for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.914Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:289 [] Updated budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.915Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:291 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:37.915Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 CurrencyFallbackInitiatorProcessor:19 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.011Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 CurrencyFallbackInitiatorProcessor:21 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.012Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:298 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.012Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:300 [] Pushing Currency Custom Rates fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.012Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 CurrencyFallbackInitiatorProcessor:26 [] Pushing Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.126Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 CurrencyFallbackInitiatorProcessor:28 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.127Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:307 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.127Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:309 [] Pushing Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.127Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 CurrencyFallbackInitiatorProcessor:33 [] Pushing Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.221Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 CurrencyFallbackInitiatorProcessor:35 [] Pushed Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T01:04:38.221Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 3 BillingPostProcessInitatorTaskConsumer:316 [] Pushed Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.471Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:97 [] Fetch customer Details : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.471Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:110 [] Chargeback is not updated for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.471Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:256 [] Submitting NX Post processing jobs for customerHash : [59d5de78-a964-5746-8c6e-677c4c7a79df] tenantId: [59d5de78-a964-5746-8c6e-677c4c7a79df]
+[2026-02-11T09:04:47.570Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:264 [] Pushing multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.587Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 TemporalClient:26 [] Pushed Task successfully to temporal with queueName multicloud-ml-forecast(smsp-stage) workflowName MlForecastWorkflow workflowID 78987e16-1eab-43d1-8e8b-3b2bf78560be
+[2026-02-11T09:04:47.587Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:271 [] Pushed multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.588Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:273 [] Pushing expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.588Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BudgetInitiatorProcessor:33 [] Pushing expired budget process job for ,customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.685Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 TemporalClient:26 [] Pushed Task successfully to temporal with queueName expired_budget_process(smsp-stage) workflowName ExpiredBudgetWorkflow workflowID 70fb4018-b040-4994-a612-2792a8f1e75a
+[2026-02-11T09:04:47.770Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:280 [] Pushed expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.770Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:282 [] Updating budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.770Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BudgetInitiatorProcessor:42 [] Updating budget status and setting system estimate for active budgets for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:47.872Z] INFO  Activity Executor taskQueue="multicloud-ml-forecast(smsp-stage)", namespace="ncm-cg": 4 MultiCloudForecastTaskConsumer:46 [] Pushing multi-cloud forecast process job for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.649Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:289 [] Updated budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.670Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:291 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.670Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 CurrencyFallbackInitiatorProcessor:19 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.769Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 CurrencyFallbackInitiatorProcessor:21 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.770Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:298 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.770Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:300 [] Pushing Currency Custom Rates fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.770Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 CurrencyFallbackInitiatorProcessor:26 [] Pushing Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.811Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 CurrencyFallbackInitiatorProcessor:28 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.870Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:307 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.870Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:309 [] Pushing Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.871Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 CurrencyFallbackInitiatorProcessor:33 [] Pushing Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.913Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 CurrencyFallbackInitiatorProcessor:35 [] Pushed Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T09:04:48.913Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 4 BillingPostProcessInitatorTaskConsumer:316 [] Pushed Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:09.975Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:97 [] Fetch customer Details : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:09.975Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:110 [] Chargeback is not updated for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:09.976Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:256 [] Submitting NX Post processing jobs for customerHash : [59d5de78-a964-5746-8c6e-677c4c7a79df] tenantId: [59d5de78-a964-5746-8c6e-677c4c7a79df]
+[2026-02-11T17:05:10.170Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:264 [] Pushing multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.186Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 TemporalClient:26 [] Pushed Task successfully to temporal with queueName multicloud-ml-forecast(smsp-stage) workflowName MlForecastWorkflow workflowID ec28ba08-bffe-47ab-ae7d-96cc6526b041
+[2026-02-11T17:05:10.187Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:271 [] Pushed multicloud forecast jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.187Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:273 [] Pushing expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.187Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BudgetInitiatorProcessor:33 [] Pushing expired budget process job for ,customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.283Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 TemporalClient:26 [] Pushed Task successfully to temporal with queueName expired_budget_process(smsp-stage) workflowName ExpiredBudgetWorkflow workflowID 3899f181-e11b-4ed3-88cc-a5bea4c0c97c
+[2026-02-11T17:05:10.283Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:280 [] Pushed expired budget jobs for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.284Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:282 [] Updating budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.284Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BudgetInitiatorProcessor:42 [] Updating budget status and setting system estimate for active budgets for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.570Z] INFO  Activity Executor taskQueue="multicloud-ml-forecast(smsp-stage)", namespace="ncm-cg": 5 MultiCloudForecastTaskConsumer:46 [] Pushing multi-cloud forecast process job for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.750Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:289 [] Updated budget status for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.771Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:291 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.771Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 CurrencyFallbackInitiatorProcessor:19 [] Pushing CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.838Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 CurrencyFallbackInitiatorProcessor:21 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.839Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:298 [] Pushed CurrencyConfiguration fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.839Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:300 [] Pushing Currency Custom Rates fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:10.839Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 CurrencyFallbackInitiatorProcessor:26 [] Pushing Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:11.070Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 CurrencyFallbackInitiatorProcessor:28 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:11.071Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:307 [] Pushed Currency Custom Rates Fallback workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:11.071Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:309 [] Pushing Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:11.071Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 CurrencyFallbackInitiatorProcessor:33 [] Pushing Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:11.170Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 CurrencyFallbackInitiatorProcessor:35 [] Pushed Multiple Currency Detection Verification for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df
+[2026-02-11T17:05:11.170Z] INFO  Activity Executor taskQueue="MSG_workflow_billing_post_process_initiator", namespace="ncm-cg": 5 BillingPostProcessInitatorTaskConsumer:316 [] Pushed Multiple Currency Detection Verification workflow for customerHash : 59d5de78-a964-5746-8c6e-677c4c7a79df

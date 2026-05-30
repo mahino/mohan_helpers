@@ -1,0 +1,50 @@
+2026-01-11 04:36:58 - del - INFO - ================================================================================
+2026-01-11 04:36:58 - del - INFO - Script: del
+2026-01-11 04:36:58 - del - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/del_20260111_043658.log
+2026-01-11 04:36:58 - del - INFO - ================================================================================
+2026-01-11 04:36:58 - del - INFO - Starting metrics collection session
+2026-01-11 04:36:58 - del - INFO - ================================================================================
+2026-01-11 04:36:58 - del - INFO - NCM CLUSTER REPORTS DOWNLOADER - IMPROVED VERSION
+2026-01-11 04:36:58 - del - INFO - ================================================================================
+2026-01-11 04:36:58 - del - INFO - Fetching cluster list...
+2026-01-11 04:37:10 - del - INFO - ✓ Successfully fetched 25 clusters in 12.70s
+2026-01-11 04:37:10 - del - INFO - Found 25 clusters to process
+2026-01-11 04:37:10 - del - INFO - Mode: SEQUENTIAL
+2026-01-11 04:37:10 - del - INFO - Status check timeout: 10.0 minutes
+2026-01-11 04:37:10 - del - INFO - Starting SEQUENTIAL processing of 25 clusters...
+2026-01-11 04:37:10 - del - INFO - 
+[1/25] Processing cluster 000641b9-6ca7-bd34-1324-ac1f6b61e0e2...
+2026-01-11 04:37:10 - del - INFO - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] Starting report download...
+2026-01-11 04:37:44 - del - INFO - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] Download API response: 202 (33.62s)
+2026-01-11 04:37:44 - del - ERROR - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] ✗ Failed to parse download ID: 'downloadId'
+2026-01-11 04:37:44 - del - ERROR - [1/25] ✗ Cluster 000641b9-6ca7-bd34-1324-ac1f6b61e0e2 failed
+2026-01-11 04:37:44 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:37:45 - del - INFO - 
+[2/25] Processing cluster 000641b9-4078-1de3-5416-7cc2558157ac...
+2026-01-11 04:37:45 - del - INFO - [CLUSTER 000641b9-4078-1de3-5416-7cc2558157ac] Starting report download...
+2026-01-11 04:37:51 - del - INFO - 
+============================================================
+2026-01-11 04:37:51 - del - INFO - Script interrupted by user (Ctrl+C)
+2026-01-11 04:37:51 - del - INFO - ============================================================
+2026-01-11 04:37:51 - del - INFO - Ending metrics collection session
+2026-01-11 04:37:51 - del - INFO - 
+================================================================================
+2026-01-11 04:37:51 - del - INFO - DETAILED PERFORMANCE METRICS
+2026-01-11 04:37:51 - del - INFO - ================================================================================
+2026-01-11 04:37:51 - del - INFO - Total Session Duration: 53.76 seconds (0.90 minutes)
+2026-01-11 04:37:51 - del - INFO - 
+API CALL METRICS:
+2026-01-11 04:37:51 - del - INFO -   Total API Calls: 2
+2026-01-11 04:37:51 - del - INFO -   Successful: 2
+2026-01-11 04:37:51 - del - INFO -   Failed: 0
+2026-01-11 04:37:51 - del - INFO -   Success Rate: 100.0%
+2026-01-11 04:37:51 - del - INFO -   Rate Limit Hits (429): 0
+2026-01-11 04:37:51 - del - INFO -   Response Time - Mean: 23.16s
+2026-01-11 04:37:51 - del - INFO -   Response Time - Median: 23.16s
+2026-01-11 04:37:51 - del - INFO -   Response Time - Min: 12.70s
+2026-01-11 04:37:51 - del - INFO -   Response Time - Max: 33.62s
+2026-01-11 04:37:51 - del - INFO - 
+STATUS CODE BREAKDOWN:
+2026-01-11 04:37:51 - del - INFO -   200: 1
+2026-01-11 04:37:51 - del - INFO -   202: 1
+2026-01-11 04:37:51 - del - INFO - ================================================================================

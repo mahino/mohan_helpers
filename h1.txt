@@ -1,0 +1,1000 @@
+    2  docker login
+    3  docker login
+    4  docker login
+    5  docker login
+    6  kubectl get pods -A | grep default
+    7  kubectl delete pod ubuntu-pod
+    8  docker pull ubuntu:latest
+    9  sudo su
+   10  docker login
+   11  sudo su
+   12  kubectl get svc -A | grep 'grafana'
+   13  kubectl get svc -A 
+   14  kubectl get svc -A | grep 'grafana'
+   15  kubectl describe pods -n ntnx-system grafana-dfbdd4cf8-88f4m 
+   16  kubectl get svc -A | grep 'Load'
+   17  kubectl get svc -A | grep 'ncm-tunnel'
+   18  kubectl get svc --all-namespaces -o custom-columns=":metadata.name,:spec.ports[*].nodePort"
+   19  kubectl get svc --all-namespaces -o custom-columns=":metadata.name,:spec.ports[*].ClusterIP"
+   20  kubectl describe pods -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc 
+   21  kubectl get svc --all-namespaces -o custom-columns=":metadata.name,:spec.ports[*].nodePort"
+   22  kubectl describe pods -n  ntnx-ncm-self-service ncm-calm-0 
+   23  kubectl get svc --all-namespaces -o custom-columns=":metadata.name,:spec.ports[*].QoS Class"
+   24  kubectl describe services -n ntnx-ncm-self-service ncm-calm-nodeport 
+   25  kubectl get pods --all-namespaces -o custom-columns=":metadata.name,:QoS Class"
+   26  kubectl describe pods --all-namespaces -o custom-columns=":metadata.name,:QoS Class"
+   27  kubectl describe --help
+   28  kubectl get pods -A | grep calm | awk '{print $2}'
+   29  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 -- bash
+   30  cat ~/.kube/config
+   31  cat ~/.kube/configcat /var/nutanix/etc/kubernetes/ssl/ca.pem
+   32  cat /var/nutanix/etc/kubernetes/ssl/ca.pem
+   33  cat ~/.kube/config
+   34  cat /var/nutanix/etc/kubernetes/ssl/kubectl.pem
+   35  cat /var/nutanix/etc/kubernetes/ssl/kubectl-key.pem
+   36  kubectl get pods -A
+   37  docker images
+   38  sudo su
+   39  kubectl describe pods -n default ubuntu-pod
+   40  ifconfig
+   41  kubectl exec -ti -n ntnx-ncm-self-service ncm-policy-6667f76897-g2vrr -- bash
+   42  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 bash
+   43  kubectl exec -ti -n ntnx-ncm-self-service ncm-policy-6667f76897-g2vrr -- bash
+   44  exit
+   45  ifconfig
+   46  kubectl get pods -A | grep default
+   47  cd stats_collection/temp/
+   48  vi temp.yaml 
+   49  kubectl apply -f temp.yaml 
+   50  pwd
+   51  cd ..
+   52  ls
+   53  vi expose_epsilon_metrics.py 
+   54  pwd
+   55  cp expose_epsilon_metrics.py temp/
+   56  cd temp
+   57  ls
+   58  pwd
+   59  which python3
+   60  kubectl get pods -A | grep default
+   61  kubectl get pods -A | grep default
+   62  kubectl get pods -A | grep default
+   63  kubectl get pods -A | grep default
+   64  pwd
+   65  kubectl edit pod -n ntnx-ncm-self-service 
+   66  /usr/local/nutanix/bin/start_services.sh
+   67  cat /usr/local/nutanix/bin/start_services.sh
+   68  vi /usr/local/nutanix/bin/start_services.sh
+   69  kubectl edit pod -n ntnx-ncm-self-service 
+   70  kubectl edit sts ncm-epsilon -n ntnx-ncm-common
+   71  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 -- bash
+   72  kubectl edit pod -n ntnx-ncm-common ncm-epsilon-0 
+   73  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 
+   74  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0  bash
+   75  vi stats_collection/temp/temp.yaml 
+   76  kubectl apply -f temp.
+   77  kubectl apply -f temp.yaml 
+   78  pwd
+   79  cd stats_collection/temp/
+   80  vi temp.yaml 
+   81  kubectl apply -f temp.yaml 
+   82  vi temp.yaml 
+   83  kubectl apply -f temp.yaml 
+   84  vi temp.yaml 
+   85  kubectl apply -f temp.yaml 
+   86  kubectl get pods -A | grep default
+   87  kubectl describe pod -n default                 ubuntu-pod
+   88  kubectl edit pod -n default                 ubuntu-pod
+   89  vi temp.yaml 
+   90  kubectl apply -f temp.yaml 
+   91  kubectl delete pod -n default                 ubuntu-pod
+   92  kubectl delete pod -n default                 ubuntu-pod
+   93  pwd
+   94  kubectl apply -f temp.yaml 
+   95  vi temp.yaml 
+   96  cat .kube/config 
+   97  kubectl get pods -A | grep default
+   98  kubectl get pods -A | grep default
+   99  kubectl get pods -A | grep default
+  100  kubectl get pods -A | grep default
+  101  kubectl get pods -A | grep default
+  102  kubectl get pods -A | grep default
+  103  kubectl get pods -A | grep default
+  104  cat .kube/config 
+  105  kubectl get pods -A | grep default
+  106  kubectl get pods -A | grep default
+  107  kubectl get pods -A | grep default
+  108  kubectl get pods -A | grep default
+  109  kubectl get pods -A | grep default
+  110  kubectl get pods -A | grep default
+  111  kubectl get pods -A | grep default
+  112  kubectl get pods -A | grep default
+  113  kubectl get pods -A | grep default
+  114  kubectl describe pod -n default                 ubuntu-pod
+  115  cd /var/nutanix/etc/kubernetes/ssl/
+  116  kubectl get pods -A | grep default
+  117  kubectl get pods -A | grep default
+  118  kubectl get pods -A | grep default
+  119  kubectl get pods -A | grep default
+  120  cd
+  121  cd .kube/con
+  122  pwd
+  123  cd/
+  124  cd 
+  125  cd /
+  126  echo $KUBE_CONFIG
+  127  echo $KUBECONFIG
+  128  exit
+  129  cat .kube/config 
+  130  pwd
+  131  kubectl exec -ti -n ntnx-ncm-self-service bash
+  132  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  133  kubectl get pods -A | grep self
+  134  kubectl get pods -A | grep def
+  135  kubectl get pods -A | grep def
+  136  kubectl get pods -A | grep de
+  137  kubectl get pods -A | grep def
+  138  kubectl get pods -A | grep def
+  139  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top
+  140  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top -n 1
+  141  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top -n 1
+  142  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- sh
+  143  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- bash
+  144  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- date
+  145  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top -n 1
+  146  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top -n 1
+  147  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top -n 1
+  148  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top -n 1
+  149  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- top -n 1
+  150  kubectl get pods -A | default
+  151  kubectl get pods -A | grep default
+  152  kubectl delete pod -n default                 ubuntu-pod
+  153  kubectl delete pod -n default                 ubuntu-pod
+  154  cd stats_collection/temp/
+  155  sudo su
+  156  kubectl exec -ti -n default ubuntu-pod bash
+  157  kubectl get pods -A | grep defau
+  158  kubectl exec -ti -n default ubuntu-pod bash
+  159  cd ../
+  160  ls
+  161  kubectl cp * default/ubuntu-pod:/home/scripts/
+  162  kubectl cp .* default/ubuntu-pod:/home/scripts/
+  163  kubectl get pods -A | grep default
+  164  kubectl cp epsilon_* default/ubuntu-pod:/home/scripts/
+  165  kubectl exec -ti -n default ubuntu-pod bash
+  166  kubectl get cmp -A
+  167  kubectl get configmap -A
+  168  kubectl edit configmap -n ntnx-ncm-self-service   ncm-calm-config
+  169  sudo su
+  170  kubectl exec -ti -n default ubuntu-pod bash
+  171  kubectl exec -ti -n default ubuntu-pod bash
+  172  sudo  su
+  173  cd temp/
+  174  ls
+  175  kubectl get pods -A |grep default
+  176  kubectl delete pod -n default                 ubuntu-pod 
+  177  vi temp.yaml 
+  178  kubectl apply -f temp.yaml 
+  179  vi temp.yaml 
+  180  vi temp.yaml 
+  181  kubectl apply -f temp.yaml 
+  182  kubectl exec -ti -n default ubuntu-pod bash
+  183  kubectl exec -ti -n default ubuntu-pod bash
+  184  kubectl delete pod -n default                 ubuntu-pod 
+  185  vi temp.yaml 
+  186  kubectl apply -f temp.yaml 
+  187  vi temp.yaml 
+  188  kubectl apply -f temp.yaml 
+  189  kubectl delete pod -n default                 ubuntu-pod 
+  190  kubectl apply -f temp.yaml 
+  191  kubectl exec -ti -n default ubuntu-pod bash
+  192  sudo su
+  193  kubectl delete pod -n default ubuntu-pod 
+  194  vi temp.yaml 
+  195  vi temp.yaml 
+  196  kubectl apply -f temp.yaml 
+  197  kubectl exec -ti -n default ubuntu-pod bash
+  198  sudo su
+  199  top | grep kubectl
+  200  top -b -c | grep kubectl
+  201  top -b -c | grep 'kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc'
+  202  top -n 1
+  203  top -b -c | grep 'kubectl exec -ti -n ntnx-ncm-self-service ncm-'
+  204  top -bc | grep 'kubectl exec -ti -n ntnx-ncm-self-service ncm-'
+  205  top -bc -w | grep 'kubectl exec -ti -n ntnx-ncm-self-service ncm-'
+  206  kubectl get pods -A | grep default
+  207  kubectl get pods -A | grep default
+  208  kubectl get pods -A | grep default
+  209  kubectl get pods -A | grep default
+  210  kubectl get pods -A | grep default
+  211  kubectl get pods -A | grep default
+  212  kubectl get pods -A | grep default
+  213  kubectl get pods -A | grep default
+  214  kubectl get pods -A | grep default
+  215  kubectl get pods -A | grep default
+  216  kubectl get pods -A | grep default
+  217  kubectl exec -ti -n default ubuntu-pod bash
+  218  kubectl delete pod -n default ubuntu-pod 
+  219  vi .kube/config 
+  220  kubectl get pods -A | grep default
+  221  kubectl get pods -A | grep default
+  222  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 bash
+  223  kubectl exec -ti -n default ubuntu-pod bash
+  224  sudo su
+  225  cd stats_collection/temp/
+  226  kubectl delete pod -n default ubuntu-pod 
+  227  vi temp.yaml 
+  228  vi temp.yaml 
+  229  kubectl apply -f temp.yaml 
+  230  kubectl exec -ti -n default ubuntu-pod bash
+  231  vi temp.yaml 
+  232  cp temp.yaml pod.yaml
+  233  kubectl exec -ti -n default ubuntu-pod bash
+  234  kubectl exec -ti -n default ubuntu-pod bash
+  235  kubectl exec -ti -n default ubuntu-pod bash
+  236  kubectl exec -ti -n default ubuntu-pod bash
+  237  kubectl exec -ti -n default ubuntu-pod bash
+  238  vi temp.yaml 
+  239  kubectl apply -f temp.yaml 
+  240  kubectl exec -ti -n default ubuntu-pod bash
+  241  vi temp.yaml 
+  242  kubectl apply -f temp.yaml 
+  243  kubectl exec -ti -n default ubuntu-pod bash
+  244  kubectl get svc -A 
+  245  kubectl get svc -A | grep export
+  246  kubectl get svc -A | grep calm
+  247  kubectl get svc -A | grep grafana
+  248  kubectl get svc -A | grep ubuntu
+  249  cd stats_collection/
+  250  vi grafana-service
+  251  vi grafana-service.yaml 
+  252  kubectl get svc -A | grep calm
+  253  kubectl edit svc -n ntnx-ncm-self-service   ncm-calm-nodeport 
+  254  ls
+  255  vi calm_service_monitor.yaml 
+  256  vi enable_ss_stats.sh 
+  257  vi grafana-service.yaml 
+  258  cd temp/
+  259  cat temp.yaml 
+  260  vi serv.yaml
+  261  kubectl apply -f serv.yaml 
+  262  vi serv.yaml
+  263  kubectl apply -f serv.yaml 
+  264  kubectl get svc -A | grep ubutu
+  265  kubectl get svc -A | grep ubuntu
+  266  vi sermonitor.yaml 
+  267  kubectl apply -f sermonitor.yaml 
+  268  kubectl exec -ti -n default ubuntu-pod bash
+  269  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets 
+  270  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t1.json
+  271  scp t1.json nutanix@10.36.199.56:/home/nutanix/
+  272  kubectl get svc -A | grep ubuntu
+  273  kubectl get pods -A | grep defa
+  274  kubectl get pods -A | grep defa
+  275  kubectl delete pod -n default                 ubuntu-pod
+  276  kubectl get pods -A | grep defa
+  277  kubectl delete pod -n default                 ubuntu-pod
+  278  kubectl get pods -A | grep defa
+  279  kubectl delete pod -n default                 ubuntu-pod
+  280  kubectl get pods -A | grep defa
+  281  cd stats_collection/temp/
+  282  kubectl apply -f temp.yaml 
+  283  kubectl delete pod -n default                 ubuntu-pod
+  284  kubectl get pods -A | grep defa
+  285  kubectl get pods -A | grep defa
+  286  kubectl delete pod -n default                 ubuntu-pod
+  287  kubectl apply -f temp.yaml 
+  288  kubectl exec -ti -n default ubuntu-pod bash
+  289  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t1.json
+  290  scp t1.json nutanix@10.36.199.56:/home/nutanix/
+  291  kubectl edit svc -n default ubuntu-pod-service 
+  292  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t1.json
+  293  scp t1.json nutanix@10.36.199.56:/home/nutanix/
+  294  kubectl edit servicemonitor -n default ubuntu-pod-monitor 
+  295  kubectl edit servicemonitor -n ntnx-ncm-common ncm-epsilon-servicemonitor 
+  296  kubectl edit service -n ntnx-ncm-common ncm-epsilon-nodeport 
+  297  kubectl edit service -n default ubuntu-pod-service 
+  298  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  299  cd stats_collection/temp/
+  300  vi role.yaml
+  301  vi role_binding.yaml
+  302  kubectl apply -f role.yaml 
+  303  kubectl apply -f role_binding.yaml 
+  304  kubectl auth can-i list pods --namespace=ntnx-ncm-self-service --as=system:serviceaccount:ntnx-system:prometheus-k8s
+  305  kubectl auth can-i list pods --namespace=default --as=system:serviceaccount:ntnx-system:prometheus-k8s
+  306  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t2.json
+  307  scp t2.json nutanix@10.36.199.56:/home/nutanix/
+  308  kubectl edit svc -n default ubuntu-pod-service 
+  309  kubectl edit servicemonitor -n default ubuntu-pod-service 
+  310  kubectl edit servicemonitor -n default ubuntu-pod-monitor 
+  311  kubectl edit svc -n default ubuntu-pod-service 
+  312  kubectl edit servicemonitor -n default ubuntu-pod-monitor 
+  313  kubectl edit servicemonitor -n default ubuntu-pod-monitor 
+  314  vi sermonitor.yaml 
+  315  kubectl apply -f sermonitor.yaml 
+  316  kubectl get svc -n default ubuntu-pod-service
+  317  kubectl get servicemonitors.monitoring.coreos.com -n default ubuntu-pod-monitor
+  318  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t3.json
+  319  scp t3.json nutanix@10.36.199.56:/home/nutanix/
+  320  kubectl get svc -A | grep default
+  321  curl http://10.200.32.187:8009/metrics
+  322  ping 10.200.32.187:8009
+  323  vi serv.yaml 
+  324  kubectl apply -f serv.yaml 
+  325  vi sermonitor.yam
+  326  kubectl apply -f sermonitor.yaml 
+  327  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t4.json
+  328  scp t4.json nutanix@10.36.199.56:/home/nutanix/
+  329  kubectl logs prometheus-k8s-0 -n ntnx-system
+  330  kubectl logs prometheus-k8s-0 -n ntnx-system
+  331  kubectl get svc -A | grep default
+  332  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://<ubuntu_pod_ip>:8009/metrics
+  333  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://10.200.32.187:8009/metrics
+  334  vi serv.yaml 
+  335  vi sermonitor.yaml 
+  336  kubectl get pods -A | grep def
+  337  vi sermonitor.yaml 
+  338  vi temp.yaml 
+  339  kubectl apply -f temp.yaml 
+  340  kubectl delete pod -n default ubuntu-pod 
+  341  kubectl apply -f temp.yaml 
+  342  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t4.json
+  343  scp t4.json nutanix@10.36.199.56:/home/nutanix/
+  344  scp t4.json nutanix@10.36.199.56:/home/nutanix/
+  345  kubectl exec -it ubuntu-pod -- curl http://localhost:8009/metrics
+  346  kubectl exec -it ubuntu-pod -- bash
+  347  kubectl get endpoints ubuntu-pod-service
+  348  kubectl exec -it ubuntu-pod -- netstat -tuln | grep 8009
+  349  kubectl exec -it ubuntu-pod -- bash
+  350  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t4.json
+  351  scp t4.json nutanix@10.36.199.56:/home/nutanix/
+  352  exit
+  353  kubectl logs ubuntu-pod
+  354  cd stats_collection/temp/
+  355  vi temp.yaml 
+  356  kubectl exec -it ubuntu-pod -- netstat -tuln
+  357  kubectl exec -it ubuntu-pod -- curl http://localhost:8009/metrics
+  358  kubectl exec -it ubuntu-pod -- curl http://localhost:8009/metrics
+  359  kubectl exec -it ubuntu-pod -- curl http://localhost:8009/metrics
+  360  kubectl exec -it ubuntu-pod -- curl http://localhost:8009/metrics
+  361  vi serv.yaml 
+  362  vi sermonitor.yaml 
+  363  vi serv.yaml 
+  364  kubectl edit svc -n default ubuntu-pod-service 
+  365  kubectl logs -n monitoring prometheus-k8s-0
+  366  kubectl logs -n ntnx-system prometheus-k8s-0
+  367  kubectl logs -n ntnx-system prometheus-k8s-0
+  368  ubu
+  369  kubectl get pod ubuntu-pod -o yaml
+  370  kubectl get svc ubuntu-pod-service -o yaml
+  371  cd ..
+  372  ls
+  373  cat enable_ss_stats.sh 
+  374  cat enable_ss_stats.sh 
+  375  kubectl get svc ubuntu-pod-service -o yaml
+  376  kubectl edit svc -n ntnx-ncm-self-service ncm-calm-nodeport 
+  377  kubectl get svc ubuntu-pod-service -o yaml
+  378  kubectl edit svc -n ntnx-ncm-self-service ncm-calm-nodeport 
+  379  kubectl edit pod -n ntnx-ncm-self-service ncm-calm-nodeport 
+  380  kubectl edit pod -n ntnx-ncm-self-service ncm-calm
+  381  kubectl edit pod -n ntnx-ncm-self-service ncm-calm-0 
+  382  vi grafana-service.yaml 
+  383  kubectl get pods -A | grep defa
+  384  kubectl get pods -A | grep defa
+  385  kubectl exec -ti -n default ubuntu-pod 
+  386  top
+  387  kubectl exec -ti -n default ubuntu-pod bash
+  388  cd stats_collection/temp/
+  389  vi temp.yaml 
+  390  kubectl apply -f temp.yaml 
+  391  kubectl apply -f temp.yaml 
+  392  kubectl exec -ti -n default ubuntu-pod bash
+  393  vi temp.yaml 
+  394  sudo su
+  395  kubectl exec -ti -n default ubuntu-pod bash
+  396  kubectl exec -ti -n default ubuntu-pod bash
+  397  kubectl edit servicemonitor -n ntnx-ncm-self-service ncm-calm-servicemonitor 
+  398  kubectl edit service -n ntnx-ncm-self-service ncm-calm-nodeport 
+  399  kubectl edit servicemonitor -n ntnx-ncm-self-service ncm-calm-servicemonitor 
+  400  kubectl edit service -n ntnx-ncm-self-service ncm-calm-nodeport 
+  401  kubectl edit servicemonitor -n ntnx-ncm-self-service ncm-calm-servicemonitor 
+  402  cd stats_collection/temp/
+  403  vi serv.yaml 
+  404  vi sermonitor.yaml 
+  405  kubectl apply -f serv.yaml 
+  406  kubectl apply -f sermonitor.yaml 
+  407  kubectl edit svc -n default ubuntu-pod-service 
+  408  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t1.json
+  409  scp t1.json nutanix@10.36.199.56:/home/nutanix/
+  410  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t2.json
+  411  scp t2.json nutanix@10.36.199.56:/home/nutanix/
+  412  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t2.json
+  413  sshpass -p nutanix/4u scp t2.json nutanix@10.36.199.56:/home/nutanix/
+  414  yum install openssh-clients
+  415  scp t2.json nutanix@10.36.199.56:/home/nutanix/
+  416  scp t2.json mohan.as1@10.48.212.161:/home/mohana.as1/
+  417  scp t2.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  418  kubectl delete svc -n default ubuntu-pod-service 
+  419  kubectl delete servicemonitor -n default ubuntu-pod-service 
+  420  kubectl delete servicemonitor -n default ubuntu-pod-monitor 
+  421  vi serv.yaml 
+  422  vi serv.yaml 
+  423  vi temp.yaml 
+  424  kubectl edit svc -n ntnx-ncm-self-service ncm-calm
+  425  kubectl edit svc -n ntnx-ncm-self-service ncm-calm-nodeport 
+  426  vi serv.yaml 
+  427  vi temp.yaml 
+  428  vi serv.yaml 
+  429  vi sermonitor.yaml 
+  430  kubectl apply -f serv.yaml 
+  431  kubectl apply -f sermonitor.yaml 
+  432  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t3.json
+  433  scp t3.json nutanix@10.36.199.56:/home/nutanix/
+  434  scp t3.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  435  kubectl exec -it prometheus-k8s-0 -c prometheus -- curl http://ubuntu-pod-service:8009/metrics
+  436  kubectl exec -it -n ntnx-system prometheus-k8s-0 -- curl http://ubuntu-pod-service:8009/metrics
+  437  kubectl exec -it -n ntnx-system prometheus-k8s-0 -- curl http://ubuntu-pod-service:8009/metrics
+  438  kubectl get svc -A | grep ubuntu
+  439  kubectl exec -it -n ntnx-system prometheus-k8s-0 -- curl http://10.200.32.194:8009/metrics
+  440  history
+  441  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://10.200.32.187:8009/metrics
+  442  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://10.200.32.187:8009/metrics
+  443  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://10.200.32.187:8009/metrics
+  444  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://10.200.32.187:8009/metrics
+  445  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://10.200.32.187:8009/metrics
+  446  kubectl edit svc -n default ubuntu-pod-service 
+  447  kubectl edit servicemonitor -n default ubuntu-pod-monitor 
+  448  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl http://10.200.32.187:8009/metrics
+  449  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- wget -qO- http://10.200.32.187:8009/metrics
+  450  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- wget -qO- http://10.200.32.187:8009/metrics
+  451  kubectl exec -n ntnx-system -it prometheus-k8s-0 -- curl -qO- http://10.200.32.187:8009/metrics
+  452  curl http://10.200.32.187:8009/metrics
+  453  kubectl exec -it ubuntu-pod -- curl http://localhost:8009/metrics
+  454  kubectl edit servicemonitor -n default ubuntu-pod-monitor 
+  455  kubectl edit service -n default ubuntu-pod-service 
+  456  kubectl edit pod -n default ubuntu-pod-service 
+  457  kubectl edit pod -n default ubuntu-pod 
+  458  kubectl logs -n ntnx-system prometheus-k8s-0
+  459  kubectl logs -n ntnx-system prometheus-k8s-0
+  460  kubectl edit svc -n ntnx-ncm-self-service ncm-calm
+  461  kubectl edit svc -n ntnx-ncm-self-service ncm-calm-nodeport 
+  462  kubectl edit servicemonitor -n ntnx-ncm-self-service ncm-calm-servicemonitor 
+  463  vi serv.yaml 
+  464  vi sermonitor.yaml 
+  465  kubectl apply -f serv.yaml 
+  466  kubectl apply -f sermonitor.yaml 
+  467  kubectl edit svc -n ntnx-system grafana 
+  468  kubectl edit servicemonitor -n ntnx-system grafana 
+  469  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t1.json
+  470  scp t3.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  471  vi sermonitor.yaml 
+  472  vi serv.yaml 
+  473  kubectl apply -f sermonitor.yaml 
+  474  kubectl edit servicemonitor -n default ubuntu-pod-monitor 
+  475  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t2.json
+  476  scp t2.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  477  scp t2.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  478  vi sermonitor.yaml 
+  479  kubectl apply -f sermonitor.yaml 
+  480  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- http://localhost:9090/api/v1/targets > t4.json
+  481  scp t4.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  482  kubectl exec -ti -n default ubuntu-pod 
+  483  top
+  484  kubectl exec -ti -n default ubuntu-pod 
+  485  kubectl exec -ti -n default ubuntu-pod bash
+  486  vi pod.yaml 
+  487  vi temp.yaml 
+  488  cd ..
+  489  vi grafana-deployment.yaml 
+  490  ls
+  491  vi grafana-dashboardDatasources.yaml 
+  492  vi grafana-dashboardDefinitions.yaml 
+  493  vi grafana-dashboardSources.yaml 
+  494  vi grafana-dashboardSources.yaml 
+  495  vi grafana-serviceAccount.yaml 
+  496  kubectl get pods -A | grep pod
+  497  kubectl get pods -A | grep grafana
+  498  kubectl get pod -n ntnx-system             grafana-dfbdd4cf8-88f4m -o json
+  499  kubectl get pod -n ntnx-system             grafana-dfbdd4cf8-88f4m -o yaml
+  500  cd te
+  501  cd temp/
+  502  ls
+  503  cp gene_stats_pod.yaml
+  504  cp temp.yaml gene_stats_pod.yaml
+  505  cp serv.yaml gene_stats_service.yaml
+  506  cp sermonitor.yaml gene_stats_serviceMonitor.yaml
+  507  cp role.yaml gene_stats_role.yaml
+  508  cp role_binding.yaml gene_stats_role_binding.yam
+  509  scp gene_stats_* nutanix@10.36.199.56:/home/nutanix/
+  510  vi temp.yaml 
+  511  vi temp.yaml 
+  512  cd stats_collection/temp/
+  513  vi temp.yaml 
+  514  kubectl delete pod -n default ubuntu-pod 
+  515  kubectl get pods -A
+  516  kubectl apply -f temp.yaml 
+  517  kubectl exec -ti -n default ubuntu-pod bash
+  518  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  519  kubectl exec -n ntnx-ncm-self-service ncm-calm-0  -- source /home/calm/venv3/bin/activate status
+  520  kubectl exec -n ntnx-ncm-self-service ncm-calm-0  -- date
+  521  cd stats_collection/temp/
+  522  kubectl apply -f gene_stats_pod.yaml 
+  523  kubectl get pods -A | grep def
+  524  vi gene_stats_pod.yaml 
+  525  kubectl apply -f gene_stats_pod.yaml 
+  526  kubectl get pods -A | grep def
+  527  vi gene_stats_pod.yaml 
+  528  kubectl apply -f gene_stats_pod.yaml 
+  529  kubectl get pods -A | grep def
+  530  vi gene_stats_pod.yaml 
+  531  kubectl apply -f gene_stats_pod.yaml 
+  532  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  533  cd stats_collection/temp/
+  534  ls
+  535  kubectl delete pod -n default ubuntu-pod 
+  536  kubectl exec -ti -n default ubuntu-pod 
+  537  kubectl exec -ti -n default ubuntu-pod bash
+  538  sudo su
+  539  kubectl delete pod -n default ubuntu-pod 
+  540  kubectl exec -ti -n default ubuntu-pod bash
+  541  kubectl exec -ti -n default ubuntu-pod bash
+  542  kubectl exec -ti -n default ubuntu-pod bash
+  543  sudo su
+  544  kubectl delete pod -n default ubuntu-pod 
+  545  kubectl exec -ti -n default ubuntu-pod bash
+  546  sudo su
+  547  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 -- date
+  548  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 -- activate && status
+  549  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 -- /home/calm/venv3/bin/activate && status
+  550  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 -- source /home/calm/venv3/bin/activate && status
+  551  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 -- bash -i -c "source /home/calm/venv3/bin/activate && status"
+  552  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -- bash -i -c "source /home/calm/venv3/bin/activate && status"
+  553  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "source /home/calm/venv3/bin/activate && status"
+  554  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "source /home/epsilon/venv3/bin/activate && status"
+  555  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 256 -n 1"
+  556  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 256 -w 256 -n 1"
+  557  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 256 -w 256 -n 1"
+  558  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 256 + -n 1"
+  559  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 256+ -n 1"
+  560  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 512 -n 1"
+  561  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 1024 -n 1"
+  562  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 999 -n 1"
+  563  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 512 -n 1"
+  564  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 999 -n 1"
+  565  top -bc -w 999 -n 1
+  566  tput cols
+  567  tput cols
+  568  tput cols
+  569  top -bc -w 999 -n 1
+  570  top -bc -w 511 -n 1
+  571  top -bc -w 512 -n 1
+  572  top -bc -w 513 -n 1
+  573  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 512 -n 1"
+  574  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 512 -n 1; source /home/epsilon/venv3/bin/activate && status"
+  575  kubectl get pods -A | grep self
+  576  kubectl exec -n ntnx-ncm-self-service ncm-policy-6667f76897-g2vrr -c ncm-policy -- bash -i -c "top -bc -w 512 -n 1; source /home/epsilon/venv3/bin/activate && status"
+  577  kubectl exec -n ntnx-ncm-self-service ncm-policy-6667f76897-g2vrr -c ncm-policy -- bash -i -c "source /home/epsilon/venv3/bin/activate && status"
+  578  kubectl exec -ti -n ntnx-ncm-self-service ncm-policy-6667f76897-g2vrr -c ncm-policy -- bash
+  579  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  580  sudo su
+  581  sudo su
+  582  sudo su
+  583  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -c 'top -bc -w 256 -n 1;source /home/calm/venv3/bin/activate && status'
+  584  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -c 'source /home/calm/venv3/bin/activate && status'
+  585  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'source /home/calm/venv3/bin/activate && status'
+  586  kubectl get pods -A | grep def
+  587  kubectl exec -ti -n default ubuntu-pod bahs
+  588  kubectl exec -ti -n default ubuntu-pod bash
+  589  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'top -bc -w 256 -n 1'
+  590  kubectl exec -ti -n default ubuntu-pod bash
+  591  kubectl get pods -A | grep self
+  592  kubectl exec -ti -n default ubuntu-pod bash
+  593  kubectl exec -ti -n default ubuntu-pod bash
+  594  kubectl exec -ti -n default ubuntu-pod bash
+  595  kubectl exec -ti -n default ubuntu-pod bash
+  596  kubectl exec -ti -n default ubuntu-pod bash
+  597  kubectl exec -ti -n default ubuntu-pod bash
+  598  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 bash
+  599  kubectl exec -ti -n default ubuntu-pod bash
+  600  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 512 -n 1; source /home/epsilon/venv3/bin/activate && status"
+  601  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 512 -n 1
+  602  ;
+  603  ;
+  604  kubectl exec -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash -i -c "top -bc -w 512 -n 1"
+  605  ls -lrt
+  606  cd stats_collection/
+  607  ls -lrt
+  608  cd
+  609  kubectl get pods -A
+  610  kubectl exec -ti -n default ubuntu-pod bash
+  611  top
+  612  ps -ef | grep 'python3.9'
+  613  kubectl exec -ti -n default ubuntu-pod bash
+  614  kubectl get pods -A
+  615  docker stats  ubuntu-pod
+  616  docker
+  617  docker stats 
+  618  docker ps
+  619  kubectl top pods -n default ubuntu-pod 
+  620  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 -c ncm-epsilon -- bash 
+  621  cd /home/nutanix/
+  622  ls
+  623  top
+  624  vi /home/nutanix/uda_engine/bin/uda_engine_server.py
+  625  cd stats_collection/
+  626  ls
+  627  vi emn
+  628  vi enable_ss_stats.sh 
+  629  calm_idf_ip=`kubectl get svc -n ntnx-ncm-self-service | grep idf  | awk '{print $3}'`
+  630  common_idf_ip=`kubectl get svc -n ntnx-ncm-common | grep idf  | awk '{print $3}'`
+  631  kubectl get svc -n ntnx-ncm-common | grep idf  | awk '{print $3}'
+  632  kubectl get svc -n ntnx-ncm-self-service | grep idf  | awk '{print $3}'
+  633  kubectl exec -ti -n default ubuntu-pod bash
+  634  kubectl exec -ti -n default ubuntu-pod bash
+  635  kubectl exec -ti -n default ubuntu-pod bash
+  636  kubectl exec -ti -n default ubuntu-pod bash
+  637  kubectl exec -ti -n default ubuntu-pod bash
+  638  kubectl exec -ti -n default ubuntu-pod bash
+  639  kubectl exec -ti -n default ubuntu-pod bash
+  640  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- bash -i -c 'echo ST: TOP STATS START;top -bc -w 256 -n 1;echo ST: TOP STATS END'
+  641  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- bash
+  642  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c openssh-server -- bash
+  643  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c tunnelserver -- bash
+  644  kubectl exec -n ntnx-ncm-self-service ncm-policy-6667f76897-g2vrr -c ncm-policy -- bash -i -c 'echo ST: TOP STATS START;top -bc -w 256 -n 1'
+  645  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c tunnelserver -- bash -i -c 'echo ST: TOP STATS START;top -bc -w 256 -n 1;echo ST: TOP STATS END'
+  646  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 -- bash
+  647  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  648  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  649  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  650  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  651  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  652  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  653  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  654  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  655  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  656  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  657  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: TOP CPU STATS END;'
+  658  kubectl exec -ti -n default ubuntu-pod bash
+  659  sudo su
+  660  sudo su
+  661  kubectl delete pod -n default ubuntu-pod 
+  662  cd stats_collection/temp/
+  663  ls
+  664  vi gene_stats_pod.yaml 
+  665  kubectl apply -f gene_stats_pod.yaml 
+  666  sudo su
+  667  vi gene_stats_pod.yaml 
+  668  kubectl apply -f gene_stats_pod.yaml 
+  669  sudo su
+  670  kubectl delete pod -n default ubuntu-pod 
+  671  kubectl apply -f gene_stats_pod.yaml 
+  672  sudo su
+  673  kubectl exec -ti -n default ubuntu-pod bash
+  674  sudo su
+  675  kubectl exec -ti -n default ubuntu-pod bash
+  676  kubectl exec -ti -n default ubuntu-pod bash
+  677  kubectl exec -ti -n default ubuntu-pod bash
+  678  kubectl get pods -A | grep defa
+  679  kubectl get pods -A | grep defa
+  680  kubectl exec -ti -n default ubuntu-pod bash
+  681  kubectl exec -ti -n default ubuntu-pod bash
+  682  kubectl exec -ti -n default ubuntu-pod bash
+  683  kubectl exec -ti -n default ubuntu-pod bash
+  684  kubectl exec -ti -n default ubuntu-pod bash
+  685  kubectl get pods -A | grep defa
+  686  kubectl describe pod -n default ubuntu-pod 
+  687  kubectl get pods -A | grep defa
+  688  kubectl get pods -A | grep defa
+  689  kubectl get pods -A | grep defa
+  690  kubectl get pods -A | grep defa
+  691  kubectl describe pod -n default ubuntu-pod 
+  692  kubectl delete pod -n default ubuntu-pod 
+  693  cd stats_collection/temp/
+  694  vi gene_stats_pod.yaml 
+  695  kubectl apply -f gene_stats_pod.yaml 
+  696  kubectl get pods -A | grep defa
+  697  kubectl exec -ti -n default ubuntu-pod bash
+  698  kubectl delete pod -n default ubuntu-pod 
+  699  vi gene_stats_pod.yaml 
+  700  kubectl apply -f gene_stats_pod.yaml 
+  701  kubectl get pods -A | grep defa
+  702  policy_services_stats
+  703  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=policy_services_stats" > l1.json
+  704  scp l1.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  705  elinks
+  706  cd ..
+  707  vi enable_ss_stats.sh 
+  708  kubectl get svc -n ntnx-ncm-self-service | grep idf  | awk \'{print $3}\'
+  709  kubectl get svc -n ntnx-ncm-self-service | grep idf  | awk '{print $3}'
+  710  kubectl get svc -n ntnx-ncm-common | grep idf  | awk '{print $3}'
+  711  kubectl get svc -n ntnx-ncm-common | grep idf 
+  712  kubectl get svc -A | grep svc
+  713  kubectl get svc -A | grep idf
+  714  vi enable_ss_stats.sh 
+  715  kubectl exec -ti -n default ubuntu-pod bash
+  716  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  717  kubectl exec -ti -n default ubuntu-pod bash
+  718  kubectl exec -ti -n default ubuntu-pod bash
+  719  ls -lrt
+  720  kubectl exec -ti -n default ubuntu-pod bash
+  721  ls -lrt
+  722  kubectl exec -ti -n default ubuntu-pod bash
+  723  kubectl exec -ti -n default ubuntu-pod bash
+  724  kubectl exec -ti -n default ubuntu-pod bash
+  725  kubectl exec -ti -n default ubuntu-pod bash
+  726  kubectl exec -ti -n default ubuntu-pod bash
+  727  kubectl delete pod -n default ubuntu-pod 
+  728  cd stats_collection/temp/
+  729  vi gene_stats_pod.yaml 
+  730  kubectl apply -f gene_stats_pod.yaml 
+  731  kubectl delete pod -n default ubuntu-pod 
+  732  vi gene_stats_pod.yaml 
+  733  kubectl apply -f gene_stats_pod.yaml 
+  734  kubectl get pods -A | grep defa
+  735  kubectl get pods -A | grep defa
+  736  kubectl delete pod -n default ubuntu-pod 
+  737  vi gene_stats_pod.yaml 
+  738  vi gene_stats_pod.yaml 
+  739  kubectl apply -f gene_stats_pod.yaml 
+  740  kubectl get pods -A | grep defa
+  741  kubectl get pods -A | grep defa
+  742  kubectl get pods -A | grep defa
+  743  kubectl describe pod -n default ubuntu-pod 
+  744  kubectl logs -n default ubuntu-pod 
+  745  kubectl logs
+  746  kubectl logs pod -n default ubuntu-pod 
+  747  kubectl logs ubuntu-pod 
+  748  kubectl delete pod -n default ubuntu-pod 
+  749  vi gene_stats_pod.yaml 
+  750  kubectl apply -f gene_stats_pod.yaml 
+  751  kubectl exec -ti -n default ubuntu-pod bash
+  752  kubectl exec -ti -n default ubuntu-pod bash
+  753  sudo su
+  754  kubectl get pods -A | grep ubuntu
+  755  kubectl exec -ti -n default ubuntu-pod bash
+  756  kubectl delete pod -n default ubuntu-pod 
+  757  vi gene_stats_pod.yaml 
+  758  kubectl apply -f gene_stats_pod.yaml 
+  759  kubectl exec -ti -n default ubuntu-pod bash
+  760  sudo su
+  761  kubectl exec -ti -n default ubuntu-pod bash
+  762  sudo su
+  763  kubectl exec -ti -n default ubuntu-pod bash
+  764  sudo su
+  765  kubectl exec -ti -n default ubuntu-pod bash
+  766  kubectl exec -ti -n default ubuntu-pod bash
+  767  sudo su
+  768  kubectl exec -ti -n default ubuntu-pod bash
+  769  $
+  770  kubectl exec -ti -n default ubuntu-pod bash
+  771  kubectl exec -ti -n default ubuntu-pod bash
+  772  kubectl exec -ti -n default ubuntu-pod bash
+  773  kubectl delete pod -n default ubuntu-pod 
+  774  cd stats_collection/temp/
+  775  vi gene_stats_pod.yaml 
+  776  kubectl apply -f gene_stats_pod.yaml 
+  777  kubectl get pods -A | grep ubuntu
+  778  sudo su
+  779  kubectl exec -ti -n default ubuntu-pod bash
+  780  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  781  kubectl exec -ti -n ntnx-ncm-self-service ncm-calm-0 bash
+  782  kubectl exec -ti -n default ubuntu-pod bash
+  783  cd stats_collection/temp/
+  784  vi gene_stats_pod.yaml 
+  785  kubectl apply -f gene_stats_pod.yaml 
+  786  kubectl get pods -A | grep deaf
+  787  kubectl get pods -A | grep defa
+  788  cd stats_collection/temp/
+  789  kubectl delete pod -n default ubuntu-pod-dummy 
+  790  vi gene_stats_pod.yaml 
+  791  kubectl apply -f gene_stats_pod.yaml 
+  792  kubectl get pods -A | grep defa
+  793  sudo su
+  794  kubectl get pods -A 
+  795  kubectl exec -ti -n default ubuntu-pod bash
+  796  kubectl get pods -A
+  797  kubectl get pods -A
+  798  kubectl exec -ti -n default ubuntu-pod-dummy bash
+  799  kubectl exec -ti -n default ubuntu-pod-dummy bash
+  800  kubectl exec -n ntnx-ncm-self-service ncm-calm-0 -c ncm-calm -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: ST: TOP CPU STATS END;echo ST: TOP MEMORY STATS START;top -bc -w 256 -n 1 -o %MEM;echo ST: TOP MEMORY STATS END;echo ST: PROCESS IDs START;source /home/calm/venv3/bin/activate && status;echo ST: PROCESS IDs END'
+  801  ls -lrt
+  802  kubectl exec -ti -n default ubuntu-pod-dummy bash
+  803  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c tunnelserver -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: ST: TOP CPU STATS END;echo ST: TOP MEMORY STATS START;top -bc -w 256 -n 1 -o %MEM;echo ST: TOP MEMORY STATS END'
+  804  kubectl get pods -A
+  805  kubectl delete pod -n default ubuntu-pod 
+  806  kubectl exec -ti -n default ubuntu-pod bash
+  807  history 30
+  808  cd stats_collection/
+  809  ls -lrt
+  810  cd temp/
+  811  ls -lrt
+  812  vim gene_stats_
+  813  vim gene_stats_pod.yaml 
+  814  vim gene_stats_pod.yaml 
+  815  netstat -tuln | grep :8009
+  816  vim gene_stats_pod.yaml
+  817  netstat -tuln | grep :8080
+  818  netstat -tuln | grep :8080
+  819  kubectl get pods -A | grep ubuntu
+  820  kubectl apply -f gene_stats_pod.yaml
+  821  cd
+  822  kubectl exec -ti -n default ubuntu-pod bash
+  823  kubectl exec -ti -n default ubuntu-pod bash
+  824  kubectl get pods -A | grep 'ubuntu'
+  825  kubectl exec -ti -n default ubuntu-pod bash
+  826  kubectl exec -ti -n default ubuntu-pod bash
+  827  -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc bash
+  828  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc bash
+  829  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c tunnelserverbash
+  830  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c tunnelserver bash
+  831  kubectl exec -ti -n default ubuntu-pod
+  832  kubectl exec -ti -n default ubuntu-pod bash
+  833  kubectl exec -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c tunnelserver -- bash -i -c 'echo ST: TOP STATS START;top -bc -w 256 -n 1;echo ST: TOP STATS END'
+  834  kubectl exec -ti -n ntnx-ncm-self-service ncm-tunnel-server-65696fff4c-cdjjc -c tunnelserver -- bash
+  835  cd stats_collection/
+  836  ls
+  837  vi grafana-deployment.yaml 
+  838  kubectl delete pod -n ntnx-system grafana-dfbdd4cf8-88f4m 
+  839  kubectl apply -f grafana-deployment.yaml 
+  840  kubectl exec -ti -n default ubuntu-pod bash
+  841  kubectl exec -ti -n default ubuntu-pod bash
+  842  kubectl svc -A | grep 'grafana'
+  843  kubectl get svc -A | grep 'grafana'
+  844  sudo su
+  845  kubecl exec -ti -n du
+  846  kubectl exec -ti -n default ubuntu-pod
+  847  kubectl exec -ti -n default ubuntu-pod bash
+  848  sudo su
+  849  cd stats_collection/temp/
+  850  kubectl exec -ti -n default ubuntu-pod
+  851  kubectl delete pod -n default ubuntu-pod
+  852  vi gene_stats_pod.yaml 
+  853  kubectl apply -f gene_stats_pod.yaml 
+  854  kubectl exec -ti -n default ubuntu-po bash
+  855  kubectl exec -ti -n default ubuntu-pop bash
+  856  kubectl exec -ti -n default ubuntu-pod bash
+  857  sudo su
+  858  kubectl delete pod -n default ubuntu-pod
+  859  vi gene_stats_pod.yaml 
+  860  kubectl apply -f gene_stats_pod.yaml 
+  861  kubectl exec -ti -n default ubuntu-po bash
+  862  kubectl exec -ti -n default ubuntu-pod bash
+  863  kubectl delete pod -n default ubuntu-pod
+  864  vi gene_stats_pod.yaml 
+  865  kubectl apply -f gene_stats_pod.yaml 
+  866  kubectl exec -ti -n default ubuntu-pod bash
+  867  vi gene_stats_pod.yaml 
+  868  kubectl apply -f gene_stats_pod.yaml 
+  869  sudo su
+  870  top
+  871  kubectl delete pod -n default ubuntu-pod
+  872  cd stats_collection/temp/
+  873  vi gene_stats_pod.yaml 
+  874  kubectl apply -f gene_stats_pod.yaml 
+  875  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=policy_services_stats" > l1.json
+  876  scp l1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers
+  877  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=policy_services_stats" > l1.json
+  878  vi l1.json 
+  879  kubectl get pods -A | grep defau
+  880  kubectl get pods -A | grep defau
+  881  kubectl get pods -A | grep defau
+  882  sudo su
+  883  kubectl get pods -A | grep defau
+  884  kubectl get pods -A | grep defau
+  885  kubectl delete pod -n default                 ubuntu-pod 
+  886  kubectl delete pod -n default                 ubuntu-pod-dummy
+  887  kubectl delete pod -n default                 my-script-pod
+  888  kubectl delete pod -n default                 metrics-collector-pod
+  889  kubectl exec -ti -n default ubuntu-pod 
+  890  kubectl exec -ti -n default ubuntu-pod bash
+  891  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=policy_services_stats" > l1.json
+  892  scp l1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers
+  893  kubectl exec -ti -n ntnx-system prometheus-k8s-0 bash
+  894  kubectl exec -ti -n ntnx-system prometheus-k8s-0 sh
+  895  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/admin/tsdb/delete_series?match=policy_services_stats"
+  896  kubectl exec -ti -n ntnx-system prometheus-k8s-0 sh
+  897  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- curl -X POST "http://localhost:9090/api/v1/admin/tsdb/delete_series?match=policy_services_stats"
+  898  kubectl exec -ti -n default ubuntu-pod bash
+  899  kubectl exec -ti -n default ubuntu-pod bash
+  900  sudo su
+  901  kubectl delete pod -n default ubuntu-pod 
+  902  cd stats_collection/temp/
+  903  vi gene_stats_pod.yaml 
+  904  kubectl apply -f gene_stats_pod.yaml 
+  905  kubectl exec -ti -n default ubuntu-pod bash
+  906  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=micro_services_stats" > l1.json
+  907  scp l1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers
+  908  kubectl exec -ti -n default ubuntu-pod bash
+  909  sudo su
+  910  cd stats_collection/temp/
+  911  kubectl delete pod -n default ubuntu-pod 
+  912  vi gene_stats_pod.yaml 
+  913  kubectl apply -f gene_stats_pod.yaml 
+  914  kubectl exec -ti -n default ubuntu-pod bash
+  915  kubectl exec -ti -n default ubuntu-pod bash
+  916  kubectl exec -ti -n default ubuntu-pod bash
+  917  kubectl exec -n ntnx-ncm-self-service ncm-policy-6667f76897-g2vrr -c ncm-policy -- bash -i -c 'echo ST: TOP CPU STATS START;top -bc -w 256 -n 1;echo ST: ST: TOP CPU STATS END;echo ST: TOP MEMORY STATS START;top -bc -w 256 -n 1 -o %MEM;echo ST: TOP MEMORY STATS END;echo ST: PROCESS IDs START;source /home/policy/venv3/bin/activate && status;echo ST: PROCESS IDs END'
+  918  kubectl get svc -A | grep 'prom'
+  919  kubectl exec -ti -n default ubuntu-pod bash
+  920  kubectl exec -ti -n default ubuntu-pod bash
+  921  kubectl get svc -A | prom
+  922  kubectl get svc -A | grep prom
+  923  kubectl edit svc -n ntnx-system prometheus-k8s 
+  924  kubectl get svc -A | grep prom
+  925  kubectl exec -ti -n default ubuntu-pod bash
+  926  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/label/__name__/values" > v1.json
+  927  vi v1.json 
+  928  scp v1.json mohan.as1@10.48.212.161:/home/mohan.as1/
+  929  scp v1.json mohan.as1@10.48.212.161:/home/mohan.as1/mohan_helpers
+  930  scp v1.json mohan.as1@10.48.212.161:/home/mohan.as1/mohan_helpers/
+  931  kubectl exec -ti -n default ubuntu-pod bash
+  932  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=top_20_cpu_stats"> l1.json
+  933  ls -lrt
+  934  l1.js
+  935  vim l1.json 
+  936  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=top_20_cpu_stats"> l1.json
+  937  vim l1.json 
+  938  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=top_20_cpu_stats"> l1.json
+  939  vim l1.json 
+  940  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=top_20_mem_stats"> l1.json
+  941  vim l1.json 
+  942  ls -lrt
+  943  vim l1.json 
+  944  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=top_20_mem_stats"> l1.json
+  945  ls -lrt
+  946  vim l1.json 
+  947  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=top_20_mem_stats"> l1.json
+  948  ls -lrt
+  949  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=top_20_mem_stats"> l1.json
+  950  ls -lrt
+  951  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=policy_services_stats" > l1.json
+  952  ls -lrt
+  953  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=policy_services_stats" > l1.json
+  954  ls -lrt
+  955  vim l1.json 
+  956  vim v1.json 
+  957  vi v1.json 
+  958  kubectl -n ntnx-ncm-self-service get pods
+  959  kubectl -n ntnx-ncm-self-service edit deployment ncm-tunnel-server
+  960  kubectl -n ntnx-ncm-self-service get pods
+  961  kubectl -n ntnx-ncm-self-service describe pod ncm-tunnel-server-84df6cdd76-w8xdg
+  962  kubectl exec -ti -n default ubuntu-pod bash
+  963  scp v1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers/
+  964  kubectl exec -ti -n default ubuntu-pod bash
+  965  cd stats_collection/temp/
+  966  ls
+  967  vi gene_stats_pod.yaml 
+  968  vi gene_stats_pod.yaml 
+  969  pwd
+  970  sudo su
+  971  vi gene_stats_pod.yaml 
+  972  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/label/__name__/values" > v1.json
+  973  scp v1.json mohan.as1@10.48.212.161:/home/mohan.as1/mohan_helpers/
+  974  scp v1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers/
+  975  kubectl exec -ti -n default ubuntu-pod bash
+  976  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/label/__name__/values" > v1.json
+  977  scp v1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers/
+  978  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=micro_services_stats" l1.json
+  979  kubectl exec -n ntnx-system -it prometheus-k8s-0 -c prometheus -- wget -qO- "http://localhost:9090/api/v1/query?query=micro_services_stats" > l1.json
+  980  scp l1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_hlpers/
+  981  scp l1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers/
+  982  scp v1.json mohan.as@10.41.26.208:/home/mohan.as/mohan_helpers/
+  983  kubectl exec -ti -n default ubuntu-pod bash
+  984  kubectl exec -ti -n default ubuntu-pod bash
+  985  cd stats_collection/temp/
+  986  ls -lrt
+  987  vim gene_stats_pod.yaml 
+  988  history 40
+  989  history 200
+  990  kubectl delete pod -n default ubuntu-pod
+  991  kubectl apply -f gene_stats_pod.yaml
+  992  ls -lrt
+  993  vi l1.json 
+  994  ls -lrt
+  995  cd stats_collection/
+  996  ls -lrt
+  997  cd temp/
+  998  ls -lrt
+  999  docker images
+ 1000  sudo su -
+ 1001  history > h1.txt

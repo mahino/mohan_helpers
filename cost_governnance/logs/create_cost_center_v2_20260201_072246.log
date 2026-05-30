@@ -1,0 +1,25 @@
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - Script: create_cost_center_v2
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/create_cost_center_v2_20260201_072246.log
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - Starting Cost Center Creation v2
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-1763.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-02-01 07:22:46 - create_cost_center_v2 - ERROR - [API ERROR] GET https://ncm.services.nconprem-10-53-60-1763.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-02-01 07:22:46 - create_cost_center_v2 - ERROR - [ERROR MESSAGE] HTTPSConnectionPool(host='ncm.services.nconprem-10-53-60-1763.ccpnx.com', port=443): Max retries exceeded with url: /v1/cg/global/chargeback/availableAccounts (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8a820fc110>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2026-02-01 07:22:46 - create_cost_center_v2 - ERROR - [TIME TAKEN] 0.0100 seconds (10.02 ms)
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - 
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - API METRICS CONSOLIDATED REPORT
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - GET      | /v1/cg/global/chargeback/availableAccounts         |       1 |      - |      10.02 |      10.02 |      10.02 |      10.02 |      10.02
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - Total API Calls: 1 | Unique Endpoints: 1 | Total Failures (non-200/202): 0 | Exceptions: 1
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - 
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - STATUS CODE BREAKDOWN:
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------
+2026-02-01 07:22:46 - create_cost_center_v2 - INFO - ================================================================================================================================================================

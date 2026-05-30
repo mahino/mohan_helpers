@@ -1,0 +1,167 @@
+{
+    "entity_results": [
+        {
+            "data": [
+                {
+                    "data_type": "int64",
+                    "name": "creation_time_usecs",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "1779772091548117"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "int64",
+                    "name": "expiration_time_usecs",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "1782363047000000"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "source_availability_zone_url",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "5f6ca0f2-7294-41d4-a9c5-e9f5b655c4e0"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "cluster_uuid",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "00065035-b0c9-5144-07ad-7cc255864212"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "bool",
+                    "name": "is_approval_policy_needed",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "false"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "source_cluster_uuid",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "00065035-b0c9-5144-07ad-7cc255864212"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "source_pc_cluster_uuid",
+                    "values": [
+                        {
+                            "time": 1779772092481768,
+                            "values": [
+                                "5f6ca0f2-7294-41d4-a9c5-e9f5b655c4e0"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "top_level_recovery_point_uuid",
+                    "values": [
+                        {
+                            "time": 1779896526874453,
+                            "values": [
+                                "f501ed32-ec82-48c3-b46e-a8f60ee9c320"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "sub_location_type",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "AOS_CLUSTER"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "sub_location_uuid",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "00065035-b0c9-5144-07ad-7cc255864212"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "entity_name",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "ahv_ins_delete-0-260519-173446"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "entity_uuid",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "0ec22bef-fe3e-4d1e-51c0-0dbd3be09158"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data_type": "string",
+                    "name": "hypervisor_type",
+                    "values": [
+                        {
+                            "time": 1779772092742251,
+                            "values": [
+                                "kKvm"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "entity_id": "cac2e68c-b8fc-404b-a405-ad080b93c653"
+        }
+    ],
+    "group_by_column_value": "0ec22bef-fe3e-4d1e-51c0-0dbd3be09158",
+    "group_summaries": {},
+    "total_entity_count": 3
+}

@@ -1,0 +1,571 @@
+
+====================================================================================================
+                               K8S CLUSTER SNAPSHOT COMPARISON REPORT                               
+====================================================================================================
+
+Generated: Mon Dec 22 16:33:14 UTC 2025
+Before Snapshot: cluster_snapshot_before
+After Snapshot:  cluster_snapshot_after
+
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mKUBERNETES VERSION[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+BEFORE:
+  Client Version: v1.28.9-22+93d0266219b728-ntnx
+  Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+  Server Version: v1.28.9-22+93d0266219b728-ntnx
+
+AFTER:
+  Client Version: v1.28.9-22+93d0266219b728-ntnx
+  Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+  Server Version: v1.28.9-22+93d0266219b728-ntnx
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mNODE STATUS COMPARISON[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+┌──────────────────────────────────────────┬───────────────────────────┬───────────────────────────┐
+│ RESOURCE                                 │ BEFORE                    │ AFTER                     │
+├──────────────────────────────────────────┼───────────────────────────┼───────────────────────────┤
+│ nc-824086-default-0                      │ Ready (age:5d12h)         │ Ready (age:5d13h)         │
+│ nc-824086-default-1                      │ Ready (age:11d)           │ Ready (age:11d)           │
+│ nc-824086-default-2                      │ Ready (age:47d)           │ Ready (age:47d)           │
+│ nc-824086-default-3                      │ Ready (age:5d5h)          │ Ready (age:11m)           │
+│ nc-824086-default-4                      │ Ready (age:5d5h)          │ Ready (age:11m)           │
+└──────────────────────────────────────────┴───────────────────────────┴───────────────────────────┘
+
+Node Taints Comparison:
+───────────────────────
+BEFORE:
+  nc-824086-default-0	
+  nc-824086-default-1	
+  nc-824086-default-2	
+  nc-824086-default-3	
+  nc-824086-default-4	
+
+AFTER:
+  nc-824086-default-0	
+  nc-824086-default-1	
+  nc-824086-default-2	
+  nc-824086-default-3	
+  nc-824086-default-4	
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mNODE PODS & RESOURCES PER VM[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+┌───────────────────────┬────────────┬────────────┬────────────────────────────┬────────────────────────────┐
+│ NODE                  │ B-PODS     │ A-PODS     │ BEFORE RESOURCES           │ AFTER RESOURCES            │
+├───────────────────────┼────────────┼────────────┼────────────────────────────┼────────────────────────────┤
+│ nc-824086-default-0   │ 54         │ 90         │ CPU:11593m MEM:26065Mi     │ CPU:14267m MEM:33683Mi     │ *
+│ nc-824086-default-1   │ 57         │ 70         │ CPU:10450m MEM:27166Mi     │ CPU:17601m MEM:32854Mi     │ *
+│ nc-824086-default-2   │ 69         │ 65         │ CPU:14329m MEM:26976Mi     │ CPU:19291m MEM:30311Mi     │ *
+│ nc-824086-default-3   │ 54         │ 25         │ CPU:15328m MEM:20222Mi     │ CPU:8181m MEM:15686Mi      │ *
+│ nc-824086-default-4   │ 60         │ 30         │ CPU:12273m MEM:26283Mi     │ CPU:4570m MEM:13824Mi      │ *
+├───────────────────────┼────────────┼────────────┼────────────────────────────┼────────────────────────────┤
+│ TOTAL                 │ 294        │ 280        │ CPU:63973m MEM:126712Mi    │ CPU:63910m MEM:126358Mi    │
+└───────────────────────┴────────────┴────────────┴────────────────────────────┴────────────────────────────┘
+
+Pod/Resource Delta Summary:
+  Total Pods:    Before=294  After=280  Delta=-14
+  Total CPU Req: Before=63973m  After=63910m  Delta=-63m
+  Total Mem Req: Before=126712Mi  After=126358Mi  Delta=-354Mi
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mDELETED & ADDED PODS PER VM[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NODE: nc-824086-default-0             PODS BEFORE: 54      PODS AFTER: 90      DELTA: +36    │
+├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ DELETED PODS (21):                                                                             │
+│   - cg-ui-5ddf455d55-kf8gt                                                                   │
+│   - common-auth-service-8679774c75-cx6gq                                                     │
+│   - common-html2pdf-service-57959989dc-kzmwt                                                 │
+│   - common-platform-billing-orchestration-service-5fcc75f95-t7sxv                            │
+│   - common-platform-billing-orchestration-worker-78cbdbbd58-cdpd5                            │
+│   - dion-service-internal-88d9d59c-7hsxb                                                     │
+│   - dmis-f7446987c-snxtv                                                                     │
+│   - nc-jobs-nc-service-app-health-monitor-cronjob-29440065-rn6q5                             │
+│   - ncm-epsilon-1                                                                            │
+│   - ncm-user-data-6c48f8977f-9f2rc                                                           │
+│   - nx-cg-hydra-billing-worker-78f7849577-xqmzb                                              │
+│   - pull-image-daemonset-1762296159-859zq                                                    │
+│   - pull-image-daemonset-1762301413-gzjb9                                                    │
+│   - pull-image-daemonset-1762939295-4qdkx                                                    │
+│   - pull-image-daemonset-1764248272-6ct62                                                    │
+│   - pull-image-daemonset-1764313288-xr9vv                                                    │
+│   - pull-image-daemonset-1764322281-96bdx                                                    │
+│   - pull-image-daemonset-1764329405-7h2nr                                                    │
+│   - pull-image-daemonset-1764332610-g4sck                                                    │
+│   - pull-image-daemonset-1764344353-l6bmj                                                    │
+│   ... and 1 more                                                                              │
+│─────────────────────────────────────────────────────────────────────────────────────────────────│
+│ ADDED PODS (56):                                                                               │
+│   + aiops-ui-8566d58cf5-cjqk6                                                                │
+│   + buscar-service-778fc9fbf-rwt8k                                                           │
+│   + cfs-0                                                                                    │
+│   + cg-data-ingestion-semi-enrich-ingest-worker-64b7db9454-wv46d                             │
+│   + cg-multicloud-ingestion-reconciler-worker-567d64769f-sxjlm                               │
+│   + cg-pg-1                                                                                  │
+│   + cg-ui-5ddf455d55-v5kt9                                                                   │
+│   + cg-ui-5ddf455d55-wnp75                                                                   │
+│   + chakr-cm-0                                                                               │
+│   + cli-678f8cdb9b-n87tz                                                                     │
+│   + common-cg-reports-worker-64d986d955-s865g                                                │
+│   + common-platform-billing-orchestration-worker-78cbdbbd58-fr5ls                            │
+│   + cpaas-nats-1                                                                             │
+│   + cpaas-nats-box-7989cbfb4-vs9p9                                                           │
+│   + csi-snapshot-controller-7fb8bf5755-f4fl2                                                 │
+│   + csi-snapshot-webhook-7f8d8b45fc-94k54                                                    │
+│   + dcis-7767d84bfb-7v528                                                                    │
+│   + dion-service-fcc464b84-pxnsd                                                             │
+│   + domain-manager-1                                                                         │
+│   + ergon-589cdccbcd-rp5qh                                                                   │
+│   ... and 36 more                                                                              │
+└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NODE: nc-824086-default-1             PODS BEFORE: 57      PODS AFTER: 70      DELTA: +13    │
+├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ DELETED PODS (12):                                                                             │
+│   - cfs-0                                                                                    │
+│   - cg-data-ingestion-nx-semi-enrich-push-worker-c7cb7dfb6-wp4jz                             │
+│   - cg-multicloud-ingestion-reconciler-worker-567d64769f-gtvg6                               │
+│   - common-cg-forecasting-worker-5f95898b87-v5htj                                            │
+│   - msp-prometheus-collector-658c77dffb-c7c6w                                                │
+│   - ncm-calm-0                                                                               │
+│   - ncm-epsilon-2                                                                            │
+│   - ncm-lg-health-678566cf7c-gprlw                                                           │
+│   - pull-image-daemonset-1764313288-rq6td                                                    │
+│   - pull-image-daemonset-1764322281-pwdtx                                                    │
+│   - pull-image-daemonset-1764344353-km7bl                                                    │
+│   - zeus-collector-0                                                                         │
+│─────────────────────────────────────────────────────────────────────────────────────────────────│
+│ ADDED PODS (24):                                                                               │
+│   + alertmanager-main-0                                                                      │
+│   + chk-clickhouse-keeper-chkeeper-chkeeper-0-2-0                                            │
+│   + common-auth-service-8679774c75-7vhdk                                                     │
+│   + common-cg-reports-worker-64d986d955-4xl77                                                │
+│   + common-cg-service-multi-cluster-85f6f55696-qhj9c                                         │
+│   + common-html2pdf-service-57959989dc-nk8f9                                                 │
+│   + common-platform-billing-orchestration-service-5fcc75f95-6ls6v                            │
+│   + cpaas-nats-0                                                                             │
+│   + dion-service-internal-88d9d59c-jc84n                                                     │
+│   + dmis-f7446987c-tr8pg                                                                     │
+│   + iam-proxy-6b5b46d675-4gnmr                                                               │
+│   + iamv2-authn-service-558d77558f-j6lt9                                                     │
+│   + iamv2-ui-service-66b748ffd8-cfh7r                                                        │
+│   + insights-collector-0                                                                     │
+│   + kube-state-metrics-76c775cd9b-jmtst                                                      │
+│   + mspserviceregistry-5cbb59d956-lpxwv                                                      │
+│   + mutator-webhook-dep-9b5f77f84-nvp4l                                                      │
+│   + neuron-1                                                                                 │
+│   + nginx-50d6o-0                                                                            │
+│   + ntnx-k8s-cluster-maintainer-operator-5c88ff6467-5z62f                                    │
+│   ... and 4 more                                                                              │
+└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NODE: nc-824086-default-2             PODS BEFORE: 69      PODS AFTER: 65      DELTA: -4     │
+├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ DELETED PODS (21):                                                                             │
+│   - common-cg-reports-worker-64d986d955-c2zfh                                                │
+│   - common-cg-service-multi-cluster-85f6f55696-fprnp                                         │
+│   - cpaas-nats-0                                                                             │
+│   - cpaas-nats-box-7989cbfb4-qw9w4                                                           │
+│   - ergon-589cdccbcd-mtcfm                                                                   │
+│   - filestore-zk-0                                                                           │
+│   - ncm-calm-1                                                                               │
+│   - ncm-calm-2                                                                               │
+│   - ncm-epsilon-0                                                                            │
+│   - ncm-platform-temporal-admintools-579589646-ct5ng                                         │
+│   - ncm-platform-temporal-web-6759bf8c7d-2dlqq                                               │
+│   - pull-image-daemonset-1762296159-s8jdh                                                    │
+│   - pull-image-daemonset-1762301413-84lxh                                                    │
+│   - pull-image-daemonset-1762939295-ptw64                                                    │
+│   - pull-image-daemonset-1764248272-4xtkl                                                    │
+│   - pull-image-daemonset-1764313288-lm5wr                                                    │
+│   - pull-image-daemonset-1764322281-466xg                                                    │
+│   - pull-image-daemonset-1764329405-c7qsm                                                    │
+│   - pull-image-daemonset-1764332610-6p2sv                                                    │
+│   - pull-image-daemonset-1764344353-854fn                                                    │
+│   ... and 1 more                                                                              │
+│─────────────────────────────────────────────────────────────────────────────────────────────────│
+│ ADDED PODS (17):                                                                               │
+│   + altinity-clickhouse-operator-bb9d998d-v5g4n                                              │
+│   + chakr-cm-0                                                                               │
+│   + chakr-db-instance-1                                                                      │
+│   + chi-clickhouse-chcluster1-0-0-0                                                          │
+│   + cloudnative-pg-6976fd56d6-cpxg6                                                          │
+│   + cluster-mgmt-578ff677c7-c4b4m                                                            │
+│   + dion-service-fcc464b84-sv79g                                                             │
+│   + iam-proxy-control-plane-55d7997cbd-5zkfd                                                 │
+│   + iamv2-ui-service-66b748ffd8-cz8j6                                                        │
+│   + ncm-adonis-service-697f5f44b-wf8jg                                                       │
+│   + ncm-dbal-dedupe-7c8c79dc-2vfkw                                                           │
+│   + ncm-ss-cnpg-1                                                                            │
+│   + nc-pooler-8c7795489-jmdt9                                                                │
+│   + objects-lite-0                                                                           │
+│   + onboarding-svc-ddd84f8bc-2vl62                                                           │
+│   + ss-zk-0                                                                                  │
+│   + vulcan-5f54c8b49d-rnxdv                                                                  │
+└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NODE: nc-824086-default-3             PODS BEFORE: 54      PODS AFTER: 25      DELTA: -29    │
+├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ DELETED PODS (53):                                                                             │
+│   - aiops-ui-8566d58cf5-q8hv9                                                                │
+│   - alertmanager-main-0                                                                      │
+│   - buscar-service-778fc9fbf-wqzng                                                           │
+│   - cg-ui-5ddf455d55-hqf2j                                                                   │
+│   - chakr-cm-0                                                                               │
+│   - chakr-db-instance-0                                                                      │
+│   - chk-clickhouse-keeper-chkeeper-chkeeper-0-2-0                                            │
+│   - ch-keeper-pull-image-8wczx                                                               │
+│   - ch-server-pull-image-cfbxd                                                               │
+│   - cli-678f8cdb9b-m6qqk                                                                     │
+│   - common-cg-reports-service-66d494769b-996zd                                               │
+│   - common-cg-reports-worker-64d986d955-n4mch                                                │
+│   - common-ne-email-service-cdf8c85bc-vgh89                                                  │
+│   - dcis-7767d84bfb-hfj8d                                                                    │
+│   - dion-service-fcc464b84-c7mdf                                                             │
+│   - ergon-589cdccbcd-45stl                                                                   │
+│   - fluent-bit-gkfdb                                                                         │
+│   - grafana-7bd4c444fb-29zp9                                                                 │
+│   - iam-proxy-6b5b46d675-pr4bg                                                               │
+│   - iamv2-ui-service-66b748ffd8-ffc2v                                                        │
+│   ... and 33 more                                                                              │
+│─────────────────────────────────────────────────────────────────────────────────────────────────│
+│ ADDED PODS (24):                                                                               │
+│   + ch-keeper-pull-image-lj2rl                                                               │
+│   + ch-server-pull-image-jtbtw                                                               │
+│   + ergon-589cdccbcd-ssfxr                                                                   │
+│   + fluent-bit-2r2sz                                                                         │
+│   + ikat-ct5gm                                                                               │
+│   + kube-flannel-ds-9m8vt                                                                    │
+│   + kube-proxy-ds-c89sp                                                                      │
+│   + mspdns-7s6g7                                                                             │
+│   + ncm-calm-0                                                                               │
+│   + ncm-calm-2                                                                               │
+│   + ncm-epsilon-0                                                                            │
+│   + ncm-epsilon-1                                                                            │
+│   + node-exporter-gk5kg                                                                      │
+│   + nutanix-csi-node-5ffn9                                                                   │
+│   + pull-image-daemonset-1762296159-gvm76                                                    │
+│   + pull-image-daemonset-1762301413-4hffs                                                    │
+│   + pull-image-daemonset-1762939295-6c8gh                                                    │
+│   + pull-image-daemonset-1764248272-zfcq6                                                    │
+│   + pull-image-daemonset-1764313288-gcd2s                                                    │
+│   + pull-image-daemonset-1764322281-7b2ts                                                    │
+│   ... and 4 more                                                                              │
+└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ NODE: nc-824086-default-4             PODS BEFORE: 60      PODS AFTER: 30      DELTA: -30    │
+├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ DELETED PODS (58):                                                                             │
+│   - altinity-clickhouse-operator-bb9d998d-b5lvp                                              │
+│   - cg-data-ingestion-semi-enrich-ingest-worker-64b7db9454-sbfzw                             │
+│   - cg-pg-1                                                                                  │
+│   - chakr-cm-0                                                                               │
+│   - chakr-db-instance-1                                                                      │
+│   - chi-clickhouse-chcluster1-0-0-0                                                          │
+│   - ch-keeper-pull-image-649cb                                                               │
+│   - ch-server-pull-image-zdgfx                                                               │
+│   - cloudnative-pg-6976fd56d6-6dxfx                                                          │
+│   - cluster-mgmt-578ff677c7-spj8g                                                            │
+│   - common-cg-service-multi-cluster-85f6f55696-pgwwt                                         │
+│   - cpaas-nats-1                                                                             │
+│   - cron-cg-adoption-metrics-ingestion-29439240-mls59                                        │
+│   - csi-snapshot-controller-7fb8bf5755-jfwrq                                                 │
+│   - csi-snapshot-webhook-7f8d8b45fc-5lmvt                                                    │
+│   - dion-service-fcc464b84-4lzhg                                                             │
+│   - domain-manager-1                                                                         │
+│   - fluent-bit-thmz7                                                                         │
+│   - iam-proxy-6b5b46d675-lwfcf                                                               │
+│   - iam-proxy-control-plane-55d7997cbd-4lb2k                                                 │
+│   ... and 38 more                                                                              │
+│─────────────────────────────────────────────────────────────────────────────────────────────────│
+│ ADDED PODS (29):                                                                               │
+│   + cg-data-ingestion-nx-semi-enrich-push-worker-c7cb7dfb6-lqvdn                             │
+│   + ch-keeper-pull-image-k84hz                                                               │
+│   + ch-server-pull-image-jwmzx                                                               │
+│   + common-cg-forecasting-worker-5f95898b87-z9pvf                                            │
+│   + common-cg-reports-service-66d494769b-gs2j5                                               │
+│   + common-cg-service-multi-cluster-85f6f55696-kxchz                                         │
+│   + common-ne-email-service-cdf8c85bc-h7xfb                                                  │
+│   + fluent-bit-xvflk                                                                         │
+│   + ikat-xhvzm                                                                               │
+│   + kube-flannel-ds-rwgkl                                                                    │
+│   + kube-proxy-ds-79kjh                                                                      │
+│   + mspdns-dq9kz                                                                             │
+│   + nc-jobs-table-view-cleanup-job-29440180-ffwgj                                            │
+│   + ncm-calm-1                                                                               │
+│   + ncm-epsilon-2                                                                            │
+│   + node-exporter-lvsrd                                                                      │
+│   + nutanix-csi-node-xtxrj                                                                   │
+│   + nx-cg-hydra-billing-worker-78f7849577-txzqb                                              │
+│   + nx-cg-inventory-manager-worker-6bf75f5bf-9mxdr                                           │
+│   + pull-image-daemonset-1762296159-sf6qm                                                    │
+│   ... and 9 more                                                                              │
+└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mSTATEFULSET STATUS COMPARISON[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+┌──────────────────────────────────────────────────────────┬─────────────────┬─────────────────┐
+│ NAMESPACE/STATEFULSET                                    │ BEFORE READY    │ AFTER READY     │
+├──────────────────────────────────────────────────────────┼─────────────────┼─────────────────┤
+│ default/nginx-50d6o                                      │ 2/2 (46d)       │ 2/2 (46d)       │
+│ domain-manager/chakr-cm                                  │ 1/1 (47d)       │ 1/1 (47d)       │
+│ domain-manager/chakr-db-instance                         │ 3/3 (47d)       │ 3/3 (47d)       │
+│ domain-manager/domain-manager                            │ 2/2 (47d)       │ 2/2 (47d)       │
+│ domain-manager/idf-statefulset                           │ 1/1 (47d)       │ 1/1 (47d)       │
+│ domain-manager/zk                                        │ 1/1 (47d)       │ 1/1 (47d)       │
+│ nc-system/cpaas-nats                                     │ 3/3 (47d)       │ 3/3 (47d)       │
+│ nc-system/nc-redis-cluster                               │ 6/6 (47d)       │ 6/6 (47d)       │
+│ ntnx-ncm-aiops/neuron                                    │ 2/2 (47d)       │ 2/2 (47d)       │
+│ ntnx-ncm-common/cfs                                      │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-common/filestore-chakr-cm                       │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-common/filestore-chakr-db-instance              │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-common/filestore-zk                             │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-common/insights-collector                       │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-common/ncm-data-processor                       │ 2/2 (47d)       │ 2/2 (47d)       │
+│ ntnx-ncm-common/ncm-epsilon                              │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-ncm-common/zeus-collector                           │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/chakr-cm                              │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/chakr-db-instance                     │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-ncm-datastore/chi-clickhouse-chcluster1-0-0         │ 1/1 (2d22h)     │ 1/1 (107m)      │
+│ ntnx-ncm-datastore/chk-clickhouse-keeper-chkeeper-chkeeper-0-0 │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/chk-clickhouse-keeper-chkeeper-chkeeper-0-1 │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/chk-clickhouse-keeper-chkeeper-chkeeper-0-2 │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/cpaas-nats                            │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/idf-statefulset                       │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/ncm-valkey-cluster-valkeycluster-0    │ 1/1 (19d)       │ 1/1 (19d)       │
+│ ntnx-ncm-datastore/objects-lite                          │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/ss-chakr-cm                           │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-datastore/ss-chakr-db-instance                  │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-ncm-datastore/ss-idf-statefulset                    │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-ncm-datastore/ss-zk                                 │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-ncm-datastore/zk                                    │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-ncm-self-service/insights-collector                 │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-ncm-self-service/ncm-calm                           │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-system/alertmanager-main                            │ 3/3 (47d)       │ 3/3 (47d)       │
+│ ntnx-system/fluentd-aggregator                           │ 1/1 (47d)       │ 1/1 (47d)       │
+│ ntnx-system/prometheus-k8s                               │ 2/2 (47d)       │ 2/2 (47d)       │
+└──────────────────────────────────────────────────────────┴─────────────────┴─────────────────┘
+
+Total StatefulSets with changes: 0
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mKUBE-SYSTEM PODS COMPARISON[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+┌────────────────────────────────────────┬────────────┬──────────────┬────────────┬──────────────┐
+│ POD NAME                               │ B-STATUS   │ B-RESTARTS   │ A-STATUS   │ A-RESTARTS   │
+├────────────────────────────────────────┼────────────┼──────────────┼────────────┼──────────────┤
+│ cloud-controller-manager-j9wtf         │ Running    │ 8            │ Running    │ 8            │
+│ cloud-controller-manager-l8lvm         │ Running    │ 6            │ Running    │ 6            │
+│ coredns-bb777ff4b-dlrtm                │ Running    │ 0            │ Running    │ 0            │
+│ coredns-bb777ff4b-ldxlt                │ Running    │ 1            │ Running    │ 1            │
+│ kube-apiserver-nc-824086-default-0     │ Running    │ 121          │ Running    │ 121          │
+│ kube-apiserver-nc-824086-default-1     │ Running    │ 180          │ Running    │ 180          │
+│ kube-flannel-ds-2nbnp                  │ Running    │ 3            │ MISSING    │ N/A          │
+│ kube-flannel-ds-7l2sk                  │ Running    │ 3            │ Running    │ 3            │
+│ kube-flannel-ds-9dqfs                  │ Running    │ 3            │ Running    │ 3            │
+│ kube-flannel-ds-9m8vt                  │ MISSING    │ N/A          │ Running    │ 1            │
+│ kube-flannel-ds-rgzs2                  │ Running    │ 2            │ Running    │ 2            │
+│ kube-flannel-ds-rwgkl                  │ MISSING    │ N/A          │ Running    │ 0            │
+│ kube-flannel-ds-t4s6q                  │ Running    │ 3            │ MISSING    │ N/A          │
+│ kube-proxy-ds-79kjh                    │ MISSING    │ N/A          │ Running    │ 0            │
+│ kube-proxy-ds-c89sp                    │ MISSING    │ N/A          │ Running    │ 0            │
+│ kube-proxy-ds-dk6hl                    │ Running    │ 1            │ MISSING    │ N/A          │
+│ kube-proxy-ds-fbnn7                    │ Running    │ 1            │ Running    │ 1            │
+│ kube-proxy-ds-nprqc                    │ Running    │ 1            │ Running    │ 1            │
+│ kube-proxy-ds-psfn4                    │ Running    │ 1            │ MISSING    │ N/A          │
+│ kube-proxy-ds-v7l4x                    │ Running    │ 1            │ Running    │ 1            │
+│ lb-controller-7cc95566b8-cz49d         │ Running    │ 0            │ Running    │ 0            │
+│ metrics-server-58df75dc7f-8dfsc        │ Running    │ 0            │ Running    │ 0            │
+│ mspdns-7lx7k                           │ Running    │ 1            │ Running    │ 1            │
+│ mspdns-7s6g7                           │ MISSING    │ N/A          │ Running    │ 0            │
+│ mspdns-8j6dr                           │ Running    │ 1            │ MISSING    │ N/A          │
+│ mspdns-bv2n8                           │ Running    │ 1            │ MISSING    │ N/A          │
+│ mspdns-dq9kz                           │ MISSING    │ N/A          │ Running    │ 0            │
+│ mspdns-mlmk5                           │ Running    │ 1            │ Running    │ 1            │
+│ mspdns-wcm8l                           │ Running    │ 1            │ Running    │ 1            │
+│ mspserviceregistry-5cbb59d956-4b66c    │ Running    │ 4            │ Running    │ 4            │
+│ mspserviceregistry-5cbb59d956-lpxwv    │ MISSING    │ N/A          │ Running    │ 0            │
+│ mspserviceregistry-5cbb59d956-wtqdn    │ Running    │ 0            │ MISSING    │ N/A          │
+└────────────────────────────────────────┴────────────┴──────────────┴────────────┴──────────────┘
+
+Kube-System Restart Summary:
+  Before: 344 total restarts recorded
+  After:  335 total restarts recorded
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mEVENTS ANALYSIS[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+Event Count Summary:
+┌─────────────────────────────────┬─────────────────┬─────────────────┐
+│ METRIC                          │ BEFORE          │ AFTER           │
+├─────────────────────────────────┼─────────────────┼─────────────────┤
+│ Total Events                    │ 207             │ 1295            │
+└─────────────────────────────────┴─────────────────┴─────────────────┘
+
+Events by Type (Before):
+─────────────────────────
+  Normal         : 135
+  Warning        : 72
+
+Events by Type (After):
+────────────────────────
+  Normal         : 982
+  Warning        : 313
+
+Top Event Reasons (Before - top 15):
+─────────────────────────────────────
+  FailedToRetrieveImagePullSecret              : 54
+  SuccessfulCreate                             : 22
+  Started                                      : 17
+  Scheduled                                    : 17
+  Pulling                                      : 17
+  Pulled                                       : 17
+  Created                                      : 17
+  Completed                                    : 16
+  DNSConfigForming                             : 13
+  Unhealthy                                    : 5
+  SuccessfulDelete                             : 5
+  SawCompletedJob                              : 4
+  ScalingReplicaSet                            : 2
+  Killing                                      : 1
+
+Top Event Reasons (After - top 15):
+────────────────────────────────────
+  Pulled                                       : 191
+  Pulling                                      : 184
+  Started                                      : 178
+  Created                                      : 177
+  FailedCreatePodSandBox                       : 135
+  Scheduled                                    : 79
+  SuccessfulCreate                             : 62
+  FailedToRetrieveImagePullSecret              : 54
+  FailedScheduling                             : 45
+  Unhealthy                                    : 27
+  Killing                                      : 22
+  FailedMount                                  : 19
+  SuccessfulAttachVolume                       : 17
+  TaintManagerEviction                         : 16
+  Completed                                    : 16
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mPDB (POD DISRUPTION BUDGET) COMPARISON[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+┌───────────────────────────────────────────────────────────────┬───────────────┬───────────────┐
+│ NAMESPACE/PDB                                                 │ B-DISRUPTIONS │ A-DISRUPTIONS │
+├───────────────────────────────────────────────────────────────┼───────────────┼───────────────┤
+│ domain-manager/chakr-cm-pdb                                   │ 0             │ 0             │
+│ domain-manager/zk-pdb                                         │ 1             │ 1             │
+│ ncm-cg/cg-ui                                                  │ 0             │ 0             │
+│ ncm-cg/common-auth-service                                    │ 1             │ 1             │
+│ ncm-cg/common-cg-reports-service                              │ 1             │ 1             │
+│ ncm-cg/common-cg-reports-worker                               │ 1             │ 1             │
+│ ncm-cg/common-cg-service-multi-cluster                        │ 1             │ 1             │
+│ ncm-cg/common-html2pdf-service                                │ 1             │ 1             │
+│ ncm-cg/common-ne-email-service                                │ 1             │ 1             │
+│ ncm-cg/common-platform-billing-orchestration-service          │ 1             │ 1             │
+│ ncm-cg/nx-cg-inventory-manager-service                        │ 1             │ 1             │
+│ nc-system/cpaas-nats                                          │ 2             │ 2             │
+│ nc-system/dion-service                                        │ 2             │ 2             │
+│ nc-system/dion-service-internal                               │ 1             │ 1             │
+│ nc-system/iam-proxy                                           │ 1             │ 1             │
+│ nc-system/iamv2-authn-service                                 │ 1             │ 1             │
+│ nc-system/iamv2-authz-service                                 │ 1             │ 1             │
+│ nc-system/iamv2-ui-service                                    │ 1             │ 1             │
+│ nc-system/nc-pg                                               │ 1             │ 1             │
+│ nc-system/nc-pg-primary                                       │ 0             │ 0             │
+│ nc-system/nc-redis-cluster                                    │ 3             │ 3             │
+│ ntnx-ncm-aiops/neuron                                         │ 1             │ 1             │
+│ ntnx-ncm-aiops/reports                                        │ 0             │ 0             │
+│ ntnx-ncm-aiops/uda                                            │ 2             │ 2             │
+│ ntnx-ncm-common/aiops-ui                                      │ 1             │ 1             │
+│ ntnx-ncm-common/dcis                                          │ 1             │ 1             │
+│ ntnx-ncm-common/dmis                                          │ 1             │ 1             │
+│ ntnx-ncm-common/ergon-pdb                                     │ 1             │ 1             │
+│ ntnx-ncm-common/filestore-zk-pdb                              │ 1             │ 1             │
+│ ntnx-ncm-common/ncm-data-processor                            │ 1             │ 1             │
+│ ntnx-ncm-common/ncm-epsilon-pdb                               │ 1             │ 1             │
+│ ntnx-ncm-common/nutanix-infra-data-receiver                   │ 0             │ 0             │
+│ ntnx-ncm-common/signals-manager                               │ 1             │ 1             │
+│ ntnx-ncm-common/statsgw                                       │ 1             │ 1             │
+│ ntnx-ncm-datastore/cg-pg-primary                              │ 0             │ 0             │
+│ ntnx-ncm-datastore/clickhouse-chcluster1                      │ 1             │ 1             │
+│ ntnx-ncm-datastore/clickhouse-keeper-chkeeper-chkeeper        │ 1             │ 1             │
+│ ntnx-ncm-datastore/cpaas-nats                                 │ 1             │ 1             │
+│ ntnx-ncm-datastore/ncm-platform-temporal-cnpg-primary         │ 0             │ 0             │
+│ ntnx-ncm-datastore/ncm-ss-cnpg-primary                        │ 0             │ 0             │
+│ ntnx-ncm-datastore/ss-zk-pdb                                  │ 1             │ 1             │
+│ ntnx-ncm-datastore/zk-pdb                                     │ 1             │ 1             │
+│ ntnx-ncm-self-service/ncm-calm-pdb                            │ 2             │ 2             │
+│ ntnx-system/alertmanager-main                                 │ 1             │ 1             │
+│ ntnx-system/prometheus-k8s                                    │ 1             │ 1             │
+└───────────────────────────────────────────────────────────────┴───────────────┴───────────────┘
+
+Total PDBs with disruption changes: 0
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mLOCAL PERSISTENT VOLUMES[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+Local PV Count:
+  Before: 0
+  After:  0
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mSTANDALONE PODS[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+Standalone Pod Count:
+  Before: 0
+  After:  0
+
+[0;36m┌──────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
+[0;36m│[0m [1mCOMPARISON SUMMARY[0m
+[0;36m└──────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
+
+┌────────────────────────────────────────────────┬─────────────────┬─────────────────┬──────────────┐
+│ METRIC                                         │ BEFORE          │ AFTER           │ DELTA        │
+├────────────────────────────────────────────────┼─────────────────┼─────────────────┼──────────────┤
+│ Node Count                                     │ 5               │ 5               │ 0            │
+│ Ready Nodes                                    │ 5               │ 5               │ 0            │
+│ StatefulSet Count                              │ 37              │ 37              │ 0            │
+│ Kube-System Pod Count                          │ 25              │ 25              │ 0            │
+│ Kube-System Total Restarts                     │ 344             │ 335             │ -9           │
+│ Total Events                                   │ 207             │ 1295            │ 1088         │
+│ PDB Count                                      │ 45              │ 45              │ 0            │
+│ Total Cluster Pods                             │ 294             │ 280             │ -14          │
+│ Total CPU Requests (m)                         │ 63973           │ 63910           │ -63          │
+│ Total Memory Requests (Mi)                     │ 126712          │ 126358          │ -354         │
+└────────────────────────────────────────────────┴─────────────────┴─────────────────┴──────────────┘
+
+Key Observations:
+─────────────────
+• Node Age Changes (may indicate VM restart):
+  - nc-824086-default-0: 5d12h → 5d13h
+  - nc-824086-default-3: 5d5h → 11m
+  - nc-824086-default-4: 5d5h → 11m
+
+• New Warning Events After Scenario:
+  Before: 72 warnings
+  After:  313 warnings
+  Delta:  241
+
+====================================================================================================
+                                      END OF COMPARISON REPORT                                      
+====================================================================================================

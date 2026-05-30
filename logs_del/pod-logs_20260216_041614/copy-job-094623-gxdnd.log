@@ -1,0 +1,14 @@
+========================================
+Pod: copy-job-094623-gxdnd
+Namespace: ncm-cg
+Status: Succeeded
+Containers: copy-job-container
+Collected at: Mon Feb 16 04:16:29 GMT 2026
+========================================
+
+{"level":"info","ts":1770457805.6919677,"caller":"secret/copy_secret.go:45","msg":"copying secret","sourceSecretName":"objects-lite-secret","sourceNamespace":"ntnx-ncm-datastore","targetSecretName":"objects-lite-secret","targetNamespace":"ntnx-ncm-common"}
+{"level":"info","ts":1770457805.6920667,"caller":"common/k8s.go:48","msg":"reading from secret","secretName":"objects-lite-secret","namespace":"ntnx-ncm-datastore"}
+{"level":"info","ts":1770457805.701306,"caller":"common/k8s.go:54","msg":"read from secret successfully"}
+{"level":"info","ts":1770457805.7013485,"caller":"common/k8s.go:59","msg":"writing to secret","secretName":"objects-lite-secret","namespace":"ntnx-ncm-common"}
+{"level":"info","ts":1770457805.7116675,"caller":"common/k8s.go:99","msg":"wrote to secret successfully"}
+{"level":"info","ts":1770457805.7117054,"caller":"secret/copy_secret.go:67","msg":"secret copied successfully"}

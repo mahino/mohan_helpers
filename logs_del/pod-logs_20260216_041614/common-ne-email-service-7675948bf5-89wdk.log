@@ -1,0 +1,47 @@
+========================================
+Pod: common-ne-email-service-7675948bf5-89wdk
+Namespace: ncm-cg
+Status: Running
+Containers: common-ne-email-service
+Collected at: Mon Feb 16 04:16:24 GMT 2026
+========================================
+
+2026-02-07T10:06:42.875Z INFO main Application:50 ActorSystem Initialized:- DurableMailBox
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-02-07T10:06:57.075Z INFO main Application:53 Starting Application v0.0.1-SNAPSHOT using Java 21.0.10 with PID 1 (/opt/beam/NotificationEngine-0.0.1-SNAPSHOT.jar started by root in /)
+2026-02-07T10:06:57.273Z INFO main Application:652 No active profile set, falling back to 1 default profile: "default"
+2026-02-07T10:07:16.677Z INFO main RepositoryConfigurationDelegate:294 Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-07T10:07:16.774Z INFO main RepositoryConfigurationDelegate:145 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-07T10:07:17.873Z INFO main RepositoryConfigurationDelegate:213 Finished Spring Data repository scanning in 599 ms. Found 0 Redis repository interfaces.
+2026-02-07T10:07:21.472Z INFO main DefaultConfiguringBeanFactoryPostProcessor:292 No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2026-02-07T10:07:21.770Z INFO main DefaultConfiguringBeanFactoryPostProcessor:292 No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2026-02-07T10:07:35.275Z INFO main TomcatWebServer:111 Tomcat initialized with port 10004 (http)
+Feb 07, 2026 10:07:35 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-10004"]
+Feb 07, 2026 10:07:35 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Tomcat]
+Feb 07, 2026 10:07:35 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet engine: [Apache Tomcat/10.1.48]
+Feb 07, 2026 10:07:37 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring embedded WebApplicationContext
+2026-02-07T10:07:37.172Z INFO main ServletWebServerApplicationContext:301 Root WebApplicationContext: initialization completed in 38805 ms
+2026-02-07T10:08:16.475Z INFO main EventDrivenConsumer:174 Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2026-02-07T10:08:16.476Z INFO main PublishSubscribeChannel:174 Channel 'application.errorChannel' has 1 subscriber(s).
+2026-02-07T10:08:16.570Z INFO main EventDrivenConsumer:292 started bean '_org.springframework.integration.errorLogger'
+Feb 07, 2026 10:08:16 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-10004"]
+2026-02-07T10:08:16.872Z INFO main TomcatWebServer:243 Tomcat started on port 10004 (http) with context path '/'
+2026-02-07T10:08:17.174Z INFO main Application:59 Started Application in 90.898 seconds (process running for 133.099)
+Feb 07, 2026 10:08:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-07T10:08:24.670Z INFO http-nio-10004-exec-2 DispatcherServlet:532 Initializing Servlet 'dispatcherServlet'
+2026-02-07T10:08:24.672Z INFO http-nio-10004-exec-2 DispatcherServlet:554 Completed initialization in 2 ms

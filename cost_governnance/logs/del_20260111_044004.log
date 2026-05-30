@@ -1,0 +1,283 @@
+2026-01-11 04:40:04 - del - INFO - ================================================================================
+2026-01-11 04:40:04 - del - INFO - Script: del
+2026-01-11 04:40:04 - del - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/del_20260111_044004.log
+2026-01-11 04:40:04 - del - INFO - ================================================================================
+2026-01-11 04:40:04 - del - INFO - Starting metrics collection session
+2026-01-11 04:40:04 - del - INFO - ================================================================================
+2026-01-11 04:40:04 - del - INFO - NCM CLUSTER REPORTS DOWNLOADER - IMPROVED VERSION
+2026-01-11 04:40:04 - del - INFO - ================================================================================
+2026-01-11 04:40:04 - del - INFO - Fetching cluster list...
+2026-01-11 04:40:10 - del - INFO - ✓ Successfully fetched 25 clusters in 6.31s
+2026-01-11 04:40:10 - del - INFO - Found 25 clusters to process
+2026-01-11 04:40:10 - del - INFO - Mode: SEQUENTIAL
+2026-01-11 04:40:10 - del - INFO - Status check timeout: 10.0 minutes
+2026-01-11 04:40:10 - del - INFO - Starting SEQUENTIAL processing of 25 clusters...
+2026-01-11 04:40:10 - del - INFO - 
+[1/25] Processing cluster 000641b9-6ca7-bd34-1324-ac1f6b61e0e2...
+2026-01-11 04:40:10 - del - INFO - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] Starting report download...
+2026-01-11 04:40:32 - del - INFO - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] Download API response: 202 (22.23s)
+2026-01-11 04:40:32 - del - INFO - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] ✓ Download initiated, ID: DOW4289
+2026-01-11 04:41:05 - del - INFO - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] Status check #1: COMPLETED (2.84s)
+2026-01-11 04:41:05 - del - INFO - [CLUSTER 000641b9-6ca7-bd34-1324-ac1f6b61e0e2] ✓ Report completed in 32.88s after 1 checks
+2026-01-11 04:41:05 - del - INFO - [1/25] ✓ Cluster 000641b9-6ca7-bd34-1324-ac1f6b61e0e2 completed successfully
+2026-01-11 04:41:05 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:41:06 - del - INFO - 
+[2/25] Processing cluster 000641b9-4078-1de3-5416-7cc2558157ac...
+2026-01-11 04:41:06 - del - INFO - [CLUSTER 000641b9-4078-1de3-5416-7cc2558157ac] Starting report download...
+2026-01-11 04:41:18 - del - INFO - [CLUSTER 000641b9-4078-1de3-5416-7cc2558157ac] Download API response: 202 (11.58s)
+2026-01-11 04:41:18 - del - INFO - [CLUSTER 000641b9-4078-1de3-5416-7cc2558157ac] ✓ Download initiated, ID: DOW4290
+2026-01-11 04:41:53 - del - INFO - [CLUSTER 000641b9-4078-1de3-5416-7cc2558157ac] Status check #1: COMPLETED (5.05s)
+2026-01-11 04:41:53 - del - INFO - [CLUSTER 000641b9-4078-1de3-5416-7cc2558157ac] ✓ Report completed in 35.08s after 1 checks
+2026-01-11 04:41:53 - del - INFO - [2/25] ✓ Cluster 000641b9-4078-1de3-5416-7cc2558157ac completed successfully
+2026-01-11 04:41:53 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:41:54 - del - INFO - 
+[3/25] Processing cluster 000641b9-5e10-4d2e-7faf-ac1f6b61e0cf...
+2026-01-11 04:41:54 - del - INFO - [CLUSTER 000641b9-5e10-4d2e-7faf-ac1f6b61e0cf] Starting report download...
+2026-01-11 04:42:23 - del - INFO - [CLUSTER 000641b9-5e10-4d2e-7faf-ac1f6b61e0cf] Download API response: 202 (29.06s)
+2026-01-11 04:42:23 - del - INFO - [CLUSTER 000641b9-5e10-4d2e-7faf-ac1f6b61e0cf] ✓ Download initiated, ID: DOW4291
+2026-01-11 04:42:58 - del - INFO - [CLUSTER 000641b9-5e10-4d2e-7faf-ac1f6b61e0cf] Status check #1: COMPLETED (5.21s)
+2026-01-11 04:42:58 - del - INFO - [CLUSTER 000641b9-5e10-4d2e-7faf-ac1f6b61e0cf] ✓ Report completed in 35.24s after 1 checks
+2026-01-11 04:42:58 - del - INFO - [3/25] ✓ Cluster 000641b9-5e10-4d2e-7faf-ac1f6b61e0cf completed successfully
+2026-01-11 04:42:58 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:42:59 - del - INFO - 
+[4/25] Processing cluster 00063e8e-dc39-5f8c-0ef8-15920b5dfcbc...
+2026-01-11 04:42:59 - del - INFO - [CLUSTER 00063e8e-dc39-5f8c-0ef8-15920b5dfcbc] Starting report download...
+2026-01-11 04:43:29 - del - INFO - [CLUSTER 00063e8e-dc39-5f8c-0ef8-15920b5dfcbc] Download API response: 202 (29.93s)
+2026-01-11 04:43:29 - del - INFO - [CLUSTER 00063e8e-dc39-5f8c-0ef8-15920b5dfcbc] ✓ Download initiated, ID: DOW4292
+2026-01-11 04:44:04 - del - INFO - [CLUSTER 00063e8e-dc39-5f8c-0ef8-15920b5dfcbc] Status check #1: COMPLETED (5.05s)
+2026-01-11 04:44:04 - del - INFO - [CLUSTER 00063e8e-dc39-5f8c-0ef8-15920b5dfcbc] ✓ Report completed in 35.05s after 1 checks
+2026-01-11 04:44:04 - del - INFO - [4/25] ✓ Cluster 00063e8e-dc39-5f8c-0ef8-15920b5dfcbc completed successfully
+2026-01-11 04:44:04 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:44:05 - del - INFO - 
+[5/25] Processing cluster 00063e8c-08a2-ee9a-0367-29d8c810c154...
+2026-01-11 04:44:05 - del - INFO - [CLUSTER 00063e8c-08a2-ee9a-0367-29d8c810c154] Starting report download...
+2026-01-11 04:44:33 - del - INFO - [CLUSTER 00063e8c-08a2-ee9a-0367-29d8c810c154] Download API response: 202 (27.32s)
+2026-01-11 04:44:33 - del - INFO - [CLUSTER 00063e8c-08a2-ee9a-0367-29d8c810c154] ✓ Download initiated, ID: DOW4293
+2026-01-11 04:45:10 - del - INFO - [CLUSTER 00063e8c-08a2-ee9a-0367-29d8c810c154] Status check #1: COMPLETED (7.05s)
+2026-01-11 04:45:10 - del - INFO - [CLUSTER 00063e8c-08a2-ee9a-0367-29d8c810c154] ✓ Report completed in 37.08s after 1 checks
+2026-01-11 04:45:10 - del - INFO - [5/25] ✓ Cluster 00063e8c-08a2-ee9a-0367-29d8c810c154 completed successfully
+2026-01-11 04:45:10 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:45:11 - del - INFO - 
+[6/25] Processing cluster 00063ecc-b11f-db16-0aea-8ea279b90f43...
+2026-01-11 04:45:11 - del - INFO - [CLUSTER 00063ecc-b11f-db16-0aea-8ea279b90f43] Starting report download...
+2026-01-11 04:45:30 - del - INFO - [CLUSTER 00063ecc-b11f-db16-0aea-8ea279b90f43] Download API response: 202 (19.03s)
+2026-01-11 04:45:30 - del - INFO - [CLUSTER 00063ecc-b11f-db16-0aea-8ea279b90f43] ✓ Download initiated, ID: DOW4294
+2026-01-11 04:46:03 - del - INFO - [CLUSTER 00063ecc-b11f-db16-0aea-8ea279b90f43] Status check #1: COMPLETED (3.15s)
+2026-01-11 04:46:03 - del - INFO - [CLUSTER 00063ecc-b11f-db16-0aea-8ea279b90f43] ✓ Report completed in 33.18s after 1 checks
+2026-01-11 04:46:03 - del - INFO - [6/25] ✓ Cluster 00063ecc-b11f-db16-0aea-8ea279b90f43 completed successfully
+2026-01-11 04:46:03 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:46:04 - del - INFO - 
+[7/25] Processing cluster 00063e8c-0809-3887-0b61-02edb4629859...
+2026-01-11 04:46:04 - del - INFO - [CLUSTER 00063e8c-0809-3887-0b61-02edb4629859] Starting report download...
+2026-01-11 04:46:31 - del - INFO - [CLUSTER 00063e8c-0809-3887-0b61-02edb4629859] Download API response: 202 (27.46s)
+2026-01-11 04:46:31 - del - INFO - [CLUSTER 00063e8c-0809-3887-0b61-02edb4629859] ✓ Download initiated, ID: DOW4295
+2026-01-11 04:47:06 - del - INFO - [CLUSTER 00063e8c-0809-3887-0b61-02edb4629859] Status check #1: COMPLETED (4.43s)
+2026-01-11 04:47:06 - del - INFO - [CLUSTER 00063e8c-0809-3887-0b61-02edb4629859] ✓ Report completed in 34.46s after 1 checks
+2026-01-11 04:47:06 - del - INFO - [7/25] ✓ Cluster 00063e8c-0809-3887-0b61-02edb4629859 completed successfully
+2026-01-11 04:47:06 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:47:07 - del - INFO - 
+[8/25] Processing cluster 00063e8c-06e5-7147-0f46-caabd7bfeaa4...
+2026-01-11 04:47:07 - del - INFO - [CLUSTER 00063e8c-06e5-7147-0f46-caabd7bfeaa4] Starting report download...
+2026-01-11 04:47:21 - del - INFO - [CLUSTER 00063e8c-06e5-7147-0f46-caabd7bfeaa4] Download API response: 202 (14.69s)
+2026-01-11 04:47:21 - del - INFO - [CLUSTER 00063e8c-06e5-7147-0f46-caabd7bfeaa4] ✓ Download initiated, ID: DOW4296
+2026-01-11 04:48:00 - del - INFO - [CLUSTER 00063e8c-06e5-7147-0f46-caabd7bfeaa4] Status check #1: COMPLETED (8.70s)
+2026-01-11 04:48:00 - del - INFO - [CLUSTER 00063e8c-06e5-7147-0f46-caabd7bfeaa4] ✓ Report completed in 38.71s after 1 checks
+2026-01-11 04:48:00 - del - INFO - [8/25] ✓ Cluster 00063e8c-06e5-7147-0f46-caabd7bfeaa4 completed successfully
+2026-01-11 04:48:00 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:48:01 - del - INFO - 
+[9/25] Processing cluster 00063ecc-b124-e115-0530-2da12ed6ef52...
+2026-01-11 04:48:01 - del - INFO - [CLUSTER 00063ecc-b124-e115-0530-2da12ed6ef52] Starting report download...
+2026-01-11 04:48:37 - del - INFO - [CLUSTER 00063ecc-b124-e115-0530-2da12ed6ef52] Download API response: 202 (35.57s)
+2026-01-11 04:48:37 - del - INFO - [CLUSTER 00063ecc-b124-e115-0530-2da12ed6ef52] ✓ Download initiated, ID: DOW4297
+2026-01-11 04:49:12 - del - INFO - [CLUSTER 00063ecc-b124-e115-0530-2da12ed6ef52] Status check #1: COMPLETED (5.01s)
+2026-01-11 04:49:12 - del - INFO - [CLUSTER 00063ecc-b124-e115-0530-2da12ed6ef52] ✓ Report completed in 35.03s after 1 checks
+2026-01-11 04:49:12 - del - INFO - [9/25] ✓ Cluster 00063ecc-b124-e115-0530-2da12ed6ef52 completed successfully
+2026-01-11 04:49:12 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:49:13 - del - INFO - 
+[10/25] Processing cluster 00063e8c-07f2-1dad-07cb-25bd600237e9...
+2026-01-11 04:49:13 - del - INFO - [CLUSTER 00063e8c-07f2-1dad-07cb-25bd600237e9] Starting report download...
+2026-01-11 04:49:38 - del - INFO - [CLUSTER 00063e8c-07f2-1dad-07cb-25bd600237e9] Download API response: 202 (24.80s)
+2026-01-11 04:49:38 - del - INFO - [CLUSTER 00063e8c-07f2-1dad-07cb-25bd600237e9] ✓ Download initiated, ID: DOW4298
+2026-01-11 04:50:12 - del - INFO - [CLUSTER 00063e8c-07f2-1dad-07cb-25bd600237e9] Status check #1: COMPLETED (4.21s)
+2026-01-11 04:50:12 - del - INFO - [CLUSTER 00063e8c-07f2-1dad-07cb-25bd600237e9] ✓ Report completed in 34.24s after 1 checks
+2026-01-11 04:50:12 - del - INFO - [10/25] ✓ Cluster 00063e8c-07f2-1dad-07cb-25bd600237e9 completed successfully
+2026-01-11 04:50:12 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:50:13 - del - INFO - 
+[11/25] Processing cluster 00063e8c-0969-ed22-068d-0fdd8949cf6d...
+2026-01-11 04:50:13 - del - INFO - [CLUSTER 00063e8c-0969-ed22-068d-0fdd8949cf6d] Starting report download...
+2026-01-11 04:50:50 - del - INFO - [CLUSTER 00063e8c-0969-ed22-068d-0fdd8949cf6d] Download API response: 202 (36.98s)
+2026-01-11 04:50:50 - del - INFO - [CLUSTER 00063e8c-0969-ed22-068d-0fdd8949cf6d] ✓ Download initiated, ID: DOW4299
+2026-01-11 04:51:26 - del - INFO - [CLUSTER 00063e8c-0969-ed22-068d-0fdd8949cf6d] Status check #1: COMPLETED (5.90s)
+2026-01-11 04:51:26 - del - INFO - [CLUSTER 00063e8c-0969-ed22-068d-0fdd8949cf6d] ✓ Report completed in 35.92s after 1 checks
+2026-01-11 04:51:26 - del - INFO - [11/25] ✓ Cluster 00063e8c-0969-ed22-068d-0fdd8949cf6d completed successfully
+2026-01-11 04:51:26 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:51:27 - del - INFO - 
+[12/25] Processing cluster 00063ecc-af30-785b-07c7-cb32a4f6770a...
+2026-01-11 04:51:27 - del - INFO - [CLUSTER 00063ecc-af30-785b-07c7-cb32a4f6770a] Starting report download...
+2026-01-11 04:51:39 - del - INFO - [CLUSTER 00063ecc-af30-785b-07c7-cb32a4f6770a] Download API response: 202 (12.73s)
+2026-01-11 04:51:39 - del - INFO - [CLUSTER 00063ecc-af30-785b-07c7-cb32a4f6770a] ✓ Download initiated, ID: DOW4300
+2026-01-11 04:52:16 - del - INFO - [CLUSTER 00063ecc-af30-785b-07c7-cb32a4f6770a] Status check #1: COMPLETED (6.19s)
+2026-01-11 04:52:16 - del - INFO - [CLUSTER 00063ecc-af30-785b-07c7-cb32a4f6770a] ✓ Report completed in 36.22s after 1 checks
+2026-01-11 04:52:16 - del - INFO - [12/25] ✓ Cluster 00063ecc-af30-785b-07c7-cb32a4f6770a completed successfully
+2026-01-11 04:52:16 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:52:17 - del - INFO - 
+[13/25] Processing cluster 00063ecc-b065-dd7d-0300-bbb7b08dbe38...
+2026-01-11 04:52:17 - del - INFO - [CLUSTER 00063ecc-b065-dd7d-0300-bbb7b08dbe38] Starting report download...
+2026-01-11 04:52:58 - del - INFO - [CLUSTER 00063ecc-b065-dd7d-0300-bbb7b08dbe38] Download API response: 202 (40.98s)
+2026-01-11 04:52:58 - del - INFO - [CLUSTER 00063ecc-b065-dd7d-0300-bbb7b08dbe38] ✓ Download initiated, ID: DOW4301
+2026-01-11 04:53:34 - del - INFO - [CLUSTER 00063ecc-b065-dd7d-0300-bbb7b08dbe38] Status check #1: COMPLETED (6.33s)
+2026-01-11 04:53:34 - del - INFO - [CLUSTER 00063ecc-b065-dd7d-0300-bbb7b08dbe38] ✓ Report completed in 36.36s after 1 checks
+2026-01-11 04:53:34 - del - INFO - [13/25] ✓ Cluster 00063ecc-b065-dd7d-0300-bbb7b08dbe38 completed successfully
+2026-01-11 04:53:34 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:53:35 - del - INFO - 
+[14/25] Processing cluster 00063ef1-3a57-a749-064b-1086c8fb24f5...
+2026-01-11 04:53:35 - del - INFO - [CLUSTER 00063ef1-3a57-a749-064b-1086c8fb24f5] Starting report download...
+2026-01-11 04:54:17 - del - INFO - [CLUSTER 00063ef1-3a57-a749-064b-1086c8fb24f5] Download API response: 202 (41.83s)
+2026-01-11 04:54:17 - del - INFO - [CLUSTER 00063ef1-3a57-a749-064b-1086c8fb24f5] ✓ Download initiated, ID: DOW4302
+2026-01-11 04:54:50 - del - INFO - [CLUSTER 00063ef1-3a57-a749-064b-1086c8fb24f5] Status check #1: COMPLETED (3.35s)
+2026-01-11 04:54:50 - del - INFO - [CLUSTER 00063ef1-3a57-a749-064b-1086c8fb24f5] ✓ Report completed in 33.36s after 1 checks
+2026-01-11 04:54:50 - del - INFO - [14/25] ✓ Cluster 00063ef1-3a57-a749-064b-1086c8fb24f5 completed successfully
+2026-01-11 04:54:50 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:54:51 - del - INFO - 
+[15/25] Processing cluster 00063ef1-2e6f-1344-07f4-2472d57ed923...
+2026-01-11 04:54:51 - del - INFO - [CLUSTER 00063ef1-2e6f-1344-07f4-2472d57ed923] Starting report download...
+2026-01-11 04:55:23 - del - INFO - [CLUSTER 00063ef1-2e6f-1344-07f4-2472d57ed923] Download API response: 202 (31.61s)
+2026-01-11 04:55:23 - del - INFO - [CLUSTER 00063ef1-2e6f-1344-07f4-2472d57ed923] ✓ Download initiated, ID: DOW4303
+2026-01-11 04:55:56 - del - INFO - [CLUSTER 00063ef1-2e6f-1344-07f4-2472d57ed923] Status check #1: COMPLETED (2.82s)
+2026-01-11 04:55:56 - del - INFO - [CLUSTER 00063ef1-2e6f-1344-07f4-2472d57ed923] ✓ Report completed in 32.85s after 1 checks
+2026-01-11 04:55:56 - del - INFO - [15/25] ✓ Cluster 00063ef1-2e6f-1344-07f4-2472d57ed923 completed successfully
+2026-01-11 04:55:56 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:55:57 - del - INFO - 
+[16/25] Processing cluster 00063e8c-07f6-fe57-06d1-3a21a8121c69...
+2026-01-11 04:55:57 - del - INFO - [CLUSTER 00063e8c-07f6-fe57-06d1-3a21a8121c69] Starting report download...
+2026-01-11 04:56:25 - del - INFO - [CLUSTER 00063e8c-07f6-fe57-06d1-3a21a8121c69] Download API response: 202 (28.15s)
+2026-01-11 04:56:25 - del - INFO - [CLUSTER 00063e8c-07f6-fe57-06d1-3a21a8121c69] ✓ Download initiated, ID: DOW4304
+2026-01-11 04:57:00 - del - INFO - [CLUSTER 00063e8c-07f6-fe57-06d1-3a21a8121c69] Status check #1: COMPLETED (5.53s)
+2026-01-11 04:57:00 - del - INFO - [CLUSTER 00063e8c-07f6-fe57-06d1-3a21a8121c69] ✓ Report completed in 35.56s after 1 checks
+2026-01-11 04:57:00 - del - INFO - [16/25] ✓ Cluster 00063e8c-07f6-fe57-06d1-3a21a8121c69 completed successfully
+2026-01-11 04:57:00 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:57:01 - del - INFO - 
+[17/25] Processing cluster 00063ecc-b164-0159-0282-74111e35b1d1...
+2026-01-11 04:57:01 - del - INFO - [CLUSTER 00063ecc-b164-0159-0282-74111e35b1d1] Starting report download...
+2026-01-11 04:57:21 - del - INFO - [CLUSTER 00063ecc-b164-0159-0282-74111e35b1d1] Download API response: 202 (19.43s)
+2026-01-11 04:57:21 - del - INFO - [CLUSTER 00063ecc-b164-0159-0282-74111e35b1d1] ✓ Download initiated, ID: DOW4305
+2026-01-11 04:57:55 - del - INFO - [CLUSTER 00063ecc-b164-0159-0282-74111e35b1d1] Status check #1: COMPLETED (3.92s)
+2026-01-11 04:57:55 - del - INFO - [CLUSTER 00063ecc-b164-0159-0282-74111e35b1d1] ✓ Report completed in 33.95s after 1 checks
+2026-01-11 04:57:55 - del - INFO - [17/25] ✓ Cluster 00063ecc-b164-0159-0282-74111e35b1d1 completed successfully
+2026-01-11 04:57:55 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:57:56 - del - INFO - 
+[18/25] Processing cluster 00063ef1-2e1c-e92b-0f64-c5b5ef285092...
+2026-01-11 04:57:56 - del - INFO - [CLUSTER 00063ef1-2e1c-e92b-0f64-c5b5ef285092] Starting report download...
+2026-01-11 04:58:16 - del - INFO - [CLUSTER 00063ef1-2e1c-e92b-0f64-c5b5ef285092] Download API response: 202 (20.50s)
+2026-01-11 04:58:16 - del - INFO - [CLUSTER 00063ef1-2e1c-e92b-0f64-c5b5ef285092] ✓ Download initiated, ID: DOW4306
+2026-01-11 04:58:50 - del - INFO - [CLUSTER 00063ef1-2e1c-e92b-0f64-c5b5ef285092] Status check #1: COMPLETED (3.46s)
+2026-01-11 04:58:50 - del - INFO - [CLUSTER 00063ef1-2e1c-e92b-0f64-c5b5ef285092] ✓ Report completed in 33.47s after 1 checks
+2026-01-11 04:58:50 - del - INFO - [18/25] ✓ Cluster 00063ef1-2e1c-e92b-0f64-c5b5ef285092 completed successfully
+2026-01-11 04:58:50 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:58:51 - del - INFO - 
+[19/25] Processing cluster 00063ecc-af43-e0be-0935-ac48ab5be589...
+2026-01-11 04:58:51 - del - INFO - [CLUSTER 00063ecc-af43-e0be-0935-ac48ab5be589] Starting report download...
+2026-01-11 04:59:00 - del - INFO - [CLUSTER 00063ecc-af43-e0be-0935-ac48ab5be589] Download API response: 202 (9.58s)
+2026-01-11 04:59:00 - del - INFO - [CLUSTER 00063ecc-af43-e0be-0935-ac48ab5be589] ✓ Download initiated, ID: DOW4307
+2026-01-11 04:59:35 - del - INFO - [CLUSTER 00063ecc-af43-e0be-0935-ac48ab5be589] Status check #1: COMPLETED (4.25s)
+2026-01-11 04:59:35 - del - INFO - [CLUSTER 00063ecc-af43-e0be-0935-ac48ab5be589] ✓ Report completed in 34.28s after 1 checks
+2026-01-11 04:59:35 - del - INFO - [19/25] ✓ Cluster 00063ecc-af43-e0be-0935-ac48ab5be589 completed successfully
+2026-01-11 04:59:35 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 04:59:36 - del - INFO - 
+[20/25] Processing cluster 00063e8c-06de-a542-0a1c-51119efe9de3...
+2026-01-11 04:59:36 - del - INFO - [CLUSTER 00063e8c-06de-a542-0a1c-51119efe9de3] Starting report download...
+2026-01-11 04:59:46 - del - INFO - [CLUSTER 00063e8c-06de-a542-0a1c-51119efe9de3] Download API response: 202 (10.19s)
+2026-01-11 04:59:46 - del - INFO - [CLUSTER 00063e8c-06de-a542-0a1c-51119efe9de3] ✓ Download initiated, ID: DOW4308
+2026-01-11 05:00:19 - del - INFO - [CLUSTER 00063e8c-06de-a542-0a1c-51119efe9de3] Status check #1: COMPLETED (3.47s)
+2026-01-11 05:00:19 - del - INFO - [CLUSTER 00063e8c-06de-a542-0a1c-51119efe9de3] ✓ Report completed in 33.50s after 1 checks
+2026-01-11 05:00:19 - del - INFO - [20/25] ✓ Cluster 00063e8c-06de-a542-0a1c-51119efe9de3 completed successfully
+2026-01-11 05:00:19 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 05:00:20 - del - INFO - 
+[21/25] Processing cluster 00063e8e-dddf-b295-0e33-3e7a8ce0f3c3...
+2026-01-11 05:00:20 - del - INFO - [CLUSTER 00063e8e-dddf-b295-0e33-3e7a8ce0f3c3] Starting report download...
+2026-01-11 05:00:39 - del - INFO - [CLUSTER 00063e8e-dddf-b295-0e33-3e7a8ce0f3c3] Download API response: 202 (18.83s)
+2026-01-11 05:00:39 - del - INFO - [CLUSTER 00063e8e-dddf-b295-0e33-3e7a8ce0f3c3] ✓ Download initiated, ID: DOW4309
+2026-01-11 05:01:16 - del - INFO - [CLUSTER 00063e8e-dddf-b295-0e33-3e7a8ce0f3c3] Status check #1: COMPLETED (6.44s)
+2026-01-11 05:01:16 - del - INFO - [CLUSTER 00063e8e-dddf-b295-0e33-3e7a8ce0f3c3] ✓ Report completed in 36.47s after 1 checks
+2026-01-11 05:01:16 - del - INFO - [21/25] ✓ Cluster 00063e8e-dddf-b295-0e33-3e7a8ce0f3c3 completed successfully
+2026-01-11 05:01:16 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 05:01:17 - del - INFO - 
+[22/25] Processing cluster 00063ef1-3793-3dbe-0e32-2897dafc3e93...
+2026-01-11 05:01:17 - del - INFO - [CLUSTER 00063ef1-3793-3dbe-0e32-2897dafc3e93] Starting report download...
+2026-01-11 05:01:28 - del - INFO - [CLUSTER 00063ef1-3793-3dbe-0e32-2897dafc3e93] Download API response: 202 (11.09s)
+2026-01-11 05:01:28 - del - INFO - [CLUSTER 00063ef1-3793-3dbe-0e32-2897dafc3e93] ✓ Download initiated, ID: DOW4310
+2026-01-11 05:02:02 - del - INFO - [CLUSTER 00063ef1-3793-3dbe-0e32-2897dafc3e93] Status check #1: COMPLETED (4.51s)
+2026-01-11 05:02:02 - del - INFO - [CLUSTER 00063ef1-3793-3dbe-0e32-2897dafc3e93] ✓ Report completed in 34.51s after 1 checks
+2026-01-11 05:02:02 - del - INFO - [22/25] ✓ Cluster 00063ef1-3793-3dbe-0e32-2897dafc3e93 completed successfully
+2026-01-11 05:02:02 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 05:02:03 - del - INFO - 
+[23/25] Processing cluster 00063e8c-0879-a6af-06c5-258c9eb39dbb...
+2026-01-11 05:02:03 - del - INFO - [CLUSTER 00063e8c-0879-a6af-06c5-258c9eb39dbb] Starting report download...
+2026-01-11 05:02:19 - del - INFO - [CLUSTER 00063e8c-0879-a6af-06c5-258c9eb39dbb] Download API response: 202 (15.40s)
+2026-01-11 05:02:19 - del - INFO - [CLUSTER 00063e8c-0879-a6af-06c5-258c9eb39dbb] ✓ Download initiated, ID: DOW4311
+2026-01-11 05:02:54 - del - INFO - [CLUSTER 00063e8c-0879-a6af-06c5-258c9eb39dbb] Status check #1: COMPLETED (5.02s)
+2026-01-11 05:02:54 - del - INFO - [CLUSTER 00063e8c-0879-a6af-06c5-258c9eb39dbb] ✓ Report completed in 35.05s after 1 checks
+2026-01-11 05:02:54 - del - INFO - [23/25] ✓ Cluster 00063e8c-0879-a6af-06c5-258c9eb39dbb completed successfully
+2026-01-11 05:02:54 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 05:02:55 - del - INFO - 
+[24/25] Processing cluster 00063ecc-b0d0-9aaf-0700-8c57df20f4fb...
+2026-01-11 05:02:55 - del - INFO - [CLUSTER 00063ecc-b0d0-9aaf-0700-8c57df20f4fb] Starting report download...
+2026-01-11 05:03:07 - del - INFO - [CLUSTER 00063ecc-b0d0-9aaf-0700-8c57df20f4fb] Download API response: 202 (12.39s)
+2026-01-11 05:03:07 - del - INFO - [CLUSTER 00063ecc-b0d0-9aaf-0700-8c57df20f4fb] ✓ Download initiated, ID: DOW4312
+2026-01-11 05:03:40 - del - INFO - [CLUSTER 00063ecc-b0d0-9aaf-0700-8c57df20f4fb] Status check #1: COMPLETED (2.92s)
+2026-01-11 05:03:40 - del - INFO - [CLUSTER 00063ecc-b0d0-9aaf-0700-8c57df20f4fb] ✓ Report completed in 32.93s after 1 checks
+2026-01-11 05:03:40 - del - INFO - [24/25] ✓ Cluster 00063ecc-b0d0-9aaf-0700-8c57df20f4fb completed successfully
+2026-01-11 05:03:40 - del - INFO - Sleeping 1s before next cluster...
+2026-01-11 05:03:41 - del - INFO - 
+[25/25] Processing cluster 00063ecc-b15b-edc0-09e1-b8b0e380d3c0...
+2026-01-11 05:03:41 - del - INFO - [CLUSTER 00063ecc-b15b-edc0-09e1-b8b0e380d3c0] Starting report download...
+2026-01-11 05:03:52 - del - INFO - [CLUSTER 00063ecc-b15b-edc0-09e1-b8b0e380d3c0] Download API response: 202 (11.43s)
+2026-01-11 05:03:52 - del - INFO - [CLUSTER 00063ecc-b15b-edc0-09e1-b8b0e380d3c0] ✓ Download initiated, ID: DOW4313
+2026-01-11 05:04:24 - del - INFO - [CLUSTER 00063ecc-b15b-edc0-09e1-b8b0e380d3c0] Status check #1: COMPLETED (2.09s)
+2026-01-11 05:04:24 - del - INFO - [CLUSTER 00063ecc-b15b-edc0-09e1-b8b0e380d3c0] ✓ Report completed in 32.11s after 1 checks
+2026-01-11 05:04:24 - del - INFO - [25/25] ✓ Cluster 00063ecc-b15b-edc0-09e1-b8b0e380d3c0 completed successfully
+2026-01-11 05:04:24 - del - INFO - 
+Sequential processing completed: 25 successful, 0 failed
+2026-01-11 05:04:24 - del - INFO - 
+================================================================================
+2026-01-11 05:04:24 - del - INFO - FINAL SUMMARY
+2026-01-11 05:04:24 - del - INFO - ================================================================================
+2026-01-11 05:04:24 - del - INFO - Total Clusters Processed: 25
+2026-01-11 05:04:24 - del - INFO - Successful Downloads: 25
+2026-01-11 05:04:24 - del - INFO - Failed Downloads: 0
+2026-01-11 05:04:24 - del - INFO - Success Rate: 100.0%
+2026-01-11 05:04:24 - del - INFO - ================================================================================
+2026-01-11 05:04:24 - del - INFO - Ending metrics collection session
+2026-01-11 05:04:24 - del - INFO - 
+================================================================================
+2026-01-11 05:04:24 - del - INFO - DETAILED PERFORMANCE METRICS
+2026-01-11 05:04:24 - del - INFO - ================================================================================
+2026-01-11 05:04:24 - del - INFO - Total Session Duration: 1460.66 seconds (24.34 minutes)
+2026-01-11 05:04:24 - del - INFO - 
+API CALL METRICS:
+2026-01-11 05:04:24 - del - INFO -   Total API Calls: 51
+2026-01-11 05:04:24 - del - INFO -   Successful: 51
+2026-01-11 05:04:24 - del - INFO -   Failed: 0
+2026-01-11 05:04:24 - del - INFO -   Success Rate: 100.0%
+2026-01-11 05:04:24 - del - INFO -   Rate Limit Hits (429): 0
+2026-01-11 05:04:24 - del - INFO -   Response Time - Mean: 13.45s
+2026-01-11 05:04:24 - del - INFO -   Response Time - Median: 8.70s
+2026-01-11 05:04:24 - del - INFO -   Response Time - Min: 2.09s
+2026-01-11 05:04:24 - del - INFO -   Response Time - Max: 41.83s
+2026-01-11 05:04:24 - del - INFO - 
+STATUS CODE BREAKDOWN:
+2026-01-11 05:04:24 - del - INFO -   200: 26
+2026-01-11 05:04:24 - del - INFO -   202: 25
+2026-01-11 05:04:24 - del - INFO - 
+DOWNLOAD DURATION METRICS:
+2026-01-11 05:04:24 - del - INFO -   Completed Downloads: 25
+2026-01-11 05:04:24 - del - INFO -   Failed Downloads: 0
+2026-01-11 05:04:24 - del - INFO -   Average Duration: 34.70s
+2026-01-11 05:04:24 - del - INFO -   Median Duration: 34.51s
+2026-01-11 05:04:24 - del - INFO -   Min Duration: 32.11s
+2026-01-11 05:04:24 - del - INFO -   Max Duration: 38.71s
+2026-01-11 05:04:24 - del - INFO - 
+STATUS CHECK METRICS:
+2026-01-11 05:04:24 - del - INFO -   Average Status Checks: 1.0
+2026-01-11 05:04:24 - del - INFO -   Max Status Checks: 1
+2026-01-11 05:04:24 - del - INFO - ================================================================================

@@ -1,0 +1,20 @@
+**************************************************
+https://ncm.services.nconprem-10-53-55-30.ccpnx.com/v1/reports/share POST {"reportName": "tesitng", "reportConfig": {"reportType": "GLOBAL_CHARGEBACK", "dataSource": {"resourceGroupIds": [], "category": "UNALLOCATED", "resourceGroupType": "ALL", "filters": {}, "groupBy": "accounts"}, "reportPeriod": {"timeUnit": "CUSTOM"}, "timeRange": {"startTime": 1759276800, "endTime": 1761955199}, "reportTemplateDetails": {"fileType": "XLS"}}, "shareConfig": {"mode": "EMAIL", "recipients": ["mohan.as@nutanix.com"]}}
+**************************************************
+[2025-10-08 18:48:56] ✓ Report 0/1000 successfully shared, response: {"id":"SHR20"}
+**************************************************
+https://ncm.services.nconprem-10-53-55-30.ccpnx.com/v1/reports/share POST {"reportName": "tesitng", "reportConfig": {"reportType": "GLOBAL_CHARGEBACK", "dataSource": {"resourceGroupIds": [], "category": "UNALLOCATED", "resourceGroupType": "ALL", "filters": {}, "groupBy": "accounts"}, "reportPeriod": {"timeUnit": "CUSTOM"}, "timeRange": {"startTime": 1759276800, "endTime": 1761955199}, "reportTemplateDetails": {"fileType": "XLS"}}, "shareConfig": {"mode": "EMAIL", "recipients": ["mohan.as@nutanix.com"]}}
+**************************************************
+[2025-10-08 18:48:57] Rate limited (429). Sleeping for 90s. Sleep count: 1, Shared: 1
+**************************************************
+https://ncm.services.nconprem-10-53-55-30.ccpnx.com/v1/reports/share POST {"reportName": "tesitng", "reportConfig": {"reportType": "GLOBAL_CHARGEBACK", "dataSource": {"resourceGroupIds": [], "category": "UNALLOCATED", "resourceGroupType": "ALL", "filters": {}, "groupBy": "accounts"}, "reportPeriod": {"timeUnit": "CUSTOM"}, "timeRange": {"startTime": 1759276800, "endTime": 1761955199}, "reportTemplateDetails": {"fileType": "XLS"}}, "shareConfig": {"mode": "EMAIL", "recipients": ["mohan.as@nutanix.com"]}}
+**************************************************
+[2025-10-08 18:50:27] Rate limited (429). Sleeping for 90s. Sleep count: 2, Shared: 1
+**************************************************
+https://ncm.services.nconprem-10-53-55-30.ccpnx.com/v1/reports/share POST {"reportName": "tesitng", "reportConfig": {"reportType": "GLOBAL_CHARGEBACK", "dataSource": {"resourceGroupIds": [], "category": "UNALLOCATED", "resourceGroupType": "ALL", "filters": {}, "groupBy": "accounts"}, "reportPeriod": {"timeUnit": "CUSTOM"}, "timeRange": {"startTime": 1759276800, "endTime": 1761955199}, "reportTemplateDetails": {"fileType": "XLS"}}, "shareConfig": {"mode": "EMAIL", "recipients": ["mohan.as@nutanix.com"]}}
+**************************************************
+[2025-10-08 18:51:58] Rate limited (429). Sleeping for 90s. Sleep count: 3, Shared: 1
+**************************************************
+https://ncm.services.nconprem-10-53-55-30.ccpnx.com/v1/reports/share POST {"reportName": "tesitng", "reportConfig": {"reportType": "GLOBAL_CHARGEBACK", "dataSource": {"resourceGroupIds": [], "category": "UNALLOCATED", "resourceGroupType": "ALL", "filters": {}, "groupBy": "accounts"}, "reportPeriod": {"timeUnit": "CUSTOM"}, "timeRange": {"startTime": 1759276800, "endTime": 1761955199}, "reportTemplateDetails": {"fileType": "XLS"}}, "shareConfig": {"mode": "EMAIL", "recipients": ["mohan.as@nutanix.com"]}}
+**************************************************
+[2025-10-08 18:53:29] Rate limited (429). Sleeping for 90s. Sleep count: 4, Shared: 1

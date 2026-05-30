@@ -1,0 +1,1673 @@
+2026-05-20 09:34:47 - update_tco - INFO - ================================================================================
+2026-05-20 09:34:47 - update_tco - INFO - Script: update_tco
+2026-05-20 09:34:47 - update_tco - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/update_tco_20260520_093447.log
+2026-05-20 09:34:47 - update_tco - INFO - ================================================================================
+2026-05-20 09:34:47 - update_tco - INFO - ================================================================================
+2026-05-20 09:34:47 - update_tco - INFO - Starting TCO Direct Cost Configuration Update
+2026-05-20 09:34:47 - update_tco - INFO - ================================================================================
+2026-05-20 09:34:47 - update_tco - INFO - Configuration:
+2026-05-20 09:34:47 - update_tco - INFO -   - Base URL: https://ncm.services.nconprem-10-114-55-128.ccpnx.com
+2026-05-20 09:34:47 - update_tco - INFO -   - Update test configs only: True
+2026-05-20 09:34:47 - update_tco - INFO -   - Test config pattern: 'test_tco_config'
+2026-05-20 09:34:47 - update_tco - INFO - 
+Update Payload:
+2026-05-20 09:34:47 - update_tco - INFO - {
+  "description": null,
+  "costHead": null,
+  "properties": null,
+  "meteringUnit": null,
+  "costPerMeter": null,
+  "resources": null
+}
+2026-05-20 09:34:47 - update_tco - INFO - ================================================================================
+2026-05-20 09:34:47 - update_tco - INFO - Fetching TCO configurations...
+2026-05-20 09:34:47 - update_tco - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=0&costHeadAction=direct
+2026-05-20 09:34:47 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"filters": []}
+2026-05-20 09:34:47 - update_tco - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=0&costHeadAction=direct
+2026-05-20 09:34:47 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:47 - update_tco - INFO - [TIME TAKEN] 0.2906 seconds (290.56 ms)
+2026-05-20 09:34:47 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:47 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "currency": "USD",
+  "totalCount": 35,
+  "data": [
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "4dd01344-6318-431f-91a9-c44b21be0252",
+      "description": "vSphere",
+      "costHead": "SOFTWARE",
+      "cost": 4800.0,
+      "costPerMeter": 100.0,
+      "monthlyCost": 4800.0,
+      "meteringUnit": "CORES",
+      "costType": "THIRD_PARTY",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1778605285,
+      "lastModifiedBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "lastModifiedAt": 1779267733,
+      "resources": [
+        {
+          "clusters": [
+            "00065090-c0b9-5f56-1409-7cc25530e937",
+            "00065088-0b23-d836-56aa-7cc2558136e5"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "resourceGroupId": "2be052b4-79cf-48c2-8771-0c1764e06335",
+      "isActive": true,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "0b3107a6-496e-479a-bbcb-e56317b16493",
+      "description": "NCI Ultimate",
+      "costHead": "SOFTWARE",
+      "costPerMeter": 42.77,
+      "monthlyCost": 2694.51,
+      "meteringUnit": "CORES",
+      "costType": "NUTANIX",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1777885244,
+      "lastModifiedBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "lastModifiedAt": 1777885244,
+      "resources": [
+        {
+          "categories": [],
+          "clusters": [
+            "00065031-3c14-1b72-7e15-7cc2558641c8"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "resourceGroupId": "3f8747d1-ef99-4a5c-ba72-d4857a54b43f",
+      "isActive": false,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "f036b872-864d-4739-885c-2c2fc0669ebd",
+      "description": "NCI Ultimate",
+      "costHea
+... (truncated)
+2026-05-20 09:34:47 - update_tco - INFO - Retrieved 35 total TCO configurations
+2026-05-20 09:34:47 - update_tco - INFO - Filtered to 20 test configurations
+2026-05-20 09:34:47 - update_tco - INFO - 
+Configurations to update (20):
+2026-05-20 09:34:47 - update_tco - INFO - --------------------------------------------------------------------------------
+2026-05-20 09:34:47 - update_tco - INFO -   1. test_tco_config_F8dDa (ID: 469c3df6...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $2.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   2. test_tco_config_cF9c7 (ID: 4ded3020...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $2.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   3. test_tco_config_b9efc (ID: 5fc05af9...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $2.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   4. test_tco_config_91CeD (ID: df6bfaa2...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $2 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   5. test_tco_config_5ebFD (ID: e15f4cca...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $2.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   6. test_tco_config_ffC5a (ID: 00c9cfff...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   7. test_tco_config_Ae445 (ID: 59a6b242...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   8. test_tco_config_02a6e (ID: 5fc2322f...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -   9. test_tco_config_4a77B (ID: 62177f1e...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  10. test_tco_config_19357 (ID: 7fdad846...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  11. test_tco_config_EC08c (ID: 973798db...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  12. test_tco_config_3EF3e (ID: a7c283dd...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  13. test_tco_config_83d6e (ID: afc58e43...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  14. test_tco_config_ddb3E (ID: c1483776...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  15. test_tco_config_d3aaa (ID: c5058ca3...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  16. test_tco_config_6AFD6 (ID: ef1c03da...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $1.0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  17. test_tco_config_c5bA5 (ID: 0a091f92...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  18. test_tco_config_d1Ae7 (ID: c04f10d5...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  19. test_tco_config_02cA2 (ID: c05a4837...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: HARDWARE/CUSTOM | Monthly Cost: $0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO -  20. test_tco_config_7fDaf (ID: e033a1f4...)
+2026-05-20 09:34:47 - update_tco - INFO -      Current: SOFTWARE/CUSTOM | Monthly Cost: $0 | Created by: admin
+2026-05-20 09:34:47 - update_tco - INFO - 
+Total Monthly Cost Impact: $21.00
+2026-05-20 09:34:47 - update_tco - INFO - --------------------------------------------------------------------------------
+2026-05-20 09:34:52 - update_tco - INFO - 
+Starting update of 20 configurations...
+2026-05-20 09:34:52 - update_tco - INFO - 
+[1/20] Processing: test_tco_config_F8dDa
+2026-05-20 09:34:52 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/469c3df6-2d93-4759-9272-b209ae44a08a
+2026-05-20 09:34:52 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/469c3df6-2d93-4759-9272-b209ae44a08a
+2026-05-20 09:34:52 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:52 - update_tco - INFO - [TIME TAKEN] 0.2953 seconds (295.31 ms)
+2026-05-20 09:34:52 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:52 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "469c3df6-2d93-4759-9272-b209ae44a08a",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083000,
+  "lastModifiedAt": 1779269431,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_F8dDa",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:52 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/469c3df6-2d93-4759-9272-b209ae44a08a
+2026-05-20 09:34:52 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_F8dDa", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065031-3c14-1b72-7e15-7cc2558641c8", "00065035-daa1-70e4-7faf-ac1f6b61e0cf"]}]}
+2026-05-20 09:34:52 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/469c3df6-2d93-4759-9272-b209ae44a08a
+2026-05-20 09:34:52 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:52 - update_tco - INFO - [TIME TAKEN] 0.3043 seconds (304.28 ms)
+2026-05-20 09:34:52 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:52 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "469c3df6-2d93-4759-9272-b209ae44a08a",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083000,
+  "lastModifiedAt": 1779269692,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_F8dDa",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:52 - update_tco - INFO - ✓ Updated: test_tco_config_F8dDa
+2026-05-20 09:34:52 - update_tco - INFO - 
+[2/20] Processing: test_tco_config_cF9c7
+2026-05-20 09:34:52 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/4ded3020-0257-4c93-b153-e0c46feac421
+2026-05-20 09:34:53 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/4ded3020-0257-4c93-b153-e0c46feac421
+2026-05-20 09:34:53 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:53 - update_tco - INFO - [TIME TAKEN] 0.3919 seconds (391.94 ms)
+2026-05-20 09:34:53 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:53 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "4ded3020-0257-4c93-b153-e0c46feac421",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083000,
+  "lastModifiedAt": 1779269431,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_cF9c7",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:53 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/4ded3020-0257-4c93-b153-e0c46feac421
+2026-05-20 09:34:53 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_cF9c7", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065031-3c14-1b72-7e15-7cc2558641c8", "00065035-daa1-70e4-7faf-ac1f6b61e0cf"]}]}
+2026-05-20 09:34:53 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/4ded3020-0257-4c93-b153-e0c46feac421
+2026-05-20 09:34:53 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:53 - update_tco - INFO - [TIME TAKEN] 0.3853 seconds (385.31 ms)
+2026-05-20 09:34:53 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:53 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "4ded3020-0257-4c93-b153-e0c46feac421",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083000,
+  "lastModifiedAt": 1779269693,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_cF9c7",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:53 - update_tco - INFO - ✓ Updated: test_tco_config_cF9c7
+2026-05-20 09:34:53 - update_tco - INFO - 
+[3/20] Processing: test_tco_config_b9efc
+2026-05-20 09:34:53 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc05af9-4811-4444-80cf-4681c00cc7c1
+2026-05-20 09:34:54 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc05af9-4811-4444-80cf-4681c00cc7c1
+2026-05-20 09:34:54 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:54 - update_tco - INFO - [TIME TAKEN] 0.2978 seconds (297.81 ms)
+2026-05-20 09:34:54 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:54 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "5fc05af9-4811-4444-80cf-4681c00cc7c1",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082996,
+  "lastModifiedAt": 1779269432,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_b9efc",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf",
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:54 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc05af9-4811-4444-80cf-4681c00cc7c1
+2026-05-20 09:34:54 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_b9efc", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065035-daa1-70e4-7faf-ac1f6b61e0cf", "00063e14-2abb-48c1-04c5-38fe9f3c9f30"]}]}
+2026-05-20 09:34:54 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc05af9-4811-4444-80cf-4681c00cc7c1
+2026-05-20 09:34:54 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:54 - update_tco - INFO - [TIME TAKEN] 0.2977 seconds (297.66 ms)
+2026-05-20 09:34:54 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:54 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "5fc05af9-4811-4444-80cf-4681c00cc7c1",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082996,
+  "lastModifiedAt": 1779269694,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_b9efc",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf",
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:54 - update_tco - INFO - ✓ Updated: test_tco_config_b9efc
+2026-05-20 09:34:54 - update_tco - INFO - 
+[4/20] Processing: test_tco_config_91CeD
+2026-05-20 09:34:54 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/df6bfaa2-413d-4336-b73a-89aba8a5d132
+2026-05-20 09:34:54 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/df6bfaa2-413d-4336-b73a-89aba8a5d132
+2026-05-20 09:34:54 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:54 - update_tco - INFO - [TIME TAKEN] 0.2138 seconds (213.84 ms)
+2026-05-20 09:34:54 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:54 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "df6bfaa2-413d-4336-b73a-89aba8a5d132",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083003,
+  "lastModifiedAt": 1779266609,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2,
+  "costPerMeter": 1,
+  "description": "test_tco_config_91CeD",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:54 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/df6bfaa2-413d-4336-b73a-89aba8a5d132
+2026-05-20 09:34:54 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_91CeD", "costHead": "SOFTWARE", "properties": {"applicability": "ONE_TIME_OPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065035-b0c9-5144-07ad-7cc255864212", "00065035-daa1-70e4-7faf-ac1f6b61e0cf"]}]}
+2026-05-20 09:34:55 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/df6bfaa2-413d-4336-b73a-89aba8a5d132
+2026-05-20 09:34:55 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:55 - update_tco - INFO - [TIME TAKEN] 0.4834 seconds (483.43 ms)
+2026-05-20 09:34:55 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:55 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "df6bfaa2-413d-4336-b73a-89aba8a5d132",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083003,
+  "lastModifiedAt": 1779269695,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2,
+  "costPerMeter": 1,
+  "description": "test_tco_config_91CeD",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:55 - update_tco - INFO - ✓ Updated: test_tco_config_91CeD
+2026-05-20 09:34:55 - update_tco - INFO - 
+[5/20] Processing: test_tco_config_5ebFD
+2026-05-20 09:34:55 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e15f4cca-55b7-411a-ba47-796794d2c3b3
+2026-05-20 09:34:55 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e15f4cca-55b7-411a-ba47-796794d2c3b3
+2026-05-20 09:34:55 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:55 - update_tco - INFO - [TIME TAKEN] 0.1361 seconds (136.11 ms)
+2026-05-20 09:34:55 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:55 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "e15f4cca-55b7-411a-ba47-796794d2c3b3",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083001,
+  "lastModifiedAt": 1779269434,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_5ebFD",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:55 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e15f4cca-55b7-411a-ba47-796794d2c3b3
+2026-05-20 09:34:55 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_5ebFD", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065035-b0c9-5144-07ad-7cc255864212", "00065035-daa1-70e4-7faf-ac1f6b61e0cf"]}]}
+2026-05-20 09:34:56 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e15f4cca-55b7-411a-ba47-796794d2c3b3
+2026-05-20 09:34:56 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:56 - update_tco - INFO - [TIME TAKEN] 0.2841 seconds (284.10 ms)
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "e15f4cca-55b7-411a-ba47-796794d2c3b3",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083001,
+  "lastModifiedAt": 1779269696,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 2.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_5ebFD",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212",
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:56 - update_tco - INFO - ✓ Updated: test_tco_config_5ebFD
+2026-05-20 09:34:56 - update_tco - INFO - 
+[6/20] Processing: test_tco_config_ffC5a
+2026-05-20 09:34:56 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/00c9cfff-560c-46bc-a95a-756312037769
+2026-05-20 09:34:56 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/00c9cfff-560c-46bc-a95a-756312037769
+2026-05-20 09:34:56 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:56 - update_tco - INFO - [TIME TAKEN] 0.1100 seconds (110.04 ms)
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "00c9cfff-560c-46bc-a95a-756312037769",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083003,
+  "lastModifiedAt": 1779083870,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_ffC5a",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:56 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/00c9cfff-560c-46bc-a95a-756312037769
+2026-05-20 09:34:56 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_ffC5a", "costHead": "SOFTWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00065035-daa1-70e4-7faf-ac1f6b61e0cf"]}]}
+2026-05-20 09:34:56 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/00c9cfff-560c-46bc-a95a-756312037769
+2026-05-20 09:34:56 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:56 - update_tco - INFO - [TIME TAKEN] 0.2020 seconds (202.02 ms)
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "00c9cfff-560c-46bc-a95a-756312037769",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083003,
+  "lastModifiedAt": 1779269696,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_ffC5a",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:56 - update_tco - INFO - ✓ Updated: test_tco_config_ffC5a
+2026-05-20 09:34:56 - update_tco - INFO - 
+[7/20] Processing: test_tco_config_Ae445
+2026-05-20 09:34:56 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/59a6b242-026c-4a0f-9903-a005e5c32b58
+2026-05-20 09:34:56 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/59a6b242-026c-4a0f-9903-a005e5c32b58
+2026-05-20 09:34:56 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:56 - update_tco - INFO - [TIME TAKEN] 0.1586 seconds (158.57 ms)
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:56 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "59a6b242-026c-4a0f-9903-a005e5c32b58",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083000,
+  "lastModifiedAt": 1779083870,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_Ae445",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:56 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/59a6b242-026c-4a0f-9903-a005e5c32b58
+2026-05-20 09:34:56 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_Ae445", "costHead": "SOFTWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00065031-3c14-1b72-7e15-7cc2558641c8"]}]}
+2026-05-20 09:34:57 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/59a6b242-026c-4a0f-9903-a005e5c32b58
+2026-05-20 09:34:57 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:57 - update_tco - INFO - [TIME TAKEN] 0.3187 seconds (318.70 ms)
+2026-05-20 09:34:57 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:57 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "59a6b242-026c-4a0f-9903-a005e5c32b58",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083000,
+  "lastModifiedAt": 1779269697,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_Ae445",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:57 - update_tco - INFO - ✓ Updated: test_tco_config_Ae445
+2026-05-20 09:34:57 - update_tco - INFO - 
+[8/20] Processing: test_tco_config_02a6e
+2026-05-20 09:34:57 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc2322f-661d-4fdf-9b3c-b5509d16df7d
+2026-05-20 09:34:57 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc2322f-661d-4fdf-9b3c-b5509d16df7d
+2026-05-20 09:34:57 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:57 - update_tco - INFO - [TIME TAKEN] 0.1140 seconds (113.98 ms)
+2026-05-20 09:34:57 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:57 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "5fc2322f-661d-4fdf-9b3c-b5509d16df7d",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083001,
+  "lastModifiedAt": 1779269436,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_02a6e",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:57 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc2322f-661d-4fdf-9b3c-b5509d16df7d
+2026-05-20 09:34:57 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_02a6e", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065035-b0c9-5144-07ad-7cc255864212"]}]}
+2026-05-20 09:34:57 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/5fc2322f-661d-4fdf-9b3c-b5509d16df7d
+2026-05-20 09:34:57 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:57 - update_tco - INFO - [TIME TAKEN] 0.3015 seconds (301.53 ms)
+2026-05-20 09:34:57 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:57 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "5fc2322f-661d-4fdf-9b3c-b5509d16df7d",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083001,
+  "lastModifiedAt": 1779269697,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_02a6e",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:57 - update_tco - INFO - ✓ Updated: test_tco_config_02a6e
+2026-05-20 09:34:58 - update_tco - INFO - 
+[9/20] Processing: test_tco_config_4a77B
+2026-05-20 09:34:58 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/62177f1e-5b03-471a-9244-bc76b2590398
+2026-05-20 09:34:58 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/62177f1e-5b03-471a-9244-bc76b2590398
+2026-05-20 09:34:58 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:58 - update_tco - INFO - [TIME TAKEN] 0.1595 seconds (159.46 ms)
+2026-05-20 09:34:58 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:58 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "62177f1e-5b03-471a-9244-bc76b2590398",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083003,
+  "lastModifiedAt": 1779269436,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_4a77B",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:58 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/62177f1e-5b03-471a-9244-bc76b2590398
+2026-05-20 09:34:58 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_4a77B", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065035-daa1-70e4-7faf-ac1f6b61e0cf"]}]}
+2026-05-20 09:34:58 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/62177f1e-5b03-471a-9244-bc76b2590398
+2026-05-20 09:34:58 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:58 - update_tco - INFO - [TIME TAKEN] 0.3174 seconds (317.40 ms)
+2026-05-20 09:34:58 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:58 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "62177f1e-5b03-471a-9244-bc76b2590398",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083003,
+  "lastModifiedAt": 1779269698,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_4a77B",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:58 - update_tco - INFO - ✓ Updated: test_tco_config_4a77B
+2026-05-20 09:34:58 - update_tco - INFO - 
+[10/20] Processing: test_tco_config_19357
+2026-05-20 09:34:58 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/7fdad846-0244-4a0b-8679-267f7d423a5c
+2026-05-20 09:34:58 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/7fdad846-0244-4a0b-8679-267f7d423a5c
+2026-05-20 09:34:58 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:58 - update_tco - INFO - [TIME TAKEN] 0.1235 seconds (123.53 ms)
+2026-05-20 09:34:58 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:58 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "7fdad846-0244-4a0b-8679-267f7d423a5c",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082997,
+  "lastModifiedAt": 1779083870,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_19357",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:58 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/7fdad846-0244-4a0b-8679-267f7d423a5c
+2026-05-20 09:34:58 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_19357", "costHead": "SOFTWARE", "properties": {"applicability": "ONE_TIME_OPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00063e14-2abb-48c1-04c5-38fe9f3c9f30"]}]}
+2026-05-20 09:34:59 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/7fdad846-0244-4a0b-8679-267f7d423a5c
+2026-05-20 09:34:59 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:59 - update_tco - INFO - [TIME TAKEN] 0.2818 seconds (281.80 ms)
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "7fdad846-0244-4a0b-8679-267f7d423a5c",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082997,
+  "lastModifiedAt": 1779269699,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_19357",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:59 - update_tco - INFO - ✓ Updated: test_tco_config_19357
+2026-05-20 09:34:59 - update_tco - INFO - 
+[11/20] Processing: test_tco_config_EC08c
+2026-05-20 09:34:59 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/973798db-eba0-4226-a620-b5b2995d6ab0
+2026-05-20 09:34:59 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/973798db-eba0-4226-a620-b5b2995d6ab0
+2026-05-20 09:34:59 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:59 - update_tco - INFO - [TIME TAKEN] 0.1033 seconds (103.29 ms)
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "973798db-eba0-4226-a620-b5b2995d6ab0",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083002,
+  "lastModifiedAt": 1779269437,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_EC08c",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:59 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/973798db-eba0-4226-a620-b5b2995d6ab0
+2026-05-20 09:34:59 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_EC08c", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00065035-daa1-70e4-7faf-ac1f6b61e0cf"]}]}
+2026-05-20 09:34:59 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/973798db-eba0-4226-a620-b5b2995d6ab0
+2026-05-20 09:34:59 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:59 - update_tco - INFO - [TIME TAKEN] 0.2037 seconds (203.66 ms)
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "973798db-eba0-4226-a620-b5b2995d6ab0",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083002,
+  "lastModifiedAt": 1779269699,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_EC08c",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-daa1-70e4-7faf-ac1f6b61e0cf"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:59 - update_tco - INFO - ✓ Updated: test_tco_config_EC08c
+2026-05-20 09:34:59 - update_tco - INFO - 
+[12/20] Processing: test_tco_config_3EF3e
+2026-05-20 09:34:59 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/a7c283dd-bde3-45ab-ab47-1253b94e01a3
+2026-05-20 09:34:59 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/a7c283dd-bde3-45ab-ab47-1253b94e01a3
+2026-05-20 09:34:59 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:34:59 - update_tco - INFO - [TIME TAKEN] 0.0932 seconds (93.21 ms)
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:34:59 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "a7c283dd-bde3-45ab-ab47-1253b94e01a3",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082996,
+  "lastModifiedAt": 1779083870,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_3EF3e",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:34:59 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/a7c283dd-bde3-45ab-ab47-1253b94e01a3
+2026-05-20 09:34:59 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_3EF3e", "costHead": "SOFTWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00063e14-2abb-48c1-04c5-38fe9f3c9f30"]}]}
+2026-05-20 09:35:00 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/a7c283dd-bde3-45ab-ab47-1253b94e01a3
+2026-05-20 09:35:00 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:00 - update_tco - INFO - [TIME TAKEN] 0.2614 seconds (261.40 ms)
+2026-05-20 09:35:00 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:00 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "a7c283dd-bde3-45ab-ab47-1253b94e01a3",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082996,
+  "lastModifiedAt": 1779269700,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_3EF3e",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:00 - update_tco - INFO - ✓ Updated: test_tco_config_3EF3e
+2026-05-20 09:35:00 - update_tco - INFO - 
+[13/20] Processing: test_tco_config_83d6e
+2026-05-20 09:35:00 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/afc58e43-e1da-45f0-b07c-7c2f4d0ae87d
+2026-05-20 09:35:00 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/afc58e43-e1da-45f0-b07c-7c2f4d0ae87d
+2026-05-20 09:35:00 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:00 - update_tco - INFO - [TIME TAKEN] 0.1479 seconds (147.89 ms)
+2026-05-20 09:35:00 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:00 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "afc58e43-e1da-45f0-b07c-7c2f4d0ae87d",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083001,
+  "lastModifiedAt": 1779083870,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_83d6e",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:00 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/afc58e43-e1da-45f0-b07c-7c2f4d0ae87d
+2026-05-20 09:35:00 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_83d6e", "costHead": "SOFTWARE", "properties": {"applicability": "ONE_TIME_OPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00065031-3c14-1b72-7e15-7cc2558641c8"]}]}
+2026-05-20 09:35:00 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/afc58e43-e1da-45f0-b07c-7c2f4d0ae87d
+2026-05-20 09:35:00 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:00 - update_tco - INFO - [TIME TAKEN] 0.2918 seconds (291.81 ms)
+2026-05-20 09:35:00 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:00 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "afc58e43-e1da-45f0-b07c-7c2f4d0ae87d",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083001,
+  "lastModifiedAt": 1779269700,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_83d6e",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065031-3c14-1b72-7e15-7cc2558641c8"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:00 - update_tco - INFO - ✓ Updated: test_tco_config_83d6e
+2026-05-20 09:35:01 - update_tco - INFO - 
+[14/20] Processing: test_tco_config_ddb3E
+2026-05-20 09:35:01 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c1483776-e4b2-4a4d-b715-2ed98b8cd6ef
+2026-05-20 09:35:01 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c1483776-e4b2-4a4d-b715-2ed98b8cd6ef
+2026-05-20 09:35:01 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:01 - update_tco - INFO - [TIME TAKEN] 0.1567 seconds (156.65 ms)
+2026-05-20 09:35:01 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:01 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c1483776-e4b2-4a4d-b715-2ed98b8cd6ef",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083002,
+  "lastModifiedAt": 1779083870,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_ddb3E",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:01 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c1483776-e4b2-4a4d-b715-2ed98b8cd6ef
+2026-05-20 09:35:01 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_ddb3E", "costHead": "SOFTWARE", "properties": {"applicability": "ONE_TIME_OPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00065035-b0c9-5144-07ad-7cc255864212"]}]}
+2026-05-20 09:35:01 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c1483776-e4b2-4a4d-b715-2ed98b8cd6ef
+2026-05-20 09:35:01 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:01 - update_tco - INFO - [TIME TAKEN] 0.4166 seconds (416.58 ms)
+2026-05-20 09:35:01 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:01 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c1483776-e4b2-4a4d-b715-2ed98b8cd6ef",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083002,
+  "lastModifiedAt": 1779269701,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_ddb3E",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:01 - update_tco - INFO - ✓ Updated: test_tco_config_ddb3E
+2026-05-20 09:35:01 - update_tco - INFO - 
+[15/20] Processing: test_tco_config_d3aaa
+2026-05-20 09:35:01 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c5058ca3-108e-42f5-8d71-215d7522c779
+2026-05-20 09:35:02 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c5058ca3-108e-42f5-8d71-215d7522c779
+2026-05-20 09:35:02 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:02 - update_tco - INFO - [TIME TAKEN] 0.1854 seconds (185.41 ms)
+2026-05-20 09:35:02 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:02 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c5058ca3-108e-42f5-8d71-215d7522c779",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083002,
+  "lastModifiedAt": 1779083870,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_d3aaa",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:02 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c5058ca3-108e-42f5-8d71-215d7522c779
+2026-05-20 09:35:02 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_d3aaa", "costHead": "SOFTWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00065035-b0c9-5144-07ad-7cc255864212"]}]}
+2026-05-20 09:35:02 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c5058ca3-108e-42f5-8d71-215d7522c779
+2026-05-20 09:35:02 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:02 - update_tco - INFO - [TIME TAKEN] 0.3261 seconds (326.14 ms)
+2026-05-20 09:35:02 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:02 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c5058ca3-108e-42f5-8d71-215d7522c779",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779083002,
+  "lastModifiedAt": 1779269702,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_d3aaa",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00065035-b0c9-5144-07ad-7cc255864212"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:02 - update_tco - INFO - ✓ Updated: test_tco_config_d3aaa
+2026-05-20 09:35:02 - update_tco - INFO - 
+[16/20] Processing: test_tco_config_6AFD6
+2026-05-20 09:35:02 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/ef1c03da-9d56-4811-b241-cbd5ca8bff35
+2026-05-20 09:35:02 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/ef1c03da-9d56-4811-b241-cbd5ca8bff35
+2026-05-20 09:35:02 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:02 - update_tco - INFO - [TIME TAKEN] 0.1649 seconds (164.91 ms)
+2026-05-20 09:35:02 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:02 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "ef1c03da-9d56-4811-b241-cbd5ca8bff35",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082996,
+  "lastModifiedAt": 1779269441,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_6AFD6",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:02 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/ef1c03da-9d56-4811-b241-cbd5ca8bff35
+2026-05-20 09:35:02 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_6AFD6", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00063e14-2abb-48c1-04c5-38fe9f3c9f30"]}]}
+2026-05-20 09:35:03 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/ef1c03da-9d56-4811-b241-cbd5ca8bff35
+2026-05-20 09:35:03 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:03 - update_tco - INFO - [TIME TAKEN] 0.4174 seconds (417.42 ms)
+2026-05-20 09:35:03 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:03 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "ef1c03da-9d56-4811-b241-cbd5ca8bff35",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082996,
+  "lastModifiedAt": 1779269703,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 1.0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_6AFD6",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063e14-2abb-48c1-04c5-38fe9f3c9f30"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:03 - update_tco - INFO - ✓ Updated: test_tco_config_6AFD6
+2026-05-20 09:35:03 - update_tco - INFO - 
+[17/20] Processing: test_tco_config_c5bA5
+2026-05-20 09:35:03 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/0a091f92-e505-49c3-b2de-e6e3da5b0134
+2026-05-20 09:35:03 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/0a091f92-e505-49c3-b2de-e6e3da5b0134
+2026-05-20 09:35:03 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:03 - update_tco - INFO - [TIME TAKEN] 0.1787 seconds (178.74 ms)
+2026-05-20 09:35:03 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:03 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "0a091f92-e505-49c3-b2de-e6e3da5b0134",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082998,
+  "lastModifiedAt": 1779087147,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_c5bA5",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:03 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/0a091f92-e505-49c3-b2de-e6e3da5b0134
+2026-05-20 09:35:03 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_c5bA5", "costHead": "SOFTWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00063ef3-95ee-0a07-0549-eeaa0f16f415"]}]}
+2026-05-20 09:35:03 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/0a091f92-e505-49c3-b2de-e6e3da5b0134
+2026-05-20 09:35:03 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:03 - update_tco - INFO - [TIME TAKEN] 0.3043 seconds (304.27 ms)
+2026-05-20 09:35:03 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:03 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "0a091f92-e505-49c3-b2de-e6e3da5b0134",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082998,
+  "lastModifiedAt": 1779269703,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_c5bA5",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:03 - update_tco - INFO - ✓ Updated: test_tco_config_c5bA5
+2026-05-20 09:35:04 - update_tco - INFO - 
+[18/20] Processing: test_tco_config_d1Ae7
+2026-05-20 09:35:04 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c04f10d5-d9f3-4d86-aa9b-5cb42f94c511
+2026-05-20 09:35:04 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c04f10d5-d9f3-4d86-aa9b-5cb42f94c511
+2026-05-20 09:35:04 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:04 - update_tco - INFO - [TIME TAKEN] 0.1920 seconds (192.05 ms)
+2026-05-20 09:35:04 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:04 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c04f10d5-d9f3-4d86-aa9b-5cb42f94c511",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082998,
+  "lastModifiedAt": 1779269442,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_d1Ae7",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:04 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c04f10d5-d9f3-4d86-aa9b-5cb42f94c511
+2026-05-20 09:35:04 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_d1Ae7", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00063ef3-95ee-0a07-0549-eeaa0f16f415"]}]}
+2026-05-20 09:35:04 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c04f10d5-d9f3-4d86-aa9b-5cb42f94c511
+2026-05-20 09:35:04 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:04 - update_tco - INFO - [TIME TAKEN] 0.2280 seconds (228.03 ms)
+2026-05-20 09:35:04 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:04 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c04f10d5-d9f3-4d86-aa9b-5cb42f94c511",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082998,
+  "lastModifiedAt": 1779269704,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_d1Ae7",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:04 - update_tco - INFO - ✓ Updated: test_tco_config_d1Ae7
+2026-05-20 09:35:04 - update_tco - INFO - 
+[19/20] Processing: test_tco_config_02cA2
+2026-05-20 09:35:04 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c05a4837-40aa-4d3b-b376-0600231b4cde
+2026-05-20 09:35:04 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c05a4837-40aa-4d3b-b376-0600231b4cde
+2026-05-20 09:35:04 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:04 - update_tco - INFO - [TIME TAKEN] 0.1081 seconds (108.08 ms)
+2026-05-20 09:35:04 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:04 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c05a4837-40aa-4d3b-b376-0600231b4cde",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082998,
+  "lastModifiedAt": 1779269443,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_02cA2",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:04 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c05a4837-40aa-4d3b-b376-0600231b4cde
+2026-05-20 09:35:04 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_02cA2", "costHead": "HARDWARE", "properties": {"applicability": "CAPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1, "resources": [{"categories": [], "clusters": ["00063ef3-95ee-0a07-0549-eeaa0f16f415"]}]}
+2026-05-20 09:35:05 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/c05a4837-40aa-4d3b-b376-0600231b4cde
+2026-05-20 09:35:05 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:05 - update_tco - INFO - [TIME TAKEN] 0.3063 seconds (306.25 ms)
+2026-05-20 09:35:05 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:05 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "c05a4837-40aa-4d3b-b376-0600231b4cde",
+  "costHead": "HARDWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082998,
+  "lastModifiedAt": 1779269705,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1,
+  "description": "test_tco_config_02cA2",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "CAPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:05 - update_tco - INFO - ✓ Updated: test_tco_config_02cA2
+2026-05-20 09:35:05 - update_tco - INFO - 
+[20/20] Processing: test_tco_config_7fDaf
+2026-05-20 09:35:05 - update_tco - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e033a1f4-91b9-48d6-aa33-4f51bc496b64
+2026-05-20 09:35:05 - update_tco - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e033a1f4-91b9-48d6-aa33-4f51bc496b64
+2026-05-20 09:35:05 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:05 - update_tco - INFO - [TIME TAKEN] 0.0924 seconds (92.38 ms)
+2026-05-20 09:35:05 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:05 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "e033a1f4-91b9-48d6-aa33-4f51bc496b64",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082999,
+  "lastModifiedAt": 1779087146,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_7fDaf",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:05 - update_tco - INFO - [API REQUEST] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e033a1f4-91b9-48d6-aa33-4f51bc496b64
+2026-05-20 09:35:05 - update_tco - INFO - [REQUEST DATA PAYLOAD] {"description": "test_tco_config_7fDaf", "costHead": "SOFTWARE", "properties": {"applicability": "ONE_TIME_OPEX", "isRecurring": false, "startDate": 1777593600, "termInMonths": 1, "totalQuantity": 0}, "meteringUnit": "NODE", "costPerMeter": 1.0, "resources": [{"categories": [], "clusters": ["00063ef3-95ee-0a07-0549-eeaa0f16f415"]}]}
+2026-05-20 09:35:05 - update_tco - INFO - [API RESPONSE] PUT https://ncm.services.nconprem-10-114-55-128.ccpnx.com/v1/cg/config/tco/configs/e033a1f4-91b9-48d6-aa33-4f51bc496b64
+2026-05-20 09:35:05 - update_tco - INFO - [STATUS CODE] 200
+2026-05-20 09:35:05 - update_tco - INFO - [TIME TAKEN] 0.1894 seconds (189.38 ms)
+2026-05-20 09:35:05 - update_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:35:05 - update_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "configId": "e033a1f4-91b9-48d6-aa33-4f51bc496b64",
+  "costHead": "SOFTWARE",
+  "costType": "CUSTOM",
+  "createdBy": "00000000-0000-0000-0000-000000000000",
+  "createdAt": 1779082999,
+  "lastModifiedAt": 1779269705,
+  "lastModifiedBy": "00000000-0000-0000-0000-000000000000",
+  "monthlyCost": 0,
+  "costPerMeter": 1.0,
+  "description": "test_tco_config_7fDaf",
+  "meteringUnit": "NODE",
+  "resources": [
+    {
+      "categories": [],
+      "clusters": [
+        "00063ef3-95ee-0a07-0549-eeaa0f16f415"
+      ]
+    }
+  ],
+  "configuration": {},
+  "properties": {
+    "applicability": "ONE_TIME_OPEX",
+    "isRecurring": false,
+    "startDate": 1777593600,
+    "termInMonths": 1,
+    "totalQuantity": 0
+  }
+}
+2026-05-20 09:35:05 - update_tco - INFO - ✓ Updated: test_tco_config_7fDaf
+2026-05-20 09:35:05 - update_tco - INFO - 
+================================================================================
+2026-05-20 09:35:05 - update_tco - INFO - UPDATE SUMMARY
+2026-05-20 09:35:05 - update_tco - INFO - ================================================================================
+2026-05-20 09:35:05 - update_tco - INFO -   Configurations updated:     20
+2026-05-20 09:35:05 - update_tco - INFO -   Configurations failed:      0
+2026-05-20 09:35:05 - update_tco - INFO -   Success rate:               20/20 (100.0%)
+2026-05-20 09:35:05 - update_tco - INFO -   Total execution time:       18.49s
+2026-05-20 09:35:05 - update_tco - INFO - ================================================================================
+2026-05-20 09:35:05 - update_tco - INFO - 
+2026-05-20 09:35:05 - update_tco - INFO - ================================================================================================================================================================
+2026-05-20 09:35:05 - update_tco - INFO - API METRICS CONSOLIDATED REPORT
+2026-05-20 09:35:05 - update_tco - INFO - ================================================================================================================================================================
+2026-05-20 09:35:05 - update_tco - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-05-20 09:35:05 - update_tco - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 09:35:05 - update_tco - INFO - GET      | /v1/cg/config/tco/configs/{uuid}                   |      20 |      - |      92.38 |     391.94 |     297.81 |     391.94 |     391.94
+2026-05-20 09:35:05 - update_tco - INFO - PUT      | /v1/cg/config/tco/configs/{uuid}                   |      20 |      - |     189.38 |     483.43 |     417.42 |     483.43 |     483.43
+2026-05-20 09:35:05 - update_tco - INFO - POST     | /v1/cg/config/tco/configs                          |       1 |      - |     290.56 |     290.56 |     290.56 |     290.56 |     290.56
+2026-05-20 09:35:05 - update_tco - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 09:35:05 - update_tco - INFO - Total API Calls: 41 | Unique Endpoints: 3 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-05-20 09:35:05 - update_tco - INFO - ================================================================================================================================================================
+2026-05-20 09:35:05 - update_tco - INFO - 
+2026-05-20 09:35:05 - update_tco - INFO - STATUS CODE BREAKDOWN:
+2026-05-20 09:35:05 - update_tco - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-20 09:35:05 - update_tco - INFO - GET    /v1/cg/config/tco/configs/{uuid}           | 200: 20
+2026-05-20 09:35:05 - update_tco - INFO - PUT    /v1/cg/config/tco/configs/{uuid}           | 200: 20
+2026-05-20 09:35:05 - update_tco - INFO - POST   /v1/cg/config/tco/configs                  | 200: 1
+2026-05-20 09:35:05 - update_tco - INFO - ================================================================================================================================================================

@@ -1,0 +1,1520 @@
+2026-05-20 06:08:29 - delete_tco - INFO - ================================================================================
+2026-05-20 06:08:29 - delete_tco - INFO - Script: delete_tco
+2026-05-20 06:08:29 - delete_tco - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/delete_tco_20260520_060829.log
+2026-05-20 06:08:29 - delete_tco - INFO - ================================================================================
+2026-05-20 06:08:29 - delete_tco - INFO - ================================================================================
+2026-05-20 06:08:29 - delete_tco - INFO - Starting TCO Direct Cost Configuration Deletion
+2026-05-20 06:08:29 - delete_tco - INFO - ================================================================================
+2026-05-20 06:08:29 - delete_tco - INFO - Configuration:
+2026-05-20 06:08:29 - delete_tco - INFO -   - Base URL: https://ncm.services.nconprem-10-122-27-229.ccpnx.com
+2026-05-20 06:08:29 - delete_tco - INFO -   - Delete test configs only: True
+2026-05-20 06:08:29 - delete_tco - INFO -   - Test config pattern: 'test_tco_config'
+2026-05-20 06:08:29 - delete_tco - INFO - ================================================================================
+2026-05-20 06:08:29 - delete_tco - INFO - Fetching TCO configurations...
+2026-05-20 06:08:29 - delete_tco - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=0&costHeadAction=indirect
+2026-05-20 06:08:29 - delete_tco - INFO - [REQUEST DATA PAYLOAD] {"filters": []}
+2026-05-20 06:08:31 - delete_tco - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=0&costHeadAction=indirect
+2026-05-20 06:08:31 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:08:31 - delete_tco - INFO - [TIME TAKEN] 1.7051 seconds (1705.06 ms)
+2026-05-20 06:08:31 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:08:31 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "currency": "USD",
+  "totalCount": 104,
+  "data": [
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "3ea022e7-3d29-4914-bd3c-089eb7581ff8",
+      "description": "People Cost",
+      "costHead": "PEOPLE",
+      "costPerMeter": 125.0,
+      "monthlyCost": 375.0,
+      "meteringUnit": "NODE",
+      "costType": "NUTANIX",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1778980262,
+      "lastModifiedBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "lastModifiedAt": 1779256277,
+      "resources": [
+        {
+          "clusters": [
+            "All"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "isActive": true,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "2a60431e-b019-4dab-87b8-de9bbcf82942",
+      "description": "Facilities Cost",
+      "costHead": "FACILITIES",
+      "costPerMeter": 40.5822222,
+      "monthlyCost": 121.7466666,
+      "meteringUnit": "NODE",
+      "costType": "NUTANIX",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1778980262,
+      "lastModifiedBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "lastModifiedAt": 1779256277,
+      "resources": [
+        {
+          "clusters": [
+            "All"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "isActive": true,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "506f46bc-9fdc-4648-82e5-476f5954c9f0",
+      "description": "Telecom Cost",
+      "costHead": "TELECOM",
+      "costPerMeter": 10.4166666,
+      "monthlyCost": 31.2499998,
+      "meteringUnit": "NODE",
+      "costType": "NUTANIX",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1778980262,
+      "lastModifiedBy": {
+  
+... (truncated)
+2026-05-20 06:08:31 - delete_tco - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=100&costHeadAction=indirect
+2026-05-20 06:08:31 - delete_tco - INFO - [REQUEST DATA PAYLOAD] {"filters": []}
+2026-05-20 06:08:32 - delete_tco - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=100&costHeadAction=indirect
+2026-05-20 06:08:32 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:08:32 - delete_tco - INFO - [TIME TAKEN] 0.5876 seconds (587.62 ms)
+2026-05-20 06:08:32 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:08:32 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "currency": "USD",
+  "totalCount": 104,
+  "data": [
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "ed55456b-151b-43e7-a29c-cfb02f021b33",
+      "description": "test_tco_config_7DDaD",
+      "costHead": "SERVICES",
+      "costPerMeter": 1,
+      "monthlyCost": 3,
+      "meteringUnit": "NODE",
+      "costType": "CUSTOM",
+      "createdBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "createdAt": 1779063516,
+      "lastModifiedBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "lastModifiedAt": 1779066143,
+      "resources": [
+        {
+          "categories": [],
+          "clusters": [
+            "000651c0-332c-fc3b-4107-7cc255819d2e"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "resourceGroupId": "6eb3e66b-5d7a-43fe-95b7-04643a5638ec",
+      "isActive": true,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "f2d5cbad-e270-4623-9166-03890edef661",
+      "description": "test_tco_config_b6C40",
+      "costHead": "PEOPLE",
+      "costPerMeter": 1,
+      "monthlyCost": 3.0,
+      "meteringUnit": "NODE",
+      "costType": "CUSTOM",
+      "createdBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "createdAt": 1779063510,
+      "lastModifiedBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "lastModifiedAt": 1779066139,
+      "resources": [
+        {
+          "categories": [],
+          "clusters": [
+            "000651c0-332c-fc3b-4107-7cc255819d2e"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "resourceGroupId": "7c56a0df-7bba-45b8-8553-6f9f2ffa5874",
+      "isActive": true,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "ffcf39f9-e4fd-4271-847e-0de9ce933e6d",
+      "description": "test_tco_config_Bd3c5",
+      "costHead": "SERVICES",
+      "costPerMeter": 1,
+      "monthlyCost": 
+... (truncated)
+2026-05-20 06:08:32 - delete_tco - INFO - Retrieved 104 total TCO configurations
+2026-05-20 06:08:32 - delete_tco - INFO - Filtered to 100 test configurations
+2026-05-20 06:08:32 - delete_tco - INFO - 
+Configurations to delete (100):
+2026-05-20 06:08:32 - delete_tco - INFO - --------------------------------------------------------------------------------
+2026-05-20 06:08:32 - delete_tco - INFO -   1. test_tco_config_1Fe8e (ID: 04f7f979...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   2. test_tco_config_DBCbb (ID: 05df2fdb...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   3. test_tco_config_cd5D4 (ID: 0a9c542f...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   4. test_tco_config_123eB (ID: 0b5ddc1d...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   5. test_tco_config_CaA2C (ID: 0e63e377...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   6. test_tco_config_7E1de (ID: 0e877f49...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   7. test_tco_config_71FBc (ID: 0f5f1385...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   8. test_tco_config_E30fC (ID: 144c582a...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -   9. test_tco_config_D84FE (ID: 147c7031...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  10. test_tco_config_b5E05 (ID: 187c1a42...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  11. test_tco_config_dbAFC (ID: 19620f02...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  12. test_tco_config_2Fdd0 (ID: 19bd4f75...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  13. test_tco_config_daaC3 (ID: 1a599105...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  14. test_tco_config_fdf3e (ID: 1a742c40...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  15. test_tco_config_E5e6a (ID: 1c124a56...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  16. test_tco_config_65019 (ID: 25af68f3...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  17. test_tco_config_e32CC (ID: 283e0c86...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  18. test_tco_config_F473A (ID: 28b0d2e0...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  19. test_tco_config_48df5 (ID: 2c7cf7c6...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  20. test_tco_config_d8d29 (ID: 2d403bfd...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  21. test_tco_config_F412a (ID: 2e80d454...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  22. test_tco_config_c8900 (ID: 33a5216b...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  23. test_tco_config_6EFaC (ID: 36a0faf5...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  24. test_tco_config_F9Dc1 (ID: 38b6b681...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  25. test_tco_config_Ed93f (ID: 3fc8223c...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  26. test_tco_config_9CB2A (ID: 41fc1209...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  27. test_tco_config_8Fa7a (ID: 46bae5a6...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  28. test_tco_config_0Deda (ID: 4b4a9cb0...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  29. test_tco_config_dcb29 (ID: 5019522a...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  30. test_tco_config_3f33F (ID: 506f4475...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  31. test_tco_config_2bbE7 (ID: 52d09799...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  32. test_tco_config_4AF43 (ID: 56493e3a...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  33. test_tco_config_e5Df4 (ID: 57a035ee...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  34. test_tco_config_Fc4Da (ID: 59c7d762...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  35. test_tco_config_abE0D (ID: 5ddb419d...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  36. test_tco_config_AF5d6 (ID: 5ee14489...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  37. test_tco_config_da56B (ID: 60a1e2a5...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  38. test_tco_config_5CfBD (ID: 6210cac4...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  39. test_tco_config_b8D3a (ID: 667b13aa...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  40. test_tco_config_5A665 (ID: 67da22a5...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  41. test_tco_config_4E9Aa (ID: 6bf6fa59...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  42. test_tco_config_edfd6 (ID: 6cccc85d...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  43. test_tco_config_BF4F0 (ID: 6dab7387...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  44. test_tco_config_2B21D (ID: 7037118b...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  45. test_tco_config_6E3AC (ID: 71d6f37c...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  46. test_tco_config_6Cdbb (ID: 7460c4ce...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  47. test_tco_config_444D0 (ID: 74bfce6a...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  48. test_tco_config_016B2 (ID: 778a0c73...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  49. test_tco_config_5ef15 (ID: 7a0d0010...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  50. test_tco_config_C1cC3 (ID: 7a1f6d00...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  51. test_tco_config_4C9bF (ID: 7c8d85be...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  52. test_tco_config_f09Ce (ID: 7cacdd15...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  53. test_tco_config_7D95D (ID: 83c8c4ef...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  54. test_tco_config_9e5cd (ID: 8774dd91...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  55. test_tco_config_4FBA1 (ID: 8906b0a9...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  56. test_tco_config_02d4A (ID: 895e190f...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  57. test_tco_config_D1Dc9 (ID: 8a1d4867...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  58. test_tco_config_08D91 (ID: 8b051f4c...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  59. test_tco_config_BC797 (ID: 8ea1414d...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  60. test_tco_config_5CdF8 (ID: 90ba9cc8...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  61. test_tco_config_Eb992 (ID: 912c3853...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  62. test_tco_config_1fC7A (ID: 91e3b160...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  63. test_tco_config_5562c (ID: 93c58e98...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  64. test_tco_config_ff0Fc (ID: 9c54cc67...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  65. test_tco_config_0AD7E (ID: a23855ff...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  66. test_tco_config_A0Bea (ID: a52065e5...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  67. test_tco_config_A70Af (ID: a751ecf6...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  68. test_tco_config_3ae81 (ID: ab690a22...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  69. test_tco_config_1fF4F (ID: ad563a5a...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  70. test_tco_config_92EB7 (ID: ae490b25...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  71. test_tco_config_5161c (ID: b633c7ca...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  72. test_tco_config_C5AdE (ID: b6e0060c...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  73. test_tco_config_741E0 (ID: bcf65802...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  74. test_tco_config_F7C9F (ID: bfc37556...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  75. test_tco_config_70c4d (ID: c1b32046...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  76. test_tco_config_DaE5f (ID: c28937a6...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  77. test_tco_config_C58fd (ID: c5b9c9aa...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  78. test_tco_config_EF7D4 (ID: c5f129ab...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  79. test_tco_config_CCecA (ID: c90e8183...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  80. test_tco_config_Db6A5 (ID: caa368c5...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  81. test_tco_config_FAB6D (ID: cc069e72...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  82. test_tco_config_0FC85 (ID: cc5427db...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  83. test_tco_config_0c0a4 (ID: cf22bd81...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  84. test_tco_config_CC513 (ID: cf337129...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  85. test_tco_config_cd811 (ID: d024bcd6...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  86. test_tco_config_3444f (ID: d0c3f6e3...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  87. test_tco_config_8f5cc (ID: d6bfd66c...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  88. test_tco_config_60b96 (ID: d7094b2b...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  89. test_tco_config_175bA (ID: d8241bb2...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  90. test_tco_config_CD6dE (ID: d87cd2cc...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  91. test_tco_config_e2135 (ID: dbe42904...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  92. test_tco_config_6fDaF (ID: dff2abff...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  93. test_tco_config_A3254 (ID: e93cd578...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  94. test_tco_config_fb782 (ID: e9a77552...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  95. test_tco_config_f40BB (ID: ea39bb2d...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  96. test_tco_config_F1BB4 (ID: ec20404c...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  97. test_tco_config_B142a (ID: ec8511bb...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  98. test_tco_config_7DDaD (ID: ed55456b...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO -  99. test_tco_config_b6C40 (ID: f2d5cbad...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO - 100. test_tco_config_Bd3c5 (ID: ffcf39f9...)
+2026-05-20 06:08:32 - delete_tco - INFO -      Type: CUSTOM | Monthly Cost: $3.0 | Created by: admin
+2026-05-20 06:08:32 - delete_tco - INFO - 
+Total Monthly Cost Impact: $300.00
+2026-05-20 06:08:32 - delete_tco - INFO - --------------------------------------------------------------------------------
+2026-05-20 06:09:42 - delete_tco - INFO - 
+Starting deletion of 100 configurations...
+2026-05-20 06:09:42 - delete_tco - INFO - [1/100] Processing: test_tco_config_1Fe8e
+2026-05-20 06:09:42 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/04f7f979-081b-40ff-ab7c-e1c6181e1bcf
+2026-05-20 06:09:43 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/04f7f979-081b-40ff-ab7c-e1c6181e1bcf
+2026-05-20 06:09:43 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:43 - delete_tco - INFO - [TIME TAKEN] 0.8104 seconds (810.44 ms)
+2026-05-20 06:09:43 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:43 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:43 - delete_tco - INFO - ✓ Deleted: test_tco_config_1Fe8e
+2026-05-20 06:09:43 - delete_tco - INFO - [2/100] Processing: test_tco_config_DBCbb
+2026-05-20 06:09:43 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/05df2fdb-92ad-4ed8-baf2-d48fa76552fe
+2026-05-20 06:09:44 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/05df2fdb-92ad-4ed8-baf2-d48fa76552fe
+2026-05-20 06:09:44 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:44 - delete_tco - INFO - [TIME TAKEN] 0.2157 seconds (215.69 ms)
+2026-05-20 06:09:44 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:44 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:44 - delete_tco - INFO - ✓ Deleted: test_tco_config_DBCbb
+2026-05-20 06:09:44 - delete_tco - INFO - [3/100] Processing: test_tco_config_cd5D4
+2026-05-20 06:09:44 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0a9c542f-3ba7-4d02-bf59-3d5e6bf41060
+2026-05-20 06:09:44 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0a9c542f-3ba7-4d02-bf59-3d5e6bf41060
+2026-05-20 06:09:44 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:44 - delete_tco - INFO - [TIME TAKEN] 0.1763 seconds (176.32 ms)
+2026-05-20 06:09:44 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:44 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:44 - delete_tco - INFO - ✓ Deleted: test_tco_config_cd5D4
+2026-05-20 06:09:44 - delete_tco - INFO - [4/100] Processing: test_tco_config_123eB
+2026-05-20 06:09:44 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0b5ddc1d-b44b-434b-88fa-9489100675cc
+2026-05-20 06:09:44 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0b5ddc1d-b44b-434b-88fa-9489100675cc
+2026-05-20 06:09:44 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:44 - delete_tco - INFO - [TIME TAKEN] 0.2036 seconds (203.55 ms)
+2026-05-20 06:09:44 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:44 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:44 - delete_tco - INFO - ✓ Deleted: test_tco_config_123eB
+2026-05-20 06:09:45 - delete_tco - INFO - [5/100] Processing: test_tco_config_CaA2C
+2026-05-20 06:09:45 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0e63e377-d9c7-4126-9321-e5c590f075a7
+2026-05-20 06:09:45 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0e63e377-d9c7-4126-9321-e5c590f075a7
+2026-05-20 06:09:45 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:45 - delete_tco - INFO - [TIME TAKEN] 0.3015 seconds (301.54 ms)
+2026-05-20 06:09:45 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:45 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:45 - delete_tco - INFO - ✓ Deleted: test_tco_config_CaA2C
+2026-05-20 06:09:45 - delete_tco - INFO - [6/100] Processing: test_tco_config_7E1de
+2026-05-20 06:09:45 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0e877f49-8f30-4e28-a45a-d6abd13a1179
+2026-05-20 06:09:46 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0e877f49-8f30-4e28-a45a-d6abd13a1179
+2026-05-20 06:09:46 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:46 - delete_tco - INFO - [TIME TAKEN] 0.4778 seconds (477.81 ms)
+2026-05-20 06:09:46 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:46 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:46 - delete_tco - INFO - ✓ Deleted: test_tco_config_7E1de
+2026-05-20 06:09:46 - delete_tco - INFO - [7/100] Processing: test_tco_config_71FBc
+2026-05-20 06:09:46 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0f5f1385-ba34-4511-abcf-ad91f5302746
+2026-05-20 06:09:46 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/0f5f1385-ba34-4511-abcf-ad91f5302746
+2026-05-20 06:09:46 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:46 - delete_tco - INFO - [TIME TAKEN] 0.2538 seconds (253.82 ms)
+2026-05-20 06:09:46 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:46 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:46 - delete_tco - INFO - ✓ Deleted: test_tco_config_71FBc
+2026-05-20 06:09:46 - delete_tco - INFO - [8/100] Processing: test_tco_config_E30fC
+2026-05-20 06:09:46 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/144c582a-641a-44e6-8959-ee070aa26f8e
+2026-05-20 06:09:47 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/144c582a-641a-44e6-8959-ee070aa26f8e
+2026-05-20 06:09:47 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:47 - delete_tco - INFO - [TIME TAKEN] 0.1893 seconds (189.31 ms)
+2026-05-20 06:09:47 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:47 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:47 - delete_tco - INFO - ✓ Deleted: test_tco_config_E30fC
+2026-05-20 06:09:47 - delete_tco - INFO - [9/100] Processing: test_tco_config_D84FE
+2026-05-20 06:09:47 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/147c7031-dcb5-4741-ab2c-1d9c35dfa852
+2026-05-20 06:09:47 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/147c7031-dcb5-4741-ab2c-1d9c35dfa852
+2026-05-20 06:09:47 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:47 - delete_tco - INFO - [TIME TAKEN] 0.2104 seconds (210.44 ms)
+2026-05-20 06:09:47 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:47 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:47 - delete_tco - INFO - ✓ Deleted: test_tco_config_D84FE
+2026-05-20 06:09:47 - delete_tco - INFO - [10/100] Processing: test_tco_config_b5E05
+2026-05-20 06:09:47 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/187c1a42-fe51-42e2-b6c3-566c9b4670e2
+2026-05-20 06:09:47 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/187c1a42-fe51-42e2-b6c3-566c9b4670e2
+2026-05-20 06:09:47 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:47 - delete_tco - INFO - [TIME TAKEN] 0.2422 seconds (242.15 ms)
+2026-05-20 06:09:47 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:47 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:47 - delete_tco - INFO - ✓ Deleted: test_tco_config_b5E05
+2026-05-20 06:09:48 - delete_tco - INFO - [11/100] Processing: test_tco_config_dbAFC
+2026-05-20 06:09:48 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/19620f02-08ff-4c8f-89c1-e4283408364e
+2026-05-20 06:09:48 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/19620f02-08ff-4c8f-89c1-e4283408364e
+2026-05-20 06:09:48 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:48 - delete_tco - INFO - [TIME TAKEN] 0.2999 seconds (299.95 ms)
+2026-05-20 06:09:48 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:48 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:48 - delete_tco - INFO - ✓ Deleted: test_tco_config_dbAFC
+2026-05-20 06:09:48 - delete_tco - INFO - [12/100] Processing: test_tco_config_2Fdd0
+2026-05-20 06:09:48 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/19bd4f75-7f0b-43e4-9f67-da3154cf52eb
+2026-05-20 06:09:48 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/19bd4f75-7f0b-43e4-9f67-da3154cf52eb
+2026-05-20 06:09:48 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:48 - delete_tco - INFO - [TIME TAKEN] 0.3764 seconds (376.41 ms)
+2026-05-20 06:09:48 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:48 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:48 - delete_tco - INFO - ✓ Deleted: test_tco_config_2Fdd0
+2026-05-20 06:09:49 - delete_tco - INFO - [13/100] Processing: test_tco_config_daaC3
+2026-05-20 06:09:49 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/1a599105-7d53-4200-b5e3-4ec817232502
+2026-05-20 06:09:49 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/1a599105-7d53-4200-b5e3-4ec817232502
+2026-05-20 06:09:49 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:49 - delete_tco - INFO - [TIME TAKEN] 0.2347 seconds (234.71 ms)
+2026-05-20 06:09:49 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:49 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:49 - delete_tco - INFO - ✓ Deleted: test_tco_config_daaC3
+2026-05-20 06:09:49 - delete_tco - INFO - [14/100] Processing: test_tco_config_fdf3e
+2026-05-20 06:09:49 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/1a742c40-6a99-451f-b32f-9b751b137334
+2026-05-20 06:09:49 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/1a742c40-6a99-451f-b32f-9b751b137334
+2026-05-20 06:09:49 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:49 - delete_tco - INFO - [TIME TAKEN] 0.1869 seconds (186.89 ms)
+2026-05-20 06:09:49 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:49 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:49 - delete_tco - INFO - ✓ Deleted: test_tco_config_fdf3e
+2026-05-20 06:09:49 - delete_tco - INFO - [15/100] Processing: test_tco_config_E5e6a
+2026-05-20 06:09:49 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/1c124a56-8376-48ce-a795-b856441190f9
+2026-05-20 06:09:50 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/1c124a56-8376-48ce-a795-b856441190f9
+2026-05-20 06:09:50 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:50 - delete_tco - INFO - [TIME TAKEN] 0.4886 seconds (488.62 ms)
+2026-05-20 06:09:50 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:50 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:50 - delete_tco - INFO - ✓ Deleted: test_tco_config_E5e6a
+2026-05-20 06:09:50 - delete_tco - INFO - [16/100] Processing: test_tco_config_65019
+2026-05-20 06:09:50 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/25af68f3-b1cf-4ca2-a1ab-ab58a6b7324c
+2026-05-20 06:09:51 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/25af68f3-b1cf-4ca2-a1ab-ab58a6b7324c
+2026-05-20 06:09:51 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:51 - delete_tco - INFO - [TIME TAKEN] 0.5491 seconds (549.13 ms)
+2026-05-20 06:09:51 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:51 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:51 - delete_tco - INFO - ✓ Deleted: test_tco_config_65019
+2026-05-20 06:09:51 - delete_tco - INFO - [17/100] Processing: test_tco_config_e32CC
+2026-05-20 06:09:51 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/283e0c86-8bd9-4c6f-b50d-6965146b1810
+2026-05-20 06:09:51 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/283e0c86-8bd9-4c6f-b50d-6965146b1810
+2026-05-20 06:09:51 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:51 - delete_tco - INFO - [TIME TAKEN] 0.3620 seconds (362.00 ms)
+2026-05-20 06:09:51 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:51 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:51 - delete_tco - INFO - ✓ Deleted: test_tco_config_e32CC
+2026-05-20 06:09:51 - delete_tco - INFO - [18/100] Processing: test_tco_config_F473A
+2026-05-20 06:09:51 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/28b0d2e0-d451-4c31-965e-966ba33c4e4d
+2026-05-20 06:09:52 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/28b0d2e0-d451-4c31-965e-966ba33c4e4d
+2026-05-20 06:09:52 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:52 - delete_tco - INFO - [TIME TAKEN] 0.1983 seconds (198.35 ms)
+2026-05-20 06:09:52 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:52 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:52 - delete_tco - INFO - ✓ Deleted: test_tco_config_F473A
+2026-05-20 06:09:52 - delete_tco - INFO - [19/100] Processing: test_tco_config_48df5
+2026-05-20 06:09:52 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/2c7cf7c6-7306-4127-a3ff-66e35d4a1025
+2026-05-20 06:09:52 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/2c7cf7c6-7306-4127-a3ff-66e35d4a1025
+2026-05-20 06:09:52 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:52 - delete_tco - INFO - [TIME TAKEN] 0.4031 seconds (403.13 ms)
+2026-05-20 06:09:52 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:52 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:52 - delete_tco - INFO - ✓ Deleted: test_tco_config_48df5
+2026-05-20 06:09:52 - delete_tco - INFO - [20/100] Processing: test_tco_config_d8d29
+2026-05-20 06:09:52 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/2d403bfd-974c-4fee-abb4-9a8ffab1c51a
+2026-05-20 06:09:53 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/2d403bfd-974c-4fee-abb4-9a8ffab1c51a
+2026-05-20 06:09:53 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:53 - delete_tco - INFO - [TIME TAKEN] 0.4244 seconds (424.41 ms)
+2026-05-20 06:09:53 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:53 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:53 - delete_tco - INFO - ✓ Deleted: test_tco_config_d8d29
+2026-05-20 06:09:53 - delete_tco - INFO - [21/100] Processing: test_tco_config_F412a
+2026-05-20 06:09:53 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/2e80d454-8ce4-40a6-a68a-acf593368380
+2026-05-20 06:09:54 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/2e80d454-8ce4-40a6-a68a-acf593368380
+2026-05-20 06:09:54 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:54 - delete_tco - INFO - [TIME TAKEN] 0.4891 seconds (489.13 ms)
+2026-05-20 06:09:54 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:54 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:54 - delete_tco - INFO - ✓ Deleted: test_tco_config_F412a
+2026-05-20 06:09:54 - delete_tco - INFO - [22/100] Processing: test_tco_config_c8900
+2026-05-20 06:09:54 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/33a5216b-0aba-4684-8d30-4fc12b86724a
+2026-05-20 06:09:54 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/33a5216b-0aba-4684-8d30-4fc12b86724a
+2026-05-20 06:09:54 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:54 - delete_tco - INFO - [TIME TAKEN] 0.3477 seconds (347.66 ms)
+2026-05-20 06:09:54 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:54 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:54 - delete_tco - INFO - ✓ Deleted: test_tco_config_c8900
+2026-05-20 06:09:54 - delete_tco - INFO - [23/100] Processing: test_tco_config_6EFaC
+2026-05-20 06:09:54 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/36a0faf5-d123-4aae-922b-f36f6e45f090
+2026-05-20 06:09:55 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/36a0faf5-d123-4aae-922b-f36f6e45f090
+2026-05-20 06:09:55 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:55 - delete_tco - INFO - [TIME TAKEN] 0.4347 seconds (434.71 ms)
+2026-05-20 06:09:55 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:55 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:55 - delete_tco - INFO - ✓ Deleted: test_tco_config_6EFaC
+2026-05-20 06:09:55 - delete_tco - INFO - [24/100] Processing: test_tco_config_F9Dc1
+2026-05-20 06:09:55 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/38b6b681-3da3-4c0a-816b-ed1b36e9eaae
+2026-05-20 06:09:55 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/38b6b681-3da3-4c0a-816b-ed1b36e9eaae
+2026-05-20 06:09:55 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:55 - delete_tco - INFO - [TIME TAKEN] 0.3848 seconds (384.81 ms)
+2026-05-20 06:09:55 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:55 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:55 - delete_tco - INFO - ✓ Deleted: test_tco_config_F9Dc1
+2026-05-20 06:09:56 - delete_tco - INFO - [25/100] Processing: test_tco_config_Ed93f
+2026-05-20 06:09:56 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/3fc8223c-36be-42ee-bfa6-c0aa6c0d016a
+2026-05-20 06:09:56 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/3fc8223c-36be-42ee-bfa6-c0aa6c0d016a
+2026-05-20 06:09:56 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:56 - delete_tco - INFO - [TIME TAKEN] 0.4187 seconds (418.70 ms)
+2026-05-20 06:09:56 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:56 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:56 - delete_tco - INFO - ✓ Deleted: test_tco_config_Ed93f
+2026-05-20 06:09:56 - delete_tco - INFO - [26/100] Processing: test_tco_config_9CB2A
+2026-05-20 06:09:56 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/41fc1209-73b1-4b3a-80cc-fb0d14317e56
+2026-05-20 06:09:56 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/41fc1209-73b1-4b3a-80cc-fb0d14317e56
+2026-05-20 06:09:56 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:56 - delete_tco - INFO - [TIME TAKEN] 0.2587 seconds (258.65 ms)
+2026-05-20 06:09:56 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:56 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:56 - delete_tco - INFO - ✓ Deleted: test_tco_config_9CB2A
+2026-05-20 06:09:57 - delete_tco - INFO - [27/100] Processing: test_tco_config_8Fa7a
+2026-05-20 06:09:57 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/46bae5a6-63f5-4f24-8f12-314d85ce2485
+2026-05-20 06:09:57 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/46bae5a6-63f5-4f24-8f12-314d85ce2485
+2026-05-20 06:09:57 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:57 - delete_tco - INFO - [TIME TAKEN] 0.2102 seconds (210.20 ms)
+2026-05-20 06:09:57 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:57 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:57 - delete_tco - INFO - ✓ Deleted: test_tco_config_8Fa7a
+2026-05-20 06:09:57 - delete_tco - INFO - [28/100] Processing: test_tco_config_0Deda
+2026-05-20 06:09:57 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/4b4a9cb0-1986-44f2-877b-3bab1d578a78
+2026-05-20 06:09:57 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/4b4a9cb0-1986-44f2-877b-3bab1d578a78
+2026-05-20 06:09:57 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:57 - delete_tco - INFO - [TIME TAKEN] 0.2796 seconds (279.56 ms)
+2026-05-20 06:09:57 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:57 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:57 - delete_tco - INFO - ✓ Deleted: test_tco_config_0Deda
+2026-05-20 06:09:58 - delete_tco - INFO - [29/100] Processing: test_tco_config_dcb29
+2026-05-20 06:09:58 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/5019522a-eede-47c6-847b-a5099cc9b0be
+2026-05-20 06:09:58 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/5019522a-eede-47c6-847b-a5099cc9b0be
+2026-05-20 06:09:58 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:58 - delete_tco - INFO - [TIME TAKEN] 0.3261 seconds (326.10 ms)
+2026-05-20 06:09:58 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:58 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:58 - delete_tco - INFO - ✓ Deleted: test_tco_config_dcb29
+2026-05-20 06:09:58 - delete_tco - INFO - [30/100] Processing: test_tco_config_3f33F
+2026-05-20 06:09:58 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/506f4475-9834-4d83-b2a7-b642010210b7
+2026-05-20 06:09:58 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/506f4475-9834-4d83-b2a7-b642010210b7
+2026-05-20 06:09:58 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:58 - delete_tco - INFO - [TIME TAKEN] 0.2954 seconds (295.41 ms)
+2026-05-20 06:09:58 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:58 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:58 - delete_tco - INFO - ✓ Deleted: test_tco_config_3f33F
+2026-05-20 06:09:59 - delete_tco - INFO - [31/100] Processing: test_tco_config_2bbE7
+2026-05-20 06:09:59 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/52d09799-c802-4eec-a911-dc1e6c7c79d4
+2026-05-20 06:09:59 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/52d09799-c802-4eec-a911-dc1e6c7c79d4
+2026-05-20 06:09:59 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:59 - delete_tco - INFO - [TIME TAKEN] 0.2262 seconds (226.22 ms)
+2026-05-20 06:09:59 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:59 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:59 - delete_tco - INFO - ✓ Deleted: test_tco_config_2bbE7
+2026-05-20 06:09:59 - delete_tco - INFO - [32/100] Processing: test_tco_config_4AF43
+2026-05-20 06:09:59 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/56493e3a-f26e-4f8c-8df7-12c157ffe867
+2026-05-20 06:09:59 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/56493e3a-f26e-4f8c-8df7-12c157ffe867
+2026-05-20 06:09:59 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:09:59 - delete_tco - INFO - [TIME TAKEN] 0.2481 seconds (248.10 ms)
+2026-05-20 06:09:59 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:09:59 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:09:59 - delete_tco - INFO - ✓ Deleted: test_tco_config_4AF43
+2026-05-20 06:09:59 - delete_tco - INFO - [33/100] Processing: test_tco_config_e5Df4
+2026-05-20 06:09:59 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/57a035ee-d898-46d3-b093-d48341863241
+2026-05-20 06:10:00 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/57a035ee-d898-46d3-b093-d48341863241
+2026-05-20 06:10:00 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:00 - delete_tco - INFO - [TIME TAKEN] 0.2132 seconds (213.23 ms)
+2026-05-20 06:10:00 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:00 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:00 - delete_tco - INFO - ✓ Deleted: test_tco_config_e5Df4
+2026-05-20 06:10:00 - delete_tco - INFO - [34/100] Processing: test_tco_config_Fc4Da
+2026-05-20 06:10:00 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/59c7d762-b2a9-4686-8b16-d7e25211e29f
+2026-05-20 06:10:00 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/59c7d762-b2a9-4686-8b16-d7e25211e29f
+2026-05-20 06:10:00 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:00 - delete_tco - INFO - [TIME TAKEN] 0.2146 seconds (214.62 ms)
+2026-05-20 06:10:00 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:00 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:00 - delete_tco - INFO - ✓ Deleted: test_tco_config_Fc4Da
+2026-05-20 06:10:00 - delete_tco - INFO - [35/100] Processing: test_tco_config_abE0D
+2026-05-20 06:10:00 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/5ddb419d-0756-469b-87e4-725b12150a4a
+2026-05-20 06:10:01 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/5ddb419d-0756-469b-87e4-725b12150a4a
+2026-05-20 06:10:01 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:01 - delete_tco - INFO - [TIME TAKEN] 0.3902 seconds (390.19 ms)
+2026-05-20 06:10:01 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:01 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:01 - delete_tco - INFO - ✓ Deleted: test_tco_config_abE0D
+2026-05-20 06:10:01 - delete_tco - INFO - [36/100] Processing: test_tco_config_AF5d6
+2026-05-20 06:10:01 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/5ee14489-2c0e-487b-b23a-102f0c500b93
+2026-05-20 06:10:01 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/5ee14489-2c0e-487b-b23a-102f0c500b93
+2026-05-20 06:10:01 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:01 - delete_tco - INFO - [TIME TAKEN] 0.5837 seconds (583.72 ms)
+2026-05-20 06:10:01 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:01 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:01 - delete_tco - INFO - ✓ Deleted: test_tco_config_AF5d6
+2026-05-20 06:10:02 - delete_tco - INFO - [37/100] Processing: test_tco_config_da56B
+2026-05-20 06:10:02 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/60a1e2a5-e88b-4d3f-ac49-8def389b9692
+2026-05-20 06:10:02 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/60a1e2a5-e88b-4d3f-ac49-8def389b9692
+2026-05-20 06:10:02 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:02 - delete_tco - INFO - [TIME TAKEN] 0.3285 seconds (328.54 ms)
+2026-05-20 06:10:02 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:02 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:02 - delete_tco - INFO - ✓ Deleted: test_tco_config_da56B
+2026-05-20 06:10:02 - delete_tco - INFO - [38/100] Processing: test_tco_config_5CfBD
+2026-05-20 06:10:02 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6210cac4-6211-4717-8978-61bd94375fac
+2026-05-20 06:10:03 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6210cac4-6211-4717-8978-61bd94375fac
+2026-05-20 06:10:03 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:03 - delete_tco - INFO - [TIME TAKEN] 0.3781 seconds (378.12 ms)
+2026-05-20 06:10:03 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:03 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:03 - delete_tco - INFO - ✓ Deleted: test_tco_config_5CfBD
+2026-05-20 06:10:03 - delete_tco - INFO - [39/100] Processing: test_tco_config_b8D3a
+2026-05-20 06:10:03 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/667b13aa-76d5-4247-b8cc-eb4433f1fa1d
+2026-05-20 06:10:03 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/667b13aa-76d5-4247-b8cc-eb4433f1fa1d
+2026-05-20 06:10:03 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:03 - delete_tco - INFO - [TIME TAKEN] 0.3182 seconds (318.16 ms)
+2026-05-20 06:10:03 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:03 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:03 - delete_tco - INFO - ✓ Deleted: test_tco_config_b8D3a
+2026-05-20 06:10:03 - delete_tco - INFO - [40/100] Processing: test_tco_config_5A665
+2026-05-20 06:10:03 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/67da22a5-d8c6-41dd-80dc-101c8484ee9f
+2026-05-20 06:10:04 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/67da22a5-d8c6-41dd-80dc-101c8484ee9f
+2026-05-20 06:10:04 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:04 - delete_tco - INFO - [TIME TAKEN] 0.1980 seconds (198.00 ms)
+2026-05-20 06:10:04 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:04 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:04 - delete_tco - INFO - ✓ Deleted: test_tco_config_5A665
+2026-05-20 06:10:04 - delete_tco - INFO - [41/100] Processing: test_tco_config_4E9Aa
+2026-05-20 06:10:04 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6bf6fa59-d4ff-4640-b228-bc6c1a351185
+2026-05-20 06:10:04 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6bf6fa59-d4ff-4640-b228-bc6c1a351185
+2026-05-20 06:10:04 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:04 - delete_tco - INFO - [TIME TAKEN] 0.2133 seconds (213.32 ms)
+2026-05-20 06:10:04 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:04 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:04 - delete_tco - INFO - ✓ Deleted: test_tco_config_4E9Aa
+2026-05-20 06:10:04 - delete_tco - INFO - [42/100] Processing: test_tco_config_edfd6
+2026-05-20 06:10:04 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6cccc85d-bbec-4341-a355-3716fd47d445
+2026-05-20 06:10:04 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6cccc85d-bbec-4341-a355-3716fd47d445
+2026-05-20 06:10:04 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:04 - delete_tco - INFO - [TIME TAKEN] 0.1937 seconds (193.71 ms)
+2026-05-20 06:10:04 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:04 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:04 - delete_tco - INFO - ✓ Deleted: test_tco_config_edfd6
+2026-05-20 06:10:05 - delete_tco - INFO - [43/100] Processing: test_tco_config_BF4F0
+2026-05-20 06:10:05 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6dab7387-db26-4c8e-b158-bd83dcc33e13
+2026-05-20 06:10:05 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/6dab7387-db26-4c8e-b158-bd83dcc33e13
+2026-05-20 06:10:05 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:05 - delete_tco - INFO - [TIME TAKEN] 0.1633 seconds (163.34 ms)
+2026-05-20 06:10:05 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:05 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:05 - delete_tco - INFO - ✓ Deleted: test_tco_config_BF4F0
+2026-05-20 06:10:05 - delete_tco - INFO - [44/100] Processing: test_tco_config_2B21D
+2026-05-20 06:10:05 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7037118b-00e2-47e7-bb48-2f9a02ee7d83
+2026-05-20 06:10:05 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7037118b-00e2-47e7-bb48-2f9a02ee7d83
+2026-05-20 06:10:05 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:05 - delete_tco - INFO - [TIME TAKEN] 0.1558 seconds (155.79 ms)
+2026-05-20 06:10:05 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:05 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:05 - delete_tco - INFO - ✓ Deleted: test_tco_config_2B21D
+2026-05-20 06:10:05 - delete_tco - INFO - [45/100] Processing: test_tco_config_6E3AC
+2026-05-20 06:10:05 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/71d6f37c-38cc-4db2-bf46-ca7b76204f92
+2026-05-20 06:10:05 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/71d6f37c-38cc-4db2-bf46-ca7b76204f92
+2026-05-20 06:10:05 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:05 - delete_tco - INFO - [TIME TAKEN] 0.1726 seconds (172.61 ms)
+2026-05-20 06:10:05 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:05 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:05 - delete_tco - INFO - ✓ Deleted: test_tco_config_6E3AC
+2026-05-20 06:10:06 - delete_tco - INFO - [46/100] Processing: test_tco_config_6Cdbb
+2026-05-20 06:10:06 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7460c4ce-0a16-4272-9bfa-749d9fc7187b
+2026-05-20 06:10:06 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7460c4ce-0a16-4272-9bfa-749d9fc7187b
+2026-05-20 06:10:06 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:06 - delete_tco - INFO - [TIME TAKEN] 0.2137 seconds (213.69 ms)
+2026-05-20 06:10:06 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:06 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:06 - delete_tco - INFO - ✓ Deleted: test_tco_config_6Cdbb
+2026-05-20 06:10:06 - delete_tco - INFO - [47/100] Processing: test_tco_config_444D0
+2026-05-20 06:10:06 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/74bfce6a-f62e-4835-ae3d-3c8079c7a511
+2026-05-20 06:10:06 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/74bfce6a-f62e-4835-ae3d-3c8079c7a511
+2026-05-20 06:10:06 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:06 - delete_tco - INFO - [TIME TAKEN] 0.2651 seconds (265.07 ms)
+2026-05-20 06:10:06 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:06 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:06 - delete_tco - INFO - ✓ Deleted: test_tco_config_444D0
+2026-05-20 06:10:06 - delete_tco - INFO - [48/100] Processing: test_tco_config_016B2
+2026-05-20 06:10:06 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/778a0c73-a612-41ef-9d61-07e4e953a0f5
+2026-05-20 06:10:07 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/778a0c73-a612-41ef-9d61-07e4e953a0f5
+2026-05-20 06:10:07 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:07 - delete_tco - INFO - [TIME TAKEN] 0.1730 seconds (172.98 ms)
+2026-05-20 06:10:07 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:07 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:07 - delete_tco - INFO - ✓ Deleted: test_tco_config_016B2
+2026-05-20 06:10:07 - delete_tco - INFO - [49/100] Processing: test_tco_config_5ef15
+2026-05-20 06:10:07 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7a0d0010-6927-423e-969b-99e80e925941
+2026-05-20 06:10:07 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7a0d0010-6927-423e-969b-99e80e925941
+2026-05-20 06:10:07 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:07 - delete_tco - INFO - [TIME TAKEN] 0.1753 seconds (175.27 ms)
+2026-05-20 06:10:07 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:07 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:07 - delete_tco - INFO - ✓ Deleted: test_tco_config_5ef15
+2026-05-20 06:10:07 - delete_tco - INFO - [50/100] Processing: test_tco_config_C1cC3
+2026-05-20 06:10:07 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7a1f6d00-0ce8-4cc8-8759-d6db6e2cb736
+2026-05-20 06:10:07 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7a1f6d00-0ce8-4cc8-8759-d6db6e2cb736
+2026-05-20 06:10:07 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:07 - delete_tco - INFO - [TIME TAKEN] 0.1526 seconds (152.59 ms)
+2026-05-20 06:10:07 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:07 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:07 - delete_tco - INFO - ✓ Deleted: test_tco_config_C1cC3
+2026-05-20 06:10:08 - delete_tco - INFO - [51/100] Processing: test_tco_config_4C9bF
+2026-05-20 06:10:08 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7c8d85be-99e3-43aa-b896-cce65e124153
+2026-05-20 06:10:08 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7c8d85be-99e3-43aa-b896-cce65e124153
+2026-05-20 06:10:08 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:08 - delete_tco - INFO - [TIME TAKEN] 0.1659 seconds (165.85 ms)
+2026-05-20 06:10:08 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:08 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:08 - delete_tco - INFO - ✓ Deleted: test_tco_config_4C9bF
+2026-05-20 06:10:08 - delete_tco - INFO - [52/100] Processing: test_tco_config_f09Ce
+2026-05-20 06:10:08 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7cacdd15-abaf-401e-9dd6-4e9a2d3755ae
+2026-05-20 06:10:08 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/7cacdd15-abaf-401e-9dd6-4e9a2d3755ae
+2026-05-20 06:10:08 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:08 - delete_tco - INFO - [TIME TAKEN] 0.1800 seconds (179.96 ms)
+2026-05-20 06:10:08 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:08 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:08 - delete_tco - INFO - ✓ Deleted: test_tco_config_f09Ce
+2026-05-20 06:10:08 - delete_tco - INFO - [53/100] Processing: test_tco_config_7D95D
+2026-05-20 06:10:08 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/83c8c4ef-6cba-4a9e-b523-477a791c9002
+2026-05-20 06:10:09 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/83c8c4ef-6cba-4a9e-b523-477a791c9002
+2026-05-20 06:10:09 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:09 - delete_tco - INFO - [TIME TAKEN] 0.2443 seconds (244.32 ms)
+2026-05-20 06:10:09 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:09 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:09 - delete_tco - INFO - ✓ Deleted: test_tco_config_7D95D
+2026-05-20 06:10:09 - delete_tco - INFO - [54/100] Processing: test_tco_config_9e5cd
+2026-05-20 06:10:09 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8774dd91-8976-4a8f-a2f6-43a346de1cdc
+2026-05-20 06:10:09 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8774dd91-8976-4a8f-a2f6-43a346de1cdc
+2026-05-20 06:10:09 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:09 - delete_tco - INFO - [TIME TAKEN] 0.4516 seconds (451.60 ms)
+2026-05-20 06:10:09 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:09 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:09 - delete_tco - INFO - ✓ Deleted: test_tco_config_9e5cd
+2026-05-20 06:10:09 - delete_tco - INFO - [55/100] Processing: test_tco_config_4FBA1
+2026-05-20 06:10:09 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8906b0a9-2493-4697-b11c-55c4dc1f342f
+2026-05-20 06:10:10 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8906b0a9-2493-4697-b11c-55c4dc1f342f
+2026-05-20 06:10:10 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:10 - delete_tco - INFO - [TIME TAKEN] 0.3417 seconds (341.68 ms)
+2026-05-20 06:10:10 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:10 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:10 - delete_tco - INFO - ✓ Deleted: test_tco_config_4FBA1
+2026-05-20 06:10:10 - delete_tco - INFO - [56/100] Processing: test_tco_config_02d4A
+2026-05-20 06:10:10 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/895e190f-f877-4d5c-8212-e7c80b8dc4e2
+2026-05-20 06:10:10 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/895e190f-f877-4d5c-8212-e7c80b8dc4e2
+2026-05-20 06:10:10 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:10 - delete_tco - INFO - [TIME TAKEN] 0.1719 seconds (171.91 ms)
+2026-05-20 06:10:10 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:10 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:10 - delete_tco - INFO - ✓ Deleted: test_tco_config_02d4A
+2026-05-20 06:10:10 - delete_tco - INFO - [57/100] Processing: test_tco_config_D1Dc9
+2026-05-20 06:10:10 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8a1d4867-5535-4871-a569-dfbbff02a9ef
+2026-05-20 06:10:11 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8a1d4867-5535-4871-a569-dfbbff02a9ef
+2026-05-20 06:10:11 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:11 - delete_tco - INFO - [TIME TAKEN] 0.2418 seconds (241.75 ms)
+2026-05-20 06:10:11 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:11 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:11 - delete_tco - INFO - ✓ Deleted: test_tco_config_D1Dc9
+2026-05-20 06:10:11 - delete_tco - INFO - [58/100] Processing: test_tco_config_08D91
+2026-05-20 06:10:11 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8b051f4c-3355-4db4-bb75-4283c193ddb1
+2026-05-20 06:10:11 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8b051f4c-3355-4db4-bb75-4283c193ddb1
+2026-05-20 06:10:11 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:11 - delete_tco - INFO - [TIME TAKEN] 0.1987 seconds (198.70 ms)
+2026-05-20 06:10:11 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:11 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:11 - delete_tco - INFO - ✓ Deleted: test_tco_config_08D91
+2026-05-20 06:10:11 - delete_tco - INFO - [59/100] Processing: test_tco_config_BC797
+2026-05-20 06:10:11 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8ea1414d-9d29-4d30-8814-11426b932bb9
+2026-05-20 06:10:12 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/8ea1414d-9d29-4d30-8814-11426b932bb9
+2026-05-20 06:10:12 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:12 - delete_tco - INFO - [TIME TAKEN] 0.5187 seconds (518.72 ms)
+2026-05-20 06:10:12 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:12 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:12 - delete_tco - INFO - ✓ Deleted: test_tco_config_BC797
+2026-05-20 06:10:12 - delete_tco - INFO - [60/100] Processing: test_tco_config_5CdF8
+2026-05-20 06:10:12 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/90ba9cc8-5514-4526-9c67-53631e51fdc2
+2026-05-20 06:10:12 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/90ba9cc8-5514-4526-9c67-53631e51fdc2
+2026-05-20 06:10:12 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:12 - delete_tco - INFO - [TIME TAKEN] 0.2507 seconds (250.73 ms)
+2026-05-20 06:10:12 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:12 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:12 - delete_tco - INFO - ✓ Deleted: test_tco_config_5CdF8
+2026-05-20 06:10:12 - delete_tco - INFO - [61/100] Processing: test_tco_config_Eb992
+2026-05-20 06:10:12 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/912c3853-8a48-477d-85b7-089ead734e25
+2026-05-20 06:10:13 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/912c3853-8a48-477d-85b7-089ead734e25
+2026-05-20 06:10:13 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:13 - delete_tco - INFO - [TIME TAKEN] 0.1710 seconds (170.99 ms)
+2026-05-20 06:10:13 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:13 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:13 - delete_tco - INFO - ✓ Deleted: test_tco_config_Eb992
+2026-05-20 06:10:13 - delete_tco - INFO - [62/100] Processing: test_tco_config_1fC7A
+2026-05-20 06:10:13 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/91e3b160-a3de-4529-8f6a-79a4cb3826d7
+2026-05-20 06:10:13 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/91e3b160-a3de-4529-8f6a-79a4cb3826d7
+2026-05-20 06:10:13 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:13 - delete_tco - INFO - [TIME TAKEN] 0.1930 seconds (192.97 ms)
+2026-05-20 06:10:13 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:13 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:13 - delete_tco - INFO - ✓ Deleted: test_tco_config_1fC7A
+2026-05-20 06:10:13 - delete_tco - INFO - [63/100] Processing: test_tco_config_5562c
+2026-05-20 06:10:13 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/93c58e98-83f1-40e8-9e22-1d748569ec33
+2026-05-20 06:10:13 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/93c58e98-83f1-40e8-9e22-1d748569ec33
+2026-05-20 06:10:13 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:13 - delete_tco - INFO - [TIME TAKEN] 0.2084 seconds (208.40 ms)
+2026-05-20 06:10:13 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:13 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:13 - delete_tco - INFO - ✓ Deleted: test_tco_config_5562c
+2026-05-20 06:10:14 - delete_tco - INFO - [64/100] Processing: test_tco_config_ff0Fc
+2026-05-20 06:10:14 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/9c54cc67-52de-4bea-a5fe-655cd40b8fc3
+2026-05-20 06:10:14 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/9c54cc67-52de-4bea-a5fe-655cd40b8fc3
+2026-05-20 06:10:14 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:14 - delete_tco - INFO - [TIME TAKEN] 0.3397 seconds (339.68 ms)
+2026-05-20 06:10:14 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:14 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:14 - delete_tco - INFO - ✓ Deleted: test_tco_config_ff0Fc
+2026-05-20 06:10:14 - delete_tco - INFO - [65/100] Processing: test_tco_config_0AD7E
+2026-05-20 06:10:14 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/a23855ff-3bff-4b07-8c53-0fc418fb0899
+2026-05-20 06:10:14 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/a23855ff-3bff-4b07-8c53-0fc418fb0899
+2026-05-20 06:10:14 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:14 - delete_tco - INFO - [TIME TAKEN] 0.3670 seconds (367.05 ms)
+2026-05-20 06:10:14 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:14 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:14 - delete_tco - INFO - ✓ Deleted: test_tco_config_0AD7E
+2026-05-20 06:10:15 - delete_tco - INFO - [66/100] Processing: test_tco_config_A0Bea
+2026-05-20 06:10:15 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/a52065e5-1d74-458d-8efa-c35c3a25f5b1
+2026-05-20 06:10:15 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/a52065e5-1d74-458d-8efa-c35c3a25f5b1
+2026-05-20 06:10:15 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:15 - delete_tco - INFO - [TIME TAKEN] 0.3002 seconds (300.18 ms)
+2026-05-20 06:10:15 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:15 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:15 - delete_tco - INFO - ✓ Deleted: test_tco_config_A0Bea
+2026-05-20 06:10:15 - delete_tco - INFO - [67/100] Processing: test_tco_config_A70Af
+2026-05-20 06:10:15 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/a751ecf6-942d-4c34-a827-5aa3fdcd974e
+2026-05-20 06:10:15 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/a751ecf6-942d-4c34-a827-5aa3fdcd974e
+2026-05-20 06:10:15 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:15 - delete_tco - INFO - [TIME TAKEN] 0.1783 seconds (178.34 ms)
+2026-05-20 06:10:15 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:15 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:15 - delete_tco - INFO - ✓ Deleted: test_tco_config_A70Af
+2026-05-20 06:10:16 - delete_tco - INFO - [68/100] Processing: test_tco_config_3ae81
+2026-05-20 06:10:16 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ab690a22-6a57-471c-85b6-75c0fb538ab6
+2026-05-20 06:10:16 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ab690a22-6a57-471c-85b6-75c0fb538ab6
+2026-05-20 06:10:16 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:16 - delete_tco - INFO - [TIME TAKEN] 0.1859 seconds (185.86 ms)
+2026-05-20 06:10:16 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:16 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:16 - delete_tco - INFO - ✓ Deleted: test_tco_config_3ae81
+2026-05-20 06:10:16 - delete_tco - INFO - [69/100] Processing: test_tco_config_1fF4F
+2026-05-20 06:10:16 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ad563a5a-59e9-4d18-8c84-6e302f42af86
+2026-05-20 06:10:16 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ad563a5a-59e9-4d18-8c84-6e302f42af86
+2026-05-20 06:10:16 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:16 - delete_tco - INFO - [TIME TAKEN] 0.2943 seconds (294.33 ms)
+2026-05-20 06:10:16 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:16 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:16 - delete_tco - INFO - ✓ Deleted: test_tco_config_1fF4F
+2026-05-20 06:10:16 - delete_tco - INFO - [70/100] Processing: test_tco_config_92EB7
+2026-05-20 06:10:16 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ae490b25-e946-48fd-9b85-fb41d8e52e6c
+2026-05-20 06:10:17 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ae490b25-e946-48fd-9b85-fb41d8e52e6c
+2026-05-20 06:10:17 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:17 - delete_tco - INFO - [TIME TAKEN] 0.2753 seconds (275.30 ms)
+2026-05-20 06:10:17 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:17 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:17 - delete_tco - INFO - ✓ Deleted: test_tco_config_92EB7
+2026-05-20 06:10:17 - delete_tco - INFO - [71/100] Processing: test_tco_config_5161c
+2026-05-20 06:10:17 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/b633c7ca-4006-487d-ae4b-fc93812f31dc
+2026-05-20 06:10:18 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/b633c7ca-4006-487d-ae4b-fc93812f31dc
+2026-05-20 06:10:18 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:18 - delete_tco - INFO - [TIME TAKEN] 0.5817 seconds (581.69 ms)
+2026-05-20 06:10:18 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:18 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:18 - delete_tco - INFO - ✓ Deleted: test_tco_config_5161c
+2026-05-20 06:10:18 - delete_tco - INFO - [72/100] Processing: test_tco_config_C5AdE
+2026-05-20 06:10:18 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/b6e0060c-5b50-4e83-b273-4d8f7d932ed3
+2026-05-20 06:10:18 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/b6e0060c-5b50-4e83-b273-4d8f7d932ed3
+2026-05-20 06:10:18 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:18 - delete_tco - INFO - [TIME TAKEN] 0.2113 seconds (211.35 ms)
+2026-05-20 06:10:18 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:18 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:18 - delete_tco - INFO - ✓ Deleted: test_tco_config_C5AdE
+2026-05-20 06:10:18 - delete_tco - INFO - [73/100] Processing: test_tco_config_741E0
+2026-05-20 06:10:18 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/bcf65802-20a4-4782-931a-77dc96da23ee
+2026-05-20 06:10:18 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/bcf65802-20a4-4782-931a-77dc96da23ee
+2026-05-20 06:10:18 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:18 - delete_tco - INFO - [TIME TAKEN] 0.2410 seconds (241.04 ms)
+2026-05-20 06:10:18 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:18 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:18 - delete_tco - INFO - ✓ Deleted: test_tco_config_741E0
+2026-05-20 06:10:19 - delete_tco - INFO - [74/100] Processing: test_tco_config_F7C9F
+2026-05-20 06:10:19 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/bfc37556-377e-42c9-bc66-a83b05560fa6
+2026-05-20 06:10:19 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/bfc37556-377e-42c9-bc66-a83b05560fa6
+2026-05-20 06:10:19 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:19 - delete_tco - INFO - [TIME TAKEN] 0.3378 seconds (337.85 ms)
+2026-05-20 06:10:19 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:19 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:19 - delete_tco - INFO - ✓ Deleted: test_tco_config_F7C9F
+2026-05-20 06:10:19 - delete_tco - INFO - [75/100] Processing: test_tco_config_70c4d
+2026-05-20 06:10:19 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c1b32046-a9a4-41b4-9307-24434c7c89b9
+2026-05-20 06:10:19 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c1b32046-a9a4-41b4-9307-24434c7c89b9
+2026-05-20 06:10:19 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:19 - delete_tco - INFO - [TIME TAKEN] 0.2963 seconds (296.32 ms)
+2026-05-20 06:10:19 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:19 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:19 - delete_tco - INFO - ✓ Deleted: test_tco_config_70c4d
+2026-05-20 06:10:20 - delete_tco - INFO - [76/100] Processing: test_tco_config_DaE5f
+2026-05-20 06:10:20 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c28937a6-f564-4d9e-9874-3625f7e17a87
+2026-05-20 06:10:20 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c28937a6-f564-4d9e-9874-3625f7e17a87
+2026-05-20 06:10:20 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:20 - delete_tco - INFO - [TIME TAKEN] 0.5111 seconds (511.13 ms)
+2026-05-20 06:10:20 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:20 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:20 - delete_tco - INFO - ✓ Deleted: test_tco_config_DaE5f
+2026-05-20 06:10:20 - delete_tco - INFO - [77/100] Processing: test_tco_config_C58fd
+2026-05-20 06:10:20 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c5b9c9aa-004f-437d-97f5-01c9f4718641
+2026-05-20 06:10:21 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c5b9c9aa-004f-437d-97f5-01c9f4718641
+2026-05-20 06:10:21 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:21 - delete_tco - INFO - [TIME TAKEN] 0.2091 seconds (209.06 ms)
+2026-05-20 06:10:21 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:21 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:21 - delete_tco - INFO - ✓ Deleted: test_tco_config_C58fd
+2026-05-20 06:10:21 - delete_tco - INFO - [78/100] Processing: test_tco_config_EF7D4
+2026-05-20 06:10:21 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c5f129ab-8ec6-43f9-9e16-75c85e996763
+2026-05-20 06:10:21 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c5f129ab-8ec6-43f9-9e16-75c85e996763
+2026-05-20 06:10:21 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:21 - delete_tco - INFO - [TIME TAKEN] 0.2582 seconds (258.17 ms)
+2026-05-20 06:10:21 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:21 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:21 - delete_tco - INFO - ✓ Deleted: test_tco_config_EF7D4
+2026-05-20 06:10:21 - delete_tco - INFO - [79/100] Processing: test_tco_config_CCecA
+2026-05-20 06:10:21 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c90e8183-1d87-4bd2-b824-b4cbec796f71
+2026-05-20 06:10:21 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/c90e8183-1d87-4bd2-b824-b4cbec796f71
+2026-05-20 06:10:21 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:21 - delete_tco - INFO - [TIME TAKEN] 0.2859 seconds (285.91 ms)
+2026-05-20 06:10:21 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:21 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:21 - delete_tco - INFO - ✓ Deleted: test_tco_config_CCecA
+2026-05-20 06:10:22 - delete_tco - INFO - [80/100] Processing: test_tco_config_Db6A5
+2026-05-20 06:10:22 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/caa368c5-0b54-4104-9d4f-607615e300bc
+2026-05-20 06:10:22 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/caa368c5-0b54-4104-9d4f-607615e300bc
+2026-05-20 06:10:22 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:22 - delete_tco - INFO - [TIME TAKEN] 0.3988 seconds (398.76 ms)
+2026-05-20 06:10:22 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:22 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:22 - delete_tco - INFO - ✓ Deleted: test_tco_config_Db6A5
+2026-05-20 06:10:22 - delete_tco - INFO - [81/100] Processing: test_tco_config_FAB6D
+2026-05-20 06:10:22 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cc069e72-631b-4687-b97b-590347186517
+2026-05-20 06:10:23 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cc069e72-631b-4687-b97b-590347186517
+2026-05-20 06:10:23 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:23 - delete_tco - INFO - [TIME TAKEN] 0.4397 seconds (439.70 ms)
+2026-05-20 06:10:23 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:23 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:23 - delete_tco - INFO - ✓ Deleted: test_tco_config_FAB6D
+2026-05-20 06:10:23 - delete_tco - INFO - [82/100] Processing: test_tco_config_0FC85
+2026-05-20 06:10:23 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cc5427db-b884-44d7-8495-cc74ac605664
+2026-05-20 06:10:23 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cc5427db-b884-44d7-8495-cc74ac605664
+2026-05-20 06:10:23 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:23 - delete_tco - INFO - [TIME TAKEN] 0.2627 seconds (262.73 ms)
+2026-05-20 06:10:23 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:23 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:23 - delete_tco - INFO - ✓ Deleted: test_tco_config_0FC85
+2026-05-20 06:10:23 - delete_tco - INFO - [83/100] Processing: test_tco_config_0c0a4
+2026-05-20 06:10:23 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cf22bd81-7193-45de-8ba8-b834c6dc0142
+2026-05-20 06:10:24 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cf22bd81-7193-45de-8ba8-b834c6dc0142
+2026-05-20 06:10:24 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:24 - delete_tco - INFO - [TIME TAKEN] 0.4392 seconds (439.21 ms)
+2026-05-20 06:10:24 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:24 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:24 - delete_tco - INFO - ✓ Deleted: test_tco_config_0c0a4
+2026-05-20 06:10:24 - delete_tco - INFO - [84/100] Processing: test_tco_config_CC513
+2026-05-20 06:10:24 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cf337129-0816-4882-ad90-3cebd110c353
+2026-05-20 06:10:24 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/cf337129-0816-4882-ad90-3cebd110c353
+2026-05-20 06:10:24 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:24 - delete_tco - INFO - [TIME TAKEN] 0.3003 seconds (300.35 ms)
+2026-05-20 06:10:24 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:24 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:24 - delete_tco - INFO - ✓ Deleted: test_tco_config_CC513
+2026-05-20 06:10:25 - delete_tco - INFO - [85/100] Processing: test_tco_config_cd811
+2026-05-20 06:10:25 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d024bcd6-fd7d-4cba-9068-d067d3352848
+2026-05-20 06:10:25 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d024bcd6-fd7d-4cba-9068-d067d3352848
+2026-05-20 06:10:25 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:25 - delete_tco - INFO - [TIME TAKEN] 0.3716 seconds (371.56 ms)
+2026-05-20 06:10:25 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:25 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:25 - delete_tco - INFO - ✓ Deleted: test_tco_config_cd811
+2026-05-20 06:10:25 - delete_tco - INFO - [86/100] Processing: test_tco_config_3444f
+2026-05-20 06:10:25 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d0c3f6e3-7254-4ecd-84a3-8d297a77ebf4
+2026-05-20 06:10:25 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d0c3f6e3-7254-4ecd-84a3-8d297a77ebf4
+2026-05-20 06:10:25 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:25 - delete_tco - INFO - [TIME TAKEN] 0.2839 seconds (283.87 ms)
+2026-05-20 06:10:25 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:25 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:25 - delete_tco - INFO - ✓ Deleted: test_tco_config_3444f
+2026-05-20 06:10:26 - delete_tco - INFO - [87/100] Processing: test_tco_config_8f5cc
+2026-05-20 06:10:26 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d6bfd66c-4146-4c9c-b945-7b6c86c1491d
+2026-05-20 06:10:26 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d6bfd66c-4146-4c9c-b945-7b6c86c1491d
+2026-05-20 06:10:26 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:26 - delete_tco - INFO - [TIME TAKEN] 0.2528 seconds (252.79 ms)
+2026-05-20 06:10:26 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:26 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:26 - delete_tco - INFO - ✓ Deleted: test_tco_config_8f5cc
+2026-05-20 06:10:26 - delete_tco - INFO - [88/100] Processing: test_tco_config_60b96
+2026-05-20 06:10:26 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d7094b2b-cb06-4db0-82a2-5dd63e661e5a
+2026-05-20 06:10:26 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d7094b2b-cb06-4db0-82a2-5dd63e661e5a
+2026-05-20 06:10:26 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:26 - delete_tco - INFO - [TIME TAKEN] 0.2697 seconds (269.73 ms)
+2026-05-20 06:10:26 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:26 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:26 - delete_tco - INFO - ✓ Deleted: test_tco_config_60b96
+2026-05-20 06:10:27 - delete_tco - INFO - [89/100] Processing: test_tco_config_175bA
+2026-05-20 06:10:27 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d8241bb2-8b53-43a9-8fbe-cd97a529f5bc
+2026-05-20 06:10:27 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d8241bb2-8b53-43a9-8fbe-cd97a529f5bc
+2026-05-20 06:10:27 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:27 - delete_tco - INFO - [TIME TAKEN] 0.4329 seconds (432.92 ms)
+2026-05-20 06:10:27 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:27 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:27 - delete_tco - INFO - ✓ Deleted: test_tco_config_175bA
+2026-05-20 06:10:27 - delete_tco - INFO - [90/100] Processing: test_tco_config_CD6dE
+2026-05-20 06:10:27 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d87cd2cc-4c16-489b-98ab-da685212e683
+2026-05-20 06:10:27 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/d87cd2cc-4c16-489b-98ab-da685212e683
+2026-05-20 06:10:27 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:27 - delete_tco - INFO - [TIME TAKEN] 0.2450 seconds (244.99 ms)
+2026-05-20 06:10:27 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:27 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:27 - delete_tco - INFO - ✓ Deleted: test_tco_config_CD6dE
+2026-05-20 06:10:28 - delete_tco - INFO - [91/100] Processing: test_tco_config_e2135
+2026-05-20 06:10:28 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/dbe42904-54b0-4ee7-b530-c239980793fa
+2026-05-20 06:10:28 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/dbe42904-54b0-4ee7-b530-c239980793fa
+2026-05-20 06:10:28 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:28 - delete_tco - INFO - [TIME TAKEN] 0.2461 seconds (246.11 ms)
+2026-05-20 06:10:28 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:28 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:28 - delete_tco - INFO - ✓ Deleted: test_tco_config_e2135
+2026-05-20 06:10:28 - delete_tco - INFO - [92/100] Processing: test_tco_config_6fDaF
+2026-05-20 06:10:28 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/dff2abff-4d85-4d40-9328-b425bd40c0b5
+2026-05-20 06:10:28 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/dff2abff-4d85-4d40-9328-b425bd40c0b5
+2026-05-20 06:10:28 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:28 - delete_tco - INFO - [TIME TAKEN] 0.2276 seconds (227.57 ms)
+2026-05-20 06:10:28 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:28 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:28 - delete_tco - INFO - ✓ Deleted: test_tco_config_6fDaF
+2026-05-20 06:10:28 - delete_tco - INFO - [93/100] Processing: test_tco_config_A3254
+2026-05-20 06:10:28 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/e93cd578-1f9e-4916-ad83-d9019f926e37
+2026-05-20 06:10:29 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/e93cd578-1f9e-4916-ad83-d9019f926e37
+2026-05-20 06:10:29 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:29 - delete_tco - INFO - [TIME TAKEN] 0.1872 seconds (187.24 ms)
+2026-05-20 06:10:29 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:29 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:29 - delete_tco - INFO - ✓ Deleted: test_tco_config_A3254
+2026-05-20 06:10:29 - delete_tco - INFO - [94/100] Processing: test_tco_config_fb782
+2026-05-20 06:10:29 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/e9a77552-86c2-4753-ab3d-14edb34d046c
+2026-05-20 06:10:29 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/e9a77552-86c2-4753-ab3d-14edb34d046c
+2026-05-20 06:10:29 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:29 - delete_tco - INFO - [TIME TAKEN] 0.1841 seconds (184.11 ms)
+2026-05-20 06:10:29 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:29 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:29 - delete_tco - INFO - ✓ Deleted: test_tco_config_fb782
+2026-05-20 06:10:29 - delete_tco - INFO - [95/100] Processing: test_tco_config_f40BB
+2026-05-20 06:10:29 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ea39bb2d-e7a7-486e-aeb1-433b90fca6be
+2026-05-20 06:10:30 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ea39bb2d-e7a7-486e-aeb1-433b90fca6be
+2026-05-20 06:10:30 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:30 - delete_tco - INFO - [TIME TAKEN] 0.3523 seconds (352.26 ms)
+2026-05-20 06:10:30 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:30 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:30 - delete_tco - INFO - ✓ Deleted: test_tco_config_f40BB
+2026-05-20 06:10:30 - delete_tco - INFO - [96/100] Processing: test_tco_config_F1BB4
+2026-05-20 06:10:30 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ec20404c-3de7-4979-bc9b-f72e55242b74
+2026-05-20 06:10:30 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ec20404c-3de7-4979-bc9b-f72e55242b74
+2026-05-20 06:10:30 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:30 - delete_tco - INFO - [TIME TAKEN] 0.2211 seconds (221.12 ms)
+2026-05-20 06:10:30 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:30 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:30 - delete_tco - INFO - ✓ Deleted: test_tco_config_F1BB4
+2026-05-20 06:10:30 - delete_tco - INFO - [97/100] Processing: test_tco_config_B142a
+2026-05-20 06:10:30 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ec8511bb-18ca-4954-bc4e-7ef13e23466e
+2026-05-20 06:10:30 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ec8511bb-18ca-4954-bc4e-7ef13e23466e
+2026-05-20 06:10:30 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:30 - delete_tco - INFO - [TIME TAKEN] 0.2229 seconds (222.87 ms)
+2026-05-20 06:10:30 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:30 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:30 - delete_tco - INFO - ✓ Deleted: test_tco_config_B142a
+2026-05-20 06:10:31 - delete_tco - INFO - [98/100] Processing: test_tco_config_7DDaD
+2026-05-20 06:10:31 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ed55456b-151b-43e7-a29c-cfb02f021b33
+2026-05-20 06:10:31 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ed55456b-151b-43e7-a29c-cfb02f021b33
+2026-05-20 06:10:31 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:31 - delete_tco - INFO - [TIME TAKEN] 0.1590 seconds (158.98 ms)
+2026-05-20 06:10:31 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:31 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:31 - delete_tco - INFO - ✓ Deleted: test_tco_config_7DDaD
+2026-05-20 06:10:31 - delete_tco - INFO - [99/100] Processing: test_tco_config_b6C40
+2026-05-20 06:10:31 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/f2d5cbad-e270-4623-9166-03890edef661
+2026-05-20 06:10:31 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/f2d5cbad-e270-4623-9166-03890edef661
+2026-05-20 06:10:31 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:31 - delete_tco - INFO - [TIME TAKEN] 0.1609 seconds (160.87 ms)
+2026-05-20 06:10:31 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:31 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:31 - delete_tco - INFO - ✓ Deleted: test_tco_config_b6C40
+2026-05-20 06:10:31 - delete_tco - INFO - [100/100] Processing: test_tco_config_Bd3c5
+2026-05-20 06:10:31 - delete_tco - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ffcf39f9-e4fd-4271-847e-0de9ce933e6d
+2026-05-20 06:10:32 - delete_tco - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs/ffcf39f9-e4fd-4271-847e-0de9ce933e6d
+2026-05-20 06:10:32 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:10:32 - delete_tco - INFO - [TIME TAKEN] 0.1689 seconds (168.92 ms)
+2026-05-20 06:10:32 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:10:32 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 06:10:32 - delete_tco - INFO - ✓ Deleted: test_tco_config_Bd3c5
+2026-05-20 06:10:32 - delete_tco - INFO - 
+================================================================================
+2026-05-20 06:10:32 - delete_tco - INFO - DELETION SUMMARY
+2026-05-20 06:10:32 - delete_tco - INFO - ================================================================================
+2026-05-20 06:10:32 - delete_tco - INFO -   Configurations deleted:     100
+2026-05-20 06:10:32 - delete_tco - INFO -   Configurations failed:      0
+2026-05-20 06:10:32 - delete_tco - INFO -   Success rate:               100/100 (100.0%)
+2026-05-20 06:10:32 - delete_tco - INFO -   Total execution time:       122.58s
+2026-05-20 06:10:32 - delete_tco - INFO - ================================================================================
+2026-05-20 06:10:32 - delete_tco - INFO - 
+2026-05-20 06:10:32 - delete_tco - INFO - ================================================================================================================================================================
+2026-05-20 06:10:32 - delete_tco - INFO - API METRICS CONSOLIDATED REPORT
+2026-05-20 06:10:32 - delete_tco - INFO - ================================================================================================================================================================
+2026-05-20 06:10:32 - delete_tco - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-05-20 06:10:32 - delete_tco - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 06:10:32 - delete_tco - INFO - DELETE   | /v1/cg/config/tco/configs/{uuid}                   |     100 |      - |     152.59 |     810.44 |     451.60 |     518.72 |     583.72
+2026-05-20 06:10:32 - delete_tco - INFO - POST     | /v1/cg/config/tco/configs                          |       2 |      - |     587.62 |    1705.06 |    1705.06 |    1705.06 |    1705.06
+2026-05-20 06:10:32 - delete_tco - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 06:10:32 - delete_tco - INFO - Total API Calls: 102 | Unique Endpoints: 2 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-05-20 06:10:32 - delete_tco - INFO - ================================================================================================================================================================
+2026-05-20 06:10:32 - delete_tco - INFO - 
+2026-05-20 06:10:32 - delete_tco - INFO - STATUS CODE BREAKDOWN:
+2026-05-20 06:10:32 - delete_tco - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-20 06:10:32 - delete_tco - INFO - DELETE /v1/cg/config/tco/configs/{uuid}           | 200: 100
+2026-05-20 06:10:32 - delete_tco - INFO - POST   /v1/cg/config/tco/configs                  | 200: 2
+2026-05-20 06:10:32 - delete_tco - INFO - ================================================================================================================================================================

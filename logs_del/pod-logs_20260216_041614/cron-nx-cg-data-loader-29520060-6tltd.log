@@ -1,0 +1,10 @@
+========================================
+Pod: cron-nx-cg-data-loader-29520060-6tltd
+Namespace: ncm-cg
+Status: Succeeded
+Containers: cron-nx-cg-data-loader
+Collected at: Mon Feb 16 04:16:32 GMT 2026
+========================================
+
+[2026-02-16T01:00:16.594Z] INFO main i.t.s.WorkflowServiceStubsImpl:86 Created WorkflowServiceStubs for channel: ManagedChannelOrphanWrapper{delegate=ManagedChannelImpl{logId=1, target=ncm-platform-temporal-frontend.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:7233}}
+[2026-02-16T01:00:20.674Z] INFO main c.n.b.c.TemporalClient:36 Pushed Task successfully to temporal with queueName nx_billing_workflow workflowName NxBillingWorkflow workflowID nx_billing

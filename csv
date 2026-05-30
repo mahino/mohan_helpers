@@ -1,0 +1,26 @@
+ Type                 Name                                                           # reqs    50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100%
+ POST                 /api/nutanix/v3/accounts/list                                     147    840   1200   1600   1700   2200   3900   4800   6300  12000  12000  12000
+ GET                  /api/nutanix/v3/app_showback/status                                49    570    810   1000   1100   2200   2500   4800   4800   4800   4800   4800
+ GET                  /api/nutanix/v3/services/nucalm/status                             49   1700   2000   2200   2200   2800   2800   4600   4600   4600   4600   4600
+ POST                 DeveloperUserBehavior/actions/run/action_restart                   15   4200   4500   5700   6800   7100  11000  11000  11000  11000  11000  11000
+ POST                 DeveloperUserBehavior/actions/run/action_scale_in                  15   5900   6100   7400   7600   7700  11000  11000  11000  11000  11000  11000
+ POST                 DeveloperUserBehavior/actions/run/action_scale_out                 15   6700   7000   7600   8500  12000  12000  12000  12000  12000  12000  12000
+ POST                 DeveloperUserBehavior/actions/run/action_start                     15   3500   5400   6900   7000   7800  12000  12000  12000  12000  12000  12000
+ POST                 DeveloperUserBehavior/actions/run/action_stop                      15   4400   5000   6500  10000  11000  12000  12000  12000  12000  12000  12000
+ POST                 DeveloperUserBehavior/app_runlogs/list                           2566   4100   4800   5400   5800   7100   8300  10000  12000  17000  26000  26000
+ POST                 DeveloperUserBehavior/app_variables/list                           49    690   1300   1400   1800   2600   2900   8200   8200   8200   8200   8200
+ GET                  DeveloperUserBehavior/apps                                         90  17000  25000  29000  31000  44000  50000  63000  70000  70000  70000  70000
+ POST                 DeveloperUserBehavior/apps/list                                   168  16000  19000  22000  24000  32000  38000  52000  91000  93000  93000  93000
+ GET                  DeveloperUserBehavior/apps_provisioning                          1593  19000  25000  28000  31000  40000  49000  61000  71000  93000  99000  99000
+ POST                 DeveloperUserBehavior/blueprint_create                             49  17000  21000  23000  25000  36000  42000  53000  53000  53000  53000  53000
+ POST                 DeveloperUserBehavior/blueprint_launch                             95   1400   1700   2100   2600   4100   4500   6600  13000  13000  13000  13000
+ PUT                  DeveloperUserBehavior/blueprint_update                             49  24000  29000  32000  33000  39000  46000  79000  79000  79000  79000  79000
+ GET                  DeveloperUserBehavior/blueprints                                   49    650    750    940   1100   1400   1700  25000  25000  25000  25000  25000
+ GET                  DeveloperUserBehavior/blueprints/export_json                       49   9600  11000  12000  19000  22000  23000  28000  28000  28000  28000  28000
+ POST                 DeveloperUserBehavior/blueprints/list                              49   6300   8800  11000  14000  18000  21000  36000  36000  36000  36000  36000
+ POST                 DeveloperUserBehavior/bp/validate_launch                          190    780   1100   1200   1400   2100   3400   9400  16000  18000  18000  18000
+ POST                 DeveloperUserBehavior/groups                                       98     19     21     23     25     28     34     44     92     92     92     92
+ POST                 DeveloperUserBehavior/patch_with_environment/validate              95  13000  17000  19000  25000  27000  34000  36000  36000  36000  36000  36000
+ GET                  DeveloperUserBehavior/pending_launches                            431    870   1400   1800   2100   3500   6300  20000  25000  84000  84000  84000
+ GET                  DeveloperUserBehaviorapi/nutanix/v3/apps                           90  29000  35000  39000  40000  44000  50000  63000  65000  65000  65000  65000
+ GET                  DeveloperUserBehaviorapp_runlogs/output/download                   70   1500   2100   2500   3600   5000   7400   7900   8500   8500   8500   8500

@@ -1,0 +1,773 @@
+2026-05-20 10:00:22 - delete_udm - INFO - ================================================================================
+2026-05-20 10:00:22 - delete_udm - INFO - Script: delete_udm
+2026-05-20 10:00:22 - delete_udm - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/delete_udm_20260520_100022.log
+2026-05-20 10:00:22 - delete_udm - INFO - ================================================================================
+2026-05-20 10:00:22 - delete_udm - INFO - ================================================================================
+2026-05-20 10:00:22 - delete_udm - INFO - Starting rate card deletion
+2026-05-20 10:00:22 - delete_udm - INFO - ================================================================================
+2026-05-20 10:00:22 - delete_udm - INFO - Configuration:
+2026-05-20 10:00:22 - delete_udm - INFO -   - Base URL: https://ncm.services.nconprem-10-122-27-229.ccpnx.com
+2026-05-20 10:00:22 - delete_udm - INFO -   - Delete test configs only: True
+2026-05-20 10:00:22 - delete_udm - INFO -   - Test config pattern: 'test_rc'
+2026-05-20 10:00:22 - delete_udm - INFO - ================================================================================
+2026-05-20 10:00:22 - delete_udm - INFO - Fetching rate cards...
+2026-05-20 10:00:22 - delete_udm - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards/actions/get-rate-cards?limit=100&offset=0
+2026-05-20 10:00:22 - delete_udm - INFO - [REQUEST DATA PAYLOAD] {"filters": []}
+2026-05-20 10:00:22 - delete_udm - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards/actions/get-rate-cards?limit=100&offset=0
+2026-05-20 10:00:22 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:22 - delete_udm - INFO - [TIME TAKEN] 0.3264 seconds (326.45 ms)
+2026-05-20 10:00:22 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:22 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "totalCount": 47,
+  "data": [
+    {
+      "rateCardId": "9c0a12a7-a509-4741-92cf-b580088556da",
+      "rateCardName": "test_rc_dEeb_12",
+      "lastModifiedBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "lastModifiedAt": 1779066433,
+      "createdBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "createdAt": 1779065612,
+      "meteringRates": {
+        "vm": {
+          "vRam": {
+            "rate": 1,
+            "unit": "HOUR"
+          },
+          "vStorage": {
+            "rate": 1,
+            "unit": "GIB"
+          },
+          "vCpu": {
+            "rate": 14,
+            "unit": "HOUR"
+          },
+          "customConfigs": []
+        },
+        "vmSnapshot": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        },
+        "objects": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        },
+        "files": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        }
+      },
+      "resources": [
+        {
+          "categories": [],
+          "clusters": []
+        }
+      ],
+      "isBaseRateCard": false
+    },
+    {
+      "rateCardId": "a0f5ce86-ef3d-47a5-ac59-b63dfba8a21d",
+      "rateCardName": "test_rc_dEeb_13",
+      "lastModifiedBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "lastModifiedAt": 1779066433,
+      "createdBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "createdAt": 1779065613,
+      "meteringRates": {
+        "vm": {
+          "vRam": {
+            "rate": 1,
+            "unit": "HOUR"
+          },
+          "vStorage": {
+            "rate": 1,
+            "unit": "GIB"
+          },
+          "vCpu": {
+            "rate": 23,
+            "unit": "HOUR"
+          },
+          "customConfigs": []
+        },
+        "vmSnapshot": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        },
+        "objects":
+... (truncated)
+2026-05-20 10:00:22 - delete_udm - INFO - Retrieved 47 total rate cards
+2026-05-20 10:00:22 - delete_udm - INFO - Filtered to 47 test rate cards
+2026-05-20 10:00:22 - delete_udm - INFO - 
+Rate cards to delete (47):
+2026-05-20 10:00:22 - delete_udm - INFO - --------------------------------------------------------------------------------
+2026-05-20 10:00:22 - delete_udm - INFO -   1. test_rc_dEeb_12 (ID: 9c0a12a7...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   2. test_rc_dEeb_13 (ID: a0f5ce86...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   3. test_rc_dEeb_14 (ID: f6345df6...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   4. test_rc_dEeb_15 (ID: 79484fa6...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   5. test_rc_dEeb_16 (ID: 760f20f5...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   6. test_rc_dEeb_17 (ID: 9742d732...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   7. test_rc_dEeb_18 (ID: ebfb1446...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   8. test_rc_dEeb_19 (ID: 101ddb60...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -   9. test_rc_dEeb_2 (ID: cc4ac296...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  10. test_rc_dEeb_20 (ID: b35eaf32...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  11. test_rc_dEeb_21 (ID: 0d64ef74...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  12. test_rc_dEeb_22 (ID: e898107e...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  13. test_rc_dEeb_23 (ID: c1a1735b...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  14. test_rc_dEeb_24 (ID: bab2cf94...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  15. test_rc_dEeb_25 (ID: 6b6b1202...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  16. test_rc_dEeb_26 (ID: a4fbeef9...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  17. test_rc_dEeb_27 (ID: f9eb3773...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  18. test_rc_dEeb_28 (ID: ee846e41...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  19. test_rc_dEeb_29 (ID: aacda0ce...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  20. test_rc_dEeb_3 (ID: f7aaa4f8...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  21. test_rc_dEeb_30 (ID: 5aeba67d...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  22. test_rc_dEeb_31 (ID: 736c4545...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  23. test_rc_dEeb_32 (ID: 44462acf...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  24. test_rc_dEeb_33 (ID: 2079d552...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  25. test_rc_dEeb_34 (ID: 41b3b26c...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  26. test_rc_dEeb_35 (ID: 9742e81b...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  27. test_rc_dEeb_36 (ID: 3523bc29...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  28. test_rc_dEeb_37 (ID: 3508b35b...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  29. test_rc_dEeb_38 (ID: 170235cb...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  30. test_rc_dEeb_39 (ID: 62aecdef...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  31. test_rc_dEeb_4 (ID: 0dfae34e...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  32. test_rc_dEeb_40 (ID: ab1c3dec...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  33. test_rc_dEeb_41 (ID: ae2653a6...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  34. test_rc_dEeb_42 (ID: f4a9aa06...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  35. test_rc_dEeb_43 (ID: d38cc712...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  36. test_rc_dEeb_44 (ID: 0828d8ae...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  37. test_rc_dEeb_45 (ID: 8fa52b82...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  38. test_rc_dEeb_46 (ID: 38a9955d...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  39. test_rc_dEeb_47 (ID: ad78b802...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  40. test_rc_dEeb_48 (ID: 76343910...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  41. test_rc_dEeb_49 (ID: ea11e817...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  42. test_rc_dEeb_5 (ID: a088c41e...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  43. test_rc_dEeb_50 (ID: fac70ac8...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  44. test_rc_dEeb_6 (ID: 1be0df12...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  45. test_rc_dEeb_7 (ID: 6626eaff...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  46. test_rc_dEeb_8 (ID: db5fbc5d...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO -  47. test_rc_dEeb_9 (ID: 4a4b6450...)
+2026-05-20 10:00:22 - delete_udm - INFO -      Type: N/A | Monthly Cost: $0 | Created by: admin
+2026-05-20 10:00:22 - delete_udm - INFO - 
+Total Monthly Cost Impact: $0.00
+2026-05-20 10:00:22 - delete_udm - INFO - --------------------------------------------------------------------------------
+2026-05-20 10:00:24 - delete_udm - INFO - 
+Starting deletion of 47 rate cards...
+2026-05-20 10:00:24 - delete_udm - INFO - Processing: test_rc_dEeb_12
+2026-05-20 10:00:24 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=9c0a12a7-a509-4741-92cf-b580088556da
+2026-05-20 10:00:24 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=9c0a12a7-a509-4741-92cf-b580088556da
+2026-05-20 10:00:24 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:24 - delete_udm - INFO - [TIME TAKEN] 0.2314 seconds (231.35 ms)
+2026-05-20 10:00:24 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:24 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:24 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_12
+2026-05-20 10:00:24 - delete_udm - INFO - Processing: test_rc_dEeb_13
+2026-05-20 10:00:24 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=a0f5ce86-ef3d-47a5-ac59-b63dfba8a21d
+2026-05-20 10:00:25 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=a0f5ce86-ef3d-47a5-ac59-b63dfba8a21d
+2026-05-20 10:00:25 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:25 - delete_udm - INFO - [TIME TAKEN] 0.1718 seconds (171.75 ms)
+2026-05-20 10:00:25 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:25 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:25 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_13
+2026-05-20 10:00:25 - delete_udm - INFO - Processing: test_rc_dEeb_14
+2026-05-20 10:00:25 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f6345df6-e94a-4724-af7f-8efb5a7b1918
+2026-05-20 10:00:25 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f6345df6-e94a-4724-af7f-8efb5a7b1918
+2026-05-20 10:00:25 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:25 - delete_udm - INFO - [TIME TAKEN] 0.2408 seconds (240.77 ms)
+2026-05-20 10:00:25 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:25 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:25 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_14
+2026-05-20 10:00:25 - delete_udm - INFO - Processing: test_rc_dEeb_15
+2026-05-20 10:00:25 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=79484fa6-5d93-420d-8e02-e5093e8754e6
+2026-05-20 10:00:25 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=79484fa6-5d93-420d-8e02-e5093e8754e6
+2026-05-20 10:00:25 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:25 - delete_udm - INFO - [TIME TAKEN] 0.2534 seconds (253.40 ms)
+2026-05-20 10:00:25 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:25 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:25 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_15
+2026-05-20 10:00:26 - delete_udm - INFO - Processing: test_rc_dEeb_16
+2026-05-20 10:00:26 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=760f20f5-07e3-45e0-8beb-e968d1f54c38
+2026-05-20 10:00:26 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=760f20f5-07e3-45e0-8beb-e968d1f54c38
+2026-05-20 10:00:26 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:26 - delete_udm - INFO - [TIME TAKEN] 0.2257 seconds (225.68 ms)
+2026-05-20 10:00:26 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:26 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:26 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_16
+2026-05-20 10:00:26 - delete_udm - INFO - Processing: test_rc_dEeb_17
+2026-05-20 10:00:26 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=9742d732-ba26-47d6-b47d-d19afd54872f
+2026-05-20 10:00:26 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=9742d732-ba26-47d6-b47d-d19afd54872f
+2026-05-20 10:00:26 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:26 - delete_udm - INFO - [TIME TAKEN] 0.4196 seconds (419.61 ms)
+2026-05-20 10:00:26 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:26 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:26 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_17
+2026-05-20 10:00:27 - delete_udm - INFO - Processing: test_rc_dEeb_18
+2026-05-20 10:00:27 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ebfb1446-1e3f-41e1-8ed0-f5b66c9db924
+2026-05-20 10:00:27 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ebfb1446-1e3f-41e1-8ed0-f5b66c9db924
+2026-05-20 10:00:27 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:27 - delete_udm - INFO - [TIME TAKEN] 0.1685 seconds (168.53 ms)
+2026-05-20 10:00:27 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:27 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:27 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_18
+2026-05-20 10:00:27 - delete_udm - INFO - Processing: test_rc_dEeb_19
+2026-05-20 10:00:27 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=101ddb60-7277-4abf-b395-499a3e0e0c19
+2026-05-20 10:00:27 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=101ddb60-7277-4abf-b395-499a3e0e0c19
+2026-05-20 10:00:27 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:27 - delete_udm - INFO - [TIME TAKEN] 0.1764 seconds (176.44 ms)
+2026-05-20 10:00:27 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:27 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:27 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_19
+2026-05-20 10:00:27 - delete_udm - INFO - Processing: test_rc_dEeb_2
+2026-05-20 10:00:27 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=cc4ac296-8e37-47e4-8c88-5dd44a9e9c61
+2026-05-20 10:00:28 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=cc4ac296-8e37-47e4-8c88-5dd44a9e9c61
+2026-05-20 10:00:28 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:28 - delete_udm - INFO - [TIME TAKEN] 0.1599 seconds (159.94 ms)
+2026-05-20 10:00:28 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:28 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:28 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_2
+2026-05-20 10:00:28 - delete_udm - INFO - Processing: test_rc_dEeb_20
+2026-05-20 10:00:28 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=b35eaf32-9e47-4e4c-8d2d-3082b67e2aae
+2026-05-20 10:00:28 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=b35eaf32-9e47-4e4c-8d2d-3082b67e2aae
+2026-05-20 10:00:28 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:28 - delete_udm - INFO - [TIME TAKEN] 0.1470 seconds (146.96 ms)
+2026-05-20 10:00:28 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:28 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:28 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_20
+2026-05-20 10:00:28 - delete_udm - INFO - Processing: test_rc_dEeb_21
+2026-05-20 10:00:28 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=0d64ef74-e7dc-4a3c-90c9-83ce8857ea17
+2026-05-20 10:00:28 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=0d64ef74-e7dc-4a3c-90c9-83ce8857ea17
+2026-05-20 10:00:28 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:28 - delete_udm - INFO - [TIME TAKEN] 0.1566 seconds (156.57 ms)
+2026-05-20 10:00:28 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:28 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:28 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_21
+2026-05-20 10:00:29 - delete_udm - INFO - Processing: test_rc_dEeb_22
+2026-05-20 10:00:29 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=e898107e-9c9c-493d-a4dd-d2903ea30198
+2026-05-20 10:00:29 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=e898107e-9c9c-493d-a4dd-d2903ea30198
+2026-05-20 10:00:29 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:29 - delete_udm - INFO - [TIME TAKEN] 0.3127 seconds (312.67 ms)
+2026-05-20 10:00:29 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:29 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:29 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_22
+2026-05-20 10:00:29 - delete_udm - INFO - Processing: test_rc_dEeb_23
+2026-05-20 10:00:29 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=c1a1735b-1964-4a20-8970-5eff06ea6bec
+2026-05-20 10:00:30 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=c1a1735b-1964-4a20-8970-5eff06ea6bec
+2026-05-20 10:00:30 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:30 - delete_udm - INFO - [TIME TAKEN] 0.5434 seconds (543.40 ms)
+2026-05-20 10:00:30 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:30 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:30 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_23
+2026-05-20 10:00:30 - delete_udm - INFO - Processing: test_rc_dEeb_24
+2026-05-20 10:00:30 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=bab2cf94-718d-424c-969b-ba9ae5bfd52c
+2026-05-20 10:00:30 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=bab2cf94-718d-424c-969b-ba9ae5bfd52c
+2026-05-20 10:00:30 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:30 - delete_udm - INFO - [TIME TAKEN] 0.1941 seconds (194.15 ms)
+2026-05-20 10:00:30 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:30 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:30 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_24
+2026-05-20 10:00:30 - delete_udm - INFO - Processing: test_rc_dEeb_25
+2026-05-20 10:00:30 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=6b6b1202-5fc2-4888-b57e-66f9a5b6680a
+2026-05-20 10:00:30 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=6b6b1202-5fc2-4888-b57e-66f9a5b6680a
+2026-05-20 10:00:30 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:30 - delete_udm - INFO - [TIME TAKEN] 0.1615 seconds (161.55 ms)
+2026-05-20 10:00:30 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:30 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:30 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_25
+2026-05-20 10:00:31 - delete_udm - INFO - Processing: test_rc_dEeb_26
+2026-05-20 10:00:31 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=a4fbeef9-dbb2-4c21-a8d5-e1bad25511e1
+2026-05-20 10:00:31 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=a4fbeef9-dbb2-4c21-a8d5-e1bad25511e1
+2026-05-20 10:00:31 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:31 - delete_udm - INFO - [TIME TAKEN] 0.1495 seconds (149.51 ms)
+2026-05-20 10:00:31 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:31 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:31 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_26
+2026-05-20 10:00:31 - delete_udm - INFO - Processing: test_rc_dEeb_27
+2026-05-20 10:00:31 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f9eb3773-8e06-42d8-a5d4-8c01a12b9c6c
+2026-05-20 10:00:31 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f9eb3773-8e06-42d8-a5d4-8c01a12b9c6c
+2026-05-20 10:00:31 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:31 - delete_udm - INFO - [TIME TAKEN] 0.1731 seconds (173.14 ms)
+2026-05-20 10:00:31 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:31 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:31 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_27
+2026-05-20 10:00:31 - delete_udm - INFO - Processing: test_rc_dEeb_28
+2026-05-20 10:00:31 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ee846e41-41d3-4cd1-bf37-4d92f4db3b1b
+2026-05-20 10:00:32 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ee846e41-41d3-4cd1-bf37-4d92f4db3b1b
+2026-05-20 10:00:32 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:32 - delete_udm - INFO - [TIME TAKEN] 0.9445 seconds (944.51 ms)
+2026-05-20 10:00:32 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:32 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:32 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_28
+2026-05-20 10:00:32 - delete_udm - INFO - Processing: test_rc_dEeb_29
+2026-05-20 10:00:32 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=aacda0ce-55db-4752-93df-30f80a046e3c
+2026-05-20 10:00:33 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=aacda0ce-55db-4752-93df-30f80a046e3c
+2026-05-20 10:00:33 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:33 - delete_udm - INFO - [TIME TAKEN] 0.3969 seconds (396.89 ms)
+2026-05-20 10:00:33 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:33 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:33 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_29
+2026-05-20 10:00:33 - delete_udm - INFO - Processing: test_rc_dEeb_3
+2026-05-20 10:00:33 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f7aaa4f8-2510-4679-8626-eff9f4c3b13d
+2026-05-20 10:00:33 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f7aaa4f8-2510-4679-8626-eff9f4c3b13d
+2026-05-20 10:00:33 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:33 - delete_udm - INFO - [TIME TAKEN] 0.1955 seconds (195.49 ms)
+2026-05-20 10:00:33 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:33 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:33 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_3
+2026-05-20 10:00:33 - delete_udm - INFO - Processing: test_rc_dEeb_30
+2026-05-20 10:00:33 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=5aeba67d-5399-44c6-b1b8-9c0d06eba101
+2026-05-20 10:00:34 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=5aeba67d-5399-44c6-b1b8-9c0d06eba101
+2026-05-20 10:00:34 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:34 - delete_udm - INFO - [TIME TAKEN] 0.4577 seconds (457.67 ms)
+2026-05-20 10:00:34 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:34 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:34 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_30
+2026-05-20 10:00:34 - delete_udm - INFO - Processing: test_rc_dEeb_31
+2026-05-20 10:00:34 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=736c4545-7989-4aee-9495-17134a6b5eef
+2026-05-20 10:00:34 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=736c4545-7989-4aee-9495-17134a6b5eef
+2026-05-20 10:00:34 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:34 - delete_udm - INFO - [TIME TAKEN] 0.3677 seconds (367.69 ms)
+2026-05-20 10:00:34 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:34 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:34 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_31
+2026-05-20 10:00:35 - delete_udm - INFO - Processing: test_rc_dEeb_32
+2026-05-20 10:00:35 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=44462acf-8ac3-4cae-8d3b-7d2df0ba08bc
+2026-05-20 10:00:35 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=44462acf-8ac3-4cae-8d3b-7d2df0ba08bc
+2026-05-20 10:00:35 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:35 - delete_udm - INFO - [TIME TAKEN] 0.4120 seconds (412.00 ms)
+2026-05-20 10:00:35 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:35 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:35 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_32
+2026-05-20 10:00:35 - delete_udm - INFO - Processing: test_rc_dEeb_33
+2026-05-20 10:00:35 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=2079d552-eee9-4d4a-b616-289b458504a2
+2026-05-20 10:00:35 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=2079d552-eee9-4d4a-b616-289b458504a2
+2026-05-20 10:00:35 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:35 - delete_udm - INFO - [TIME TAKEN] 0.2144 seconds (214.39 ms)
+2026-05-20 10:00:35 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:35 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:35 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_33
+2026-05-20 10:00:36 - delete_udm - INFO - Processing: test_rc_dEeb_34
+2026-05-20 10:00:36 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=41b3b26c-9d79-49e6-9a28-f94de79b7876
+2026-05-20 10:00:36 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=41b3b26c-9d79-49e6-9a28-f94de79b7876
+2026-05-20 10:00:36 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:36 - delete_udm - INFO - [TIME TAKEN] 0.1720 seconds (172.03 ms)
+2026-05-20 10:00:36 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:36 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:36 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_34
+2026-05-20 10:00:36 - delete_udm - INFO - Processing: test_rc_dEeb_35
+2026-05-20 10:00:36 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=9742e81b-7cb7-4210-8ba7-9e5df2e4c731
+2026-05-20 10:00:36 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=9742e81b-7cb7-4210-8ba7-9e5df2e4c731
+2026-05-20 10:00:36 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:36 - delete_udm - INFO - [TIME TAKEN] 0.1933 seconds (193.31 ms)
+2026-05-20 10:00:36 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:36 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:36 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_35
+2026-05-20 10:00:36 - delete_udm - INFO - Processing: test_rc_dEeb_36
+2026-05-20 10:00:36 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=3523bc29-169b-4418-b6e7-7ca6a6b871c5
+2026-05-20 10:00:37 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=3523bc29-169b-4418-b6e7-7ca6a6b871c5
+2026-05-20 10:00:37 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:37 - delete_udm - INFO - [TIME TAKEN] 0.2897 seconds (289.68 ms)
+2026-05-20 10:00:37 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:37 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:37 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_36
+2026-05-20 10:00:37 - delete_udm - INFO - Processing: test_rc_dEeb_37
+2026-05-20 10:00:37 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=3508b35b-fcd8-42df-a98e-94725add5673
+2026-05-20 10:00:37 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=3508b35b-fcd8-42df-a98e-94725add5673
+2026-05-20 10:00:37 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:37 - delete_udm - INFO - [TIME TAKEN] 0.3592 seconds (359.22 ms)
+2026-05-20 10:00:37 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:37 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:37 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_37
+2026-05-20 10:00:37 - delete_udm - INFO - Processing: test_rc_dEeb_38
+2026-05-20 10:00:37 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=170235cb-7b28-4b04-8e11-ac78d4d59852
+2026-05-20 10:00:38 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=170235cb-7b28-4b04-8e11-ac78d4d59852
+2026-05-20 10:00:38 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:38 - delete_udm - INFO - [TIME TAKEN] 0.2718 seconds (271.77 ms)
+2026-05-20 10:00:38 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:38 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:38 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_38
+2026-05-20 10:00:38 - delete_udm - INFO - Processing: test_rc_dEeb_39
+2026-05-20 10:00:38 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=62aecdef-ea92-4ebc-a7f2-2f84e1d16767
+2026-05-20 10:00:38 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=62aecdef-ea92-4ebc-a7f2-2f84e1d16767
+2026-05-20 10:00:38 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:38 - delete_udm - INFO - [TIME TAKEN] 0.2160 seconds (215.96 ms)
+2026-05-20 10:00:38 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:38 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:38 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_39
+2026-05-20 10:00:38 - delete_udm - INFO - Processing: test_rc_dEeb_4
+2026-05-20 10:00:38 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=0dfae34e-b914-45d4-b366-7fc8315196e4
+2026-05-20 10:00:39 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=0dfae34e-b914-45d4-b366-7fc8315196e4
+2026-05-20 10:00:39 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:39 - delete_udm - INFO - [TIME TAKEN] 0.3044 seconds (304.44 ms)
+2026-05-20 10:00:39 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:39 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:39 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_4
+2026-05-20 10:00:39 - delete_udm - INFO - Processing: test_rc_dEeb_40
+2026-05-20 10:00:39 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ab1c3dec-303a-4d15-a3b4-350bd6ac054e
+2026-05-20 10:00:39 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ab1c3dec-303a-4d15-a3b4-350bd6ac054e
+2026-05-20 10:00:39 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:39 - delete_udm - INFO - [TIME TAKEN] 0.3036 seconds (303.63 ms)
+2026-05-20 10:00:39 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:39 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:39 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_40
+2026-05-20 10:00:39 - delete_udm - INFO - Processing: test_rc_dEeb_41
+2026-05-20 10:00:39 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ae2653a6-23a6-42ae-b7c0-7bc1676a30ff
+2026-05-20 10:00:40 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ae2653a6-23a6-42ae-b7c0-7bc1676a30ff
+2026-05-20 10:00:40 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:40 - delete_udm - INFO - [TIME TAKEN] 0.4612 seconds (461.21 ms)
+2026-05-20 10:00:40 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:40 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:40 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_41
+2026-05-20 10:00:40 - delete_udm - INFO - Processing: test_rc_dEeb_42
+2026-05-20 10:00:40 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f4a9aa06-91a1-4274-acf4-6b5bb893d7d6
+2026-05-20 10:00:40 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=f4a9aa06-91a1-4274-acf4-6b5bb893d7d6
+2026-05-20 10:00:40 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:40 - delete_udm - INFO - [TIME TAKEN] 0.4376 seconds (437.61 ms)
+2026-05-20 10:00:40 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:40 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:40 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_42
+2026-05-20 10:00:41 - delete_udm - INFO - Processing: test_rc_dEeb_43
+2026-05-20 10:00:41 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=d38cc712-75be-4674-aef5-6da22f999275
+2026-05-20 10:00:41 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=d38cc712-75be-4674-aef5-6da22f999275
+2026-05-20 10:00:41 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:41 - delete_udm - INFO - [TIME TAKEN] 0.2418 seconds (241.83 ms)
+2026-05-20 10:00:41 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:41 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:41 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_43
+2026-05-20 10:00:41 - delete_udm - INFO - Processing: test_rc_dEeb_44
+2026-05-20 10:00:41 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=0828d8ae-48dc-4b0b-aabe-701b1062b0c2
+2026-05-20 10:00:42 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=0828d8ae-48dc-4b0b-aabe-701b1062b0c2
+2026-05-20 10:00:42 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:42 - delete_udm - INFO - [TIME TAKEN] 0.4240 seconds (423.99 ms)
+2026-05-20 10:00:42 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:42 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:42 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_44
+2026-05-20 10:00:42 - delete_udm - INFO - Processing: test_rc_dEeb_45
+2026-05-20 10:00:42 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=8fa52b82-2053-4502-8fba-17c3a55095bf
+2026-05-20 10:00:42 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=8fa52b82-2053-4502-8fba-17c3a55095bf
+2026-05-20 10:00:42 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:42 - delete_udm - INFO - [TIME TAKEN] 0.6409 seconds (640.93 ms)
+2026-05-20 10:00:42 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:42 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:42 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_45
+2026-05-20 10:00:43 - delete_udm - INFO - Processing: test_rc_dEeb_46
+2026-05-20 10:00:43 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=38a9955d-39c7-44bc-9fda-cc24890b3679
+2026-05-20 10:00:43 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=38a9955d-39c7-44bc-9fda-cc24890b3679
+2026-05-20 10:00:43 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:43 - delete_udm - INFO - [TIME TAKEN] 0.3854 seconds (385.35 ms)
+2026-05-20 10:00:43 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:43 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:43 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_46
+2026-05-20 10:00:43 - delete_udm - INFO - Processing: test_rc_dEeb_47
+2026-05-20 10:00:43 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ad78b802-721d-4ac5-a445-23b164c654c1
+2026-05-20 10:00:43 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ad78b802-721d-4ac5-a445-23b164c654c1
+2026-05-20 10:00:43 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:43 - delete_udm - INFO - [TIME TAKEN] 0.2738 seconds (273.76 ms)
+2026-05-20 10:00:43 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:43 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:43 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_47
+2026-05-20 10:00:44 - delete_udm - INFO - Processing: test_rc_dEeb_48
+2026-05-20 10:00:44 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=76343910-7471-4d96-bb9d-29dee506ff53
+2026-05-20 10:00:44 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=76343910-7471-4d96-bb9d-29dee506ff53
+2026-05-20 10:00:44 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:44 - delete_udm - INFO - [TIME TAKEN] 0.4633 seconds (463.33 ms)
+2026-05-20 10:00:44 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:44 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:44 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_48
+2026-05-20 10:00:44 - delete_udm - INFO - Processing: test_rc_dEeb_49
+2026-05-20 10:00:44 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ea11e817-d421-401b-b029-799e6a716001
+2026-05-20 10:00:45 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=ea11e817-d421-401b-b029-799e6a716001
+2026-05-20 10:00:45 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:45 - delete_udm - INFO - [TIME TAKEN] 0.4960 seconds (496.00 ms)
+2026-05-20 10:00:45 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:45 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:45 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_49
+2026-05-20 10:00:45 - delete_udm - INFO - Processing: test_rc_dEeb_5
+2026-05-20 10:00:45 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=a088c41e-d95c-42a2-9f8f-704c5674e6dd
+2026-05-20 10:00:45 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=a088c41e-d95c-42a2-9f8f-704c5674e6dd
+2026-05-20 10:00:45 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:45 - delete_udm - INFO - [TIME TAKEN] 0.3933 seconds (393.28 ms)
+2026-05-20 10:00:45 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:45 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:45 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_5
+2026-05-20 10:00:46 - delete_udm - INFO - Processing: test_rc_dEeb_50
+2026-05-20 10:00:46 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=fac70ac8-7721-4628-ad10-d96fbf3850c0
+2026-05-20 10:00:46 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=fac70ac8-7721-4628-ad10-d96fbf3850c0
+2026-05-20 10:00:46 - delete_udm - INFO - [STATUS CODE] 400
+2026-05-20 10:00:46 - delete_udm - INFO - [TIME TAKEN] 0.3722 seconds (372.23 ms)
+2026-05-20 10:00:46 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:46 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": "IM2065",
+  "errorMessage": "Rate card cannot be deleted if it has associated resources",
+  "errorDetails": "",
+  "errors": {}
+}
+2026-05-20 10:00:46 - delete_udm - ERROR - ✗ Failed to delete test_rc_dEeb_50: HTTP 400 - {"errorCode":"IM2065","errorMessage":"Rate card cannot be deleted if it has associated resources","errorDetails":"","errors":{}}
+2026-05-20 10:00:46 - delete_udm - INFO - Processing: test_rc_dEeb_6
+2026-05-20 10:00:46 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=1be0df12-2a2c-4e50-98e6-4b92fcc151f4
+2026-05-20 10:00:46 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=1be0df12-2a2c-4e50-98e6-4b92fcc151f4
+2026-05-20 10:00:46 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:46 - delete_udm - INFO - [TIME TAKEN] 0.2590 seconds (259.00 ms)
+2026-05-20 10:00:46 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:46 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:46 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_6
+2026-05-20 10:00:47 - delete_udm - INFO - Processing: test_rc_dEeb_7
+2026-05-20 10:00:47 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=6626eaff-4f31-4187-b280-b0bcda0fff41
+2026-05-20 10:00:47 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=6626eaff-4f31-4187-b280-b0bcda0fff41
+2026-05-20 10:00:47 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:47 - delete_udm - INFO - [TIME TAKEN] 0.4257 seconds (425.72 ms)
+2026-05-20 10:00:47 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:47 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:47 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_7
+2026-05-20 10:00:47 - delete_udm - INFO - Processing: test_rc_dEeb_8
+2026-05-20 10:00:47 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=db5fbc5d-e4c5-4b5d-961d-848c88ba7357
+2026-05-20 10:00:48 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=db5fbc5d-e4c5-4b5d-961d-848c88ba7357
+2026-05-20 10:00:48 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:48 - delete_udm - INFO - [TIME TAKEN] 0.2939 seconds (293.86 ms)
+2026-05-20 10:00:48 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:48 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:48 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_8
+2026-05-20 10:00:48 - delete_udm - INFO - Processing: test_rc_dEeb_9
+2026-05-20 10:00:48 - delete_udm - INFO - [API REQUEST] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=4a4b6450-2db7-4b86-9d04-ff6a6f2929b4
+2026-05-20 10:00:48 - delete_udm - INFO - [API RESPONSE] DELETE https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards?rateCardIds=4a4b6450-2db7-4b86-9d04-ff6a6f2929b4
+2026-05-20 10:00:48 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 10:00:48 - delete_udm - INFO - [TIME TAKEN] 0.3130 seconds (312.96 ms)
+2026-05-20 10:00:48 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 10:00:48 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "message": "Delete Success"
+}
+2026-05-20 10:00:48 - delete_udm - INFO - ✓ Deleted: test_rc_dEeb_9
+2026-05-20 10:00:48 - delete_udm - INFO - 
+================================================================================
+2026-05-20 10:00:48 - delete_udm - INFO - DELETION SUMMARY
+2026-05-20 10:00:48 - delete_udm - INFO - ================================================================================
+2026-05-20 10:00:48 - delete_udm - INFO -   Rate cards deleted:     46
+2026-05-20 10:00:48 - delete_udm - INFO -   Rate cards failed:      1
+2026-05-20 10:00:48 - delete_udm - INFO -   Success rate:               46/47 (97.9%)
+2026-05-20 10:00:48 - delete_udm - INFO -   Total execution time:       26.45s
+2026-05-20 10:00:48 - delete_udm - INFO - ================================================================================
+2026-05-20 10:00:48 - delete_udm - INFO - 
+2026-05-20 10:00:48 - delete_udm - INFO - ================================================================================================================================================================
+2026-05-20 10:00:48 - delete_udm - INFO - API METRICS CONSOLIDATED REPORT
+2026-05-20 10:00:48 - delete_udm - INFO - ================================================================================================================================================================
+2026-05-20 10:00:48 - delete_udm - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-05-20 10:00:48 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 10:00:48 - delete_udm - INFO - DELETE   | /v1/cg/config/rate-cards                           |      47 |      1 |     146.96 |     944.51 |     463.33 |     543.40 |     944.51
+2026-05-20 10:00:48 - delete_udm - INFO - POST     | /v1/cg/config/rate-cards/actions/get-rate-cards    |       1 |      - |     326.45 |     326.45 |     326.45 |     326.45 |     326.45
+2026-05-20 10:00:48 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 10:00:48 - delete_udm - INFO - Total API Calls: 48 | Unique Endpoints: 2 | Total Failures (non-200/202): 1 | Exceptions: 0
+2026-05-20 10:00:48 - delete_udm - INFO - ================================================================================================================================================================
+2026-05-20 10:00:48 - delete_udm - INFO - 
+2026-05-20 10:00:48 - delete_udm - INFO - FAILED REQUESTS (non-200/202):
+2026-05-20 10:00:48 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-20 10:00:48 - delete_udm - INFO - Method   | Endpoint                                           |   Failures | Status Codes                  
+2026-05-20 10:00:48 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-20 10:00:48 - delete_udm - INFO - DELETE   | /v1/cg/config/rate-cards                           |          1 | 400: 1                        
+2026-05-20 10:00:48 - delete_udm - INFO - ====================================================================================================
+2026-05-20 10:00:48 - delete_udm - INFO - 
+2026-05-20 10:00:48 - delete_udm - INFO - STATUS CODE BREAKDOWN:
+2026-05-20 10:00:48 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-20 10:00:48 - delete_udm - INFO - DELETE /v1/cg/config/rate-cards                   | 200: 46, 400: 1
+2026-05-20 10:00:48 - delete_udm - INFO - POST   /v1/cg/config/rate-cards/actions/get-rat.. | 200: 1
+2026-05-20 10:00:48 - delete_udm - INFO - ================================================================================================================================================================

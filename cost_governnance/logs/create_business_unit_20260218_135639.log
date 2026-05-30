@@ -1,0 +1,413 @@
+2026-02-18 13:56:39 - create_business_unit - INFO - ================================================================================
+2026-02-18 13:56:39 - create_business_unit - INFO - Script: create_business_unit
+2026-02-18 13:56:39 - create_business_unit - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/create_business_unit_20260218_135639.log
+2026-02-18 13:56:39 - create_business_unit - INFO - ================================================================================
+2026-02-18 13:56:39 - create_business_unit - INFO - ================================================================================
+2026-02-18 13:56:39 - create_business_unit - INFO - Starting Business Unit Creation Process
+2026-02-18 13:56:39 - create_business_unit - INFO - ================================================================================
+2026-02-18 13:56:39 - create_business_unit - INFO - Configuration:
+2026-02-18 13:56:39 - create_business_unit - INFO -   - Base URL: https://ncm.services.nconprem-10-53-60-173.ccpnx.com
+2026-02-18 13:56:39 - create_business_unit - INFO -   - Business Units to create: 100
+2026-02-18 13:56:39 - create_business_unit - INFO -   - Cost Centers per BU: 1
+2026-02-18 13:56:39 - create_business_unit - INFO - ================================================================================
+2026-02-18 13:56:39 - create_business_unit - INFO - 
+[1/100] Processing Business Unit...
+2026-02-18 13:56:39 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=1
+2026-02-18 13:56:40 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=1
+2026-02-18 13:56:40 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:40 - create_business_unit - INFO - [TIME TAKEN] 0.5134 seconds (513.40 ms)
+2026-02-18 13:56:40 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:40 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 100,
+  "items": [
+    {
+      "id": "4a03cea9-a1a7-4273-b425-27bc50ff6c15",
+      "name": "CC_SSBF_HOME_PC_0e846_ADGroup_$Default_449811",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522",
+          "filters": {
+            "childAccounts": [
+              "00063ffe-e22c-90bf-45a6-7cc25530e846"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:ADGroup"
+                ],
+                "values": [
+                  "$Default"
+                ],
+                "operator": "in"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-02-18T13:53:26.916+00:00",
+      "lastUpdatedAt": "2026-02-18T13:53:26.916+00:00"
+    }
+  ],
+  "nextLink": "/v1/global/costCenters?filterBy=costCenters&ids=[]&limit=1&offset=2"
+}
+2026-02-18 13:56:40 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:40 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_1", "permissions": {}, "costCenters": ["4a03cea9-a1a7-4273-b425-27bc50ff6c15"]}
+2026-02-18 13:56:41 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:41 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:41 - create_business_unit - INFO - [TIME TAKEN] 0.6717 seconds (671.65 ms)
+2026-02-18 13:56:41 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:41 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "995e4e55-5909-414d-aef6-2d096c8a3c90"
+}
+2026-02-18 13:56:41 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_1 with 1 cost centers
+2026-02-18 13:56:41 - create_business_unit - INFO - 
+[2/100] Processing Business Unit...
+2026-02-18 13:56:41 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=2
+2026-02-18 13:56:41 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=2
+2026-02-18 13:56:41 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:41 - create_business_unit - INFO - [TIME TAKEN] 0.1658 seconds (165.85 ms)
+2026-02-18 13:56:41 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:41 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 100,
+  "items": [
+    {
+      "id": "8919dbc7-e30f-4ca9-8f53-861cbb904e24",
+      "name": "CC_SSBF_HOME_PC_0e846_ahv_0-250930-142555-NameChanged_key1_7nbbX_ahv_0-250930-142555-NameChanged_value1_10_7nbbX_449811",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522",
+          "filters": {
+            "childAccounts": [
+              "00063ffe-e22c-90bf-45a6-7cc25530e846"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_10_7nbbX"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:ADGroup"
+                ],
+                "values": [
+                  "$Default"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-02-18T13:53:28.666+00:00",
+      "lastUpdatedAt": "2026-02-18T13:53:28.666+00:00"
+    }
+  ],
+  "nextLink": "/v1/global/costCenters?filterBy=costCenters&ids=[]&limit=1&offset=3"
+}
+2026-02-18 13:56:41 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:41 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_2", "permissions": {}, "costCenters": ["8919dbc7-e30f-4ca9-8f53-861cbb904e24"]}
+2026-02-18 13:56:41 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:41 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:41 - create_business_unit - INFO - [TIME TAKEN] 0.4375 seconds (437.55 ms)
+2026-02-18 13:56:41 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:41 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "ba2245a0-8578-4d4d-930a-737463b7a167"
+}
+2026-02-18 13:56:41 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_2 with 1 cost centers
+2026-02-18 13:56:41 - create_business_unit - INFO - 
+[3/100] Processing Business Unit...
+2026-02-18 13:56:41 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=3
+2026-02-18 13:56:42 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=3
+2026-02-18 13:56:42 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:42 - create_business_unit - INFO - [TIME TAKEN] 0.4769 seconds (476.93 ms)
+2026-02-18 13:56:42 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:42 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 100,
+  "items": [
+    {
+      "id": "2a62474d-1a65-46ce-a7f0-94e2a17c1c47",
+      "name": "CC_SSBF_HOME_PC_0e846_ahv_0-250930-142555-NameChanged_key1_Dx2Sk_ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk_449811",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522",
+          "filters": {
+            "childAccounts": [
+              "00063ffe-e22c-90bf-45a6-7cc25530e846"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:ADGroup"
+                ],
+                "values": [
+                  "$Default"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_10_7nbbX"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-02-18T13:53:29.890+00:00",
+      "lastUpdatedAt": "2026-02-18T13:53:29.890+00:00"
+    }
+  ],
+  "nextLink": "/v1/global/costCenters?filterBy=costCenters&ids=[]&limit=1&offset=4"
+}
+2026-02-18 13:56:42 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:42 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_3", "permissions": {}, "costCenters": ["2a62474d-1a65-46ce-a7f0-94e2a17c1c47"]}
+2026-02-18 13:56:42 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:42 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:42 - create_business_unit - INFO - [TIME TAKEN] 0.5451 seconds (545.10 ms)
+2026-02-18 13:56:42 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:42 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "c57ad9c9-88c6-4de9-b2ca-1929f0dd15b2"
+}
+2026-02-18 13:56:42 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_3 with 1 cost centers
+2026-02-18 13:56:42 - create_business_unit - INFO - 
+[4/100] Processing Business Unit...
+2026-02-18 13:56:42 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=4
+2026-02-18 13:56:42 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=4
+2026-02-18 13:56:42 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:42 - create_business_unit - INFO - [TIME TAKEN] 0.1554 seconds (155.35 ms)
+2026-02-18 13:56:42 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:42 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 100,
+  "items": [
+    {
+      "id": "b89a8c41-5cf5-40d2-9cc9-ac4e8c4f43e1",
+      "name": "CC_SSBF_HOME_PC_0e846_ahv_0-250930-142555-NameChanged_key1_fo4eW_ahv_0-250930-142555-NameChanged_value1_1_fo4eW_449811",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522",
+          "filters": {
+            "childAccounts": [
+              "00063ffe-e22c-90bf-45a6-7cc25530e846"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_1_fo4eW"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:ADGroup"
+                ],
+                "values": [
+                  "$Default"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_10_7nbbX"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-02-18T13:53:31.163+00:00",
+      "lastUpdatedAt": "2026-02-18T13:53:31.163+00:00"
+    }
+  ],
+  "nextLink": "/v1/global/costCenters?filterBy=costCenters&ids=[]&limit=1&offset=5"
+}
+2026-02-18 13:56:42 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:42 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_4", "permissions": {}, "costCenters": ["b89a8c41-5cf5-40d2-9cc9-ac4e8c4f43e1"]}
+2026-02-18 13:56:43 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:43 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:43 - create_business_unit - INFO - [TIME TAKEN] 0.3333 seconds (333.33 ms)
+2026-02-18 13:56:43 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:43 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "76679c64-4e8d-4d89-9cec-d4449e4fb000"
+}
+2026-02-18 13:56:43 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_4 with 1 cost centers
+2026-02-18 13:56:43 - create_business_unit - INFO - 
+[5/100] Processing Business Unit...
+2026-02-18 13:56:43 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=5
+2026-02-18 13:56:43 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=5
+2026-02-18 13:56:43 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:43 - create_business_unit - INFO - [TIME TAKEN] 0.1473 seconds (147.28 ms)
+2026-02-18 13:56:43 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:43 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 100,
+  "items": [
+    {
+      "id": "418f5418-1bad-436e-8151-3720f791c43b",
+      "name": "CC_SSBF_HOME_PC_0e846_ahv_0-250930-142555-NameChanged_key1_gTvXL_ahv_0-250930-142555-NameChanged_value1_10_gTvXL_449811",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522",
+          "filters": {
+            "childAccounts": [
+              "00063ffe-e22c-90bf-45a6-7cc25530e846"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_10_gTvXL"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:ADGroup"
+                ],
+                "values": [
+                  "$Default"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_10_7nbbX"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"
+                ],
+                "values": [
+                  "ahv_0-250930-142555-NameChanged_value1_1_fo4eW"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers"
+... (truncated)
+2026-02-18 13:56:43 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:43 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_5", "permissions": {}, "costCenters": ["418f5418-1bad-436e-8151-3720f791c43b"]}
+2026-02-18 13:56:43 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/businessUnit
+2026-02-18 13:56:43 - create_business_unit - INFO - [STATUS CODE] 200
+2026-02-18 13:56:43 - create_business_unit - INFO - [TIME TAKEN] 0.1953 seconds (195.33 ms)
+2026-02-18 13:56:43 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-18 13:56:43 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "6231a6eb-eed1-427c-b977-816c6f860f57"
+}
+2026-02-18 13:56:43 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_5 with 1 cost centers
+2026-02-18 13:56:43 - create_business_unit - INFO - 
+[6/100] Processing Business Unit...
+2026-02-18 13:56:43 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenters?limit=1&offset=6
+2026-02-18 13:56:43 - create_business_unit - INFO - 
+2026-02-18 13:56:43 - create_business_unit - INFO - ================================================================================================================================================================
+2026-02-18 13:56:43 - create_business_unit - INFO - API METRICS CONSOLIDATED REPORT
+2026-02-18 13:56:43 - create_business_unit - INFO - ================================================================================================================================================================
+2026-02-18 13:56:43 - create_business_unit - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-02-18 13:56:43 - create_business_unit - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-18 13:56:43 - create_business_unit - INFO - GET      | /v1/cg/global/costCenters                          |       5 |      - |     147.28 |     513.40 |     513.40 |     513.40 |     513.40
+2026-02-18 13:56:43 - create_business_unit - INFO - POST     | /v1/cg/global/businessUnit                         |       5 |      - |     195.33 |     671.65 |     671.65 |     671.65 |     671.65
+2026-02-18 13:56:43 - create_business_unit - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-18 13:56:43 - create_business_unit - INFO - Total API Calls: 10 | Unique Endpoints: 2 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-02-18 13:56:43 - create_business_unit - INFO - ================================================================================================================================================================
+2026-02-18 13:56:43 - create_business_unit - INFO - 
+2026-02-18 13:56:43 - create_business_unit - INFO - STATUS CODE BREAKDOWN:
+2026-02-18 13:56:43 - create_business_unit - INFO - ----------------------------------------------------------------------------------------------------
+2026-02-18 13:56:43 - create_business_unit - INFO - GET    /v1/cg/global/costCenters                  | 200: 5
+2026-02-18 13:56:43 - create_business_unit - INFO - POST   /v1/cg/global/businessUnit                 | 200: 5
+2026-02-18 13:56:43 - create_business_unit - INFO - ================================================================================================================================================================

@@ -1,0 +1,180 @@
+[
+  {
+    "softwareType": "CALM",
+    "softwareVersion": {
+        "version": "3.7.2"
+    },
+    "operationType": "ADD",
+    "productConfigs": [
+      {
+        "name": "Number of VMs",
+        "limit": "2000",
+        "description": "Number of VMs",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Single Instance"
+      },
+      {
+        "name": "Number of single-VM blueprints",
+        "limit": "400",
+        "description": "Number of single-VM blueprints",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Single Instance"
+      },
+      {
+        "name": "Number of single-VM applications",
+        "limit": "2000",
+        "description": "Number of single-VM applications",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Single Instance"
+      },
+      {
+        "name": "Number of projects",
+        "limit": "50",
+        "description": "Number of projects",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Single Instance"
+      },
+      {
+        "name": "Number of runbooks",
+        "limit": "250",
+        "description": "Number of runbooks",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Single Instance"
+      },
+      { 
+        "name": "Number of Replicas per Blueprint",
+        "limit": "200",
+        "description": "Number of Replicas per Blueprint",
+        "nutanixInternal": "Blueprint consisting of Service with no Guest_customisation or tasks added",
+        "productMaxType": "Small PC - Single Instance"
+      },
+      {
+        "name": "Number of VMs",
+        "limit": "7000",
+        "description": "Number of VMs",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Single Instance"
+      },
+      {
+        "name": "Number of single-VM blueprints",
+        "limit": "1400",
+        "description": "Number of single-VM blueprints",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Single Instance"
+      },
+      {
+        "name": "Number of single-VM applications",
+        "limit": "7000",
+        "description": "Number of single-VM applications",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Single Instance"
+      },
+      {
+        "name": "Number of projects",
+        "limit": "250",
+        "description": "Number of projects",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Single Instance"
+      },
+      {
+        "name": "Number of runbooks",
+        "limit": "500",
+        "description": "Number of runbooks",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Single Instance"
+      },
+      {
+        "name": "Number of Replicas per Blueprint",
+        "limit": "200",
+        "description": "Number of Replicas per Blueprint",
+        "nutanixInternal": "Blueprint consisting of Service with no Guest_customisation or tasks added",
+        "productMaxType": "Large PC - Single Instance"
+      },
+      {
+        "name": "Number of VMs",
+        "limit": "3500",
+        "description": "Number of VMs",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of single-VM blueprints",
+        "limit": "700",
+        "description": "Number of single-VM blueprints",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of single-VM applications",
+        "limit": "3500",
+        "description": "Number of single-VM applications",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of projects",
+        "limit": "100",
+        "description": "Number of projects",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of runbooks",
+        "limit": "500",
+        "description": "Number of runbooks",
+        "nutanixInternal": "",
+        "productMaxType": "Small PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of Replicas per Blueprint",
+        "limit": "200",
+        "description": "Number of Replicas per Blueprint",
+        "nutanixInternal": "Blueprint consisting of Service with no Guest_customisation or tasks added",
+        "productMaxType": "Small PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of VMs",
+        "limit": "12500",
+        "description": "Number of VMs",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of single-VM blueprints",
+        "limit": "2500",
+        "description": "Number of single-VM blueprints",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of single-VM applications",
+        "limit": "12500",
+        "description": "Number of single-VM applications",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of projects",
+        "limit": "500",
+        "description": "Number of projects",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of runbooks",
+        "limit": "1000",
+        "description": "Number of runbooks",
+        "nutanixInternal": "",
+        "productMaxType": "Large PC - Scale-out (3 Instances)"
+      },
+      {
+        "name": "Number of Replicas per Blueprint",
+        "limit": "200",
+        "description": "Number of Replicas per Blueprint",
+        "nutanixInternal": "Blueprint consisting of Service with no Guest_customisation or tasks added",
+        "productMaxType": "Large PC - Scale-out (3 Instances)"
+      }
+    ],
+    "userEmail": "nagaraj.bv@nutanix.com"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "ncm": {
+    "aiops_neuron_raw": "19.11 MiB",
+    "cg_nx_billing_local": "402.71 KiB",
+    "cg_nx_billing_temp": "402.71 KiB",
+    "cg_nx_metrics_categories_config_local": "209.66 KiB",
+    "cg_nx_metrics_cluster_config_local": "53.45 KiB",
+    "cg_nx_metrics_cluster_hardware_config_local": "95.93 KiB",
+    "cg_nx_metrics_vm_config_local": "80.40 KiB",
+    "infra_configuration_history_common_local": "634.46 KiB",
+    "infra_configuration_history_vm_local": "1.21 MiB",
+    "infrastructure_cdc_local": "111.22 MiB",
+    "infrastructure_historical_rollup_1hr_raw": "669.84 KiB",
+    "infrastructure_latest_raw": "401.26 KiB",
+    "infrastructure_raw": "179.44 MiB",
+    "infrastructure_rollup_1hr_raw": "30.11 MiB",
+    "labels_history_local": "1012.13 KiB",
+    "ml_forecast_multi_cloud_local": "4.64 KiB",
+    "schema_migrations": "707.00 B"
+  },
+  "system": {
+    "asynchronous_insert_log": "2.40 MiB",
+    "error_log": "213.49 KiB",
+    "latency_log": "25.99 MiB",
+    "part_log": "55.75 MiB",
+    "processors_profile_log": "3.94 GiB",
+    "query_log": "5.46 GiB",
+    "query_metric_log": "283.07 KiB"
+  }
+}

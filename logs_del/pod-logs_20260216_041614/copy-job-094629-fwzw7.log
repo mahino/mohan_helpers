@@ -1,0 +1,14 @@
+========================================
+Pod: copy-job-094629-fwzw7
+Namespace: ncm-cg
+Status: Succeeded
+Containers: copy-job-container
+Collected at: Mon Feb 16 04:16:30 GMT 2026
+========================================
+
+{"level":"info","ts":1770457817.9408696,"caller":"secret/copy_secret.go:45","msg":"copying secret","sourceSecretName":"cg-pg-app","sourceNamespace":"ntnx-ncm-datastore","targetSecretName":"cg-pg-app","targetNamespace":"ntnx-ncm-common"}
+{"level":"info","ts":1770457817.9409528,"caller":"common/k8s.go:48","msg":"reading from secret","secretName":"cg-pg-app","namespace":"ntnx-ncm-datastore"}
+{"level":"info","ts":1770457817.9526937,"caller":"common/k8s.go:54","msg":"read from secret successfully"}
+{"level":"info","ts":1770457817.9527447,"caller":"common/k8s.go:59","msg":"writing to secret","secretName":"cg-pg-app","namespace":"ntnx-ncm-common"}
+{"level":"info","ts":1770457817.9636853,"caller":"common/k8s.go:99","msg":"wrote to secret successfully"}
+{"level":"info","ts":1770457817.9637232,"caller":"secret/copy_secret.go:67","msg":"secret copied successfully"}

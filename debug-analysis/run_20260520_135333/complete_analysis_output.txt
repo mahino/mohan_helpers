@@ -1,0 +1,9 @@
+================================================================================
+STEP 1: Extracting APP-CREATE-START entries from styx.log* files
+================================================================================
+Path: /home/docker/nucalm/log
+Pattern: styx.log*
+(Handling both regular and .xz compressed files)
+
+Found 0 valid APP-CREATE-START entries
+No valid entries found!

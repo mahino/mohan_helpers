@@ -1,0 +1,61 @@
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - Script: create_cost_center_v2
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/create_cost_center_v2_20260216_175852.log
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - Starting Cost Center Creation v2
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-16 17:58:52 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-02-16 17:58:53 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-02-16 17:58:53 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-16 17:58:53 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.7591 seconds (759.09 ms)
+2026-02-16 17:58:53 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-16 17:58:53 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "gcp": [],
+  "nx": [
+    "1789aa5d-ed8a-46ae-92c7-724aab42b591",
+    "9d53686b-eda3-462b-83c9-431c0060b574",
+    "63782ec0-3042-4768-97c0-9381fe0bbae3",
+    "72009bf7-482f-403f-87f2-ca28028f9b8e",
+    "414e05f7-1a8c-4fb5-bf19-566bff7d5f7e",
+    "9d9e07ba-a8a4-4c5a-9cb8-37f653083fb3",
+    "33c36e70-f931-4c20-8419-2c0f5c52cbb9",
+    "68b28707-942e-4b96-94a9-5c93b3b675bc",
+    "c329357f-0879-483d-80c4-4ea3e96b02f0",
+    "21b7c124-aba3-431d-b9c7-c087813b66c3",
+    "a39fc585-85c5-48af-a7e2-ced054db7631",
+    "6d915317-d32b-4093-a6fa-b225f59a7522",
+    "79eb95ae-38ba-4ef6-b79c-382265710996",
+    "7d7291d3-dc98-4513-8614-3e85dd13489d",
+    "867dd99a-3e00-4d96-aeeb-c71cfb90bdba",
+    "c1d8d312-7537-4d97-bc32-4d6a5e7b1682",
+    "e29780d5-d005-47a6-a76f-ea4e023f0eaa",
+    "712c4ef6-8240-440f-af23-8c8cbf3f0585",
+    "ee0a80f0-9eee-44bd-9c01-2bdfb464d8de",
+    "5987a290-7415-4460-8338-c8258ef4ca86",
+    "dc1fc2fd-d400-4ad6-b3fc-c5eb960197e6",
+    "87fcf8da-f9bf-4bd5-aa61-bbd351f2d2bd",
+    "f8f80576-cdb7-4f2b-8c76-3e448032a5ea",
+    "d2363acc-a45c-49b0-a2b6-8d1dbef3f20d"
+  ],
+  "aws": [],
+  "azure": []
+}
+2026-02-16 17:58:53 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/api/nutanix/v3/accounts/list
+2026-02-16 17:58:53 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"length": 250, "offset": 0, "filter": "state!=DELETED;type==nutanix_pc;offboarding==True"}
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - 
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - API METRICS CONSOLIDATED REPORT
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - GET      | /v1/cg/global/chargeback/availableAccounts         |       1 |      - |     759.09 |     759.09 |     759.09 |     759.09 |     759.09
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - Total API Calls: 1 | Unique Endpoints: 1 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - 
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - STATUS CODE BREAKDOWN:
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - GET    /v1/cg/global/chargeback/availableAccoun.. | 200: 1
+2026-02-16 17:58:55 - create_cost_center_v2 - INFO - ================================================================================================================================================================

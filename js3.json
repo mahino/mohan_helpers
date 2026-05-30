@@ -1,0 +1,62 @@
+{
+    "spec": {
+        "resources": {
+            "credential_definition_list": [
+                {
+                    "name": "admin",
+                    "type": "PASSWORD",
+                    "cred_class": "static",
+                    "username": "root",
+                    "secret": {
+                        "attrs": {
+                            "is_secret_modified": true
+                        },
+                        "value": "nutanix/4u"
+                    },
+                    "uuid": "00a68e94-00bc-d979-81e2-e9a1201d9da9"
+                }
+            ],
+            "endpoint_definition_list": [],
+            "runbook": {
+                "name": "c87dec09_runbook",
+                "variable_list": [],
+                "task_definition_list": [
+                    {
+                        "name": "6cb3df5f_dag",
+                        "type": "DAG",
+                        "child_tasks_local_reference_list": [
+                            {
+                                "kind": "app_task",
+                                "uuid": "9ac11bb9-271c-de71-41ac-ee5b38598d8b"
+                            },
+                            {
+                                "kind": "app_task",
+                                "uuid": "d9248aa4-1311-1c74-234f-31568906f06c"
+                            }
+                        ],
+                        "attrs": {
+                            "edges": []
+                        },
+                        "uuid": "5c5ea4af-af58-8392-4fb8-f9a73e954327"
+                    }
+                ],
+                "main_task_local_reference": {
+                    "kind": "app_task",
+                    "uuid": "5c5ea4af-af58-8392-4fb8-f9a73e954327"
+                },
+                "uuid": "5d2cec4a-c83f-aedd-4550-78a8626d06ef"
+            }
+        },
+        "name": "temp"
+    },
+    "api_version": "3.0",
+    "metadata": {
+        "kind": "runbook",
+        "project_reference": {
+            "name": "vpc_project",
+            "kind": "project",
+            "uuid": "3ab4f0ba-9f7b-49b1-8009-c97aed09d5f0"
+        },
+        "uuid": "3ac8c50e-ccd4-b73f-f416-77f4eb77d519"
+    }
+}

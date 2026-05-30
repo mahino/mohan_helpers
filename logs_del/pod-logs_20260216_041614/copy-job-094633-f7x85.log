@@ -1,0 +1,14 @@
+========================================
+Pod: copy-job-094633-f7x85
+Namespace: ncm-cg
+Status: Succeeded
+Containers: copy-job-container
+Collected at: Mon Feb 16 04:16:30 GMT 2026
+========================================
+
+{"level":"info","ts":1770457818.39622,"caller":"secret/copy_secret.go:45","msg":"copying secret","sourceSecretName":"ncm-valkey-cluster-valkeycluster-password","sourceNamespace":"ntnx-ncm-datastore","targetSecretName":"ncm-valkey-cluster-valkeycluster-password","targetNamespace":"ncm-cg"}
+{"level":"info","ts":1770457818.3963666,"caller":"common/k8s.go:48","msg":"reading from secret","secretName":"ncm-valkey-cluster-valkeycluster-password","namespace":"ntnx-ncm-datastore"}
+{"level":"info","ts":1770457818.4070957,"caller":"common/k8s.go:54","msg":"read from secret successfully"}
+{"level":"info","ts":1770457818.40717,"caller":"common/k8s.go:59","msg":"writing to secret","secretName":"ncm-valkey-cluster-valkeycluster-password","namespace":"ncm-cg"}
+{"level":"info","ts":1770457818.4167988,"caller":"common/k8s.go:99","msg":"wrote to secret successfully"}
+{"level":"info","ts":1770457818.416869,"caller":"secret/copy_secret.go:67","msg":"secret copied successfully"}

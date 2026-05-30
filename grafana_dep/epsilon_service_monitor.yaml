@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: ncm-epsilon-servicemonitor
+  namespace: ntnx-ncm-common
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ncm-epsilon-nodeport
+  endpoints:
+  - port: epsilonstats
+    interval: 30s
+    path: /metrics  # Adjust if path is different
+  namespaceSelector:
+    matchNames:
+    - ntnx-ncm-common

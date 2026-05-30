@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: ncm-calm-servicemonitor
+  namespace: ntnx-ncm-self-service
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ncm-calm-nodeport
+  endpoints:
+  - port: calmstats
+    interval: 30s
+    path: /metrics 
+  namespaceSelector:
+    matchNames:
+    - ntnx-ncm-self-service
+

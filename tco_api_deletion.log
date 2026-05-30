@@ -1,0 +1,2 @@
+2026-02-20 03:11:15,932 - ERROR - API connection failed: 500 - {"errorCode":990020,"errorMessage":"The system encountered an internal error. If the issue persists, please reach out to our support."}
+2026-02-20 03:11:15,932 - ERROR - Failed to connect to API. Please check URL and credentials.

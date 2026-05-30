@@ -1,0 +1,119 @@
+2026-05-20 06:11:33 - delete_tco - INFO - ================================================================================
+2026-05-20 06:11:33 - delete_tco - INFO - Script: delete_tco
+2026-05-20 06:11:33 - delete_tco - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/delete_tco_20260520_061133.log
+2026-05-20 06:11:33 - delete_tco - INFO - ================================================================================
+2026-05-20 06:11:33 - delete_tco - INFO - ================================================================================
+2026-05-20 06:11:33 - delete_tco - INFO - Starting TCO Direct Cost Configuration Deletion
+2026-05-20 06:11:33 - delete_tco - INFO - ================================================================================
+2026-05-20 06:11:33 - delete_tco - INFO - Configuration:
+2026-05-20 06:11:33 - delete_tco - INFO -   - Base URL: https://ncm.services.nconprem-10-122-27-229.ccpnx.com
+2026-05-20 06:11:33 - delete_tco - INFO -   - Delete test configs only: True
+2026-05-20 06:11:33 - delete_tco - INFO -   - Test config pattern: 'test_tco_config'
+2026-05-20 06:11:33 - delete_tco - INFO - ================================================================================
+2026-05-20 06:11:33 - delete_tco - INFO - Fetching TCO configurations...
+2026-05-20 06:11:33 - delete_tco - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=0&costHeadAction=indirect
+2026-05-20 06:11:33 - delete_tco - INFO - [REQUEST DATA PAYLOAD] {"filters": []}
+2026-05-20 06:11:34 - delete_tco - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/tco/configs?limit=100&offset=0&costHeadAction=indirect
+2026-05-20 06:11:34 - delete_tco - INFO - [STATUS CODE] 200
+2026-05-20 06:11:34 - delete_tco - INFO - [TIME TAKEN] 0.5627 seconds (562.71 ms)
+2026-05-20 06:11:34 - delete_tco - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 06:11:34 - delete_tco - INFO - [RESPONSE PAYLOAD]
+{
+  "currency": "USD",
+  "totalCount": 4,
+  "data": [
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "3ea022e7-3d29-4914-bd3c-089eb7581ff8",
+      "description": "People Cost",
+      "costHead": "PEOPLE",
+      "costPerMeter": 125.0,
+      "monthlyCost": 375.0,
+      "meteringUnit": "NODE",
+      "costType": "NUTANIX",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1778980262,
+      "lastModifiedBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "lastModifiedAt": 1779256277,
+      "resources": [
+        {
+          "clusters": [
+            "All"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "isActive": true,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "2a60431e-b019-4dab-87b8-de9bbcf82942",
+      "description": "Facilities Cost",
+      "costHead": "FACILITIES",
+      "costPerMeter": 40.5822222,
+      "monthlyCost": 121.7466666,
+      "meteringUnit": "NODE",
+      "costType": "NUTANIX",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1778980262,
+      "lastModifiedBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "lastModifiedAt": 1779256277,
+      "resources": [
+        {
+          "clusters": [
+            "All"
+          ]
+        }
+      ],
+      "totalQuantity": 0,
+      "isActive": true,
+      "isClusterActive": true
+    },
+    {
+      "customerHash": "59d5de78-a964-5746-8c6e-677c4c7a79df",
+      "configId": "506f46bc-9fdc-4648-82e5-476f5954c9f0",
+      "description": "Telecom Cost",
+      "costHead": "TELECOM",
+      "costPerMeter": 10.4166666,
+      "monthlyCost": 31.2499998,
+      "meteringUnit": "NODE",
+      "costType": "NUTANIX",
+      "createdBy": {
+        "name": "System",
+        "email": "System"
+      },
+      "createdAt": 1778980262,
+      "lastModifiedBy": {
+    
+... (truncated)
+2026-05-20 06:11:34 - delete_tco - INFO - Retrieved 4 total TCO configurations
+2026-05-20 06:11:34 - delete_tco - INFO - Filtered to 0 test configurations
+2026-05-20 06:11:34 - delete_tco - INFO - No configurations match deletion criteria
+2026-05-20 06:11:34 - delete_tco - INFO - 
+2026-05-20 06:11:34 - delete_tco - INFO - ================================================================================================================================================================
+2026-05-20 06:11:34 - delete_tco - INFO - API METRICS CONSOLIDATED REPORT
+2026-05-20 06:11:34 - delete_tco - INFO - ================================================================================================================================================================
+2026-05-20 06:11:34 - delete_tco - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-05-20 06:11:34 - delete_tco - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 06:11:34 - delete_tco - INFO - POST     | /v1/cg/config/tco/configs                          |       1 |      - |     562.71 |     562.71 |     562.71 |     562.71 |     562.71
+2026-05-20 06:11:34 - delete_tco - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 06:11:34 - delete_tco - INFO - Total API Calls: 1 | Unique Endpoints: 1 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-05-20 06:11:34 - delete_tco - INFO - ================================================================================================================================================================
+2026-05-20 06:11:34 - delete_tco - INFO - 
+2026-05-20 06:11:34 - delete_tco - INFO - STATUS CODE BREAKDOWN:
+2026-05-20 06:11:34 - delete_tco - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-20 06:11:34 - delete_tco - INFO - POST   /v1/cg/config/tco/configs                  | 200: 1
+2026-05-20 06:11:34 - delete_tco - INFO - ================================================================================================================================================================

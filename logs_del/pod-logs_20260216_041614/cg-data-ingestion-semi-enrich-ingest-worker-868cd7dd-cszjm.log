@@ -1,0 +1,89 @@
+========================================
+Pod: cg-data-ingestion-semi-enrich-ingest-worker-868cd7dd-cszjm
+Namespace: ncm-cg
+Status: Running
+Containers: cg-data-ingestion-semi-enrich-ingest-worker
+Collected at: Mon Feb 16 04:16:14 GMT 2026
+========================================
+
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+[2026-02-07T10:01:49.680Z] INFO main MultiCloudSemiIngestionDriver:22 Starting Multicloud Semi Ingestion Driver...
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+SLF4J: Failed to load class "org.slf4j.impl.StaticMDCBinder".
+SLF4J: Defaulting to no-operation MDCAdapter implementation.
+SLF4J: See http://www.slf4j.org/codes.html#no_static_mdc_binder for further details.
+[2026-02-11T00:05:12.578Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 1 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-02=values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/bd19bb67-0baf-462a-a73c-b36142a22d14/019c4a02-f039-755c-8138-165d01e08f6f_47/2026/02/08/semi-enrich-02_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/bd19bb67-0baf-462a-a73c-b36142a22d14/019c4a02-f039-755c-8138-165d01e08f6f_47/2026/02/09/semi-enrich-01_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/bd19bb67-0baf-462a-a73c-b36142a22d14/019c4a02-f039-755c-8138-165d01e08f6f_47/2026/02/10/semi-enrich-03_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/bd19bb67-0baf-462a-a73c-b36142a22d14/019c4a02-f039-755c-8138-165d01e08f6f_47/2026/02/07/semi-enrich-04_11.csv.gz"
+}
+}
+[2026-02-11T00:05:16.371Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 1 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+ DROP PARTITION 202602
+[2026-02-11T00:05:16.375Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 1 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/bd19bb67-0baf-462a-a73c-b36142a22d14/019c4a02-f039-755c-8138-165d01e08f6f_47/2026/02/{07,08,09,10}/semi-enrich-{03_11,02_11,01_11,04_11}.csv.gz', 'CSVWithNames')
+[2026-02-11T01:04:35.575Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 2 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-02=values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/65ca8b18-bee5-46f2-864b-184bfb0c6f29/019c4a39-e6c0-74cc-a473-57211566d62f_47/2026/02/10/semi-enrich-04_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/65ca8b18-bee5-46f2-864b-184bfb0c6f29/019c4a39-e6c0-74cc-a473-57211566d62f_47/2026/02/11/semi-enrich-03_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/65ca8b18-bee5-46f2-864b-184bfb0c6f29/019c4a39-e6c0-74cc-a473-57211566d62f_47/2026/02/07/semi-enrich-05_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/65ca8b18-bee5-46f2-864b-184bfb0c6f29/019c4a39-e6c0-74cc-a473-57211566d62f_47/2026/02/08/semi-enrich-02_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/65ca8b18-bee5-46f2-864b-184bfb0c6f29/019c4a39-e6c0-74cc-a473-57211566d62f_47/2026/02/09/semi-enrich-01_11.csv.gz"
+}
+}
+[2026-02-11T01:04:35.754Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 2 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+ DROP PARTITION 202602
+[2026-02-11T01:04:35.755Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 2 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/65ca8b18-bee5-46f2-864b-184bfb0c6f29/019c4a39-e6c0-74cc-a473-57211566d62f_47/2026/02/{11,07,08,09,10}/semi-enrich-{03_11,02_11,01_11,04_11,05_11}.csv.gz', 'CSVWithNames')
+[2026-02-11T09:04:45.890Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 3 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-02=values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/20f75782-7514-4f38-95cd-c708d6e1cdc0/019c4bf1-a574-7bb7-bf09-d3fb918f793f_47/2026/02/11/semi-enrich-03_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/20f75782-7514-4f38-95cd-c708d6e1cdc0/019c4bf1-a574-7bb7-bf09-d3fb918f793f_47/2026/02/07/semi-enrich-05_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/20f75782-7514-4f38-95cd-c708d6e1cdc0/019c4bf1-a574-7bb7-bf09-d3fb918f793f_47/2026/02/08/semi-enrich-02_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/20f75782-7514-4f38-95cd-c708d6e1cdc0/019c4bf1-a574-7bb7-bf09-d3fb918f793f_47/2026/02/09/semi-enrich-01_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/20f75782-7514-4f38-95cd-c708d6e1cdc0/019c4bf1-a574-7bb7-bf09-d3fb918f793f_47/2026/02/10/semi-enrich-04_11.csv.gz"
+}
+}
+[2026-02-11T09:04:46.077Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 3 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+ DROP PARTITION 202602
+[2026-02-11T09:04:46.078Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 3 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/20f75782-7514-4f38-95cd-c708d6e1cdc0/019c4bf1-a574-7bb7-bf09-d3fb918f793f_47/2026/02/{11,07,08,09,10}/semi-enrich-{02_11,03_11,01_11,04_11,05_11}.csv.gz', 'CSVWithNames')
+[2026-02-11T17:05:07.885Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 4 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-02=values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/5b82d62e-29de-49db-8a0e-8f22ba2abb6a/019c4da9-5e89-7c36-a6c0-c9676490af10_47/2026/02/09/semi-enrich-01_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/5b82d62e-29de-49db-8a0e-8f22ba2abb6a/019c4da9-5e89-7c36-a6c0-c9676490af10_47/2026/02/10/semi-enrich-04_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/5b82d62e-29de-49db-8a0e-8f22ba2abb6a/019c4da9-5e89-7c36-a6c0-c9676490af10_47/2026/02/11/semi-enrich-03_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/5b82d62e-29de-49db-8a0e-8f22ba2abb6a/019c4da9-5e89-7c36-a6c0-c9676490af10_47/2026/02/07/semi-enrich-05_11.csv.gz"
+}
+values {
+  string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/5b82d62e-29de-49db-8a0e-8f22ba2abb6a/019c4da9-5e89-7c36-a6c0-c9676490af10_47/2026/02/08/semi-enrich-02_11.csv.gz"
+}
+}
+[2026-02-11T17:05:08.160Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 4 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+ DROP PARTITION 202602
+[2026-02-11T17:05:08.162Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 4 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/5b82d62e-29de-49db-8a0e-8f22ba2abb6a/019c4da9-5e89-7c36-a6c0-c9676490af10_47/2026/02/{11,07,08,09,10}/semi-enrich-{03_11,02_11,01_11,04_11,05_11}.csv.gz', 'CSVWithNames')

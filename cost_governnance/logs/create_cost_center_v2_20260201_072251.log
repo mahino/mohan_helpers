@@ -1,0 +1,1461 @@
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - Script: create_cost_center_v2
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/create_cost_center_v2_20260201_072251.log
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - Starting Cost Center Creation v2
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - ================================================================================
+2026-02-01 07:22:51 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-02-01 07:22:52 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-02-01 07:22:52 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:52 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4670 seconds (466.99 ms)
+2026-02-01 07:22:52 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:52 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "gcp": [],
+  "nx": [
+    "6d915317-d32b-4093-a6fa-b225f59a7522"
+  ],
+  "aws": [],
+  "azure": []
+}
+2026-02-01 07:22:52 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/api/nutanix/v3/accounts/list
+2026-02-01 07:22:52 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"length": 250, "offset": 0, "filter": "state!=DELETED;type==nutanix_pc;offboarding==True"}
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/api/nutanix/v3/accounts/list
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.1482 seconds (3148.24 ms)
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "api_version": "3.0",
+  "metadata": {
+    "total_matches": 26,
+    "kind": "account"
+  },
+  "entities": [
+    {
+      "status": {
+        "name": "HomePC_Account",
+        "description": "",
+        "message_list": [],
+        "resources": {
+          "data": {
+            "type": "basic_auth",
+            "server": "pc-10-53-60-176.ccpnx.com",
+            "port": 9440,
+            "pc_uuid": "6d915317-d32b-4093-a6fa-b225f59a7522",
+            "cluster_account_reference_list": [
+              {
+                "name": "AdPE2",
+                "description": "",
+                "message_list": [],
+                "resources": {
+                  "price_items": [
+                    {
+                      "type": "",
+                      "name": "",
+                      "uuid": "211f884e-cd37-4ed2-99cd-87339efe79cd",
+                      "description": "",
+                      "details": {
+                        "type": "",
+                        "association_type": "VM",
+                        "provider_type": "nutanix",
+                        "occurrence": "recurring"
+                      },
+                      "state_cost_list": [
+                        {
+                          "type": "",
+                          "state": "ON",
+                          "cost_list": [
+                            {
+                              "type": "recurring",
+                              "interval": "hour",
+                              "value": 0.01,
+                              "name": "sockets"
+                            },
+                            {
+                              "type": "recurring",
+                              "interval": "hour",
+                              "value": 0.01,
+                              "name": "memory"
+                            },
+                            {
+                              "type": "recurring",
+                              "interval": "hour",
+                              "value": 0.0003,
+ 
+... (truncated)
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - Found 1 PCs: ['HomePC_Account']
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - 
+============================================================
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - Processing PC: HomePC_Account (6d915317-d32b-4093-a6fa-b225f59a7522)
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - ============================================================
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/chargeback/availableAccounts/usedTags?provider=nx&parentAccount=6d915317-d32b-4093-a6fa-b225f59a7522
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/chargeback/availableAccounts/usedTags?provider=nx&parentAccount=6d915317-d32b-4093-a6fa-b225f59a7522
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3043 seconds (304.30 ms)
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "00063ffe-e22c-90bf-45a6-7cc25530e846": [],
+  "00064002-1290-400a-0000-0000000193e1": [],
+  "parentAccount": [],
+  "00063fff-3b65-3df9-6bee-7cc255814617": []
+}
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO -   Found 3 clusters
+2026-02-01 07:22:55 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tagKeys&resourceGroupType=billingAccount
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tagKeys&resourceGroupType=billingAccount
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.8783 seconds (878.25 ms)
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "tagKeys": [
+    "nx:ADGroup",
+    "nx:ahv_0-250930-142555-NameChanged_key1_7nbbX",
+    "nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk",
+    "nx:ahv_0-250930-142555-NameChanged_key1_fo4eW",
+    "nx:ahv_0-250930-142555-NameChanged_key1_gTvXL",
+    "nx:ahv_0-250930-142939_key1_twjx2",
+    "nx:ahv_0-250930-203852_key1_j0ZEM",
+    "nx:ahv_0-251002-230901_key1_ZMC08",
+    "nx:ahv_0-251003-055714_key1_zcZmD",
+    "nx:ahv_0-251004-104419_key1_GA5E4",
+    "nx:ahv_0-251004-112445_key1_7Juyt",
+    "nx:ahv_0-251004-112454_key1_P1FyH",
+    "nx:ahv_0-251004-112505_key1_h7zvi",
+    "nx:ahv_0-251004-112521_key1_VxDdX",
+    "nx:ahv_0-251004-112524_key1_FxJNZ",
+    "nx:ahv_0-251004-112533_key1_GOxLS",
+    "nx:ahv_0-251004-112538_key1_8T3pf",
+    "nx:ahv_0-251004-112543_key1_cWNZI",
+    "nx:ahv_0-251004-112549_key1_jePTb",
+    "nx:ahv_0-251004-112557_key1_jW5Pe",
+    "nx:ahv_0-251004-112558_key1_Rvw5V",
+    "nx:ahv_0-251004-112606_key1_tZ7F6",
+    "nx:ahv_0-251004-112615_key1_JyWLu",
+    "nx:ahv_0-251004-112618_key1_7aFgy",
+    "nx:ahv_0-251004-112632_key1_OWnlM",
+    "nx:ahv_0-251004-112635_key1_zXZb6",
+    "nx:ahv_0-251004-112641_key1_WlNEz",
+    "nx:ahv_0-251004-112648_key1_sZQeA",
+    "nx:ahv_0-251004-112659_key1_lFQeM",
+    "nx:ahv_0-251004-112707_key1_24wOh",
+    "nx:ahv_0-251004-112716_key1_y9eB9",
+    "nx:ahv_0-251004-112724_key1_uLrxg",
+    "nx:ahv_0-251004-112725_key1_uXgze",
+    "nx:ahv_0-251004-112728_key1_tVkNx",
+    "nx:ahv_0-251004-112739_key1_qrZ8z",
+    "nx:ahv_0-251004-112740_key1_2Y58r",
+    "nx:ahv_0-251004-112748_key1_Eb1rW",
+    "nx:ahv_0-251004-112755_key1_K8h54",
+    "nx:ahv_0-251004-123942_key1_AMkuF",
+    "nx:ahv_0-251004-123945_key1_9Xc9r",
+    "nx:ahv_0-251004-123947_key1_9acxk",
+    "nx:ahv_0-251004-123951_key1_dFzTW",
+    "nx:ahv_0-251004-124004_key1_Sbu5J",
+    "nx:ahv_0-251004-124010_key1_eknPl",
+    "nx:ahv_0-251004-124014_key1_YeKDR",
+    "nx:ahv_0-251004-124037_key1_nOHmh",
+    "nx:ahv_0-251004-124042_key1_dY74l",
+    "nx:ahv_0-251004-124045_key
+... (truncated)
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO -   Found 87 tag keys
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO -   Already used tags: 0
+2026-02-01 07:22:56 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253AADGroup&resourceGroupType=billingAccount
+2026-02-01 07:22:57 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253AADGroup&resourceGroupType=billingAccount
+2026-02-01 07:22:57 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:57 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.6734 seconds (673.40 ms)
+2026-02-01 07:22:57 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:57 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ADGroup": [
+    "$Default"
+  ]
+}
+2026-02-01 07:22:57 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:22:57 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ADGroup_$Default_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "in"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.9690 seconds (969.03 ms)
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "24ede76e-000e-4140-b34e-e174ad0c2f8a"
+}
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ADGroup_$Default_538825
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ADGroup_$Default_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "in"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5906 seconds (590.63 ms)
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4cc497c3-c868-47f5-a1f7-5fd3212497ba"
+}
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ADGroup_$Default_538825
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:22:58 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ADGroup_$Default_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "in"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:22:59 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:22:59 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:22:59 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.7829 seconds (782.95 ms)
+2026-02-01 07:22:59 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:22:59 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "55781c69-2936-4f1b-999e-87f0fd5fee67"
+}
+2026-02-01 07:22:59 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ADGroup_$Default_538825
+2026-02-01 07:22:59 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_7nbbX&resourceGroupType=billingAccount
+2026-02-01 07:23:00 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_7nbbX&resourceGroupType=billingAccount
+2026-02-01 07:23:00 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:00 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.3917 seconds (1391.68 ms)
+2026-02-01 07:23:00 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:00 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-250930-142555-NameChanged_key1_7nbbX": [
+    "ahv_0-250930-142555-NameChanged_value1_10_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_1_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_2_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_3_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_4_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_5_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_6_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_7_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_8_7nbbX",
+    "ahv_0-250930-142555-NameChanged_value1_9_7nbbX"
+  ]
+}
+2026-02-01 07:23:00 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:00 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_7nbbX_ahv_0-250930-142555-NameChanged_value1_10_7nbbX_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5486 seconds (548.61 ms)
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "87521a54-77ea-42a3-8e85-f0a8502cb58f"
+}
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_7nbbX_ahv_0-250930-142555-NameChanged_value1_10_7nbbX_538825
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:01 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_7nbbX_ahv_0-250930-142555-NameChanged_value1_10_7nbbX_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5473 seconds (547.32 ms)
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "faf37460-db33-4afa-bc36-d7b13460e78e"
+}
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_7nbbX_ahv_0-250930-142555-NameChanged_value1_10_7nbbX_538825
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_7nbbX_ahv_0-250930-142555-NameChanged_value1_10_7nbbX_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.8170 seconds (816.97 ms)
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "3314d334-befb-4ead-95e0-b4468183bbc7"
+}
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_7nbbX_ahv_0-250930-142555-NameChanged_value1_10_7nbbX_538825
+2026-02-01 07:23:02 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_Dx2Sk&resourceGroupType=billingAccount
+2026-02-01 07:23:03 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_Dx2Sk&resourceGroupType=billingAccount
+2026-02-01 07:23:03 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:03 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.7037 seconds (703.73 ms)
+2026-02-01 07:23:03 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:03 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk": [
+    "ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk",
+    "ahv_0-250930-142555-NameChanged_value1_2_Dx2Sk",
+    "ahv_0-250930-142555-NameChanged_value1_3_Dx2Sk",
+    "ahv_0-250930-142555-NameChanged_value1_4_Dx2Sk",
+    "ahv_0-250930-142555-NameChanged_value1_5_Dx2Sk"
+  ]
+}
+2026-02-01 07:23:03 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:03 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_Dx2Sk_ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4934 seconds (493.39 ms)
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f3712666-49d6-4393-9873-0d9e5c3971ba"
+}
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_Dx2Sk_ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk_538825
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_Dx2Sk_ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5686 seconds (568.62 ms)
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "a2c5ad13-d622-4d8b-8abf-602835699a7a"
+}
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_Dx2Sk_ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk_538825
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:04 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_Dx2Sk_ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4125 seconds (412.47 ms)
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e3092a8b-60cc-49fe-a012-7b549406c88b"
+}
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_Dx2Sk_ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk_538825
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_fo4eW&resourceGroupType=billingAccount
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_fo4eW&resourceGroupType=billingAccount
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5096 seconds (509.60 ms)
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-250930-142555-NameChanged_key1_fo4eW": [
+    "ahv_0-250930-142555-NameChanged_value1_1_fo4eW"
+  ]
+}
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_fo4eW_ahv_0-250930-142555-NameChanged_value1_1_fo4eW_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3866 seconds (386.56 ms)
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "ab5fd6cb-bc20-4366-8e2e-5dd372c65cac"
+}
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_fo4eW_ahv_0-250930-142555-NameChanged_value1_1_fo4eW_538825
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:05 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_fo4eW_ahv_0-250930-142555-NameChanged_value1_1_fo4eW_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4037 seconds (403.73 ms)
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "1c3db20c-328c-4df3-b9ff-42b24422fe2a"
+}
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_fo4eW_ahv_0-250930-142555-NameChanged_value1_1_fo4eW_538825
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_fo4eW_ahv_0-250930-142555-NameChanged_value1_1_fo4eW_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5013 seconds (501.35 ms)
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "09458549-baa3-4aff-9c96-8996ca29c76e"
+}
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_fo4eW_ahv_0-250930-142555-NameChanged_value1_1_fo4eW_538825
+2026-02-01 07:23:06 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_gTvXL&resourceGroupType=billingAccount
+2026-02-01 07:23:07 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142555-NameChanged_key1_gTvXL&resourceGroupType=billingAccount
+2026-02-01 07:23:07 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:07 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.7951 seconds (795.08 ms)
+2026-02-01 07:23:07 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:07 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-250930-142555-NameChanged_key1_gTvXL": [
+    "ahv_0-250930-142555-NameChanged_value1_10_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_11_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_12_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_13_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_14_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_15_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_16_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_17_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_18_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_19_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_1_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_20_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_21_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_22_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_23_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_24_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_25_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_26_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_27_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_28_gTvXL",
+    "ahv_0-250930-142555-NameChanged_value1_2_gTvXL"
+  ]
+}
+2026-02-01 07:23:07 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:07 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_gTvXL_ahv_0-250930-142555-NameChanged_value1_10_gTvXL_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_gTvXL"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5013 seconds (501.31 ms)
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e2e584aa-8217-4e98-b55d-ae4e0925f730"
+}
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-250930-142555-NameChanged_key1_gTvXL_ahv_0-250930-142555-NameChanged_value1_10_gTvXL_538825
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_gTvXL_ahv_0-250930-142555-NameChanged_value1_10_gTvXL_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_gTvXL"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5153 seconds (515.27 ms)
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "abf553a0-48b9-4bf1-a027-ac74798716d0"
+}
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-250930-142555-NameChanged_key1_gTvXL_ahv_0-250930-142555-NameChanged_value1_10_gTvXL_538825
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:08 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_gTvXL_ahv_0-250930-142555-NameChanged_value1_10_gTvXL_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_gTvXL"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-02"]}
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4792 seconds (479.23 ms)
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "b8e423d4-f419-4390-8ff8-01278073ba70"
+}
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-250930-142555-NameChanged_key1_gTvXL_ahv_0-250930-142555-NameChanged_value1_10_gTvXL_538825
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142939_key1_twjx2&resourceGroupType=billingAccount
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-142939_key1_twjx2&resourceGroupType=billingAccount
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.7268 seconds (726.82 ms)
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-250930-142939_key1_twjx2": [
+    "ahv_0-250930-142939_value1_1_twjx2"
+  ]
+}
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:09 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-250930-142939_key1_twjx2_ahv_0-250930-142939_value1_1_twjx2_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-250930-142939_key1_twjx2"], "values": ["ahv_0-250930-142939_value1_1_twjx2"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5949 seconds (594.86 ms)
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "0180d484-4d60-4ea0-a9f2-9181321d7887"
+}
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-250930-142939_key1_twjx2_ahv_0-250930-142939_value1_1_twjx2_538825
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:10 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-250930-142939_key1_twjx2_ahv_0-250930-142939_value1_1_twjx2_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-250930-142939_key1_twjx2"], "values": ["ahv_0-250930-142939_value1_1_twjx2"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5484 seconds (548.39 ms)
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "54dd4097-df72-49fd-80ee-864882ecec66"
+}
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-250930-142939_key1_twjx2_ahv_0-250930-142939_value1_1_twjx2_538825
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-250930-142939_key1_twjx2_ahv_0-250930-142939_value1_1_twjx2_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-250930-142939_key1_twjx2"], "values": ["ahv_0-250930-142939_value1_1_twjx2"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5132 seconds (513.24 ms)
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f78cbd8a-1071-4f4e-bf47-a33563eff84b"
+}
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-250930-142939_key1_twjx2_ahv_0-250930-142939_value1_1_twjx2_538825
+2026-02-01 07:23:11 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-203852_key1_j0ZEM&resourceGroupType=billingAccount
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-250930-203852_key1_j0ZEM&resourceGroupType=billingAccount
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4470 seconds (446.98 ms)
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-250930-203852_key1_j0ZEM": [
+    "ahv_0-250930-203852_value1_1_j0ZEM"
+  ]
+}
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-250930-203852_key1_j0ZEM_ahv_0-250930-203852_value1_1_j0ZEM_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-250930-203852_key1_j0ZEM"], "values": ["ahv_0-250930-203852_value1_1_j0ZEM"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3728 seconds (372.83 ms)
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "24dd1534-fae0-4186-a1d9-77c855de99de"
+}
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-250930-203852_key1_j0ZEM_ahv_0-250930-203852_value1_1_j0ZEM_538825
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-250930-203852_key1_j0ZEM_ahv_0-250930-203852_value1_1_j0ZEM_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-250930-203852_key1_j0ZEM"], "values": ["ahv_0-250930-203852_value1_1_j0ZEM"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4621 seconds (462.11 ms)
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "0513c4f3-6816-4567-90c4-66a5e0ba290d"
+}
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-250930-203852_key1_j0ZEM_ahv_0-250930-203852_value1_1_j0ZEM_538825
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:12 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-250930-203852_key1_j0ZEM_ahv_0-250930-203852_value1_1_j0ZEM_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-250930-203852_key1_j0ZEM"], "values": ["ahv_0-250930-203852_value1_1_j0ZEM"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3210 seconds (321.04 ms)
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "a245ee7c-c100-4a89-a364-32460bf3c515"
+}
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-250930-203852_key1_j0ZEM_ahv_0-250930-203852_value1_1_j0ZEM_538825
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251002-230901_key1_ZMC08&resourceGroupType=billingAccount
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251002-230901_key1_ZMC08&resourceGroupType=billingAccount
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2732 seconds (273.17 ms)
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251002-230901_key1_ZMC08": [
+    "ahv_0-251002-230901_value1_1_ZMC08"
+  ]
+}
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251002-230901_key1_ZMC08_ahv_0-251002-230901_value1_1_ZMC08_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251002-230901_key1_ZMC08"], "values": ["ahv_0-251002-230901_value1_1_ZMC08"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3431 seconds (343.08 ms)
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4ace8827-057c-4ecf-b032-5f116e3c155f"
+}
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251002-230901_key1_ZMC08_ahv_0-251002-230901_value1_1_ZMC08_538825
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:13 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251002-230901_key1_ZMC08_ahv_0-251002-230901_value1_1_ZMC08_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251002-230901_key1_ZMC08"], "values": ["ahv_0-251002-230901_value1_1_ZMC08"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3740 seconds (373.96 ms)
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d6400da0-dbeb-438a-936c-ccc26b75c275"
+}
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251002-230901_key1_ZMC08_ahv_0-251002-230901_value1_1_ZMC08_538825
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251002-230901_key1_ZMC08_ahv_0-251002-230901_value1_1_ZMC08_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251002-230901_key1_ZMC08"], "values": ["ahv_0-251002-230901_value1_1_ZMC08"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4190 seconds (418.96 ms)
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "eac03229-ca52-43e4-a3cf-f6ee0c6c07ac"
+}
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251002-230901_key1_ZMC08_ahv_0-251002-230901_value1_1_ZMC08_538825
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251003-055714_key1_zcZmD&resourceGroupType=billingAccount
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251003-055714_key1_zcZmD&resourceGroupType=billingAccount
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2217 seconds (221.65 ms)
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251003-055714_key1_zcZmD": [
+    "ahv_0-251003-055714_value1_1_zcZmD"
+  ]
+}
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:14 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251003-055714_key1_zcZmD_ahv_0-251003-055714_value1_1_zcZmD_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251003-055714_key1_zcZmD"], "values": ["ahv_0-251003-055714_value1_1_zcZmD"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3406 seconds (340.57 ms)
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "0a342428-22c9-40f6-a6c6-799b03d6fc84"
+}
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251003-055714_key1_zcZmD_ahv_0-251003-055714_value1_1_zcZmD_538825
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251003-055714_key1_zcZmD_ahv_0-251003-055714_value1_1_zcZmD_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251003-055714_key1_zcZmD"], "values": ["ahv_0-251003-055714_value1_1_zcZmD"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3122 seconds (312.16 ms)
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "87a6d622-1c8e-4d67-a11d-f05578bdba59"
+}
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251003-055714_key1_zcZmD_ahv_0-251003-055714_value1_1_zcZmD_538825
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251003-055714_key1_zcZmD_ahv_0-251003-055714_value1_1_zcZmD_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251003-055714_key1_zcZmD"], "values": ["ahv_0-251003-055714_value1_1_zcZmD"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3154 seconds (315.38 ms)
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "251d304b-edeb-4718-98b7-9f7860df5036"
+}
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251003-055714_key1_zcZmD_ahv_0-251003-055714_value1_1_zcZmD_538825
+2026-02-01 07:23:15 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-104419_key1_GA5E4&resourceGroupType=billingAccount
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-104419_key1_GA5E4&resourceGroupType=billingAccount
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3750 seconds (375.02 ms)
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-104419_key1_GA5E4": [
+    "ahv_0-251004-104419_value1_1_GA5E4"
+  ]
+}
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-104419_key1_GA5E4_ahv_0-251004-104419_value1_1_GA5E4_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-104419_key1_GA5E4"], "values": ["ahv_0-251004-104419_value1_1_GA5E4"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4219 seconds (421.93 ms)
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "44d630eb-f191-4005-b80f-ca9da0026f87"
+}
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-104419_key1_GA5E4_ahv_0-251004-104419_value1_1_GA5E4_538825
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-104419_key1_GA5E4_ahv_0-251004-104419_value1_1_GA5E4_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-104419_key1_GA5E4"], "values": ["ahv_0-251004-104419_value1_1_GA5E4"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3585 seconds (358.51 ms)
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "2d659c60-49b4-49ef-b38e-6cf28da079ac"
+}
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-104419_key1_GA5E4_ahv_0-251004-104419_value1_1_GA5E4_538825
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:16 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-104419_key1_GA5E4_ahv_0-251004-104419_value1_1_GA5E4_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-104419_key1_GA5E4"], "values": ["ahv_0-251004-104419_value1_1_GA5E4"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2302 seconds (230.17 ms)
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "aff61f46-c52d-40b3-b83f-0968822baaad"
+}
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-104419_key1_GA5E4_ahv_0-251004-104419_value1_1_GA5E4_538825
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112445_key1_7Juyt&resourceGroupType=billingAccount
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112445_key1_7Juyt&resourceGroupType=billingAccount
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2593 seconds (259.30 ms)
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112445_key1_7Juyt": [
+    "ahv_0-251004-112445_value1_1_7Juyt"
+  ]
+}
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112445_key1_7Juyt_ahv_0-251004-112445_value1_1_7Juyt_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112445_key1_7Juyt"], "values": ["ahv_0-251004-112445_value1_1_7Juyt"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3348 seconds (334.81 ms)
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "bbe8a0e5-cb30-4592-adf4-d0e0e9bfaa9f"
+}
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112445_key1_7Juyt_ahv_0-251004-112445_value1_1_7Juyt_538825
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:17 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112445_key1_7Juyt_ahv_0-251004-112445_value1_1_7Juyt_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112445_key1_7Juyt"], "values": ["ahv_0-251004-112445_value1_1_7Juyt"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5864 seconds (586.43 ms)
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "9035f82f-0514-4e15-b9fd-5e9dd2193207"
+}
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112445_key1_7Juyt_ahv_0-251004-112445_value1_1_7Juyt_538825
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112445_key1_7Juyt_ahv_0-251004-112445_value1_1_7Juyt_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112445_key1_7Juyt"], "values": ["ahv_0-251004-112445_value1_1_7Juyt"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3990 seconds (398.99 ms)
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8a12f856-6c17-440a-92d1-217aae05bf71"
+}
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112445_key1_7Juyt_ahv_0-251004-112445_value1_1_7Juyt_538825
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112454_key1_P1FyH&resourceGroupType=billingAccount
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112454_key1_P1FyH&resourceGroupType=billingAccount
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2304 seconds (230.35 ms)
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112454_key1_P1FyH": [
+    "ahv_0-251004-112454_value1_1_P1FyH"
+  ]
+}
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:18 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112454_key1_P1FyH_ahv_0-251004-112454_value1_1_P1FyH_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112454_key1_P1FyH"], "values": ["ahv_0-251004-112454_value1_1_P1FyH"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.6981 seconds (698.08 ms)
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "c9271b10-12b3-4f60-81f2-4fdb75910b0e"
+}
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112454_key1_P1FyH_ahv_0-251004-112454_value1_1_P1FyH_538825
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:19 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112454_key1_P1FyH_ahv_0-251004-112454_value1_1_P1FyH_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112454_key1_P1FyH"], "values": ["ahv_0-251004-112454_value1_1_P1FyH"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5070 seconds (506.97 ms)
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "7ea3a574-7006-45f6-9353-8db093e38df2"
+}
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112454_key1_P1FyH_ahv_0-251004-112454_value1_1_P1FyH_538825
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112454_key1_P1FyH_ahv_0-251004-112454_value1_1_P1FyH_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112454_key1_P1FyH"], "values": ["ahv_0-251004-112454_value1_1_P1FyH"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4744 seconds (474.36 ms)
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "02d1c40c-7ff5-45fd-8dfc-a47a37ca1870"
+}
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112454_key1_P1FyH_ahv_0-251004-112454_value1_1_P1FyH_538825
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112505_key1_h7zvi&resourceGroupType=billingAccount
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112505_key1_h7zvi&resourceGroupType=billingAccount
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3157 seconds (315.66 ms)
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112505_key1_h7zvi": [
+    "ahv_0-251004-112505_value1_1_h7zvi"
+  ]
+}
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:20 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112505_key1_h7zvi_ahv_0-251004-112505_value1_1_h7zvi_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112505_key1_h7zvi"], "values": ["ahv_0-251004-112505_value1_1_h7zvi"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3661 seconds (366.06 ms)
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "90d382b9-f841-46f2-9b94-c0647a9df1f7"
+}
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112505_key1_h7zvi_ahv_0-251004-112505_value1_1_h7zvi_538825
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112505_key1_h7zvi_ahv_0-251004-112505_value1_1_h7zvi_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112505_key1_h7zvi"], "values": ["ahv_0-251004-112505_value1_1_h7zvi"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2970 seconds (297.03 ms)
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8d52c5da-be74-4f44-9503-6780690ac77a"
+}
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112505_key1_h7zvi_ahv_0-251004-112505_value1_1_h7zvi_538825
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:21 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112505_key1_h7zvi_ahv_0-251004-112505_value1_1_h7zvi_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112505_key1_h7zvi"], "values": ["ahv_0-251004-112505_value1_1_h7zvi"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3948 seconds (394.75 ms)
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "9b3abd1e-908c-48af-a3d9-d6c4d3c1a9cf"
+}
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112505_key1_h7zvi_ahv_0-251004-112505_value1_1_h7zvi_538825
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112521_key1_VxDdX&resourceGroupType=billingAccount
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112521_key1_VxDdX&resourceGroupType=billingAccount
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3300 seconds (330.00 ms)
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112521_key1_VxDdX": [
+    "ahv_0-251004-112521_value1_10_VxDdX",
+    "ahv_0-251004-112521_value1_1_VxDdX",
+    "ahv_0-251004-112521_value1_4_VxDdX",
+    "ahv_0-251004-112521_value1_5_VxDdX",
+    "ahv_0-251004-112521_value1_6_VxDdX",
+    "ahv_0-251004-112521_value1_7_VxDdX",
+    "ahv_0-251004-112521_value1_8_VxDdX",
+    "ahv_0-251004-112521_value1_9_VxDdX"
+  ]
+}
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112521_key1_VxDdX_ahv_0-251004-112521_value1_10_VxDdX_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112521_key1_VxDdX"], "values": ["ahv_0-251004-112521_value1_10_VxDdX"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4874 seconds (487.42 ms)
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e759d72b-6fce-4131-8abd-d0feb495ca1f"
+}
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112521_key1_VxDdX_ahv_0-251004-112521_value1_10_VxDdX_538825
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:22 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112521_key1_VxDdX_ahv_0-251004-112521_value1_10_VxDdX_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112521_key1_VxDdX"], "values": ["ahv_0-251004-112521_value1_10_VxDdX"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3925 seconds (392.45 ms)
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "6429f19e-895e-4922-8ac6-7a575578e5b1"
+}
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112521_key1_VxDdX_ahv_0-251004-112521_value1_10_VxDdX_538825
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112521_key1_VxDdX_ahv_0-251004-112521_value1_10_VxDdX_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112521_key1_VxDdX"], "values": ["ahv_0-251004-112521_value1_10_VxDdX"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3263 seconds (326.29 ms)
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "ae6fe0a3-605d-4a8c-8789-0b6aa317007a"
+}
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112521_key1_VxDdX_ahv_0-251004-112521_value1_10_VxDdX_538825
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112524_key1_FxJNZ&resourceGroupType=billingAccount
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112524_key1_FxJNZ&resourceGroupType=billingAccount
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2692 seconds (269.18 ms)
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112524_key1_FxJNZ": [
+    "ahv_0-251004-112524_value1_10_FxJNZ",
+    "ahv_0-251004-112524_value1_1_FxJNZ",
+    "ahv_0-251004-112524_value1_2_FxJNZ",
+    "ahv_0-251004-112524_value1_4_FxJNZ",
+    "ahv_0-251004-112524_value1_5_FxJNZ",
+    "ahv_0-251004-112524_value1_8_FxJNZ"
+  ]
+}
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:23 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112524_key1_FxJNZ_ahv_0-251004-112524_value1_10_FxJNZ_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112524_key1_FxJNZ"], "values": ["ahv_0-251004-112524_value1_10_FxJNZ"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4120 seconds (411.96 ms)
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d3b2df3c-8cb0-4462-8b7e-f3b7980c2c0c"
+}
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112524_key1_FxJNZ_ahv_0-251004-112524_value1_10_FxJNZ_538825
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112524_key1_FxJNZ_ahv_0-251004-112524_value1_10_FxJNZ_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112524_key1_FxJNZ"], "values": ["ahv_0-251004-112524_value1_10_FxJNZ"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4836 seconds (483.58 ms)
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "97dbeffd-bee9-4a11-83dc-95eb9edc6e21"
+}
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112524_key1_FxJNZ_ahv_0-251004-112524_value1_10_FxJNZ_538825
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:24 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112524_key1_FxJNZ_ahv_0-251004-112524_value1_10_FxJNZ_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112524_key1_FxJNZ"], "values": ["ahv_0-251004-112524_value1_10_FxJNZ"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4001 seconds (400.10 ms)
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "669d5bc4-22dc-427b-8f95-320d8400f275"
+}
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112524_key1_FxJNZ_ahv_0-251004-112524_value1_10_FxJNZ_538825
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112533_key1_GOxLS&resourceGroupType=billingAccount
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112533_key1_GOxLS&resourceGroupType=billingAccount
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2267 seconds (226.65 ms)
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112533_key1_GOxLS": [
+    "ahv_0-251004-112533_value1_10_GOxLS",
+    "ahv_0-251004-112533_value1_3_GOxLS",
+    "ahv_0-251004-112533_value1_4_GOxLS",
+    "ahv_0-251004-112533_value1_5_GOxLS",
+    "ahv_0-251004-112533_value1_7_GOxLS",
+    "ahv_0-251004-112533_value1_8_GOxLS",
+    "ahv_0-251004-112533_value1_9_GOxLS"
+  ]
+}
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112533_key1_GOxLS_ahv_0-251004-112533_value1_10_GOxLS_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112533_key1_GOxLS"], "values": ["ahv_0-251004-112533_value1_10_GOxLS"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3599 seconds (359.91 ms)
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "82b581f7-26b8-4129-a54b-627be1ac994b"
+}
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112533_key1_GOxLS_ahv_0-251004-112533_value1_10_GOxLS_538825
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:25 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112533_key1_GOxLS_ahv_0-251004-112533_value1_10_GOxLS_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112533_key1_GOxLS"], "values": ["ahv_0-251004-112533_value1_10_GOxLS"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.8511 seconds (851.08 ms)
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "ce8d4118-622e-46cd-aa70-a838873adfbc"
+}
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112533_key1_GOxLS_ahv_0-251004-112533_value1_10_GOxLS_538825
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:26 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112533_key1_GOxLS_ahv_0-251004-112533_value1_10_GOxLS_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112533_key1_GOxLS"], "values": ["ahv_0-251004-112533_value1_10_GOxLS"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:27 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:27 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:27 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.0751 seconds (1075.12 ms)
+2026-02-01 07:23:27 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:27 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "44c0767c-8d97-4b9a-8230-a2142595c524"
+}
+2026-02-01 07:23:27 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112533_key1_GOxLS_ahv_0-251004-112533_value1_10_GOxLS_538825
+2026-02-01 07:23:27 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112538_key1_8T3pf&resourceGroupType=billingAccount
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112538_key1_8T3pf&resourceGroupType=billingAccount
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3515 seconds (351.48 ms)
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112538_key1_8T3pf": [
+    "ahv_0-251004-112538_value1_10_8T3pf",
+    "ahv_0-251004-112538_value1_1_8T3pf",
+    "ahv_0-251004-112538_value1_2_8T3pf",
+    "ahv_0-251004-112538_value1_3_8T3pf",
+    "ahv_0-251004-112538_value1_4_8T3pf",
+    "ahv_0-251004-112538_value1_5_8T3pf",
+    "ahv_0-251004-112538_value1_6_8T3pf",
+    "ahv_0-251004-112538_value1_7_8T3pf",
+    "ahv_0-251004-112538_value1_8_8T3pf",
+    "ahv_0-251004-112538_value1_9_8T3pf"
+  ]
+}
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112538_key1_8T3pf_ahv_0-251004-112538_value1_10_8T3pf_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112538_key1_8T3pf"], "values": ["ahv_0-251004-112538_value1_10_8T3pf"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4142 seconds (414.20 ms)
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4d895752-651d-44f2-8da5-3e9abb6966de"
+}
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112538_key1_8T3pf_ahv_0-251004-112538_value1_10_8T3pf_538825
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:28 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112538_key1_8T3pf_ahv_0-251004-112538_value1_10_8T3pf_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112538_key1_8T3pf"], "values": ["ahv_0-251004-112538_value1_10_8T3pf"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.6825 seconds (682.54 ms)
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "2f105ca7-ff42-439a-ad10-0aeddea6c27c"
+}
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112538_key1_8T3pf_ahv_0-251004-112538_value1_10_8T3pf_538825
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112538_key1_8T3pf_ahv_0-251004-112538_value1_10_8T3pf_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112538_key1_8T3pf"], "values": ["ahv_0-251004-112538_value1_10_8T3pf"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4156 seconds (415.58 ms)
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4b7a7f5b-d434-4302-bfdd-ab930efdeaaa"
+}
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112538_key1_8T3pf_ahv_0-251004-112538_value1_10_8T3pf_538825
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112543_key1_cWNZI&resourceGroupType=billingAccount
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112543_key1_cWNZI&resourceGroupType=billingAccount
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2495 seconds (249.52 ms)
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112543_key1_cWNZI": [
+    "ahv_0-251004-112543_value1_2_cWNZI",
+    "ahv_0-251004-112543_value1_3_cWNZI",
+    "ahv_0-251004-112543_value1_4_cWNZI",
+    "ahv_0-251004-112543_value1_5_cWNZI",
+    "ahv_0-251004-112543_value1_7_cWNZI",
+    "ahv_0-251004-112543_value1_8_cWNZI"
+  ]
+}
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:29 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112543_key1_cWNZI_ahv_0-251004-112543_value1_2_cWNZI_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112543_key1_cWNZI"], "values": ["ahv_0-251004-112543_value1_2_cWNZI"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3596 seconds (359.60 ms)
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "cde176a4-bfbb-46da-a40b-30727c8d7853"
+}
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112543_key1_cWNZI_ahv_0-251004-112543_value1_2_cWNZI_538825
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112543_key1_cWNZI_ahv_0-251004-112543_value1_2_cWNZI_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112543_key1_cWNZI"], "values": ["ahv_0-251004-112543_value1_2_cWNZI"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2960 seconds (295.99 ms)
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4f818711-2453-4096-9a4f-6749fb152e30"
+}
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112543_key1_cWNZI_ahv_0-251004-112543_value1_2_cWNZI_538825
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112543_key1_cWNZI_ahv_0-251004-112543_value1_2_cWNZI_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112543_key1_cWNZI"], "values": ["ahv_0-251004-112543_value1_2_cWNZI"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3692 seconds (369.15 ms)
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "1ec20630-8a6a-46bd-8d09-ec6d0db1ef64"
+}
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112543_key1_cWNZI_ahv_0-251004-112543_value1_2_cWNZI_538825
+2026-02-01 07:23:30 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112549_key1_jePTb&resourceGroupType=billingAccount
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112549_key1_jePTb&resourceGroupType=billingAccount
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2352 seconds (235.24 ms)
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112549_key1_jePTb": [
+    "ahv_0-251004-112549_value1_4_jePTb",
+    "ahv_0-251004-112549_value1_5_jePTb",
+    "ahv_0-251004-112549_value1_6_jePTb",
+    "ahv_0-251004-112549_value1_7_jePTb",
+    "ahv_0-251004-112549_value1_9_jePTb"
+  ]
+}
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112549_key1_jePTb_ahv_0-251004-112549_value1_4_jePTb_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112549_key1_jePTb"], "values": ["ahv_0-251004-112549_value1_4_jePTb"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2698 seconds (269.79 ms)
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "48e2908c-d0d3-47d4-a9d5-db278476d768"
+}
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112549_key1_jePTb_ahv_0-251004-112549_value1_4_jePTb_538825
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112549_key1_jePTb_ahv_0-251004-112549_value1_4_jePTb_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112549_key1_jePTb"], "values": ["ahv_0-251004-112549_value1_4_jePTb"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3219 seconds (321.90 ms)
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "a20e42ed-fc87-4927-983f-91986d441493"
+}
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112549_key1_jePTb_ahv_0-251004-112549_value1_4_jePTb_538825
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:31 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112549_key1_jePTb_ahv_0-251004-112549_value1_4_jePTb_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112549_key1_jePTb"], "values": ["ahv_0-251004-112549_value1_4_jePTb"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5839 seconds (583.94 ms)
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8fb5c6ff-9bb9-4170-8d29-2651fce391d8"
+}
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112549_key1_jePTb_ahv_0-251004-112549_value1_4_jePTb_538825
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112557_key1_jW5Pe&resourceGroupType=billingAccount
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112557_key1_jW5Pe&resourceGroupType=billingAccount
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3317 seconds (331.73 ms)
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112557_key1_jW5Pe": [
+    "ahv_0-251004-112557_value1_10_jW5Pe",
+    "ahv_0-251004-112557_value1_2_jW5Pe",
+    "ahv_0-251004-112557_value1_3_jW5Pe",
+    "ahv_0-251004-112557_value1_4_jW5Pe",
+    "ahv_0-251004-112557_value1_7_jW5Pe",
+    "ahv_0-251004-112557_value1_8_jW5Pe"
+  ]
+}
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112557_key1_jW5Pe_ahv_0-251004-112557_value1_10_jW5Pe_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112557_key1_jW5Pe"], "values": ["ahv_0-251004-112557_value1_10_jW5Pe"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3848 seconds (384.79 ms)
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "9bbf35fd-9b95-4a39-aca6-59344a363616"
+}
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112557_key1_jW5Pe_ahv_0-251004-112557_value1_10_jW5Pe_538825
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:32 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112557_key1_jW5Pe_ahv_0-251004-112557_value1_10_jW5Pe_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112557_key1_jW5Pe"], "values": ["ahv_0-251004-112557_value1_10_jW5Pe"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3006 seconds (300.64 ms)
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "7492d786-a14f-4da3-baf3-9d0e96363f43"
+}
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112557_key1_jW5Pe_ahv_0-251004-112557_value1_10_jW5Pe_538825
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112557_key1_jW5Pe_ahv_0-251004-112557_value1_10_jW5Pe_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112557_key1_jW5Pe"], "values": ["ahv_0-251004-112557_value1_10_jW5Pe"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-Name... (truncated)
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4642 seconds (464.25 ms)
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "ad62966b-08e0-41b3-a2fc-bb514e4338db"
+}
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112557_key1_jW5Pe_ahv_0-251004-112557_value1_10_jW5Pe_538825
+2026-02-01 07:23:33 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112558_key1_Rvw5V&resourceGroupType=billingAccount
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112558_key1_Rvw5V&resourceGroupType=billingAccount
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4327 seconds (432.68 ms)
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112558_key1_Rvw5V": [
+    "ahv_0-251004-112558_value1_1_Rvw5V",
+    "ahv_0-251004-112558_value1_2_Rvw5V",
+    "ahv_0-251004-112558_value1_3_Rvw5V",
+    "ahv_0-251004-112558_value1_5_Rvw5V"
+  ]
+}
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112558_key1_Rvw5V_ahv_0-251004-112558_value1_1_Rvw5V_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112558_key1_Rvw5V"], "values": ["ahv_0-251004-112558_value1_1_Rvw5V"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4656 seconds (465.55 ms)
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "0d2799ae-b73f-4497-8b6f-d928fc31815f"
+}
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112558_key1_Rvw5V_ahv_0-251004-112558_value1_1_Rvw5V_538825
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:34 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112558_key1_Rvw5V_ahv_0-251004-112558_value1_1_Rvw5V_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112558_key1_Rvw5V"], "values": ["ahv_0-251004-112558_value1_1_Rvw5V"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.8472 seconds (847.20 ms)
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "eb18f872-db5c-4d62-9bef-0df87c279b0d"
+}
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112558_key1_Rvw5V_ahv_0-251004-112558_value1_1_Rvw5V_538825
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:35 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112558_key1_Rvw5V_ahv_0-251004-112558_value1_1_Rvw5V_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112558_key1_Rvw5V"], "values": ["ahv_0-251004-112558_value1_1_Rvw5V"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.6071 seconds (607.13 ms)
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "80d72ef6-304c-4fc1-8fe9-7b7c75e261a8"
+}
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112558_key1_Rvw5V_ahv_0-251004-112558_value1_1_Rvw5V_538825
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112606_key1_tZ7F6&resourceGroupType=billingAccount
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112606_key1_tZ7F6&resourceGroupType=billingAccount
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3069 seconds (306.91 ms)
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112606_key1_tZ7F6": [
+    "ahv_0-251004-112606_value1_2_tZ7F6",
+    "ahv_0-251004-112606_value1_4_tZ7F6"
+  ]
+}
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112606_key1_tZ7F6_ahv_0-251004-112606_value1_2_tZ7F6_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112606_key1_tZ7F6"], "values": ["ahv_0-251004-112606_value1_2_tZ7F6"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5424 seconds (542.40 ms)
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "073a7a6a-a369-4ac1-b7d7-fa36edcfbdbd"
+}
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112606_key1_tZ7F6_ahv_0-251004-112606_value1_2_tZ7F6_538825
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:36 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112606_key1_tZ7F6_ahv_0-251004-112606_value1_2_tZ7F6_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112606_key1_tZ7F6"], "values": ["ahv_0-251004-112606_value1_2_tZ7F6"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3237 seconds (323.75 ms)
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "5b28461a-2a40-4f68-8184-356516611580"
+}
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112606_key1_tZ7F6_ahv_0-251004-112606_value1_2_tZ7F6_538825
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112606_key1_tZ7F6_ahv_0-251004-112606_value1_2_tZ7F6_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112606_key1_tZ7F6"], "values": ["ahv_0-251004-112606_value1_2_tZ7F6"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3978 seconds (397.84 ms)
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "9e6ba223-a7e4-415b-9507-2bf872ac17a9"
+}
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112606_key1_tZ7F6_ahv_0-251004-112606_value1_2_tZ7F6_538825
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112615_key1_JyWLu&resourceGroupType=billingAccount
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112615_key1_JyWLu&resourceGroupType=billingAccount
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2094 seconds (209.41 ms)
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112615_key1_JyWLu": [
+    "ahv_0-251004-112615_value1_4_JyWLu",
+    "ahv_0-251004-112615_value1_5_JyWLu"
+  ]
+}
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:37 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112615_key1_JyWLu_ahv_0-251004-112615_value1_4_JyWLu_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112615_key1_JyWLu"], "values": ["ahv_0-251004-112615_value1_4_JyWLu"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3691 seconds (369.13 ms)
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "cb6bbfda-193a-44be-8772-98f18582a6d9"
+}
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112615_key1_JyWLu_ahv_0-251004-112615_value1_4_JyWLu_538825
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112615_key1_JyWLu_ahv_0-251004-112615_value1_4_JyWLu_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112615_key1_JyWLu"], "values": ["ahv_0-251004-112615_value1_4_JyWLu"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3373 seconds (337.30 ms)
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "419d9f61-f8bd-43f7-ab6b-8b4d3f120a42"
+}
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112615_key1_JyWLu_ahv_0-251004-112615_value1_4_JyWLu_538825
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112615_key1_JyWLu_ahv_0-251004-112615_value1_4_JyWLu_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112615_key1_JyWLu"], "values": ["ahv_0-251004-112615_value1_4_JyWLu"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3747 seconds (374.71 ms)
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "60ccdabb-b277-42c2-a24c-7d289b01c09a"
+}
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112615_key1_JyWLu_ahv_0-251004-112615_value1_4_JyWLu_538825
+2026-02-01 07:23:38 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112618_key1_7aFgy&resourceGroupType=billingAccount
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112618_key1_7aFgy&resourceGroupType=billingAccount
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5830 seconds (582.99 ms)
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112618_key1_7aFgy": [
+    "ahv_0-251004-112618_value1_1_7aFgy",
+    "ahv_0-251004-112618_value1_5_7aFgy"
+  ]
+}
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112618_key1_7aFgy_ahv_0-251004-112618_value1_1_7aFgy_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112618_key1_7aFgy"], "values": ["ahv_0-251004-112618_value1_1_7aFgy"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2893 seconds (289.26 ms)
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "315c6d33-9030-46c3-8932-890acc971389"
+}
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112618_key1_7aFgy_ahv_0-251004-112618_value1_1_7aFgy_538825
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:39 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112618_key1_7aFgy_ahv_0-251004-112618_value1_1_7aFgy_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112618_key1_7aFgy"], "values": ["ahv_0-251004-112618_value1_1_7aFgy"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4191 seconds (419.10 ms)
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f5b1419a-dc9d-4e3b-be02-2c0299e9e349"
+}
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112618_key1_7aFgy_ahv_0-251004-112618_value1_1_7aFgy_538825
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112618_key1_7aFgy_ahv_0-251004-112618_value1_1_7aFgy_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112618_key1_7aFgy"], "values": ["ahv_0-251004-112618_value1_1_7aFgy"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.6161 seconds (616.10 ms)
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f407f08a-d96f-4984-9753-472b4fef6394"
+}
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112618_key1_7aFgy_ahv_0-251004-112618_value1_1_7aFgy_538825
+2026-02-01 07:23:40 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112632_key1_OWnlM&resourceGroupType=billingAccount
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112632_key1_OWnlM&resourceGroupType=billingAccount
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2547 seconds (254.72 ms)
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112632_key1_OWnlM": [
+    "ahv_0-251004-112632_value1_1_OWnlM",
+    "ahv_0-251004-112632_value1_3_OWnlM"
+  ]
+}
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112632_key1_OWnlM_ahv_0-251004-112632_value1_1_OWnlM_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112632_key1_OWnlM"], "values": ["ahv_0-251004-112632_value1_1_OWnlM"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3894 seconds (389.43 ms)
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "cc7aa0b4-97c6-4c05-923e-9bdaf1658122"
+}
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112632_key1_OWnlM_ahv_0-251004-112632_value1_1_OWnlM_538825
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:41 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112632_key1_OWnlM_ahv_0-251004-112632_value1_1_OWnlM_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112632_key1_OWnlM"], "values": ["ahv_0-251004-112632_value1_1_OWnlM"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.4629 seconds (462.93 ms)
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "73ac97ad-1eb1-4a58-b3c0-156575da33eb"
+}
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112632_key1_OWnlM_ahv_0-251004-112632_value1_1_OWnlM_538825
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112632_key1_OWnlM_ahv_0-251004-112632_value1_1_OWnlM_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112632_key1_OWnlM"], "values": ["ahv_0-251004-112632_value1_1_OWnlM"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3445 seconds (344.52 ms)
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "b754e578-9a18-4b38-84ac-dbeaa8054cd7"
+}
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112632_key1_OWnlM_ahv_0-251004-112632_value1_1_OWnlM_538825
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112635_key1_zXZb6&resourceGroupType=billingAccount
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112635_key1_zXZb6&resourceGroupType=billingAccount
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3221 seconds (322.14 ms)
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112635_key1_zXZb6": [
+    "ahv_0-251004-112635_value1_3_zXZb6",
+    "ahv_0-251004-112635_value1_5_zXZb6"
+  ]
+}
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:42 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112635_key1_zXZb6_ahv_0-251004-112635_value1_3_zXZb6_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112635_key1_zXZb6"], "values": ["ahv_0-251004-112635_value1_3_zXZb6"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.5007 seconds (500.67 ms)
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "676ca4c0-f90f-499b-9316-2a0ab22afcb6"
+}
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112635_key1_zXZb6_ahv_0-251004-112635_value1_3_zXZb6_538825
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112635_key1_zXZb6_ahv_0-251004-112635_value1_3_zXZb6_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112635_key1_zXZb6"], "values": ["ahv_0-251004-112635_value1_3_zXZb6"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.2781 seconds (278.14 ms)
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "17e00640-0849-4ff2-b95d-8edfeb2c2cda"
+}
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112635_key1_zXZb6_ahv_0-251004-112635_value1_3_zXZb6_538825
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112635_key1_zXZb6_ahv_0-251004-112635_value1_3_zXZb6_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112635_key1_zXZb6"], "values": ["ahv_0-251004-112635_value1_3_zXZb6"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3845 seconds (384.53 ms)
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "c374162e-1d0f-432c-8f1b-018828eafa4d"
+}
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112635_key1_zXZb6_ahv_0-251004-112635_value1_3_zXZb6_538825
+2026-02-01 07:23:43 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112641_key1_WlNEz&resourceGroupType=billingAccount
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112641_key1_WlNEz&resourceGroupType=billingAccount
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3002 seconds (300.19 ms)
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:ahv_0-251004-112641_key1_WlNEz": [
+    "ahv_0-251004-112641_value1_2_WlNEz",
+    "ahv_0-251004-112641_value1_3_WlNEz",
+    "ahv_0-251004-112641_value1_4_WlNEz",
+    "ahv_0-251004-112641_value1_5_WlNEz"
+  ]
+}
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_0e846_ahv_0-251004-112641_key1_WlNEz_ahv_0-251004-112641_value1_2_WlNEz_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063ffe-e22c-90bf-45a6-7cc25530e846"], "tags": [{"keys": ["nx:ahv_0-251004-112641_key1_WlNEz"], "values": ["ahv_0-251004-112641_value1_2_WlNEz"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3041 seconds (304.14 ms)
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "9c61cd93-4a4c-4e70-afb3-4725f55a434c"
+}
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_0e846_ahv_0-251004-112641_key1_WlNEz_ahv_0-251004-112641_value1_2_WlNEz_538825
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_193e1_ahv_0-251004-112641_key1_WlNEz_ahv_0-251004-112641_value1_2_WlNEz_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00064002-1290-400a-0000-0000000193e1"], "tags": [{"keys": ["nx:ahv_0-251004-112641_key1_WlNEz"], "values": ["ahv_0-251004-112641_value1_2_WlNEz"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3242 seconds (324.18 ms)
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8cf2cb98-5654-4f81-b0d5-beb050b7c900"
+}
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_193e1_ahv_0-251004-112641_key1_WlNEz_ahv_0-251004-112641_value1_2_WlNEz_538825
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:44 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePC_Account_14617_ahv_0-251004-112641_key1_WlNEz_ahv_0-251004-112641_value1_2_WlNEz_538825", "definitions": [{"provider": "nx", "parentAccount": "6d915317-d32b-4093-a6fa-b225f59a7522", "filters": {"childAccounts": ["00063fff-3b65-3df9-6bee-7cc255814617"], "tags": [{"keys": ["nx:ahv_0-251004-112641_key1_WlNEz"], "values": ["ahv_0-251004-112641_value1_2_WlNEz"], "operator": "in"}, {"keys": ["nx:ADGroup"], "values": ["$Default"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_7nbbX"], "values": ["ahv_0-250930-142555-NameChanged_value1_10_7nbbX"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_Dx2Sk"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_Dx2Sk"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_fo4eW"], "values": ["ahv_0-250930-142555-NameChanged_value1_1_fo4eW"], "operator": "notIn"}, {"keys": ["nx:ahv_0-250930-142555-NameChanged_key1_gTvXL"], "values": ["ahv_0-250930-142555-NameCh... (truncated)
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/global/costCenter
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - [TIME TAKEN] 0.3944 seconds (394.40 ms)
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "2dada90b-ee53-43e9-8703-3983fb0ee260"
+}
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePC_Account_14617_ahv_0-251004-112641_key1_WlNEz_ahv_0-251004-112641_value1_2_WlNEz_538825
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=6d915317-d32b-4093-a6fa-b225f59a7522&dimensions=tag.nx%253Aahv_0-251004-112648_key1_sZQeA&resourceGroupType=billingAccount
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - 
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - API METRICS CONSOLIDATED REPORT
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - POST     | /v1/cg/global/costCenter                           |      81 |      - |     230.17 |    1075.12 |     616.10 |     816.97 |     969.03
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - GET      | /v1/cg/nx/analysis/dimensions/values               |      28 |      - |     209.41 |    1391.68 |     795.08 |     878.25 |    1391.68
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - GET      | /v1/cg/global/chargeback/availableAccounts         |       1 |      - |     466.99 |     466.99 |     466.99 |     466.99 |     466.99
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - POST     | /api/nutanix/v3/accounts/list                      |       1 |      - |    3148.24 |    3148.24 |    3148.24 |    3148.24 |    3148.24
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - GET      | /v1/cg/global/chargeback/availableAccounts/usedT.. |       1 |      - |     304.30 |     304.30 |     304.30 |     304.30 |     304.30
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - Total API Calls: 112 | Unique Endpoints: 5 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - 
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - STATUS CODE BREAKDOWN:
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - POST   /v1/cg/global/costCenter                   | 200: 81
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - GET    /v1/cg/nx/analysis/dimensions/values       | 200: 28
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - GET    /v1/cg/global/chargeback/availableAccoun.. | 200: 1
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - POST   /api/nutanix/v3/accounts/list              | 200: 1
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - GET    /v1/cg/global/chargeback/availableAccoun.. | 200: 1
+2026-02-01 07:23:45 - create_cost_center_v2 - INFO - ================================================================================================================================================================

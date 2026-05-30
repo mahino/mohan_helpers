@@ -1,0 +1,1561 @@
+2026-05-26 04:24:23 - create_budget - INFO - ================================================================================
+2026-05-26 04:24:23 - create_budget - INFO - Script: create_budget
+2026-05-26 04:24:23 - create_budget - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/create_budget_20260526_042423.log
+2026-05-26 04:24:23 - create_budget - INFO - ================================================================================
+2026-05-26 04:24:23 - create_budget - INFO - ================================================================================
+2026-05-26 04:24:23 - create_budget - INFO - Starting Budget Creation Process
+2026-05-26 04:24:23 - create_budget - INFO - ================================================================================
+2026-05-26 04:24:23 - create_budget - INFO - Configuration:
+2026-05-26 04:24:23 - create_budget - INFO -   - Base URL: https://ncm.services.nconprem-10-53-56-44.ccpnx.com
+2026-05-26 04:24:23 - create_budget - INFO -   - Budget name prefix: budget_1
+2026-05-26 04:24:23 - create_budget - INFO -   - Recipients per budget: 5
+2026-05-26 04:24:23 - create_budget - INFO - ================================================================================
+2026-05-26 04:24:23 - create_budget - INFO - Fetching resource groups...
+2026-05-26 04:24:23 - create_budget - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets/listResourceGroups
+2026-05-26 04:24:24 - create_budget - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets/listResourceGroups
+2026-05-26 04:24:24 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:24 - create_budget - INFO - [TIME TAKEN] 1.0050 seconds (1005.03 ms)
+2026-05-26 04:24:24 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:24 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "data": [
+    {
+      "buId": "d4dd577b-d807-472a-ae9a-1c3b8184713c",
+      "buName": "Business_Unit_1",
+      "alreadyBudgeted": false,
+      "sessions": [
+        2026,
+        2027
+      ],
+      "ccUnits": [
+        {
+          "ccId": "4a6ca8cf-4c71-4401-afa0-a83527f227d7",
+          "ccName": "CC_HomePCAccount_0e796_AppFamily_Backup_612596",
+          "alreadyBudgeted": false,
+          "sessions": [
+            2026,
+            2027
+          ],
+          "editable": true
+        },
+        {
+          "ccId": "a895d3c0-254f-48d0-96ed-3208e1f3ba32",
+          "ccName": "CC_HomePCAccount_0e796_AppType_Default_612596",
+          "alreadyBudgeted": false,
+          "sessions": [
+            2026,
+            2027
+          ],
+          "editable": true
+        }
+      ],
+      "editable": true
+    },
+    {
+      "buId": "9ca0f9fb-d239-4a7d-9a4c-bc28e6f53b7d",
+      "buName": "Business_Unit_2",
+      "alreadyBudgeted": true,
+      "sessions": [],
+      "ccUnits": [
+        {
+          "ccId": "44e37342-e21a-46e9-8c61-72b159995b72",
+          "ccName": "CC_HomePCAccount_0e796_CalmApplication_4erafsd_612596",
+          "alreadyBudgeted": false,
+          "sessions": [
+            2026,
+            2027
+          ],
+          "editable": true
+        },
+        {
+          "ccId": "a566ebe3-9460-484b-a4c4-83dd0d0d7d46",
+          "ccName": "CC_HomePCAccount_0e796_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596",
+          "alreadyBudgeted": false,
+          "sessions": [
+            2026,
+            2027
+          ],
+          "editable": true
+        }
+      ],
+      "editable": true
+    },
+    {
+      "buId": "29247eb3-6db2-4998-b554-d50d903cbe91",
+      "buName": "Business_Unit_3",
+      "alreadyBudgeted": false,
+      "sessions": [
+        2026,
+        2027
+      ],
+      "ccUnits": [
+        {
+          "ccId": "3754cf10-2c30-4751-ab13-d075fe3746ad",
+          "ccName": "CC_HomePCAccount_0e796_CalmProject_Nucalm_07p3_612596",
+          "alrea
+... (truncated)
+2026-05-26 04:24:24 - create_budget - INFO - Fetched 31 resource groups
+2026-05-26 04:24:24 - create_budget - INFO - Fetching user list...
+2026-05-26 04:24:24 - create_budget - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/users/list
+2026-05-26 04:24:25 - create_budget - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/users/list
+2026-05-26 04:24:25 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:25 - create_budget - INFO - [TIME TAKEN] 0.5075 seconds (507.54 ms)
+2026-05-26 04:24:25 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:25 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "users": []
+}
+2026-05-26 04:24:25 - create_budget - INFO - Fetched 0 users for recipients
+2026-05-26 04:24:25 - create_budget - WARNING - No users found for recipients. Budgets will be created without recipients.
+2026-05-26 04:24:25 - create_budget - INFO - Planning to create: 30 BU budgets + 85 CC budgets = 115 total
+2026-05-26 04:24:25 - create_budget - INFO - ================================================================================
+2026-05-26 04:24:25 - create_budget - INFO - [1/115] Creating BU budget: budget_1_Business_Unit_1
+2026-05-26 04:24:25 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:25 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_1", "financialYearStartMonth": "2", "resourceGroups": {"businessUnit": ["d4dd577b-d807-472a-ae9a-1c3b8184713c"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:25 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:25 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:25 - create_budget - INFO - [TIME TAKEN] 0.6611 seconds (661.08 ms)
+2026-05-26 04:24:25 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:25 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:25 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_1': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:25 - create_budget - INFO - [2/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_AppFamily_Backup_612596
+2026-05-26 04:24:25 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:25 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_AppFamily_Backup_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["4a6ca8cf-4c71-4401-afa0-a83527f227d7"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 69, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:26 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:26 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:26 - create_budget - INFO - [TIME TAKEN] 0.5124 seconds (512.40 ms)
+2026-05-26 04:24:26 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:26 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "60275cef-8722-415d-9d5f-e8bb3db14374"
+}
+2026-05-26 04:24:26 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_AppFamily_Backup_612596
+2026-05-26 04:24:26 - create_budget - INFO - [3/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_AppType_Default_612596
+2026-05-26 04:24:26 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:26 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_AppType_Default_612596", "financialYearStartMonth": "6", "resourceGroups": {"costCenters": ["a895d3c0-254f-48d0-96ed-3208e1f3ba32"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:27 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:27 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:27 - create_budget - INFO - [TIME TAKEN] 0.6009 seconds (600.93 ms)
+2026-05-26 04:24:27 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:27 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "d0b6c5d1-5b77-4cb3-9e5c-3ea8a5ec6cf5"
+}
+2026-05-26 04:24:27 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_AppType_Default_612596
+2026-05-26 04:24:27 - create_budget - INFO - [4/115] Creating BU budget: budget_1_Business_Unit_2
+2026-05-26 04:24:27 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:27 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_2", "financialYearStartMonth": "10", "resourceGroups": {"businessUnit": ["9ca0f9fb-d239-4a7d-9a4c-bc28e6f53b7d"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:28 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:28 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:28 - create_budget - INFO - [TIME TAKEN] 0.9838 seconds (983.83 ms)
+2026-05-26 04:24:28 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:28 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:28 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_2': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:28 - create_budget - INFO - [5/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_CalmApplication_4erafsd_612596
+2026-05-26 04:24:28 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:28 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_CalmApplication_4erafsd_612596", "financialYearStartMonth": "1", "resourceGroups": {"costCenters": ["44e37342-e21a-46e9-8c61-72b159995b72"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:28 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:28 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:28 - create_budget - INFO - [TIME TAKEN] 0.5567 seconds (556.73 ms)
+2026-05-26 04:24:28 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:28 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ef551261-79d3-48c7-b433-41c2d8abcde8"
+}
+2026-05-26 04:24:28 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_CalmApplication_4erafsd_612596
+2026-05-26 04:24:28 - create_budget - INFO - [6/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596
+2026-05-26 04:24:28 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:28 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596", "financialYearStartMonth": "12", "resourceGroups": {"costCenters": ["a566ebe3-9460-484b-a4c4-83dd0d0d7d46"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:29 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:29 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:29 - create_budget - INFO - [TIME TAKEN] 1.0381 seconds (1038.12 ms)
+2026-05-26 04:24:29 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:29 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "34a3e768-0cff-4bec-94ad-07fde1218917"
+}
+2026-05-26 04:24:29 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596
+2026-05-26 04:24:29 - create_budget - INFO - [7/115] Creating BU budget: budget_1_Business_Unit_3
+2026-05-26 04:24:29 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:29 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_3", "financialYearStartMonth": "8", "resourceGroups": {"businessUnit": ["29247eb3-6db2-4998-b554-d50d903cbe91"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:30 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:30 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:30 - create_budget - INFO - [TIME TAKEN] 0.9018 seconds (901.76 ms)
+2026-05-26 04:24:30 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:30 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:30 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_3': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:30 - create_budget - INFO - [8/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_CalmProject_Nucalm_07p3_612596
+2026-05-26 04:24:30 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:30 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_CalmProject_Nucalm_07p3_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["3754cf10-2c30-4751-ab13-d075fe3746ad"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:31 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:31 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:31 - create_budget - INFO - [TIME TAKEN] 1.0123 seconds (1012.32 ms)
+2026-05-26 04:24:31 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:31 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "57da7f65-5227-42a5-a2f2-6655888a0895"
+}
+2026-05-26 04:24:31 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_CalmProject_Nucalm_07p3_612596
+2026-05-26 04:24:31 - create_budget - INFO - [9/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_CalmService_Service1_612596
+2026-05-26 04:24:31 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:31 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_CalmService_Service1_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["65f4ae4b-4f15-4e75-9a3b-fc211909fec4"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:32 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:32 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:32 - create_budget - INFO - [TIME TAKEN] 1.3806 seconds (1380.64 ms)
+2026-05-26 04:24:32 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:32 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "3980fc53-49d1-4ffb-a548-de9d1f5b6640"
+}
+2026-05-26 04:24:32 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_CalmService_Service1_612596
+2026-05-26 04:24:32 - create_budget - INFO - [10/115] Creating BU budget: budget_1_Business_Unit_4
+2026-05-26 04:24:32 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:32 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_4", "financialYearStartMonth": "8", "resourceGroups": {"businessUnit": ["620c54e4-30d2-47ce-be24-dd68125e3737"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:33 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:33 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:33 - create_budget - INFO - [TIME TAKEN] 0.5993 seconds (599.28 ms)
+2026-05-26 04:24:33 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:33 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:33 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_4': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:33 - create_budget - INFO - [11/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_CalmUsername_admin_612596
+2026-05-26 04:24:33 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:33 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_CalmUsername_admin_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["ce610974-ca1b-4761-83ec-cbb5bcea0835"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:34 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:34 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:34 - create_budget - INFO - [TIME TAKEN] 0.8973 seconds (897.31 ms)
+2026-05-26 04:24:34 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:34 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "c377abbf-79f5-41eb-9906-5c0b53edf42e"
+}
+2026-05-26 04:24:34 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_CalmUsername_admin_612596
+2026-05-26 04:24:34 - create_budget - INFO - [12/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_OSType_Linux_612596
+2026-05-26 04:24:34 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:34 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_OSType_Linux_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["7cadabb6-de49-47d2-a53a-570acdd77034"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:35 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:35 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:35 - create_budget - INFO - [TIME TAKEN] 0.6475 seconds (647.48 ms)
+2026-05-26 04:24:35 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:35 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "578b7ec5-f8aa-4361-968a-f5b41dca7cfd"
+}
+2026-05-26 04:24:35 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_OSType_Linux_612596
+2026-05-26 04:24:35 - create_budget - INFO - [13/115] Creating BU budget: budget_1_Business_Unit_5
+2026-05-26 04:24:35 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:35 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_5", "financialYearStartMonth": "3", "resourceGroups": {"businessUnit": ["0f0140b3-21c4-4548-b8e6-c94c71860cbe"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:35 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:35 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:35 - create_budget - INFO - [TIME TAKEN] 0.5546 seconds (554.56 ms)
+2026-05-26 04:24:35 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:35 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:35 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_5': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:35 - create_budget - INFO - [14/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596
+2026-05-26 04:24:35 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:35 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["76025709-9970-4bf4-b17b-2501f9c70f5b"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:36 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:36 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:36 - create_budget - INFO - [TIME TAKEN] 0.5214 seconds (521.38 ms)
+2026-05-26 04:24:36 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:36 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "1254e4a9-85fc-47f9-8007-fb07f5c77550"
+}
+2026-05-26 04:24:36 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596
+2026-05-26 04:24:36 - create_budget - INFO - [15/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_Project__internal_612596
+2026-05-26 04:24:36 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:36 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_Project__internal_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["2fe28dec-b79d-4a48-8a71-eb0b62eb5b2d"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:36 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:36 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:36 - create_budget - INFO - [TIME TAKEN] 0.4161 seconds (416.08 ms)
+2026-05-26 04:24:36 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:36 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ecef2dd0-5307-4867-9b3f-0609f43fcbaf"
+}
+2026-05-26 04:24:36 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_Project__internal_612596
+2026-05-26 04:24:36 - create_budget - INFO - [16/115] Creating BU budget: budget_1_Business_Unit_6
+2026-05-26 04:24:36 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:36 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_6", "financialYearStartMonth": "3", "resourceGroups": {"businessUnit": ["8dd5cdf7-2183-4b23-bd94-d197168b2032"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:37 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:37 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:37 - create_budget - INFO - [TIME TAKEN] 0.5546 seconds (554.61 ms)
+2026-05-26 04:24:37 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:37 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:37 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_6': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:37 - create_budget - INFO - [17/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596
+2026-05-26 04:24:37 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:37 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["0360a871-d226-4be0-ad1c-90183a3ae066"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:37 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:37 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:37 - create_budget - INFO - [TIME TAKEN] 0.6343 seconds (634.31 ms)
+2026-05-26 04:24:37 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:37 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ce1c12a5-297e-4e76-a3c4-1c043b55d239"
+}
+2026-05-26 04:24:37 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596
+2026-05-26 04:24:37 - create_budget - INFO - [18/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596
+2026-05-26 04:24:37 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:37 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596", "financialYearStartMonth": "3", "resourceGroups": {"costCenters": ["ee7f3675-ced1-4de7-ad9c-65e220877da9"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:38 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:38 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:38 - create_budget - INFO - [TIME TAKEN] 0.5022 seconds (502.18 ms)
+2026-05-26 04:24:38 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:38 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ad5137a7-6508-42a7-bf4b-fc319477e87a"
+}
+2026-05-26 04:24:38 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596
+2026-05-26 04:24:38 - create_budget - INFO - [19/115] Creating BU budget: budget_1_Business_Unit_7
+2026-05-26 04:24:38 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:38 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_7", "financialYearStartMonth": "12", "resourceGroups": {"businessUnit": ["160e2a67-89cf-4455-a832-466fe6143a04"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:39 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:39 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:39 - create_budget - INFO - [TIME TAKEN] 0.9596 seconds (959.64 ms)
+2026-05-26 04:24:39 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:39 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:39 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_7': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:39 - create_budget - INFO - [20/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596
+2026-05-26 04:24:39 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:39 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596", "financialYearStartMonth": "2", "resourceGroups": {"costCenters": ["3c5b1c1c-f522-4d08-9f05-9d16e8f0df80"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 93, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:39 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:39 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:39 - create_budget - INFO - [TIME TAKEN] 0.7364 seconds (736.39 ms)
+2026-05-26 04:24:39 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:39 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "9d345391-5960-4f38-bee3-d7925cd08622"
+}
+2026-05-26 04:24:39 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596
+2026-05-26 04:24:39 - create_budget - INFO - [21/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596
+2026-05-26 04:24:39 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:39 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["e9d9287a-5040-4a9e-8973-2d3f3462ac0d"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:41 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:41 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:41 - create_budget - INFO - [TIME TAKEN] 1.7571 seconds (1757.09 ms)
+2026-05-26 04:24:41 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:41 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "0d5c332f-f34c-4080-a313-17f69fe359b5"
+}
+2026-05-26 04:24:41 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596
+2026-05-26 04:24:41 - create_budget - INFO - [22/115] Creating BU budget: budget_1_Business_Unit_8
+2026-05-26 04:24:41 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:41 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_8", "financialYearStartMonth": "5", "resourceGroups": {"businessUnit": ["8461ffd5-741d-4f31-831a-bba3bbf6207e"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:42 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:42 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:42 - create_budget - INFO - [TIME TAKEN] 0.8984 seconds (898.40 ms)
+2026-05-26 04:24:42 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:42 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:42 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_8': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:42 - create_budget - INFO - [23/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596
+2026-05-26 04:24:42 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:42 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["955cf6d7-e83b-48e6-8a06-f5ad21c707ac"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:43 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:43 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:43 - create_budget - INFO - [TIME TAKEN] 0.4981 seconds (498.14 ms)
+2026-05-26 04:24:43 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:43 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "2d7b283e-1894-4205-a328-326523e55cf3"
+}
+2026-05-26 04:24:43 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596
+2026-05-26 04:24:43 - create_budget - INFO - [24/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596
+2026-05-26 04:24:43 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:43 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596", "financialYearStartMonth": "7", "resourceGroups": {"costCenters": ["bd387c72-473c-490a-8f2d-eab38e696360"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:43 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:43 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:43 - create_budget - INFO - [TIME TAKEN] 0.6104 seconds (610.39 ms)
+2026-05-26 04:24:43 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:43 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "3456c224-3c41-49e6-9a96-2361460766fb"
+}
+2026-05-26 04:24:43 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596
+2026-05-26 04:24:43 - create_budget - INFO - [25/115] Creating BU budget: budget_1_Business_Unit_9
+2026-05-26 04:24:43 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:43 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_9", "financialYearStartMonth": "10", "resourceGroups": {"businessUnit": ["8451ec42-d37b-4a1f-a43c-3579659a23c3"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:44 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:44 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:44 - create_budget - INFO - [TIME TAKEN] 0.2900 seconds (289.96 ms)
+2026-05-26 04:24:44 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:44 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:44 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_9': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:44 - create_budget - INFO - [26/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596
+2026-05-26 04:24:44 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:44 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["5a21a66e-4f90-4173-9d2f-77c02df7db62"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:44 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:44 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:44 - create_budget - INFO - [TIME TAKEN] 0.3948 seconds (394.83 ms)
+2026-05-26 04:24:44 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:44 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "c8633111-b9d2-4c4b-b435-5350d3ae493c"
+}
+2026-05-26 04:24:44 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596
+2026-05-26 04:24:44 - create_budget - INFO - [27/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596
+2026-05-26 04:24:44 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:44 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["0c2295bb-ac5a-4bf0-ba11-8d4ec924d123"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:44 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:44 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:44 - create_budget - INFO - [TIME TAKEN] 0.4320 seconds (431.97 ms)
+2026-05-26 04:24:44 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:44 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "f2d59465-84ad-47a3-a2f1-8fedfb8af488"
+}
+2026-05-26 04:24:44 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596
+2026-05-26 04:24:44 - create_budget - INFO - [28/115] Creating BU budget: budget_1_Business_Unit_10
+2026-05-26 04:24:44 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:44 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_10", "financialYearStartMonth": "10", "resourceGroups": {"businessUnit": ["6b65c04e-79fa-4a2c-8870-da5d50f32371"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:45 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:45 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:45 - create_budget - INFO - [TIME TAKEN] 0.2699 seconds (269.88 ms)
+2026-05-26 04:24:45 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:45 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:45 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_10': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:45 - create_budget - INFO - [29/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596
+2026-05-26 04:24:45 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:45 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["7eecbb6d-9dde-46ba-bf7e-83e5003fe399"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:45 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:45 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:45 - create_budget - INFO - [TIME TAKEN] 0.6952 seconds (695.20 ms)
+2026-05-26 04:24:45 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:45 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "232ba4f7-5642-4938-9c44-08a10a47098b"
+}
+2026-05-26 04:24:45 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596
+2026-05-26 04:24:45 - create_budget - INFO - [30/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596
+2026-05-26 04:24:45 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:45 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596", "financialYearStartMonth": "12", "resourceGroups": {"costCenters": ["0ca37dd6-b29e-4d15-9571-5fa88f422600"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:47 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:47 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:47 - create_budget - INFO - [TIME TAKEN] 2.0479 seconds (2047.91 ms)
+2026-05-26 04:24:47 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:47 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "f9682b4d-97f4-4287-86c5-f73a09135e8e"
+}
+2026-05-26 04:24:47 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596
+2026-05-26 04:24:47 - create_budget - INFO - [31/115] Creating BU budget: budget_1_Business_Unit_11
+2026-05-26 04:24:47 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:47 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_11", "financialYearStartMonth": "10", "resourceGroups": {"businessUnit": ["adbba462-10df-411f-8bcb-a6f0718f66c0"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 93, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:48 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:48 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:48 - create_budget - INFO - [TIME TAKEN] 0.9530 seconds (952.96 ms)
+2026-05-26 04:24:48 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:48 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:48 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_11': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:48 - create_budget - INFO - [32/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596
+2026-05-26 04:24:48 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:48 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596", "financialYearStartMonth": "11", "resourceGroups": {"costCenters": ["7d5a27b3-827c-4a70-bbd5-89f66d53cfbe"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:49 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:49 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:49 - create_budget - INFO - [TIME TAKEN] 0.8929 seconds (892.89 ms)
+2026-05-26 04:24:49 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:49 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "fe341658-9f6e-48fa-bbf5-6a45f417186d"
+}
+2026-05-26 04:24:49 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596
+2026-05-26 04:24:49 - create_budget - INFO - [33/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596
+2026-05-26 04:24:49 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:49 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596", "financialYearStartMonth": "11", "resourceGroups": {"costCenters": ["fa60523f-b8d3-431e-823d-c4c96433023f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:50 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:50 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:50 - create_budget - INFO - [TIME TAKEN] 0.9033 seconds (903.31 ms)
+2026-05-26 04:24:50 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:50 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "e8f49d1e-16a2-485e-a45f-881a332eed59"
+}
+2026-05-26 04:24:50 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596
+2026-05-26 04:24:50 - create_budget - INFO - [34/115] Creating BU budget: budget_1_Business_Unit_12
+2026-05-26 04:24:50 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:50 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_12", "financialYearStartMonth": "1", "resourceGroups": {"businessUnit": ["67e43629-6490-4556-a2ee-f205fbd77492"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:51 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:51 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:51 - create_budget - INFO - [TIME TAKEN] 0.6946 seconds (694.56 ms)
+2026-05-26 04:24:51 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:51 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:51 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_12': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:51 - create_budget - INFO - [35/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596
+2026-05-26 04:24:51 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:51 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["0d842ad0-5678-41fb-8ced-90a8a4872c64"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:52 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:52 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:52 - create_budget - INFO - [TIME TAKEN] 1.1340 seconds (1134.02 ms)
+2026-05-26 04:24:52 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:52 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "b738bec8-6b14-447f-9e0e-5b97e62a7f28"
+}
+2026-05-26 04:24:52 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596
+2026-05-26 04:24:52 - create_budget - INFO - [36/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596
+2026-05-26 04:24:52 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:52 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596", "financialYearStartMonth": "12", "resourceGroups": {"costCenters": ["49117877-0520-4b6b-b3f4-e9acfb84c89e"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:52 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:52 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:52 - create_budget - INFO - [TIME TAKEN] 0.4209 seconds (420.94 ms)
+2026-05-26 04:24:52 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:52 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "8eee0e62-aa73-4363-a597-8001ac83166d"
+}
+2026-05-26 04:24:52 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596
+2026-05-26 04:24:52 - create_budget - INFO - [37/115] Creating BU budget: budget_1_Business_Unit_13
+2026-05-26 04:24:52 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:52 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_13", "financialYearStartMonth": "6", "resourceGroups": {"businessUnit": ["69c01ddb-ff9d-4124-be07-56bcfecdaec2"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:53 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:53 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:53 - create_budget - INFO - [TIME TAKEN] 0.4429 seconds (442.91 ms)
+2026-05-26 04:24:53 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:53 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:53 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_13': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:53 - create_budget - INFO - [38/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596
+2026-05-26 04:24:53 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:53 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["fcd742d2-4807-4456-ba26-4bfa891a498a"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:53 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:53 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:53 - create_budget - INFO - [TIME TAKEN] 0.4408 seconds (440.80 ms)
+2026-05-26 04:24:53 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:53 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "678fe5fd-eb37-452d-8493-bb173bc1f378"
+}
+2026-05-26 04:24:53 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596
+2026-05-26 04:24:53 - create_budget - INFO - [39/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596
+2026-05-26 04:24:53 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:53 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["20d3ad36-5c22-464b-92b2-96db9a5f5366"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:54 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:54 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:54 - create_budget - INFO - [TIME TAKEN] 0.4704 seconds (470.43 ms)
+2026-05-26 04:24:54 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:54 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "38a03920-74b5-45fa-8e47-38f7a5ee171f"
+}
+2026-05-26 04:24:54 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596
+2026-05-26 04:24:54 - create_budget - INFO - [40/115] Creating BU budget: budget_1_Business_Unit_14
+2026-05-26 04:24:54 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:54 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_14", "financialYearStartMonth": "3", "resourceGroups": {"businessUnit": ["36f93247-3cbc-4331-9489-bbb6f7067fba"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 69, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:54 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:54 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:54 - create_budget - INFO - [TIME TAKEN] 0.4881 seconds (488.07 ms)
+2026-05-26 04:24:54 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:54 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:54 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_14': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:54 - create_budget - INFO - [41/115] Creating CC budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key26_LPnHw_St_category_l6_value26_1_LPnHw_612596
+2026-05-26 04:24:54 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:54 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_0e796_St_category_l6_key26_LPnHw_St_category_l6_value26_1_LPnHw_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["a53b3fed-8fb8-46f1-b509-8d384bb148b1"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:55 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:55 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:55 - create_budget - INFO - [TIME TAKEN] 0.5902 seconds (590.23 ms)
+2026-05-26 04:24:55 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:55 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "c9b9902c-a302-4ef6-ab07-8fdc4b489458"
+}
+2026-05-26 04:24:55 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_0e796_St_category_l6_key26_LPnHw_St_category_l6_value26_1_LPnHw_612596
+2026-05-26 04:24:55 - create_budget - INFO - [42/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_AppFamily_Backup_612596
+2026-05-26 04:24:55 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:55 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_AppFamily_Backup_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["c58c4981-fc12-4036-8b10-cb2a6834c832"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:55 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:55 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:55 - create_budget - INFO - [TIME TAKEN] 0.5020 seconds (501.95 ms)
+2026-05-26 04:24:55 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:55 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "6404b954-2328-408b-86a0-a3e26b982dee"
+}
+2026-05-26 04:24:55 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_AppFamily_Backup_612596
+2026-05-26 04:24:55 - create_budget - INFO - [43/115] Creating BU budget: budget_1_Business_Unit_15
+2026-05-26 04:24:55 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:55 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_15", "financialYearStartMonth": "1", "resourceGroups": {"businessUnit": ["a0cbf32b-6171-4d85-9984-b8ff8fc0a920"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:56 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:56 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:56 - create_budget - INFO - [TIME TAKEN] 0.2976 seconds (297.57 ms)
+2026-05-26 04:24:56 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:56 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:56 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_15': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:56 - create_budget - INFO - [44/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_AppType_Default_612596
+2026-05-26 04:24:56 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:56 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_AppType_Default_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["2358b1ac-a4b7-41b2-a18c-8c51d2ddc6a1"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:56 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:56 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:56 - create_budget - INFO - [TIME TAKEN] 0.3438 seconds (343.85 ms)
+2026-05-26 04:24:56 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:56 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "6d6c83b6-f039-4190-9f53-920738507558"
+}
+2026-05-26 04:24:56 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_AppType_Default_612596
+2026-05-26 04:24:56 - create_budget - INFO - [45/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_CalmApplication_4erafsd_612596
+2026-05-26 04:24:56 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:56 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_CalmApplication_4erafsd_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["83cae67d-648c-414b-8343-d89ea3f2eed7"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:57 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:57 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:57 - create_budget - INFO - [TIME TAKEN] 0.7849 seconds (784.92 ms)
+2026-05-26 04:24:57 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:57 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ecaafccf-925c-47c3-843d-34585566f83b"
+}
+2026-05-26 04:24:57 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_CalmApplication_4erafsd_612596
+2026-05-26 04:24:57 - create_budget - INFO - [46/115] Creating BU budget: budget_1_Business_Unit_16
+2026-05-26 04:24:57 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:57 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_16", "financialYearStartMonth": "11", "resourceGroups": {"businessUnit": ["5e911df7-d783-4910-8595-5a26a93b7234"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:57 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:57 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:57 - create_budget - INFO - [TIME TAKEN] 0.4664 seconds (466.35 ms)
+2026-05-26 04:24:57 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:57 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:57 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_16': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:57 - create_budget - INFO - [47/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_CalmProject_Nucalm_07p3_612596
+2026-05-26 04:24:57 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:57 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_CalmProject_Nucalm_07p3_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["d2b17cf1-1bf1-4dec-8ebb-b42e089544bf"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:58 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:58 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:58 - create_budget - INFO - [TIME TAKEN] 0.3423 seconds (342.34 ms)
+2026-05-26 04:24:58 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:58 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "b36fb993-c3f7-492d-b703-751689e7f4a0"
+}
+2026-05-26 04:24:58 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_CalmProject_Nucalm_07p3_612596
+2026-05-26 04:24:58 - create_budget - INFO - [48/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596
+2026-05-26 04:24:58 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:58 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["2ab3380f-0b3e-468f-b920-aec14203a9d5"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 69, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:58 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:58 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:58 - create_budget - INFO - [TIME TAKEN] 0.5974 seconds (597.45 ms)
+2026-05-26 04:24:58 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:58 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ac6a805b-7b87-4742-b2d0-859236f9919f"
+}
+2026-05-26 04:24:58 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596
+2026-05-26 04:24:58 - create_budget - INFO - [49/115] Creating BU budget: budget_1_Business_Unit_17
+2026-05-26 04:24:58 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:58 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_17", "financialYearStartMonth": "11", "resourceGroups": {"businessUnit": ["c440907d-b66e-4f75-ab63-cbae929b1d67"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:59 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:59 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:24:59 - create_budget - INFO - [TIME TAKEN] 0.4554 seconds (455.42 ms)
+2026-05-26 04:24:59 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:59 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:24:59 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_17': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:24:59 - create_budget - INFO - [50/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_CalmService_Service1_612596
+2026-05-26 04:24:59 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:59 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_CalmService_Service1_612596", "financialYearStartMonth": "12", "resourceGroups": {"costCenters": ["e339978d-4e97-4c9e-9e97-9ce382363fa4"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:24:59 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:59 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:24:59 - create_budget - INFO - [TIME TAKEN] 0.5582 seconds (558.17 ms)
+2026-05-26 04:24:59 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:24:59 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "5c597420-3836-40d1-94b7-ab935f2d0a3c"
+}
+2026-05-26 04:24:59 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_CalmService_Service1_612596
+2026-05-26 04:24:59 - create_budget - INFO - [51/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_CalmUsername_admin_612596
+2026-05-26 04:24:59 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:24:59 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_CalmUsername_admin_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["75827bb6-a2bb-478b-b518-5a80c2419ef4"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 93, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:00 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:00 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:00 - create_budget - INFO - [TIME TAKEN] 0.5375 seconds (537.53 ms)
+2026-05-26 04:25:00 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:00 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "3a5f8f19-40dd-4ea8-86be-84850c951306"
+}
+2026-05-26 04:25:00 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_CalmUsername_admin_612596
+2026-05-26 04:25:00 - create_budget - INFO - [52/115] Creating BU budget: budget_1_Business_Unit_18
+2026-05-26 04:25:00 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:00 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_18", "financialYearStartMonth": "2", "resourceGroups": {"businessUnit": ["5e0f96a4-e575-4e4f-a99c-e06e5279b344"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:00 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:00 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:00 - create_budget - INFO - [TIME TAKEN] 0.3011 seconds (301.12 ms)
+2026-05-26 04:25:00 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:00 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:00 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_18': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:00 - create_budget - INFO - [53/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_OSType_Linux_612596
+2026-05-26 04:25:00 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:00 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_OSType_Linux_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["80c72e13-5ce7-4350-a7d6-64a08ce01c1f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:01 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:01 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:01 - create_budget - INFO - [TIME TAKEN] 0.8955 seconds (895.52 ms)
+2026-05-26 04:25:01 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:01 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "f71edb3f-588a-4ce3-a3ae-ecd6914db0c3"
+}
+2026-05-26 04:25:01 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_OSType_Linux_612596
+2026-05-26 04:25:01 - create_budget - INFO - [54/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_Project__internal_612596
+2026-05-26 04:25:01 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:01 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_Project__internal_612596", "financialYearStartMonth": "2", "resourceGroups": {"costCenters": ["a134aa55-fdc2-4676-ae91-ce0b2ad12df1"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:02 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:02 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:02 - create_budget - INFO - [TIME TAKEN] 1.5348 seconds (1534.85 ms)
+2026-05-26 04:25:02 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:02 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "e08fa607-8d91-4629-8ee2-9264625c9c18"
+}
+2026-05-26 04:25:02 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_Project__internal_612596
+2026-05-26 04:25:02 - create_budget - INFO - [55/115] Creating BU budget: budget_1_Business_Unit_19
+2026-05-26 04:25:02 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:02 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_19", "financialYearStartMonth": "3", "resourceGroups": {"businessUnit": ["a49038d8-c208-466a-bb4f-662b15b0a975"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:03 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:03 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:03 - create_budget - INFO - [TIME TAKEN] 0.7631 seconds (763.12 ms)
+2026-05-26 04:25:03 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:03 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:03 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_19': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:03 - create_budget - INFO - [56/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596
+2026-05-26 04:25:03 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:03 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596", "financialYearStartMonth": "11", "resourceGroups": {"costCenters": ["678230d1-5ab4-4763-8f7b-ccdb0b3ab1dc"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:04 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:04 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:04 - create_budget - INFO - [TIME TAKEN] 0.8172 seconds (817.17 ms)
+2026-05-26 04:25:04 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:04 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "f35bd3c1-332b-44b6-8525-a9d773c7cb33"
+}
+2026-05-26 04:25:04 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596
+2026-05-26 04:25:04 - create_budget - INFO - [57/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596
+2026-05-26 04:25:04 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:04 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596", "financialYearStartMonth": "6", "resourceGroups": {"costCenters": ["dce8f9f2-85f6-4437-936d-8fae26530250"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:04 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:04 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:04 - create_budget - INFO - [TIME TAKEN] 0.3136 seconds (313.57 ms)
+2026-05-26 04:25:04 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:04 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "5725c6b3-437d-4eff-bcad-3424610e1f56"
+}
+2026-05-26 04:25:04 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596
+2026-05-26 04:25:04 - create_budget - INFO - [58/115] Creating BU budget: budget_1_Business_Unit_20
+2026-05-26 04:25:04 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:04 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_20", "financialYearStartMonth": "12", "resourceGroups": {"businessUnit": ["c4603705-1c9b-41bc-ab1d-fd9040fac369"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:05 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:05 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:05 - create_budget - INFO - [TIME TAKEN] 0.4672 seconds (467.18 ms)
+2026-05-26 04:25:05 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:05 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:05 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_20': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:05 - create_budget - INFO - [59/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596
+2026-05-26 04:25:05 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:05 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["14f9b00d-7eef-4ec6-885c-96d0746f211a"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:06 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:06 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:06 - create_budget - INFO - [TIME TAKEN] 1.1950 seconds (1194.95 ms)
+2026-05-26 04:25:06 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:06 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "6dab957d-a005-4dfb-b5c8-7cf23229100a"
+}
+2026-05-26 04:25:06 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596
+2026-05-26 04:25:06 - create_budget - INFO - [60/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596
+2026-05-26 04:25:06 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:06 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["17071ec7-4524-4dfe-ac57-7f6ca9e6833d"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:07 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:07 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:07 - create_budget - INFO - [TIME TAKEN] 1.3583 seconds (1358.26 ms)
+2026-05-26 04:25:07 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:07 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "8e356334-81ed-4149-87ea-9c319a5aed0c"
+}
+2026-05-26 04:25:07 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596
+2026-05-26 04:25:07 - create_budget - INFO - [61/115] Creating BU budget: budget_1_Business_Unit_21
+2026-05-26 04:25:07 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:07 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_21", "financialYearStartMonth": "4", "resourceGroups": {"businessUnit": ["da8b9ca2-3ca3-49a7-a497-903ca7dc9fdb"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:08 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:08 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:08 - create_budget - INFO - [TIME TAKEN] 0.5421 seconds (542.10 ms)
+2026-05-26 04:25:08 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:08 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:08 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_21': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:08 - create_budget - INFO - [62/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596
+2026-05-26 04:25:08 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:08 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596", "financialYearStartMonth": "1", "resourceGroups": {"costCenters": ["38e6a168-16cb-4b55-a481-8f0c4c274799"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:08 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:08 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:08 - create_budget - INFO - [TIME TAKEN] 0.4398 seconds (439.76 ms)
+2026-05-26 04:25:08 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:08 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "c2625ae2-45b2-425e-9531-83b9c81d8dda"
+}
+2026-05-26 04:25:08 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596
+2026-05-26 04:25:08 - create_budget - INFO - [63/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596
+2026-05-26 04:25:08 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:08 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["e95bd91d-34bc-4cb4-a2ba-17cdbfac19d6"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:09 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:09 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:09 - create_budget - INFO - [TIME TAKEN] 0.3110 seconds (311.04 ms)
+2026-05-26 04:25:09 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:09 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ec1d865b-4584-4c3f-be4f-8f607eff6651"
+}
+2026-05-26 04:25:09 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596
+2026-05-26 04:25:09 - create_budget - INFO - [64/115] Creating BU budget: budget_1_Business_Unit_22
+2026-05-26 04:25:09 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:09 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_22", "financialYearStartMonth": "6", "resourceGroups": {"businessUnit": ["65083f5c-985f-4c51-93ff-a53081bf8bb5"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:09 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:09 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:09 - create_budget - INFO - [TIME TAKEN] 0.3760 seconds (376.04 ms)
+2026-05-26 04:25:09 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:09 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:09 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_22': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:09 - create_budget - INFO - [65/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596
+2026-05-26 04:25:09 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:09 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["ccb55515-e49c-4036-a7b5-e038760f4dd7"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:09 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:09 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:09 - create_budget - INFO - [TIME TAKEN] 0.3703 seconds (370.34 ms)
+2026-05-26 04:25:09 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:09 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "bd955a63-de04-4c1e-a7b6-6bc7c24a928e"
+}
+2026-05-26 04:25:09 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596
+2026-05-26 04:25:09 - create_budget - INFO - [66/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596
+2026-05-26 04:25:09 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:09 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596", "financialYearStartMonth": "7", "resourceGroups": {"costCenters": ["b3b1e8ee-dc0e-41b2-8e84-7ee57e914b64"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:10 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:10 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:10 - create_budget - INFO - [TIME TAKEN] 0.8201 seconds (820.06 ms)
+2026-05-26 04:25:10 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:10 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "a513bbd7-ac06-4737-98c1-25283ed9d02f"
+}
+2026-05-26 04:25:10 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596
+2026-05-26 04:25:10 - create_budget - INFO - [67/115] Creating BU budget: budget_1_Business_Unit_23
+2026-05-26 04:25:10 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:10 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_23", "financialYearStartMonth": "3", "resourceGroups": {"businessUnit": ["781be46e-78cd-4d0b-8564-e4e097e2fde7"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:11 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:11 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:11 - create_budget - INFO - [TIME TAKEN] 0.6706 seconds (670.62 ms)
+2026-05-26 04:25:11 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:11 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:11 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_23': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:11 - create_budget - INFO - [68/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596
+2026-05-26 04:25:11 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:11 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["7d83523a-bb91-4a66-bc27-d9f6f4d6c2b6"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:11 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:11 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:11 - create_budget - INFO - [TIME TAKEN] 0.5373 seconds (537.35 ms)
+2026-05-26 04:25:11 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:11 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "4aa8fcdb-6227-4bb3-8f82-e1189fda72ea"
+}
+2026-05-26 04:25:11 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596
+2026-05-26 04:25:11 - create_budget - INFO - [69/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596
+2026-05-26 04:25:11 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:11 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596", "financialYearStartMonth": "7", "resourceGroups": {"costCenters": ["517c4332-8709-4794-be5e-3681049a097b"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:12 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:12 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:12 - create_budget - INFO - [TIME TAKEN] 0.7581 seconds (758.09 ms)
+2026-05-26 04:25:12 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:12 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "13853c12-dbb5-452f-b2f6-19569bf0587c"
+}
+2026-05-26 04:25:12 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596
+2026-05-26 04:25:12 - create_budget - INFO - [70/115] Creating BU budget: budget_1_Business_Unit_24
+2026-05-26 04:25:12 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:12 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_24", "financialYearStartMonth": "3", "resourceGroups": {"businessUnit": ["3bb17ee5-9efc-4e48-8afd-c06c38c74992"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:13 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:13 - create_budget - INFO - [TIME TAKEN] 0.3055 seconds (305.50 ms)
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:13 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_24': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:13 - create_budget - INFO - [71/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596
+2026-05-26 04:25:13 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["097a85bc-e873-42be-8b72-b0fe69624517"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:13 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:13 - create_budget - INFO - [TIME TAKEN] 0.3910 seconds (390.99 ms)
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ac0f5b3b-483a-4faa-91c0-6210d451428e"
+}
+2026-05-26 04:25:13 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596
+2026-05-26 04:25:13 - create_budget - INFO - [72/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596
+2026-05-26 04:25:13 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596", "financialYearStartMonth": "11", "resourceGroups": {"costCenters": ["db66a6da-ed46-41ae-af96-0fe9cf981d4d"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:13 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:13 - create_budget - INFO - [TIME TAKEN] 0.3346 seconds (334.59 ms)
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "e2162485-b037-437a-985d-fefaca248520"
+}
+2026-05-26 04:25:13 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596
+2026-05-26 04:25:13 - create_budget - INFO - [73/115] Creating BU budget: budget_1_Business_Unit_25
+2026-05-26 04:25:13 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_25", "financialYearStartMonth": "5", "resourceGroups": {"businessUnit": ["8df98ae2-a75c-4344-99b9-78b7c03592c1"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:13 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:13 - create_budget - INFO - [TIME TAKEN] 0.1750 seconds (175.01 ms)
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:13 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:13 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_25': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:13 - create_budget - INFO - [74/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596
+2026-05-26 04:25:13 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:13 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596", "financialYearStartMonth": "3", "resourceGroups": {"costCenters": ["c93f00d3-e43c-4b20-b470-bd9f9df16c52"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 93, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:14 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:14 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:14 - create_budget - INFO - [TIME TAKEN] 0.5846 seconds (584.62 ms)
+2026-05-26 04:25:14 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:14 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "d844d27f-521d-4a31-8a56-6a8fd1af9fa7"
+}
+2026-05-26 04:25:14 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596
+2026-05-26 04:25:14 - create_budget - INFO - [75/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596
+2026-05-26 04:25:14 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:14 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596", "financialYearStartMonth": "12", "resourceGroups": {"costCenters": ["585287e9-527a-4740-99dd-ea60d4aba9ce"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 69, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:14 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:14 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:14 - create_budget - INFO - [TIME TAKEN] 0.3302 seconds (330.22 ms)
+2026-05-26 04:25:14 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:14 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "dcc443b6-35e1-488e-8d0d-8df53fd0a604"
+}
+2026-05-26 04:25:14 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596
+2026-05-26 04:25:14 - create_budget - INFO - [76/115] Creating BU budget: budget_1_Business_Unit_26
+2026-05-26 04:25:14 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:14 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_26", "financialYearStartMonth": "4", "resourceGroups": {"businessUnit": ["336cdafe-73d3-4d4e-8e79-62633ec6d2ec"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:15 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:15 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:15 - create_budget - INFO - [TIME TAKEN] 0.6702 seconds (670.17 ms)
+2026-05-26 04:25:15 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:15 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:15 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_26': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:15 - create_budget - INFO - [77/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596
+2026-05-26 04:25:15 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:15 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["45155564-dce0-4478-877f-6718428c696c"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:16 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:16 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:16 - create_budget - INFO - [TIME TAKEN] 0.5047 seconds (504.68 ms)
+2026-05-26 04:25:16 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:16 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ee382d04-02dc-4099-bd03-fa684df4c616"
+}
+2026-05-26 04:25:16 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596
+2026-05-26 04:25:16 - create_budget - INFO - [78/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596
+2026-05-26 04:25:16 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:16 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["86d05702-b5b1-495b-960d-dae04a9b850f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:16 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:16 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:16 - create_budget - INFO - [TIME TAKEN] 0.6696 seconds (669.56 ms)
+2026-05-26 04:25:16 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:16 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "a5593f85-e4d7-48d5-ad33-7d08e2cd7f9b"
+}
+2026-05-26 04:25:16 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596
+2026-05-26 04:25:16 - create_budget - INFO - [79/115] Creating BU budget: budget_1_Business_Unit_27
+2026-05-26 04:25:16 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:16 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_27", "financialYearStartMonth": "5", "resourceGroups": {"businessUnit": ["bc5f426f-25c2-4bb8-b588-0c48b0f83310"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:17 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:17 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:17 - create_budget - INFO - [TIME TAKEN] 0.7190 seconds (719.04 ms)
+2026-05-26 04:25:17 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:17 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:17 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_27': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:17 - create_budget - INFO - [80/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596
+2026-05-26 04:25:17 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:17 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596", "financialYearStartMonth": "6", "resourceGroups": {"costCenters": ["262ec84b-6a8a-477b-b156-0c9a47b702d6"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:17 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:17 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:17 - create_budget - INFO - [TIME TAKEN] 0.3299 seconds (329.90 ms)
+2026-05-26 04:25:17 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:17 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "a2c3e8f9-e9c3-4bc9-89af-531c66b38c1e"
+}
+2026-05-26 04:25:17 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596
+2026-05-26 04:25:17 - create_budget - INFO - [81/115] Creating CC budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key26_LPnHw_St_category_l6_value26_1_LPnHw_612596
+2026-05-26 04:25:17 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:17 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key26_LPnHw_St_category_l6_value26_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["a31807c0-e7ca-4096-974a-471a322cc6cb"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:18 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:18 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:18 - create_budget - INFO - [TIME TAKEN] 0.3050 seconds (305.02 ms)
+2026-05-26 04:25:18 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:18 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "fffa1a8b-2736-4eac-be41-e282045af8e6"
+}
+2026-05-26 04:25:18 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_1e0ce_St_category_l6_key26_LPnHw_St_category_l6_value26_1_LPnHw_612596
+2026-05-26 04:25:18 - create_budget - INFO - [82/115] Creating BU budget: budget_1_Business_Unit_28
+2026-05-26 04:25:18 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:18 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_28", "financialYearStartMonth": "7", "resourceGroups": {"businessUnit": ["af8f2c0c-114e-499a-97c7-65036977f15f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 69, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:18 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:18 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:18 - create_budget - INFO - [TIME TAKEN] 0.2041 seconds (204.07 ms)
+2026-05-26 04:25:18 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:18 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:18 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_28': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:18 - create_budget - INFO - [83/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_AppType_Default_612596
+2026-05-26 04:25:18 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:18 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_AppType_Default_612596", "financialYearStartMonth": "7", "resourceGroups": {"costCenters": ["10d653c7-55a9-431b-941f-4459bb3651bb"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:18 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:18 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:18 - create_budget - INFO - [TIME TAKEN] 0.4533 seconds (453.31 ms)
+2026-05-26 04:25:18 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:18 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "3b631687-fe9d-4b0d-a6d4-e19c8d511d9d"
+}
+2026-05-26 04:25:18 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_AppType_Default_612596
+2026-05-26 04:25:18 - create_budget - INFO - [84/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_AppFamily_Backup_612596
+2026-05-26 04:25:18 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:18 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_AppFamily_Backup_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["1d5e700e-ed78-4ac1-acf0-2dcf3bc990c7"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:19 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:19 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:19 - create_budget - INFO - [TIME TAKEN] 0.3696 seconds (369.65 ms)
+2026-05-26 04:25:19 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:19 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "1823af7d-1c81-41c7-b98c-9746fbc45c01"
+}
+2026-05-26 04:25:19 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_AppFamily_Backup_612596
+2026-05-26 04:25:19 - create_budget - INFO - [85/115] Creating BU budget: budget_1_Business_Unit_29
+2026-05-26 04:25:19 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:19 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_29", "financialYearStartMonth": "1", "resourceGroups": {"businessUnit": ["64852523-30c4-41f7-8e74-2276925a6209"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:19 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:19 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:19 - create_budget - INFO - [TIME TAKEN] 0.4430 seconds (443.01 ms)
+2026-05-26 04:25:19 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:19 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:19 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_29': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:19 - create_budget - INFO - [86/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_CalmApplication_4erafsd_612596
+2026-05-26 04:25:19 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:19 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_CalmApplication_4erafsd_612596", "financialYearStartMonth": "3", "resourceGroups": {"costCenters": ["c88b4a57-35d1-4efd-b3c0-cf8e6aca2953"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 82, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:19 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:19 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:19 - create_budget - INFO - [TIME TAKEN] 0.3334 seconds (333.45 ms)
+2026-05-26 04:25:19 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:19 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "8abb7e18-5cbd-4553-8a03-d16410a9043a"
+}
+2026-05-26 04:25:19 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_CalmApplication_4erafsd_612596
+2026-05-26 04:25:19 - create_budget - INFO - [87/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596
+2026-05-26 04:25:19 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:19 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596", "financialYearStartMonth": "6", "resourceGroups": {"costCenters": ["b930b2c3-63b4-49d6-9908-bf9a668a9742"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:20 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:20 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:20 - create_budget - INFO - [TIME TAKEN] 0.3587 seconds (358.75 ms)
+2026-05-26 04:25:20 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:20 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "a639c1f1-e65b-4363-95eb-183ccb918ab3"
+}
+2026-05-26 04:25:20 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_CalmClusterUuid_47a7b178-5025-48f2-a952-f11a885b75c6_612596
+2026-05-26 04:25:20 - create_budget - INFO - [88/115] Creating BU budget: budget_1_Business_Unit_30
+2026-05-26 04:25:20 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:20 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_Business_Unit_30", "financialYearStartMonth": "12", "resourceGroups": {"businessUnit": ["91466417-ca95-44e4-a9aa-519613872175"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 66, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:20 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:20 - create_budget - INFO - [STATUS CODE] 500
+2026-05-26 04:25:20 - create_budget - INFO - [TIME TAKEN] 0.2963 seconds (296.28 ms)
+2026-05-26 04:25:20 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:20 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "errorCode": 990020,
+  "errorMessage": "The system encountered an internal error. If the issue persists, please reach out to our support."
+}
+2026-05-26 04:25:20 - create_budget - ERROR - ✗ Failed to create budget 'budget_1_Business_Unit_30': HTTP 500 - {'errorCode': 990020, 'errorMessage': 'The system encountered an internal error. If the issue persists, please reach out to our support.'}
+2026-05-26 04:25:20 - create_budget - INFO - [89/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_CalmProject_Nucalm_07p3_612596
+2026-05-26 04:25:20 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:20 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_CalmProject_Nucalm_07p3_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["0367a273-2866-4527-a857-26f51c6e2fa0"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 70, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 93, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:20 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:20 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:20 - create_budget - INFO - [TIME TAKEN] 0.3043 seconds (304.28 ms)
+2026-05-26 04:25:20 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:20 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ab60f35f-a572-494a-9aa6-21e882617405"
+}
+2026-05-26 04:25:20 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_CalmProject_Nucalm_07p3_612596
+2026-05-26 04:25:20 - create_budget - INFO - [90/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_CalmService_Service1_612596
+2026-05-26 04:25:20 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:20 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_CalmService_Service1_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["c9f744d4-b6ae-4081-ae2b-d97a82fdb5aa"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 65, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:22 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:22 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:22 - create_budget - INFO - [TIME TAKEN] 1.5854 seconds (1585.41 ms)
+2026-05-26 04:25:22 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:22 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "ad65ac0f-c36a-4133-9baa-c1eb5afd75a0"
+}
+2026-05-26 04:25:22 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_CalmService_Service1_612596
+2026-05-26 04:25:22 - create_budget - INFO - [91/115] Creating CC budget: budget_1_CC_RemotepcAccount3_44896_Project__internal_612596
+2026-05-26 04:25:22 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:22 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_RemotepcAccount3_44896_Project__internal_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["ab461ca9-d25d-418a-bc1a-00b990120d4e"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 93, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:23 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:23 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:23 - create_budget - INFO - [TIME TAKEN] 1.3978 seconds (1397.80 ms)
+2026-05-26 04:25:23 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:23 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "663c0657-3600-469c-adbe-0e610771e1bb"
+}
+2026-05-26 04:25:23 - create_budget - INFO - ✓ Created budget: budget_1_CC_RemotepcAccount3_44896_Project__internal_612596
+2026-05-26 04:25:23 - create_budget - INFO - [92/115] Creating CC budget: budget_1_CC_RemotepcAccount5_ec202_Project__internal_612596
+2026-05-26 04:25:23 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:23 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_RemotepcAccount5_ec202_Project__internal_612596", "financialYearStartMonth": "2", "resourceGroups": {"costCenters": ["0dd8e7b5-b949-403c-9730-c1bfd993b47d"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 76, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:24 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:24 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:24 - create_budget - INFO - [TIME TAKEN] 0.4197 seconds (419.72 ms)
+2026-05-26 04:25:24 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:24 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "f9daed59-a646-4405-abdd-abf8ef3ed028"
+}
+2026-05-26 04:25:24 - create_budget - INFO - ✓ Created budget: budget_1_CC_RemotepcAccount5_ec202_Project__internal_612596
+2026-05-26 04:25:24 - create_budget - INFO - [93/115] Creating CC budget: budget_1_CC_RemotepcAccount2_fdf89_Project__internal_612596
+2026-05-26 04:25:24 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:24 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_RemotepcAccount2_fdf89_Project__internal_612596", "financialYearStartMonth": "6", "resourceGroups": {"costCenters": ["338dd07a-9dc1-4fe0-91a7-6d46acb4b045"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:24 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:24 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:24 - create_budget - INFO - [TIME TAKEN] 0.4612 seconds (461.15 ms)
+2026-05-26 04:25:24 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:24 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "37b29db2-1678-4e09-aa08-ddf3f2cf3b11"
+}
+2026-05-26 04:25:24 - create_budget - INFO - ✓ Created budget: budget_1_CC_RemotepcAccount2_fdf89_Project__internal_612596
+2026-05-26 04:25:24 - create_budget - INFO - [94/115] Creating CC budget: budget_1_CC_RemotepcAccount1_7ebbc_Project__internal_612596
+2026-05-26 04:25:24 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:24 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_RemotepcAccount1_7ebbc_Project__internal_612596", "financialYearStartMonth": "7", "resourceGroups": {"costCenters": ["c5458633-aff0-4e87-a5a2-fcff3651d04a"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 94, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:25 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:25 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:25 - create_budget - INFO - [TIME TAKEN] 0.6137 seconds (613.72 ms)
+2026-05-26 04:25:25 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:25 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "6a9cf383-0520-4885-a0a0-966dcfcd862f"
+}
+2026-05-26 04:25:25 - create_budget - INFO - ✓ Created budget: budget_1_CC_RemotepcAccount1_7ebbc_Project__internal_612596
+2026-05-26 04:25:25 - create_budget - INFO - [95/115] Creating CC budget: budget_1_CC_RemotepcAccount4_6ecc0_Project__internal_612596
+2026-05-26 04:25:25 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:25 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_RemotepcAccount4_6ecc0_Project__internal_612596", "financialYearStartMonth": "2", "resourceGroups": {"costCenters": ["c4493f73-b542-4f57-954e-43fb94a07fcc"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:26 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:26 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:26 - create_budget - INFO - [TIME TAKEN] 0.6980 seconds (697.96 ms)
+2026-05-26 04:25:26 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:26 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "1c3f3452-582a-4980-a791-2833054c9195"
+}
+2026-05-26 04:25:26 - create_budget - INFO - ✓ Created budget: budget_1_CC_RemotepcAccount4_6ecc0_Project__internal_612596
+2026-05-26 04:25:26 - create_budget - INFO - [96/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_CalmUsername_admin_612596
+2026-05-26 04:25:26 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:26 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_CalmUsername_admin_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["2b2c918b-b3f4-4404-bf7f-d8ab4bcacf45"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:26 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:26 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:26 - create_budget - INFO - [TIME TAKEN] 0.2554 seconds (255.37 ms)
+2026-05-26 04:25:26 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:26 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "44d2cb12-2398-486a-af5d-ec665d651493"
+}
+2026-05-26 04:25:26 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_CalmUsername_admin_612596
+2026-05-26 04:25:26 - create_budget - INFO - [97/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_OSType_Linux_612596
+2026-05-26 04:25:26 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:26 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_OSType_Linux_612596", "financialYearStartMonth": "10", "resourceGroups": {"costCenters": ["1391ca68-1b52-4035-938e-cd6b6e88e2e4"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:26 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:26 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:26 - create_budget - INFO - [TIME TAKEN] 0.4733 seconds (473.30 ms)
+2026-05-26 04:25:26 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:26 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "78d3ba69-ef4c-4229-89e1-16935e5f42e4"
+}
+2026-05-26 04:25:26 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_OSType_Linux_612596
+2026-05-26 04:25:26 - create_budget - INFO - [98/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_Project__internal_612596
+2026-05-26 04:25:26 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:26 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_Project__internal_612596", "financialYearStartMonth": "9", "resourceGroups": {"costCenters": ["7553ebf7-71f6-4d6c-b75e-0798833369cf"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 79, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:27 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:27 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:27 - create_budget - INFO - [TIME TAKEN] 0.9362 seconds (936.24 ms)
+2026-05-26 04:25:27 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:27 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "c8e20e58-b3d9-4045-b850-83a2e752c28e"
+}
+2026-05-26 04:25:27 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_Project__internal_612596
+2026-05-26 04:25:27 - create_budget - INFO - [99/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596
+2026-05-26 04:25:27 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:27 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["fb18151e-d3b9-43e6-ad8d-1056b67e7c9e"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:28 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:28 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:28 - create_budget - INFO - [TIME TAKEN] 0.6290 seconds (629.00 ms)
+2026-05-26 04:25:28 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:28 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "28854267-7f74-454e-952a-73571a176c32"
+}
+2026-05-26 04:25:28 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key10_LPnHw_St_category_l6_value10_1_LPnHw_612596
+2026-05-26 04:25:28 - create_budget - INFO - [100/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596
+2026-05-26 04:25:28 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:28 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596", "financialYearStartMonth": "6", "resourceGroups": {"costCenters": ["e8f349a7-72c0-4d0f-9a41-351ab0a89770"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:29 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:29 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:29 - create_budget - INFO - [TIME TAKEN] 1.1006 seconds (1100.62 ms)
+2026-05-26 04:25:29 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:29 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "a19d8c2c-d26a-4818-8829-9231355e352d"
+}
+2026-05-26 04:25:29 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key11_LPnHw_St_category_l6_value11_1_LPnHw_612596
+2026-05-26 04:25:29 - create_budget - INFO - [101/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596
+2026-05-26 04:25:29 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:29 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596", "financialYearStartMonth": "12", "resourceGroups": {"costCenters": ["161ae39a-162b-4838-86d1-75fcc350ea6c"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 85, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:30 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:30 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:30 - create_budget - INFO - [TIME TAKEN] 0.8011 seconds (801.06 ms)
+2026-05-26 04:25:30 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:30 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "53f8a959-079c-499c-a6c2-0355fd8468aa"
+}
+2026-05-26 04:25:30 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key22_LPnHw_St_category_l6_value22_1_LPnHw_612596
+2026-05-26 04:25:30 - create_budget - INFO - [102/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596
+2026-05-26 04:25:30 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:30 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["3d279552-4364-4e1e-b08c-51f576fea18b"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:31 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:31 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:31 - create_budget - INFO - [TIME TAKEN] 0.7921 seconds (792.14 ms)
+2026-05-26 04:25:31 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:31 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "e4aed790-f054-41ab-a7cb-400ecf92e51a"
+}
+2026-05-26 04:25:31 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key12_LPnHw_St_category_l6_value12_1_LPnHw_612596
+2026-05-26 04:25:31 - create_budget - INFO - [103/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596
+2026-05-26 04:25:31 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:31 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["5c036732-ee4b-4709-aa66-7b75acbe94aa"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:31 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:31 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:31 - create_budget - INFO - [TIME TAKEN] 0.6645 seconds (664.50 ms)
+2026-05-26 04:25:31 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:31 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "dfb03850-9781-49b3-bf39-5c76a1a97ef1"
+}
+2026-05-26 04:25:31 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key13_LPnHw_St_category_l6_value13_1_LPnHw_612596
+2026-05-26 04:25:31 - create_budget - INFO - [104/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596
+2026-05-26 04:25:31 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:31 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596", "financialYearStartMonth": "4", "resourceGroups": {"costCenters": ["f5fc701d-6199-4aa8-98d5-8e07a30ab08f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 73, "isDisabled": false}], "quarterly": [{"thresholdPercent": 84, "isDisabled": false}], "yearly": [{"thresholdPercent": 86, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:33 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:33 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:33 - create_budget - INFO - [TIME TAKEN] 1.9320 seconds (1931.97 ms)
+2026-05-26 04:25:33 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:33 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "cbadc922-ae22-4a86-844d-3d14ae76983b"
+}
+2026-05-26 04:25:33 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key14_LPnHw_St_category_l6_value14_1_LPnHw_612596
+2026-05-26 04:25:33 - create_budget - INFO - [105/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596
+2026-05-26 04:25:33 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:33 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["908b9cae-dff2-4bf7-b0f9-e3a72ed0390f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 67, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:35 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:35 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:35 - create_budget - INFO - [TIME TAKEN] 2.0291 seconds (2029.14 ms)
+2026-05-26 04:25:35 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:35 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "abb82141-991b-494b-b8dd-181168c05f51"
+}
+2026-05-26 04:25:35 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key15_LPnHw_St_category_l6_value15_1_LPnHw_612596
+2026-05-26 04:25:35 - create_budget - INFO - [106/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596
+2026-05-26 04:25:35 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:35 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596", "financialYearStartMonth": "3", "resourceGroups": {"costCenters": ["a8af58e2-c102-487e-abd8-8477f2b56d79"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 75, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:36 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:36 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:36 - create_budget - INFO - [TIME TAKEN] 0.6305 seconds (630.52 ms)
+2026-05-26 04:25:36 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:36 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "69655462-b949-4bc5-9c0e-265d9ea63d5c"
+}
+2026-05-26 04:25:36 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key16_LPnHw_St_category_l6_value16_1_LPnHw_612596
+2026-05-26 04:25:36 - create_budget - INFO - [107/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596
+2026-05-26 04:25:36 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:36 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596", "financialYearStartMonth": "2", "resourceGroups": {"costCenters": ["e4fe2c02-095e-4ca6-830c-901459030fc5"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 88, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:36 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:36 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:36 - create_budget - INFO - [TIME TAKEN] 0.5639 seconds (563.93 ms)
+2026-05-26 04:25:36 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:36 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "4e443728-f744-46f3-b818-ba8c98d0ba3b"
+}
+2026-05-26 04:25:36 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key17_LPnHw_St_category_l6_value17_1_LPnHw_612596
+2026-05-26 04:25:36 - create_budget - INFO - [108/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596
+2026-05-26 04:25:36 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:36 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596", "financialYearStartMonth": "5", "resourceGroups": {"costCenters": ["ad417b9d-5f65-44ad-898b-b96423bf425c"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 72, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 87, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:37 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:37 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:37 - create_budget - INFO - [TIME TAKEN] 0.4099 seconds (409.95 ms)
+2026-05-26 04:25:37 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:37 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "733c6509-bd35-480b-8464-1de77e290dd6"
+}
+2026-05-26 04:25:37 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key19_LPnHw_St_category_l6_value19_1_LPnHw_612596
+2026-05-26 04:25:37 - create_budget - INFO - [109/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596
+2026-05-26 04:25:37 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:37 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596", "financialYearStartMonth": "3", "resourceGroups": {"costCenters": ["1289b3ae-d2b9-499e-a936-8a63de3b215f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 77, "isDisabled": false}], "yearly": [{"thresholdPercent": 92, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:37 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:37 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:37 - create_budget - INFO - [TIME TAKEN] 0.5094 seconds (509.43 ms)
+2026-05-26 04:25:37 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:37 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "f664f02b-e015-4241-b19f-8c37974b8915"
+}
+2026-05-26 04:25:37 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key1_LPnHw_St_category_l6_value1_1_LPnHw_612596
+2026-05-26 04:25:37 - create_budget - INFO - [110/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596
+2026-05-26 04:25:37 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:37 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596", "financialYearStartMonth": "11", "resourceGroups": {"costCenters": ["c41883fc-184b-4b19-8c1c-89d8e6df2a28"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 85, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:38 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:38 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:38 - create_budget - INFO - [TIME TAKEN] 0.4273 seconds (427.32 ms)
+2026-05-26 04:25:38 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:38 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "1cd371c2-c791-4b32-9139-3816bcb4f217"
+}
+2026-05-26 04:25:38 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key21_LPnHw_St_category_l6_value21_1_LPnHw_612596
+2026-05-26 04:25:38 - create_budget - INFO - [111/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596
+2026-05-26 04:25:38 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:38 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596", "financialYearStartMonth": "3", "resourceGroups": {"costCenters": ["db57dea9-ca82-473f-a52f-17fd29a9ef97"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 69, "isDisabled": false}], "quarterly": [{"thresholdPercent": 78, "isDisabled": false}], "yearly": [{"thresholdPercent": 93, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:38 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:38 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:38 - create_budget - INFO - [TIME TAKEN] 0.5539 seconds (553.94 ms)
+2026-05-26 04:25:38 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:38 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "e0c2a335-7c50-4023-9b17-3bdb6a8484f3"
+}
+2026-05-26 04:25:38 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key18_LPnHw_St_category_l6_value18_1_LPnHw_612596
+2026-05-26 04:25:38 - create_budget - INFO - [112/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596
+2026-05-26 04:25:38 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:38 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596", "financialYearStartMonth": "2", "resourceGroups": {"costCenters": ["f6d447f4-f5f2-4427-accc-ee565305a6c7"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 75, "isDisabled": false}], "yearly": [{"thresholdPercent": 89, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:39 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:39 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:39 - create_budget - INFO - [TIME TAKEN] 0.6122 seconds (612.20 ms)
+2026-05-26 04:25:39 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:39 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "665bf790-8e99-4b62-9f5d-26c5eab4f6b9"
+}
+2026-05-26 04:25:39 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key20_LPnHw_St_category_l6_value20_1_LPnHw_612596
+2026-05-26 04:25:39 - create_budget - INFO - [113/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596
+2026-05-26 04:25:39 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:39 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596", "financialYearStartMonth": "12", "resourceGroups": {"costCenters": ["0c012ee2-9019-4696-9802-b570cebfbb87"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 68, "isDisabled": false}], "quarterly": [{"thresholdPercent": 81, "isDisabled": false}], "yearly": [{"thresholdPercent": 90, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:39 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:39 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:39 - create_budget - INFO - [TIME TAKEN] 0.2966 seconds (296.57 ms)
+2026-05-26 04:25:39 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:39 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "2ef5cde0-f196-4140-aa41-17eabb32b32a"
+}
+2026-05-26 04:25:39 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key23_LPnHw_St_category_l6_value23_1_LPnHw_612596
+2026-05-26 04:25:39 - create_budget - INFO - [114/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596
+2026-05-26 04:25:39 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:39 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596", "financialYearStartMonth": "8", "resourceGroups": {"costCenters": ["f8877267-a9cb-4ab1-94db-dcb54df9bf93"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 74, "isDisabled": false}], "quarterly": [{"thresholdPercent": 83, "isDisabled": false}], "yearly": [{"thresholdPercent": 95, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:40 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:40 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:40 - create_budget - INFO - [TIME TAKEN] 0.4280 seconds (428.04 ms)
+2026-05-26 04:25:40 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:40 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "6bb14404-a7cd-46bc-98cc-1e38aab6fbba"
+}
+2026-05-26 04:25:40 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key24_LPnHw_St_category_l6_value24_1_LPnHw_612596
+2026-05-26 04:25:40 - create_budget - INFO - [115/115] Creating CC budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596
+2026-05-26 04:25:40 - create_budget - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:40 - create_budget - INFO - [REQUEST DATA PAYLOAD] {"budgetName": "budget_1_CC_HomePCAccount_640e4_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596", "financialYearStartMonth": "1", "resourceGroups": {"costCenters": ["83b077b1-e6f0-4139-b5fe-459cbec9b91f"]}, "systemEstimate": true, "budgetAlert": {"configuration": {"monthly": [{"thresholdPercent": 71, "isDisabled": false}], "quarterly": [{"thresholdPercent": 80, "isDisabled": false}], "yearly": [{"thresholdPercent": 91, "isDisabled": false}]}, "recipients": [], "isDisabled": false}}
+2026-05-26 04:25:40 - create_budget - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-53-56-44.ccpnx.com/v1/cg/global/budgets
+2026-05-26 04:25:40 - create_budget - INFO - [STATUS CODE] 200
+2026-05-26 04:25:40 - create_budget - INFO - [TIME TAKEN] 0.3486 seconds (348.65 ms)
+2026-05-26 04:25:40 - create_budget - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-26 04:25:40 - create_budget - INFO - [RESPONSE PAYLOAD]
+{
+  "budgetId": "a54da2ad-2286-4468-aa2c-ab28e65db7b4"
+}
+2026-05-26 04:25:40 - create_budget - INFO - ✓ Created budget: budget_1_CC_HomePCAccount_640e4_St_category_l6_key25_LPnHw_St_category_l6_value25_1_LPnHw_612596
+2026-05-26 04:25:40 - create_budget - INFO - 
+2026-05-26 04:25:40 - create_budget - INFO - ================================================================================
+2026-05-26 04:25:40 - create_budget - INFO - EXECUTION SUMMARY
+2026-05-26 04:25:40 - create_budget - INFO - ================================================================================
+2026-05-26 04:25:40 - create_budget - INFO -   Business Unit budgets created: 0
+2026-05-26 04:25:40 - create_budget - INFO -   Business Unit budgets failed:  30
+2026-05-26 04:25:40 - create_budget - INFO -   Cost Center budgets created:   85
+2026-05-26 04:25:40 - create_budget - INFO -   Cost Center budgets failed:    0
+2026-05-26 04:25:40 - create_budget - INFO - ----------------------------------------
+2026-05-26 04:25:40 - create_budget - INFO -   Total budgets created:         85
+2026-05-26 04:25:40 - create_budget - INFO -   Total budgets failed:          30
+2026-05-26 04:25:40 - create_budget - INFO -   Success rate:                  85/115 (73.9%)
+2026-05-26 04:25:40 - create_budget - INFO -   Total execution time:          76.71s (1.28 min)
+2026-05-26 04:25:40 - create_budget - INFO - ================================================================================
+2026-05-26 04:25:40 - create_budget - INFO - 
+2026-05-26 04:25:40 - create_budget - INFO - ================================================================================================================================================================
+2026-05-26 04:25:40 - create_budget - INFO - API METRICS CONSOLIDATED REPORT
+2026-05-26 04:25:40 - create_budget - INFO - ================================================================================================================================================================
+2026-05-26 04:25:40 - create_budget - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-05-26 04:25:40 - create_budget - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-26 04:25:40 - create_budget - INFO - POST     | /v1/cg/global/budgets                              |     115 |     30 |     175.01 |    2047.91 |    1100.62 |    1534.85 |    1931.97
+2026-05-26 04:25:40 - create_budget - INFO - GET      | /v1/cg/global/budgets/listResourceGroups           |       1 |      - |    1005.03 |    1005.03 |    1005.03 |    1005.03 |    1005.03
+2026-05-26 04:25:40 - create_budget - INFO - GET      | /v1/cg/users/list                                  |       1 |      - |     507.54 |     507.54 |     507.54 |     507.54 |     507.54
+2026-05-26 04:25:40 - create_budget - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-26 04:25:40 - create_budget - INFO - Total API Calls: 117 | Unique Endpoints: 3 | Total Failures (non-200/202): 30 | Exceptions: 0
+2026-05-26 04:25:40 - create_budget - INFO - ================================================================================================================================================================
+2026-05-26 04:25:40 - create_budget - INFO - 
+2026-05-26 04:25:40 - create_budget - INFO - FAILED REQUESTS (non-200/202):
+2026-05-26 04:25:40 - create_budget - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-26 04:25:40 - create_budget - INFO - Method   | Endpoint                                           |   Failures | Status Codes                  
+2026-05-26 04:25:40 - create_budget - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-26 04:25:40 - create_budget - INFO - POST     | /v1/cg/global/budgets                              |         30 | 500: 30                       
+2026-05-26 04:25:40 - create_budget - INFO - ====================================================================================================
+2026-05-26 04:25:40 - create_budget - INFO - 
+2026-05-26 04:25:40 - create_budget - INFO - STATUS CODE BREAKDOWN:
+2026-05-26 04:25:40 - create_budget - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-26 04:25:40 - create_budget - INFO - POST   /v1/cg/global/budgets                      | 200: 85, 500: 30
+2026-05-26 04:25:40 - create_budget - INFO - GET    /v1/cg/global/budgets/listResourceGroups   | 200: 1
+2026-05-26 04:25:40 - create_budget - INFO - GET    /v1/cg/users/list                          | 200: 1
+2026-05-26 04:25:40 - create_budget - INFO - ================================================================================================================================================================

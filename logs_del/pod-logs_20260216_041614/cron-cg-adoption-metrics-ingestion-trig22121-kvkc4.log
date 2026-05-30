@@ -1,0 +1,23 @@
+========================================
+Pod: cron-cg-adoption-metrics-ingestion-trig22121-kvkc4
+Namespace: ncm-cg
+Status: Succeeded
+Containers: cron-cg-adoption-metrics-ingestion
+Collected at: Mon Feb 16 04:16:31 GMT 2026
+========================================
+
+{"level":"info","ts":1770996105.611648,"caller":"idf/idf.go:26","msg":"Initializing IDF connection","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996105.7076535,"caller":"idf/idf.go:36","msg":"Initialized IDF connection","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.5155215,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_active_cost_centers","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.807345,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_active_business_units","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.8118591,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_active_budgets","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.8158202,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_active_pcs","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.8212197,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_active_pes","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.8254213,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_currencies_used","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.8291245,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_chargeback_uploads","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.8326137,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_scheduled_reports","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.90822,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_shared_reports","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.9128695,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_downloaded_reports","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.917329,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_nx_cost_config_updates","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.922068,"caller":"idf/idf_service.go:58","msg":"Inserted CG adoption metric num_active_rate_cards","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}
+{"level":"info","ts":1770996106.9221144,"caller":"adoption_metrics_ingestion/adoption_metrics_ingestion.go:87","msg":"Successfully ingested all adoption metrics","hostname":"cron-cg-adoption-metrics-ingestion-trig22121-kvkc4","service":"platform-ingestion-service"}

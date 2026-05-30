@@ -1,0 +1,94 @@
+{
+  "marketState": [
+    {
+      "market": "Capital Market",
+      "marketStatus": "Close",
+      "tradeDate": "17-Apr-2025 15:30",
+      "index": "NIFTY 50",
+      "last": 23851.65,
+      "variation": 414.4500000000007,
+      "percentChange": 1.77,
+      "marketStatusMessage": "Market is Closed"
+    },
+    {
+      "market": "Currency",
+      "marketStatus": "Close",
+      "tradeDate": "17-Apr-2025",
+      "index": "",
+      "last": "",
+      "variation": "",
+      "percentChange": "",
+      "marketStatusMessage": "Market is Closed"
+    },
+    {
+      "market": "Commodity",
+      "marketStatus": "Close",
+      "tradeDate": "17-Apr-2025",
+      "index": "",
+      "last": "",
+      "variation": "",
+      "percentChange": "",
+      "marketStatusMessage": "Market is Closed"
+    },
+    {
+      "market": "Debt",
+      "marketStatus": "Close",
+      "tradeDate": "17-Apr-2025",
+      "index": "",
+      "last": "",
+      "variation": "",
+      "percentChange": "",
+      "marketStatusMessage": "Market is Closed"
+    },
+    {
+      "market": "currencyfuture",
+      "marketStatus": "Close",
+      "tradeDate": "17-Apr-2025",
+      "index": "",
+      "last": "85.4400",
+      "variation": "",
+      "percentChange": "",
+      "marketStatusMessage": "Market is Closed",
+      "expiryDate": "28-Apr-2025",
+      "underlying": "USDINR",
+      "updated_time": "17-Apr-2025 17:00",
+      "tradeDateFormatted": "17-Apr-2025 17:00",
+      "slickclass": "slick-item"
+    }
+  ],
+  "marketcap": {
+    "timeStamp": "17-Apr-2025",
+    "marketCapinTRDollars": 4.87,
+    "marketCapinLACCRRupees": 417.0428081574884,
+    "marketCapinCRRupees": 41704280.82,
+    "marketCapinCRRupeesFormatted": "41,704,280.82",
+    "marketCapinLACCRRupeesFormatted": "417.04",
+    "underlying": "Market Cap"
+  },
+  "indicativenifty50": {
+    "dateTime": "17-Apr-2025 15:30",
+    "indicativeTime": null,
+    "indexName": "NIFTY 50",
+    "indexLast": null,
+    "indexPercChange": null,
+    "indexTimeVal": null,
+    "closingValue": 23851.65,
+    "finalClosingValue": 23851.65,
+    "change": 414.46,
+    "perChange": 1.77,
+    "status": "CLOSE"
+  },
+  "giftnifty": {
+    "INSTRUMENTTYPE": "FUTIDX",
+    "SYMBOL": "NIFTY",
+    "EXPIRYDATE": "24-Apr-2025",
+    "OPTIONTYPE": "-",
+    "STRIKEPRICE": "-",
+    "LASTPRICE": 23900,
+    "DAYCHANGE": "-0.50",
+    "PERCHANGE": "            0.00",
+    "CONTRACTSTRADED": 3882,
+    "TIMESTMP": "19-Apr-2025 02:48",
+    "id": "0/NIFTYFUTIDX24-Apr-2025--"
+  }
+}

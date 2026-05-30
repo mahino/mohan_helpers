@@ -1,0 +1,43 @@
+{
+    "ncmVersionTo": "2.1.152",
+    "ncmVersionFrom": "2.1.68",
+    "overallStatus": "running",
+    "stages": {
+        "upgrade_chart_ncm-base": {
+            "name": "upgrade_chart_ncm-base",
+            "taskUuid": "26cab954-05c0-42be-4f78-58b28d552a17",
+            "status": "success",
+            "version": "2.1.113"
+        },
+        "upgrade_chart_domain-manager-umbrella": {
+            "name": "upgrade_chart_domain-manager-umbrella",
+            "taskUuid": "384975f4-0cea-4c23-7506-57758ee3991e",
+            "status": "running",
+            "version": "2.1.21"
+        },
+        "upgrade_chart_ncm-common": {
+            "name": "upgrade_chart_ncm-common",
+            "taskUuid": "",
+            "status": "queue",
+            "version": "2.1.145"
+        },
+        "upgrade_chart_aiops": {
+            "name": "upgrade_chart_aiops",
+            "taskUuid": "",
+            "status": "queue",
+            "version": "2.1.60"
+        },
+        "upgrade_chart_cg-umbrella-chart": {
+            "name": "upgrade_chart_cg-umbrella-chart",
+            "taskUuid": "",
+            "status": "queue",
+            "version": "2.1.22"
+        },
+        "upgrade_chart_ncm-self-service": {
+            "name": "upgrade_chart_ncm-self-service",
+            "taskUuid": "",
+            "status": "queue",
+            "version": "2.1.51"
+        }
+    }
+}

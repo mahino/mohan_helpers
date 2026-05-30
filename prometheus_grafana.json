@@ -1,0 +1,1293 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 1,
+  "id": 24,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 18,
+      "panels": [],
+      "title": "calm_IDF",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 15,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": false,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(entity_stats{metric=\"mem\"}) by (entity_type)",
+          "legendFormat": "{{entity_type}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory (MB)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "mbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 16,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": false,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "sort": "min",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(entity_stats{metric=\"entities\"}) by (entity_type)",
+          "legendFormat": "{{entity_type}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "#No.of entities",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "id": 20,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "idf_res_mem",
+          "legendFormat": "{{__name__}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "idf_resident_memory",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "decmbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 11,
+      "panels": [],
+      "title": "epsilon",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "id": 12,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 0.5,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "epsilon_engine:vajra_0_cpu_usage_percent",
+          "legendFormat": "vajra_0",
+          "refId": "A"
+        },
+        {
+          "expr": "home_epsilon_bin_arjun___worker_id_0_cpu_usage_percent",
+          "legendFormat": "arjun_0",
+          "refId": "B"
+        },
+        {
+          "expr": "home_epsilon_bin_arjun___worker_id_1_cpu_usage_percent",
+          "legendFormat": "arjun1",
+          "refId": "C"
+        },
+        {
+          "expr": "home_epsilon_bin_durga___worker_id_0_cpu_usage_percent",
+          "legendFormat": "durga_0",
+          "refId": "D"
+        },
+        {
+          "expr": "home_epsilon_bin_durga___worker_id_1_cpu_usage_percent",
+          "legendFormat": "durga_1",
+          "refId": "E"
+        },
+        {
+          "expr": "home_epsilon_bin_indra___worker_id_0_cpu_usage_percent",
+          "legendFormat": "indra_0",
+          "refId": "F"
+        },
+        {
+          "expr": "home_epsilon_bin_indra___worker_id_1_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "indra_1",
+          "refId": "G"
+        },
+        {
+          "expr": "home_epsilon_bin_jove_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "jove",
+          "refId": "H"
+        },
+        {
+          "expr": "home_epsilon_bin_karan___worker_id_0_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "karan_0",
+          "refId": "I"
+        },
+        {
+          "expr": "home_epsilon_bin_karan___worker_id_0_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "karan_1",
+          "refId": "J"
+        },
+        {
+          "expr": "home_epsilon_bin_narad_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "narad",
+          "refId": "Q"
+        },
+        {
+          "expr": "home_epsilon_bin_zaffi_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "zaffi",
+          "refId": "K"
+        },
+        {
+          "expr": "home_epsilon_conf_modules_proxy_service_ini_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "proxy_service",
+          "refId": "L"
+        },
+        {
+          "expr": "elastic_search_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "elastic_search",
+          "refId": "M"
+        },
+        {
+          "expr": "usr_bin_redis_serve_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "redis",
+          "refId": "N"
+        },
+        {
+          "expr": "var_lib_pgsql_11_data_postgresql_conf_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "postgres",
+          "refId": "P"
+        },
+        {
+          "expr": "sum(proxy_child_stats{metric=\"cpu_usage\"}) by (pid)",
+          "legendFormat": "proxy_child_{{child}}",
+          "refId": "O"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 4,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 0.5,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "vajra_0_memory_mb",
+          "legendFormat": "vajra_0",
+          "refId": "A"
+        },
+        {
+          "expr": "home_epsilon_bin_arjun___worker_id_0_memory_mb",
+          "legendFormat": "arjun_0",
+          "refId": "B"
+        },
+        {
+          "expr": "home_epsilon_bin_arjun___worker_id_1_memory_mb",
+          "legendFormat": "arjun1",
+          "refId": "C"
+        },
+        {
+          "expr": "home_epsilon_bin_durga___worker_id_0_memory_mb",
+          "legendFormat": "durga_0",
+          "refId": "D"
+        },
+        {
+          "expr": "home_epsilon_bin_durga___worker_id_1_memory_mb",
+          "legendFormat": "durga_1",
+          "refId": "E"
+        },
+        {
+          "expr": "home_epsilon_bin_indra___worker_id_0_memory_mb",
+          "legendFormat": "indra_0",
+          "refId": "F"
+        },
+        {
+          "expr": "home_epsilon_bin_indra___worker_id_1_memory_mb",
+          "hide": false,
+          "legendFormat": "indra_1",
+          "refId": "G"
+        },
+        {
+          "expr": "home_epsilon_bin_jove_memory_mb",
+          "hide": false,
+          "legendFormat": "jove",
+          "refId": "H"
+        },
+        {
+          "expr": "home_epsilon_bin_karan___worker_id_0_memory_mb",
+          "hide": false,
+          "legendFormat": "karan_0",
+          "refId": "I"
+        },
+        {
+          "expr": "home_epsilon_bin_karan___worker_id_1_memory_mb",
+          "hide": false,
+          "legendFormat": "karan_1",
+          "refId": "J"
+        },
+        {
+          "expr": "home_epsilon_bin_narad_memory_mb",
+          "hide": false,
+          "legendFormat": "narad",
+          "refId": "Q"
+        },
+        {
+          "expr": "home_epsilon_bin_zaffi_memory_mb",
+          "hide": false,
+          "legendFormat": "zaffi",
+          "refId": "K"
+        },
+        {
+          "expr": "home_epsilon_conf_modules_proxy_service_ini_memory_mb",
+          "hide": false,
+          "legendFormat": "proxy_service",
+          "refId": "L"
+        },
+        {
+          "expr": "elastic_search_memory_mb",
+          "hide": false,
+          "legendFormat": "elastic_search",
+          "refId": "M"
+        },
+        {
+          "expr": "usr_bin_redis_serve_memory_mb",
+          "hide": false,
+          "legendFormat": "redis",
+          "refId": "N"
+        },
+        {
+          "expr": "usr_bin_redis_serve_memory_mb",
+          "hide": false,
+          "legendFormat": "redis",
+          "refId": "O"
+        },
+        {
+          "expr": "var_lib_pgsql_11_data_postgresql_conf_memory_mb",
+          "hide": false,
+          "legendFormat": "postgres",
+          "refId": "P"
+        },
+        {
+          "expr": "sum(proxy_child_stats{metric=\"res_mem\"}) by (pid)",
+          "legendFormat": "proxy_child_{{pid}}",
+          "refId": "R"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "MEM (MB)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "deckbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 36
+      },
+      "id": 13,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 0.5,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "epsilon_engine:vajra_0_memory_usage_percent",
+          "legendFormat": "vajra_0",
+          "refId": "A"
+        },
+        {
+          "expr": "home_epsilon_bin_arjun___worker_id_0_memory_usage_percent",
+          "legendFormat": "arjun_0",
+          "refId": "B"
+        },
+        {
+          "expr": "home_epsilon_bin_arjun___worker_id_1_memory_usage_percent",
+          "legendFormat": "arjun1",
+          "refId": "C"
+        },
+        {
+          "expr": "home_epsilon_bin_durga___worker_id_0_memory_usage_percent",
+          "legendFormat": "durga_0",
+          "refId": "D"
+        },
+        {
+          "expr": "home_epsilon_bin_durga___worker_id_1_memory_usage_percent",
+          "legendFormat": "durga_1",
+          "refId": "E"
+        },
+        {
+          "expr": "home_epsilon_bin_indra___worker_id_0_memory_usage_percent",
+          "legendFormat": "indra_0",
+          "refId": "F"
+        },
+        {
+          "expr": "home_epsilon_bin_indra___worker_id_1_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "indra_1",
+          "refId": "G"
+        },
+        {
+          "expr": "home_epsilon_bin_jove_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "jove",
+          "refId": "H"
+        },
+        {
+          "expr": "home_epsilon_bin_karan___worker_id_0_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "karan_0",
+          "refId": "I"
+        },
+        {
+          "expr": "home_epsilon_bin_karan___worker_id_1_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "karan_1",
+          "refId": "J"
+        },
+        {
+          "expr": "home_epsilon_bin_narad_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "narad",
+          "refId": "Q"
+        },
+        {
+          "expr": "home_epsilon_bin_zaffi_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "zaffi",
+          "refId": "K"
+        },
+        {
+          "expr": "home_epsilon_conf_modules_proxy_service_ini_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "proxy_service",
+          "refId": "L"
+        },
+        {
+          "expr": "elastic_search_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "elastic_search",
+          "refId": "M"
+        },
+        {
+          "expr": "usr_bin_redis_serve_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "redis",
+          "refId": "N"
+        },
+        {
+          "expr": "var_lib_pgsql_11_data_postgresql_conf_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "postgres",
+          "refId": "P"
+        },
+        {
+          "expr": "sum(proxy_child_stats{metric=\"mem_usage\"}) by (pid)",
+          "legendFormat": "proxy_child_{{pid}}",
+          "refId": "O"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "MEM %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 44
+      },
+      "id": 6,
+      "panels": [],
+      "title": "SelfService",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 45
+      },
+      "id": 2,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 0.5,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "hercules_app_pyc___process_num_0_cpu_usage_percent",
+          "legendFormat": "hercules_0",
+          "refId": "A"
+        },
+        {
+          "expr": "hercules_app_pyc___process_num_1_cpu_usage_percent",
+          "legendFormat": "hercules_1",
+          "refId": "B"
+        },
+        {
+          "expr": "_home_calm_bin_algalon_cpu_usage_percent",
+          "legendFormat": "algalon",
+          "refId": "C"
+        },
+        {
+          "expr": "_home_calm_bin_eos_cpu_usage_percent",
+          "legendFormat": "eos",
+          "refId": "D"
+        },
+        {
+          "expr": "_home_calm_bin_goiris_cpu_usage_percent",
+          "legendFormat": "goiris",
+          "refId": "E"
+        },
+        {
+          "expr": "_home_calm_bin_helios_cpu_usage_percent",
+          "legendFormat": "helios",
+          "refId": "F"
+        },
+        {
+          "expr": "_home_calm_bin_jove_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "jove",
+          "refId": "G"
+        },
+        {
+          "expr": "calm_server_styx_cpu_usage_percent",
+          "hide": false,
+          "legendFormat": "styx",
+          "refId": "H"
+        },
+        {
+          "expr": "sum(styx_child_stats{metric=\"cpu_usage\"}) by (pid)",
+          "legendFormat": "styx_child_{{pid}}",
+          "refId": "I"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 5,
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 54
+      },
+      "id": 9,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 0.5,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "hercules_app_pyc___process_num_0_memory_mb",
+          "legendFormat": "hercules_0",
+          "refId": "A"
+        },
+        {
+          "expr": "hercules_app_pyc___process_num_1_memory_mb",
+          "legendFormat": "hercules_1",
+          "refId": "B"
+        },
+        {
+          "expr": "_home_calm_bin_algalon_memory_mb",
+          "legendFormat": "algalon",
+          "refId": "C"
+        },
+        {
+          "expr": "_home_calm_bin_eos_memory_mb",
+          "legendFormat": "eos",
+          "refId": "D"
+        },
+        {
+          "expr": "_home_calm_bin_goiris_memory_mb",
+          "legendFormat": "goiris",
+          "refId": "E"
+        },
+        {
+          "expr": "_home_calm_bin_helios_memory_mb",
+          "legendFormat": "helios",
+          "refId": "F"
+        },
+        {
+          "expr": "_home_calm_bin_jove_memory_mb",
+          "hide": false,
+          "legendFormat": "jove",
+          "refId": "G"
+        },
+        {
+          "expr": "calm_server_styx_memory_mb",
+          "hide": false,
+          "legendFormat": "styx",
+          "refId": "H"
+        },
+        {
+          "expr": "sum(styx_child_stats{metric=\"res_mem\"}) by (pid)",
+          "legendFormat": "styx_{{pid}}",
+          "refId": "I"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "MEM (MB)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "deckbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "prometheus",
+      "fill": 1,
+      "fillGradient": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 63
+      },
+      "id": 8,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 0.5,
+      "points": true,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "hercules_app_pyc___process_num_0_memory_usage_percent",
+          "legendFormat": "hercules_0",
+          "refId": "A"
+        },
+        {
+          "expr": "hercules_app_pyc___process_num_1_memory_usage_percent",
+          "legendFormat": "hercules_1",
+          "refId": "B"
+        },
+        {
+          "expr": "_home_calm_bin_algalon_memory_usage_percent",
+          "legendFormat": "algalon",
+          "refId": "C"
+        },
+        {
+          "expr": "_home_calm_bin_eos_memory_usage_percent",
+          "legendFormat": "eos",
+          "refId": "D"
+        },
+        {
+          "expr": "_home_calm_bin_goiris_memory_usage_percent",
+          "legendFormat": "goiris",
+          "refId": "E"
+        },
+        {
+          "expr": "_home_calm_bin_helios_memory_usage_percent",
+          "legendFormat": "helios",
+          "refId": "F"
+        },
+        {
+          "expr": "_home_calm_bin_jove_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "jove",
+          "refId": "G"
+        },
+        {
+          "expr": "calm_server_styx_memory_usage_percent",
+          "hide": false,
+          "legendFormat": "styx",
+          "refId": "H"
+        },
+        {
+          "expr": "sum(styx_child_stats{metric=\"mem_usgae\"}) by (pid)",
+          "legendFormat": "styx_child_{{pid}}",
+          "refId": "I"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "MEM %",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 20,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "TESTING_DASHBOARD",
+  "uid": "TK-hXfeSz",
+  "version": 8
+}

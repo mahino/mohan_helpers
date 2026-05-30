@@ -1,0 +1,134 @@
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - Script: delete_udm
+2026-05-20 09:57:43 - delete_udm - INFO - Log file: /home/mohan.as1/mohan_helpers/cost_governnance/logs/delete_udm_20260520_095743.log
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - Starting rate card deletion
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - Configuration:
+2026-05-20 09:57:43 - delete_udm - INFO -   - Base URL: https://ncm.services.nconprem-10-122-27-229.ccpnx.com
+2026-05-20 09:57:43 - delete_udm - INFO -   - Delete test configs only: True
+2026-05-20 09:57:43 - delete_udm - INFO -   - Test config pattern: 'test_rate_card'
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - Fetching rate cards...
+2026-05-20 09:57:43 - delete_udm - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards/actions/get-rate-cards?limit=100&offset=0
+2026-05-20 09:57:43 - delete_udm - INFO - [REQUEST DATA PAYLOAD] {"filters": []}
+2026-05-20 09:57:43 - delete_udm - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-122-27-229.ccpnx.com/v1/cg/config/rate-cards/actions/get-rate-cards?limit=100&offset=0
+2026-05-20 09:57:43 - delete_udm - INFO - [STATUS CODE] 200
+2026-05-20 09:57:43 - delete_udm - INFO - [TIME TAKEN] 0.7513 seconds (751.27 ms)
+2026-05-20 09:57:43 - delete_udm - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-05-20 09:57:43 - delete_udm - INFO - [RESPONSE PAYLOAD]
+{
+  "totalCount": 47,
+  "data": [
+    {
+      "rateCardId": "9c0a12a7-a509-4741-92cf-b580088556da",
+      "rateCardName": "test_rc_dEeb_12",
+      "lastModifiedBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "lastModifiedAt": 1779066433,
+      "createdBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "createdAt": 1779065612,
+      "meteringRates": {
+        "vm": {
+          "vRam": {
+            "rate": 1,
+            "unit": "HOUR"
+          },
+          "vStorage": {
+            "rate": 1,
+            "unit": "GIB"
+          },
+          "vCpu": {
+            "rate": 14,
+            "unit": "HOUR"
+          },
+          "customConfigs": []
+        },
+        "vmSnapshot": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        },
+        "objects": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        },
+        "files": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        }
+      },
+      "resources": [
+        {
+          "categories": [],
+          "clusters": []
+        }
+      ],
+      "isBaseRateCard": false
+    },
+    {
+      "rateCardId": "a0f5ce86-ef3d-47a5-ac59-b63dfba8a21d",
+      "rateCardName": "test_rc_dEeb_13",
+      "lastModifiedBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "lastModifiedAt": 1779066433,
+      "createdBy": {
+        "name": "admin",
+        "email": ""
+      },
+      "createdAt": 1779065613,
+      "meteringRates": {
+        "vm": {
+          "vRam": {
+            "rate": 1,
+            "unit": "HOUR"
+          },
+          "vStorage": {
+            "rate": 1,
+            "unit": "GIB"
+          },
+          "vCpu": {
+            "rate": 23,
+            "unit": "HOUR"
+          },
+          "customConfigs": []
+        },
+        "vmSnapshot": {
+          "vStorage": {
+            "rate": 0,
+            "unit": "GIB"
+          }
+        },
+        "objects":
+... (truncated)
+2026-05-20 09:57:43 - delete_udm - INFO - Retrieved 47 total rate cards
+2026-05-20 09:57:43 - delete_udm - INFO - Filtered to 0 test configurations
+2026-05-20 09:57:43 - delete_udm - INFO - No rate cards match deletion criteria
+2026-05-20 09:57:43 - delete_udm - INFO - 
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - API METRICS CONSOLIDATED REPORT
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-05-20 09:57:43 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 09:57:43 - delete_udm - INFO - POST     | /v1/cg/config/rate-cards/actions/get-rate-cards    |       1 |      - |     751.27 |     751.27 |     751.27 |     751.27 |     751.27
+2026-05-20 09:57:43 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-05-20 09:57:43 - delete_udm - INFO - Total API Calls: 1 | Unique Endpoints: 1 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================================================================================================
+2026-05-20 09:57:43 - delete_udm - INFO - 
+2026-05-20 09:57:43 - delete_udm - INFO - STATUS CODE BREAKDOWN:
+2026-05-20 09:57:43 - delete_udm - INFO - ----------------------------------------------------------------------------------------------------
+2026-05-20 09:57:43 - delete_udm - INFO - POST   /v1/cg/config/rate-cards/actions/get-rat.. | 200: 1
+2026-05-20 09:57:43 - delete_udm - INFO - ================================================================================================================================================================

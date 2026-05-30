@@ -1,0 +1,206 @@
+========================================
+Pod: common-cg-db-migrations-20260207094636-dbz6n
+Namespace: ncm-cg
+Status: Succeeded
+Containers: nx-db-migrations cost-db-migrations multicloud-metadata-db-migrations reports-db-migrations
+Collected at: Mon Feb 16 04:16:19 GMT 2026
+========================================
+
+Starting migrations service
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+[2026-02-07T09:51:45.186Z] INFO main Applications:53 [] Starting Applications v0.0.1-SNAPSHOT using Java 21.0.10 with PID 1 (/opt/beam/cg-common-cg-db-migrations-0.0.1-SNAPSHOT.jar started by root in /)
+[2026-02-07T09:51:45.272Z] INFO main Applications:658 [] The following 1 profile is active: "default"
+[2026-02-07T09:51:49.178Z] INFO main RepositoryConfigurationDelegate:145 [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-02-07T09:51:49.288Z] INFO main RepositoryConfigurationDelegate:213 [] Finished Spring Data repository scanning in 94 ms. Found 0 JPA repository interfaces.
+[2026-02-07T09:51:55.685Z] INFO main VersionPrinter:37 [] Flyway Community Edition 9.22.3 by Redgate
+[2026-02-07T09:51:55.685Z] INFO main VersionPrinter:37 [] See release notes here: https://rd.gt/416ObMi
+[2026-02-07T09:51:55.686Z] INFO main VersionPrinter:37 [] 
+[2026-02-07T09:51:56.087Z] INFO main FlywayExecutor:37 [] Database: jdbc:postgresql://cg-pg-rw.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:5432/cg_nx (PostgreSQL 16.11)
+[2026-02-07T09:51:56.179Z] WARN main Database:41 [] Flyway upgrade recommended: PostgreSQL 16.11 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+[2026-02-07T09:51:56.476Z] INFO main JdbcTableSchemaHistory:37 [] Schema history table "public"."flyway_schema_history" does not exist yet
+[2026-02-07T09:51:56.483Z] INFO main DbValidate:37 [] Successfully validated 14 migrations (execution time 00:00.209s)
+[2026-02-07T09:51:56.578Z] INFO main JdbcTableSchemaHistory:37 [] Creating Schema History table "public"."flyway_schema_history" ...
+[2026-02-07T09:51:57.073Z] INFO main DbMigrate:37 [] Current version of schema "public": << Empty Schema >>
+[2026-02-07T09:51:57.172Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.1 - create types"
+[2026-02-07T09:51:57.287Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.2 - create iv license sequences"
+[2026-02-07T09:51:57.392Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.3 - create iv license casts"
+[2026-02-07T09:51:57.890Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.4 - create tables and indexes"
+[2026-02-07T09:51:59.083Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.5 - insert service categories"
+[2026-02-07T09:51:59.383Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.6 - insert per metric prices"
+[2026-02-07T09:51:59.786Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.7 - insert per node prices"
+[2026-02-07T09:52:00.404Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.8 - insert nutanix benchmark model"
+[2026-02-07T09:52:00.481Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.9 - insert nutanix backfill job run status"
+[2026-02-07T09:52:00.579Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.10 - update cost type enum for thirdParty"
+[2026-02-07T09:52:00.594Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.11 - update license type values"
+[2026-02-07T09:52:00.700Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.12 - unique constraint on rate card name"
+[2026-02-07T09:52:00.816Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Starting migration 1_12: Backup + Unique Constraint...
+[2026-02-07T09:52:00.870Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Creating backup table: rate_card_backup_1_12_1770457921
+[2026-02-07T09:52:00.870Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Backup table rate_card_backup_1_12_1770457921 created successfully
+[2026-02-07T09:52:00.871Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Found 0 rate cards that need to be deactivated due to duplicate base rate cards.
+[2026-02-07T09:52:00.871Z] INFO main DefaultSqlScriptExecutor:37 [] DB: SUCCESS: No duplicate base rate cards remain. Migration completed successfully.
+[2026-02-07T09:52:00.871Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Duplicate base rate cards have been deactivated, keeping only the latest created ones.
+[2026-02-07T09:52:00.871Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Completed duplicate resolution after 1 iterations
+[2026-02-07T09:52:00.872Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Updated rate card names with sequential numbering
+[2026-02-07T09:52:00.872Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Successfully completed migration 1_12: Backup + Unique Constraint
+[2026-02-07T09:52:00.872Z] INFO main DefaultSqlScriptExecutor:37 [] DB: Backup table name: rate_card_backup_1_12_1770457921
+[2026-02-07T09:52:00.890Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.13 - update license type values ROBO VDI"
+[2026-02-07T09:52:00.991Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.14 - insert nus per metric prices"
+[2026-02-07T09:52:01.088Z] INFO main DbMigrate:37 [] Successfully applied 14 migrations to schema "public", now at version v1.14 (execution time 00:02.880s)
+[2026-02-07T09:52:01.584Z] INFO main HikariDataSource:109 [] HikariPool-1 - Starting...
+[2026-02-07T09:52:01.985Z] INFO main HikariPool:580 [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2f20f7ad
+[2026-02-07T09:52:01.988Z] INFO main HikariDataSource:122 [] HikariPool-1 - Start completed.
+[2026-02-07T09:52:02.570Z] INFO main LogHelper:31 [] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-02-07T09:52:03.282Z] INFO main Version:44 [] HHH000412: Hibernate ORM core version 6.6.33.Final
+[2026-02-07T09:52:03.687Z] INFO main RegionFactoryInitiator:50 [] HHH000026: Second-level cache disabled
+[2026-02-07T09:52:05.490Z] WARN main deprecation:153 [] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-02-07T09:52:05.671Z] INFO main pooling:163 [] HHH10001005: Database info:\n	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']\n	Database driver: undefined/unknown\n	Database version: 16.11\n	Autocommit mode: undefined/unknown\n	Isolation level: undefined/unknown\n	Minimum pool size: undefined/unknown\n	Maximum pool size: undefined/unknown
+[2026-02-07T09:52:07.482Z] INFO main SpringPersistenceUnitInfo:87 [] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-02-07T09:52:10.190Z] INFO main JtaPlatformInitiator:59 [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-02-07T09:52:10.275Z] INFO main LocalContainerEntityManagerFactoryBean:447 [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:11.581Z] INFO main Applications:59 [] Started Applications in 29.888 seconds (process running for 37.305)
+[2026-02-07T09:52:11.587Z] INFO main LocalContainerEntityManagerFactoryBean:660 [] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:11.589Z] INFO main HikariDataSource:349 [] HikariPool-1 - Shutdown initiated...
+[2026-02-07T09:52:11.676Z] INFO main HikariDataSource:351 [] HikariPool-1 - Shutdown completed.
+Starting migrations service
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+[2026-02-07T09:51:45.982Z] INFO main Applications:53 [] Starting Applications v0.0.1-SNAPSHOT using Java 21.0.10 with PID 1 (/opt/beam/cg-common-cg-db-migrations-0.0.1-SNAPSHOT.jar started by root in /)
+[2026-02-07T09:51:45.988Z] INFO main Applications:658 [] The following 1 profile is active: "default"
+[2026-02-07T09:51:49.892Z] INFO main RepositoryConfigurationDelegate:145 [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-02-07T09:51:50.079Z] INFO main RepositoryConfigurationDelegate:213 [] Finished Spring Data repository scanning in 93 ms. Found 0 JPA repository interfaces.
+[2026-02-07T09:51:56.376Z] INFO main VersionPrinter:37 [] Flyway Community Edition 9.22.3 by Redgate
+[2026-02-07T09:51:56.377Z] INFO main VersionPrinter:37 [] See release notes here: https://rd.gt/416ObMi
+[2026-02-07T09:51:56.378Z] INFO main VersionPrinter:37 [] 
+[2026-02-07T09:51:56.786Z] INFO main FlywayExecutor:37 [] Database: jdbc:postgresql://cg-pg-rw.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:5432/cg_cost (PostgreSQL 16.11)
+[2026-02-07T09:51:56.878Z] WARN main Database:41 [] Flyway upgrade recommended: PostgreSQL 16.11 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+[2026-02-07T09:51:57.082Z] INFO main JdbcTableSchemaHistory:37 [] Schema history table "public"."flyway_schema_history" does not exist yet
+[2026-02-07T09:51:57.087Z] INFO main DbValidate:37 [] Successfully validated 7 migrations (execution time 00:00.115s)
+[2026-02-07T09:51:57.272Z] INFO main JdbcTableSchemaHistory:37 [] Creating Schema History table "public"."flyway_schema_history" ...
+[2026-02-07T09:51:57.589Z] INFO main DbMigrate:37 [] Current version of schema "public": << Empty Schema >>
+[2026-02-07T09:51:57.685Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.1 - create sequences"
+[2026-02-07T09:51:57.984Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.2 - create types"
+[2026-02-07T09:51:58.672Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.3 - create tables"
+[2026-02-07T09:51:59.978Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.4 - create indexes"
+[2026-02-07T09:52:00.375Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.5 - create functions"
+[2026-02-07T09:52:00.381Z] WARN main DefaultSqlScriptExecutor:41 [] DB: extension "uuid-ossp" already exists, skipping (SQL State: 42710 - Error Code: 0)
+[2026-02-07T09:52:00.571Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.6 - create views"
+[2026-02-07T09:52:00.682Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.7 - insert currency data"
+[2026-02-07T09:52:00.779Z] INFO main DbMigrate:37 [] Successfully applied 7 migrations to schema "public", now at version v1.7 (execution time 00:01.984s)
+[2026-02-07T09:52:01.274Z] INFO main HikariDataSource:109 [] HikariPool-1 - Starting...
+[2026-02-07T09:52:01.575Z] INFO main HikariPool:580 [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27fe059d
+[2026-02-07T09:52:01.578Z] INFO main HikariDataSource:122 [] HikariPool-1 - Start completed.
+[2026-02-07T09:52:02.079Z] INFO main LogHelper:31 [] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-02-07T09:52:02.879Z] INFO main Version:44 [] HHH000412: Hibernate ORM core version 6.6.33.Final
+[2026-02-07T09:52:03.284Z] INFO main RegionFactoryInitiator:50 [] HHH000026: Second-level cache disabled
+[2026-02-07T09:52:04.881Z] WARN main deprecation:153 [] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-02-07T09:52:04.991Z] INFO main pooling:163 [] HHH10001005: Database info:\n	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']\n	Database driver: undefined/unknown\n	Database version: 16.11\n	Autocommit mode: undefined/unknown\n	Isolation level: undefined/unknown\n	Minimum pool size: undefined/unknown\n	Maximum pool size: undefined/unknown
+[2026-02-07T09:52:06.791Z] INFO main SpringPersistenceUnitInfo:87 [] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-02-07T09:52:09.887Z] INFO main JtaPlatformInitiator:59 [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-02-07T09:52:09.894Z] INFO main LocalContainerEntityManagerFactoryBean:447 [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:11.278Z] INFO main Applications:59 [] Started Applications in 28.903 seconds (process running for 36.802)
+[2026-02-07T09:52:11.286Z] INFO main LocalContainerEntityManagerFactoryBean:660 [] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:11.289Z] INFO main HikariDataSource:349 [] HikariPool-1 - Shutdown initiated...
+[2026-02-07T09:52:11.379Z] INFO main HikariDataSource:351 [] HikariPool-1 - Shutdown completed.
+Starting migrations service
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+[2026-02-07T09:51:45.884Z] INFO main Applications:53 [] Starting Applications v0.0.1-SNAPSHOT using Java 21.0.10 with PID 1 (/opt/beam/cg-common-cg-db-migrations-0.0.1-SNAPSHOT.jar started by root in /)
+[2026-02-07T09:51:45.973Z] INFO main Applications:658 [] The following 1 profile is active: "default"
+[2026-02-07T09:51:49.997Z] INFO main RepositoryConfigurationDelegate:145 [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-02-07T09:51:50.182Z] INFO main RepositoryConfigurationDelegate:213 [] Finished Spring Data repository scanning in 95 ms. Found 0 JPA repository interfaces.
+[2026-02-07T09:51:56.188Z] INFO main VersionPrinter:37 [] Flyway Community Edition 9.22.3 by Redgate
+[2026-02-07T09:51:56.189Z] INFO main VersionPrinter:37 [] See release notes here: https://rd.gt/416ObMi
+[2026-02-07T09:51:56.189Z] INFO main VersionPrinter:37 [] 
+[2026-02-07T09:51:56.588Z] INFO main FlywayExecutor:37 [] Database: jdbc:postgresql://cg-pg-rw.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:5432/cg_multicloud_metadata (PostgreSQL 16.11)
+[2026-02-07T09:51:56.678Z] WARN main Database:41 [] Flyway upgrade recommended: PostgreSQL 16.11 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+[2026-02-07T09:51:56.879Z] INFO main JdbcTableSchemaHistory:37 [] Schema history table "public"."flyway_schema_history" does not exist yet
+[2026-02-07T09:51:56.888Z] INFO main DbValidate:37 [] Successfully validated 3 migrations (execution time 00:00.113s)
+[2026-02-07T09:51:57.076Z] INFO main JdbcTableSchemaHistory:37 [] Creating Schema History table "public"."flyway_schema_history" ...
+[2026-02-07T09:51:57.573Z] INFO main DbMigrate:37 [] Current version of schema "public": << Empty Schema >>
+[2026-02-07T09:51:57.582Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.1 - create types"
+[2026-02-07T09:51:57.778Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.2 - create tables"
+[2026-02-07T09:51:57.891Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.3 - create functions"
+[2026-02-07T09:51:57.995Z] INFO main DbMigrate:37 [] Successfully applied 3 migrations to schema "public", now at version v1.3 (execution time 00:00.125s)
+[2026-02-07T09:51:58.487Z] INFO main HikariDataSource:109 [] HikariPool-1 - Starting...
+[2026-02-07T09:51:58.790Z] INFO main HikariPool:580 [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32091c14
+[2026-02-07T09:51:58.792Z] INFO main HikariDataSource:122 [] HikariPool-1 - Start completed.
+[2026-02-07T09:51:59.289Z] INFO main LogHelper:31 [] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-02-07T09:52:00.074Z] INFO main Version:44 [] HHH000412: Hibernate ORM core version 6.6.33.Final
+[2026-02-07T09:52:00.576Z] INFO main RegionFactoryInitiator:50 [] HHH000026: Second-level cache disabled
+[2026-02-07T09:52:02.693Z] WARN main deprecation:153 [] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-02-07T09:52:02.883Z] INFO main pooling:163 [] HHH10001005: Database info:\n	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']\n	Database driver: undefined/unknown\n	Database version: 16.11\n	Autocommit mode: undefined/unknown\n	Isolation level: undefined/unknown\n	Minimum pool size: undefined/unknown\n	Maximum pool size: undefined/unknown
+[2026-02-07T09:52:04.771Z] INFO main SpringPersistenceUnitInfo:87 [] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-02-07T09:52:07.580Z] INFO main JtaPlatformInitiator:59 [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-02-07T09:52:07.591Z] INFO main LocalContainerEntityManagerFactoryBean:447 [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:09.186Z] INFO main Applications:59 [] Started Applications in 26.901 seconds (process running for 34.521)
+[2026-02-07T09:52:09.273Z] INFO main LocalContainerEntityManagerFactoryBean:660 [] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:09.277Z] INFO main HikariDataSource:349 [] HikariPool-1 - Shutdown initiated...
+[2026-02-07T09:52:09.286Z] INFO main HikariDataSource:351 [] HikariPool-1 - Shutdown completed.
+Starting migrations service
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+[2026-02-07T09:51:45.991Z] INFO main Applications:53 [] Starting Applications v0.0.1-SNAPSHOT using Java 21.0.10 with PID 1 (/opt/beam/cg-common-cg-db-migrations-0.0.1-SNAPSHOT.jar started by root in /)
+[2026-02-07T09:51:46.077Z] INFO main Applications:658 [] The following 1 profile is active: "default"
+[2026-02-07T09:51:49.977Z] INFO main RepositoryConfigurationDelegate:145 [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-02-07T09:51:50.096Z] INFO main RepositoryConfigurationDelegate:213 [] Finished Spring Data repository scanning in 100 ms. Found 0 JPA repository interfaces.
+[2026-02-07T09:51:56.389Z] INFO main VersionPrinter:37 [] Flyway Community Edition 9.22.3 by Redgate
+[2026-02-07T09:51:56.390Z] INFO main VersionPrinter:37 [] See release notes here: https://rd.gt/416ObMi
+[2026-02-07T09:51:56.390Z] INFO main VersionPrinter:37 [] 
+[2026-02-07T09:51:56.886Z] INFO main FlywayExecutor:37 [] Database: jdbc:postgresql://cg-pg-rw.ntnx-ncm-datastore.svc.nc.msp.pc-gebb.nutanix.com:5432/cg_reports (PostgreSQL 16.11)
+[2026-02-07T09:51:56.977Z] WARN main Database:41 [] Flyway upgrade recommended: PostgreSQL 16.11 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+[2026-02-07T09:51:57.093Z] INFO main JdbcTableSchemaHistory:37 [] Schema history table "public"."flyway_schema_history" does not exist yet
+[2026-02-07T09:51:57.175Z] INFO main DbValidate:37 [] Successfully validated 3 migrations (execution time 00:00.104s)
+[2026-02-07T09:51:57.276Z] INFO main JdbcTableSchemaHistory:37 [] Creating Schema History table "public"."flyway_schema_history" ...
+[2026-02-07T09:51:57.673Z] INFO main DbMigrate:37 [] Current version of schema "public": << Empty Schema >>
+[2026-02-07T09:51:57.683Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.1 - create sequences"
+[2026-02-07T09:51:57.881Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.2 - create tables"
+[2026-02-07T09:51:58.172Z] INFO main DbMigrate:37 [] Migrating schema "public" to version "1.3 - create indexes"
+[2026-02-07T09:51:58.294Z] INFO main DbMigrate:37 [] Successfully applied 3 migrations to schema "public", now at version v1.3 (execution time 00:00.335s)
+[2026-02-07T09:51:58.690Z] INFO main HikariDataSource:109 [] HikariPool-1 - Starting...
+[2026-02-07T09:51:58.989Z] INFO main HikariPool:580 [] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32091c14
+[2026-02-07T09:51:58.991Z] INFO main HikariDataSource:122 [] HikariPool-1 - Start completed.
+[2026-02-07T09:51:59.569Z] INFO main LogHelper:31 [] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2026-02-07T09:52:00.373Z] INFO main Version:44 [] HHH000412: Hibernate ORM core version 6.6.33.Final
+[2026-02-07T09:52:00.971Z] INFO main RegionFactoryInitiator:50 [] HHH000026: Second-level cache disabled
+[2026-02-07T09:52:02.887Z] WARN main deprecation:153 [] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-02-07T09:52:02.992Z] INFO main pooling:163 [] HHH10001005: Database info:\n	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']\n	Database driver: undefined/unknown\n	Database version: 16.11\n	Autocommit mode: undefined/unknown\n	Isolation level: undefined/unknown\n	Minimum pool size: undefined/unknown\n	Maximum pool size: undefined/unknown
+[2026-02-07T09:52:04.789Z] INFO main SpringPersistenceUnitInfo:87 [] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-02-07T09:52:07.589Z] INFO main JtaPlatformInitiator:59 [] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-02-07T09:52:07.599Z] INFO main LocalContainerEntityManagerFactoryBean:447 [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:09.076Z] INFO main Applications:59 [] Started Applications in 26.293 seconds (process running for 34.028)
+[2026-02-07T09:52:09.084Z] INFO main LocalContainerEntityManagerFactoryBean:660 [] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-02-07T09:52:09.088Z] INFO main HikariDataSource:349 [] HikariPool-1 - Shutdown initiated...
+[2026-02-07T09:52:09.175Z] INFO main HikariDataSource:351 [] HikariPool-1 - Shutdown completed.

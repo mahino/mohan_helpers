@@ -1,0 +1,4 @@
+2026-02-20 02:51:30,662 - INFO - Found 2 TCO direct cost files:
+2026-02-20 02:51:30,662 - INFO -   1. /home/mohan.as1/mohan_helpers/Nutanix_TCO_Direct_Cost_Nutanix_Cost_Configuration_04-11-2025_16_40.xls (77824 bytes)
+2026-02-20 02:51:30,662 - INFO -   2. /home/mohan.as1/mohan_helpers/Nutanix_TCO_Direct_Cost_Nutanix_Cost_Configuration_30-10-2025_12_41.xls (35840 bytes)
+2026-02-20 02:56:48,233 - INFO - Operation cancelled by user

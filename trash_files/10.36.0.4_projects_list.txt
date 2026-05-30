@@ -1,0 +1,8 @@
+<html>
+<head><title>405 Not Allowed</title></head>
+<body bgcolor="white">
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+{"entity_type":"project","filtered_entity_count":3,"filtered_group_count":1,"group_results":[{"entity_results":[{"data":[{"data_type":"string","name":"name","values":[{"time":1600842330315394,"values":["3060"]}]},{"data_type":"uint64","name":"_created_timestamp_usecs_","values":[{"time":1600842330315394,"values":["1600842330315394"]}]}],"entity_id":"3fd50a3a-c638-41ec-a40c-f0f803a49b03"}],"group_by_column_value":"","group_summaries":{},"total_entity_count":3}],"total_entity_count":3,"total_group_count":1}

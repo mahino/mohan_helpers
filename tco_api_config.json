@@ -1,0 +1,29 @@
+{
+    "base_url": "https://ncm.services.nconprem-10-53-55-93.ccpnx.com",
+    "endpoints": {
+        "list_configs": "/v1/cg/config/tco/configs",
+        "delete_config": "/v1/cg/config/tco/configs/{configId}"
+    },
+    "default_filters": {
+        "cost_head_action": "direct"
+    },
+    "batch_settings": {
+        "default_batch_size": 10,
+        "rate_limit_delay": 0.5
+    },
+    "common_filters": {
+        "test_configs": {
+            "description_contains": ["test_tco_config"]
+        },
+        "nutanix_hardware": {
+            "cost_type": ["NUTANIX"],
+            "cost_head": ["HARDWARE"]
+        },
+        "custom_configs": {
+            "cost_type": ["CUSTOM"]
+        },
+        "inactive_configs": {
+            "is_active": false
+        }
+    }
+}

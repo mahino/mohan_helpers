@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ubuntu-pod-service
+  namespace: default
+  labels:  # Add labels here
+    app.kubernetes.io/instance: ubuntu-pod
+    app.kubernetes.io/name: ubuntu-pod-nodeport
+spec:
+  selector:
+    app.kubernetes.io/instance: ubuntu-pod
+    app.kubernetes.io/name: ubuntu-pod-nodeport
+  ports:
+    - name: genestats
+      protocol: TCP
+      port: 80        # Port exposed by the service (could be any port)
+      targetPort: 8009 # Port the pod container is listening on (your script's port)
+  type: NodePort 

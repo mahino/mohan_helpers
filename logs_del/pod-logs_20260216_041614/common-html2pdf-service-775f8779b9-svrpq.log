@@ -1,0 +1,21 @@
+========================================
+Pod: common-html2pdf-service-775f8779b9-svrpq
+Namespace: ncm-cg
+Status: Running
+Containers: common-html2pdf-service
+Collected at: Mon Feb 16 04:16:23 GMT 2026
+========================================
+
+
+> url-to-pdf-api@1.0.0 start
+> nodemon --watch ./src -e js src/index.js
+
+[33m[nodemon] 3.1.11[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): src/**/*[39m
+[33m[nodemon] watching extensions: js[39m
+[32m[nodemon] starting `node src/index.js`[39m
+[2026-02-07T10:05:51.153Z] INFO ALLOW_HTTP=true, unsafe requests are allowed. Don't use this in production.
+[2026-02-07T10:05:51.154Z] INFO Using CORS options:
+[2026-02-07T10:05:51.250Z] WARN Warning: no authentication required to use the API
+[2026-02-07T10:05:51.257Z] INFO Express server listening on http://localhost:11001/ in production mode

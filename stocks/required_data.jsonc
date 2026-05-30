@@ -1,0 +1,23 @@
+{
+  "pricebandupper": 1473.2,
+  "symbol": "INFY",
+  "applicableMargin": 16,
+  "companyName": "Infosys Limited",
+  "marketType": "N",
+  "exDate": "31-MAY-21",
+  "dayHigh": 1357.5,
+  "basePrice": 1339.3,
+  "securityVar": 12.5,
+  "pricebandlower": 1205.4,
+  "dayLow": 1346.35,
+  "quantityTraded": 4969733,
+  "averagePrice": 1351.75,
+  "purpose": "ANNUAL GENERAL MEETING/DIVIDEND - RS 15 PER SHARE",
+  "high52": 1477.55,
+  "previousClose": 1339.3,
+  "low52": 659.65,
+  "change": 16.7,
+  "closePrice": 1354.5,
+  "open": 1347.5,
+  "lastPrice": 1356
+}

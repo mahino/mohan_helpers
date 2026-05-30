@@ -1,0 +1,70 @@
+[
+  {
+    "table": "aiops_neuron_raw",
+    "size_on_disk": "19.11 MiB"
+  },
+  {
+    "table": "cg_nx_billing_local",
+    "size_on_disk": "402.71 KiB"
+  },
+  {
+    "table": "cg_nx_billing_temp",
+    "size_on_disk": "402.71 KiB"
+  },
+  {
+    "table": "cg_nx_metrics_categories_config_local",
+    "size_on_disk": "209.66 KiB"
+  },
+  {
+    "table": "cg_nx_metrics_cluster_config_local",
+    "size_on_disk": "53.45 KiB"
+  },
+  {
+    "table": "cg_nx_metrics_cluster_hardware_config_local",
+    "size_on_disk": "95.93 KiB"
+  },
+  {
+    "table": "cg_nx_metrics_vm_config_local",
+    "size_on_disk": "80.40 KiB"
+  },
+  {
+    "table": "infra_configuration_history_common_local",
+    "size_on_disk": "634.46 KiB"
+  },
+  {
+    "table": "infra_configuration_history_vm_local",
+    "size_on_disk": "1.21 MiB"
+  },
+  {
+    "table": "infrastructure_cdc_local",
+    "size_on_disk": "111.22 MiB"
+  },
+  {
+    "table": "infrastructure_historical_rollup_1hr_raw",
+    "size_on_disk": "669.84 KiB"
+  },
+  {
+    "table": "infrastructure_latest_raw",
+    "size_on_disk": "401.26 KiB"
+  },
+  {
+    "table": "infrastructure_raw",
+    "size_on_disk": "179.44 MiB"
+  },
+  {
+    "table": "infrastructure_rollup_1hr_raw",
+    "size_on_disk": "30.11 MiB"
+  },
+  {
+    "table": "labels_history_local",
+    "size_on_disk": "1012.13 KiB"
+  },
+  {
+    "table": "ml_forecast_multi_cloud_local",
+    "size_on_disk": "4.64 KiB"
+  },
+  {
+    "table": "schema_migrations",
+    "size_on_disk": "707.00 B"
+  }
+]

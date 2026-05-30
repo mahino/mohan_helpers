@@ -1,0 +1,8 @@
+<html>
+<head><title>405 Not Allowed</title></head>
+<body bgcolor="white">
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+{"entity_type":"project","filtered_entity_count":2,"filtered_group_count":1,"group_results":[{"entity_results":[],"group_by_column_value":"","group_summaries":{},"total_entity_count":2}],"total_entity_count":2,"total_group_count":1}

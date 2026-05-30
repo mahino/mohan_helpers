@@ -1,0 +1,14 @@
+========================================
+Pod: copy-job-094626-xpmnz
+Namespace: ncm-cg
+Status: Succeeded
+Containers: copy-job-container
+Collected at: Mon Feb 16 04:16:30 GMT 2026
+========================================
+
+{"level":"info","ts":1770457805.471907,"caller":"secret/copy_secret.go:45","msg":"copying secret","sourceSecretName":"clickhouse-br-secret","sourceNamespace":"ntnx-ncm-datastore","targetSecretName":"clickhouse-br-secret","targetNamespace":"ntnx-ncm-common"}
+{"level":"info","ts":1770457805.4720037,"caller":"common/k8s.go:48","msg":"reading from secret","secretName":"clickhouse-br-secret","namespace":"ntnx-ncm-datastore"}
+{"level":"info","ts":1770457805.4847677,"caller":"common/k8s.go:54","msg":"read from secret successfully"}
+{"level":"info","ts":1770457805.484841,"caller":"common/k8s.go:59","msg":"writing to secret","secretName":"clickhouse-br-secret","namespace":"ntnx-ncm-common"}
+{"level":"info","ts":1770457805.5055127,"caller":"common/k8s.go:99","msg":"wrote to secret successfully"}
+{"level":"info","ts":1770457805.5055656,"caller":"secret/copy_secret.go:67","msg":"secret copied successfully"}

@@ -1,0 +1,493 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="row1">
+    <div class='nodeConfig'>
+      <label for="nodeConfig">Node Config:</label>
+      <select id="nodeConfig">
+        <% nodeConfigs.forEach(config => { %>
+          <% if (config === "1NS") { %>
+            <option value="<%= config %>" selected><%= config %></option>
+          <% } else { %>
+            <option value="<%= config %>"><%= config %></option>
+          <% } %>
+        <% }); %>
+      </select>
+    </div>
+    <div class='nodeConfig'>
+      Select Calm Version:
+      <div style="max-height: 85px; overflow-y: auto; border: 1px solid #882c2c; padding: 10px; max-width: 120px; margin-top:10px;">
+        <% for (let i = 0; i < caVersions.length ; i++) { %>
+          <label for="calmVersionToggle_<%=caVersions[i]%>" style="display: block;">
+            <input type="checkbox" id="calmVersionToggle_<%=caVersions[i]%>" style="display: inline-block; vertical-align: middle;" <%= (caVersions[i] === "3.8.0") ? 'checked' : '' %>> <%= caVersions[i] %>
+          </label>
+        <% } %>
+      </div>
+    </div>
+    <div class='nodeConfig' >
+      Select API:<input type="text" id="searchInputAPIName" placeholder="Search For API" >
+      <!-- <br> -->
+      <div style="max-height: 85px; overflow-y: auto; border: 1px solid #882c2c; padding: 10px; max-width: 250px; margin-top:10px;">
+        <label for="apiNameToggle_all" style="display: block;">
+          <input type="checkbox" id="apiNameToggle_all" style="display: inline-block; vertical-align: middle;"> All
+        </label>
+        <% for (let i = 0; i < apiNames.length ; i++) { %>
+          <label for="apiNameToggle_<%=apiNames[i]%>" style="display: block;">
+            <input type="checkbox" id="apiNameToggle_<%=apiNames[i]%>" style="display: inline-block; vertical-align: middle;" <%= (apiNames[i] === "accounts") ? 'checked' : '' %>> <%= apiNames[i] %>
+          </label>
+        <% } %>
+      </div>
+      
+    </div>
+    <div class='nodeConfig'>
+      Select API Percentile:
+      <div style="max-height: 85px; overflow-y: auto; border: 1px solid #882c2c; padding: 10px; max-width: 200px; margin-top:10px;">
+        <% for (let i = 0; i < percentiles.length ; i++) { %>
+          <label for="ApiPercentileToggle_<%=percentiles[i]%>" style="display: block;">
+            <input type="checkbox" id="ApiPercentileToggle_<%=percentiles[i]%>" style="display: inline-block; vertical-align: middle;"  <%= (percentiles[i] === "perc_90") ? 'checked' : '' %>>  <%= percentiles[i] %>
+          </label>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <div class="row2">
+    <div class='nodeConfig'>
+      <label for="statsToggleButton">System Stats</label>
+      <input type="checkbox" id="statsToggleButton" style="margin-right: 45px; display: inline-block; vertical-align: middle;" checked>
+    </div>
+    <div class='nodeConfig'>
+      Select Stat Type:
+      <div style="max-height: 85px; overflow-y: auto; border: 1px solid #882c2c; padding: 10px; max-width: 250px;margin-top:10px;">
+        <% for (let i = 0; i < statsType.length ; i++) { %>
+          <label for="statsTypeToggle_<%=statsType[i]%>" style="display: block;">
+            <input type="checkbox" id="statsTypeToggle_<%=statsType[i]%>" style="display: inline-block; vertical-align: middle;" <%= (statsType[i] === "perc90") ? 'checked' : '' %>> <%= statsType[i] %>
+          </label>
+        <% } %>
+      </div>
+    </div>
+    <div class='nodeConfig' style="margin-left:25px">
+      Select Entity Type: <input type="text" id="searchInputEntity" placeholder="Search For Entity">
+      <div style="max-height: 85px; overflow-y: auto; border: 1px solid #882c2c; padding: 10px; max-width: 200px;margin-top:10px;">
+        <% for (let i = 0; i < statsFor.length ; i++) { %>
+          <label for="statsForNameValues_<%=statsFor[i]%>" style="display: block;">
+            <input type="checkbox" id="statsForNameValues_<%=statsFor[i]%>" style="display: inline-block; vertical-align: middle;" checked> <%= statsFor[i] %>
+          </label>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <script>
+    var searchInput = document.getElementById("searchInputEntity");
+    var APIsearchInput = document.getElementById("searchInputAPIName");
+    var checkboxes = document.querySelectorAll("[id^='statsForNameValues_']");
+    var APIcheckboxes = document.querySelectorAll("[id^='apiNameToggle_']");
+    // Add event listener to the search input
+    searchInput.addEventListener("input", function() {
+      var searchValue = searchInput.value.trim().toLowerCase();
+      checkboxes.forEach(function(checkbox) {
+        var label = checkbox.parentElement.textContent.toLowerCase();
+        var isVisible = label.includes(searchValue);
+        checkbox.style.display = isVisible ? "inline-block" : "none";
+        checkbox.parentElement.style.display = isVisible ? "block" : "none";
+      });
+    });
+    APIsearchInput.addEventListener("input", function() {
+      var searchValue = APIsearchInput.value.trim().toLowerCase();
+      APIcheckboxes.forEach(function(checkbox) {
+        var label = checkbox.parentElement.textContent.toLowerCase();
+        var isVisible = label.includes(searchValue);
+        checkbox.style.display = isVisible ? "inline-block" : "none";
+        checkbox.parentElement.style.display = isVisible ? "block" : "none";
+      });
+    });
+    APIcheckboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        // Check if all checkboxes are checked
+        const allChecked = APIcheckboxes.every(function(checkbox) {
+          return checkbox.checked;
+        });
+
+        // Update the state of the "check all" checkbox
+        checkAllCheckbox.checked = allChecked;
+      });
+    const checkAllCheckbox = document.getElementById("apiNameToggle_all");
+
+    // Add event listener to the "check all" checkbox
+    checkAllCheckbox.addEventListener('change', function() {
+      const isChecked = this.checked;
+
+      // Iterate over all checkboxes excluding the "check all" checkbox
+      APIcheckboxes.forEach(function(checkbox) {
+        // Set the checked state of each checkbox based on the state of the "check all" checkbox
+        checkbox.checked = isChecked;
+      });
+    });
+
+    // Add event listener to individual checkboxes to update the "check all" checkbox state
+    
+    });
+  </script>
+  <style>
+    .row1 {
+      display: flex;
+      margin-bottom: 20px;
+      margin-right: 20;
+    }
+    .row2 {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .nodeConfig {
+      margin-right: 100px;
+    }
+    label {
+      margin-right: 10px;
+    }
+    select[multiple] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #238390;
+      width: 200px;
+      font-size: 16px;
+      margin-right: 100px;
+      justify-content: space-between;
+    }
+    select[multiple] option {
+      padding: 5px;
+      font-size: 14px;
+      background-color: #f3f1f8;
+      color: #050404;
+    }
+    .panel {
+      margin-bottom: 10px;
+      border: 1px solid #9bd773;
+      border-radius: 5px;
+    }
+    .panel-header {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #63a0be;
+      border-bottom: 1px solid #511010;
+    }
+    .panel-body {
+      padding: 10px;
+      display: 'none';
+    }
+    .loader {
+      border: 16px solid #f3f3f3; /* Light grey */
+      border-top: 16px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+      margin: auto;
+      display: none;
+    }
+    .loader span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 16px;
+    color: #333;
+    animation: text-rotate 2s linear infinite reverse;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #fetchDataBtn {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #fetchDataBtn:hover {
+        background-color: #45a049;
+    }
+    #searchInputAPIName {
+      width: 190px; /* Adjust the width as needed */
+    }
+    #searchInputEntity {
+      width: 90px; /* Adjust the width as needed */
+    }
+  </style>
+  <button id="fetchDataBtn">Plot Graphs</button>
+  <div class="loader" id="loader"><span>Plotting Graphs</span></div>
+  <div class="panel">
+    <div class="panel-header" onclick="togglePanel(this)">Api Latencies</div>
+    <div class="panel-body">
+      <div id="api_latency-graph_container"></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-header" onclick="togglePanel(this)">Stats</div>
+    <div class="panel-body">
+      <div id="stats-graph_container"></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-header" onclick="togglePanel(this)">Other Data</div>
+    <div class="panel-body">
+      <div id="others-graph_container"></div>
+    </div>
+  </div>
+  <div id="message-container"></div>
+  <div id="personal_container"></div>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script>
+    document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
+    document.getElementById('api_latency-graph_container').style.display = 'block';
+    async function fetchData() {
+      document.getElementById('loader').style.display = 'block';
+      const apiNamesTemp = document.querySelectorAll("[id^='apiNameToggle']")
+      const apiNamesNames = Array.from(apiNamesTemp).map(option => option.id.split('_').slice(1).join('_'))
+      const apiNames = Array.from(apiNamesTemp).map(option => option.checked);
+      const apiNamesSelected = apiNamesNames.filter((_, index) => apiNames[index] === true);
+      const caVersionTemp = document.querySelectorAll("[id^='calmVersionToggle']")
+      const caVersionNames = Array.from(caVersionTemp).map(option => option.id.split('_').slice(1).join('_'))
+      const caVersionValues = Array.from(caVersionTemp).map(option => option.checked);
+      const caVersion = caVersionNames.filter((_, index) => caVersionValues[index] === true);
+      const nodeConfig = document.getElementById('nodeConfig').value;
+      const percentileTemp = document.querySelectorAll("[id^='ApiPercentileToggle']")
+      const percentileNames = Array.from(percentileTemp).map(option => option.id.split('_').slice(1).join('_'))
+      const percentile = Array.from(percentileTemp).map(option => option.checked);
+      const statsToggle = document.getElementById('statsToggleButton').checked;
+      const statsTypeTemp = document.querySelectorAll("[id^='statsTypeToggle']")
+      const statsTypeNames = Array.from(statsTypeTemp).map(option => option.id.split('_')[1])
+      const statTypes = Array.from(statsTypeTemp).map(option => option.checked);
+      const temp = document.querySelectorAll("[id^='statsForNameValues']")
+      const statNames = Array.from(temp).map(option => option.id.split('_').slice(1).join('_'));
+      const statsFor = Array.from(temp).map(option => option.checked);
+      fetch(`/data?ca_version=${caVersion}&api_name=${apiNamesSelected}&node_config=${nodeConfig}&percentile=${percentile}&stats_toggle=${statsToggle}&stats_for=${statsFor}`)
+      .then(response => response.json())
+      .then(data => {
+        const statsForValues = statNames.filter((_, index) => statsFor[index] === true);
+        const statsTypeValues = statsTypeNames.filter((_, index) => statTypes[index] === true);
+        const final_traces = [];
+        const final_layouts = [];
+        // Clear create graphs
+        for (let j = 1; j < 100; j++) {
+          breakLoop = true  
+          if (document.getElementById(`api_latency-container-${j}`)) {
+            Plotly.purge(`api_latency-container-${j}`)
+            breakLoop = false
+          }
+          if (document.getElementById(`stats-container-${j}`)) {
+            Plotly.purge(`stats-container-${j}`)
+            breakLoop = false
+          }
+          if (document.getElementById(`others-container-${j}`)) {
+            Plotly.purge(`others-container-${j}`)
+            breakLoop = false
+          }
+          if ( breakLoop ) {
+            break
+          }
+        };
+        // Clear the content of the message container
+        var persCont = document.getElementById('personal_container');
+        const persContainer = document.createElement('p');
+        var messageContainer = document.getElementById('message-container');
+        messageContainer.innerHTML = '';
+        if (data.api_names.length > 0) {
+          // i = iterate with api_names
+          apiExist = false
+          apiLocalIndex = 0
+          for (let i = 0; i < data.api_names.length; i++) {
+            const api_name = data.api_names[i]
+            const layout = { 
+                  title: api_name,
+                  xaxis: {
+                    title: 'App Count'
+                  },
+                  yaxis: {
+                    
+                    title: 'API Latencies (sec)'
+                  }
+                };
+            const traces = [];
+            // m = iterate with percentiles
+            for (let m = 0; m < data.percentiles.length; m++) {
+              api_data = data.api_latencies_data
+              // j = iterate with node configs
+              for (let j = 0; j < api_data.length; j++) {
+                apiLocalExist = false
+                if ( data.api_names[i] in api_data[j].api_latencies ) {
+                  const appCount = data.app_count_data[j].split(',').map(Number);
+                  const perc = api_data[j].api_latencies[api_name]['percLatencies'][m].split(',').map(Number);
+                  const trace = {
+                    x: appCount,
+                    y: perc,
+                    type: 'scatter',
+                    name: `${data.calm_versions[j]} ${data.percentiles[m]}`
+                  };
+                  traces.push(trace);
+                  apiLocalExist = true
+                  apiLocalIndex = j
+                }
+                apiExist = apiLocalExist || apiExist
+              }
+            }
+            if (apiExist) {
+              layout.title = layout.title + ' ' + api_data[apiLocalIndex].api_latencies[api_name]['method']
+              final_traces.push(traces);
+              final_layouts.push(layout)
+            }
+            apiExist = false
+          }
+          // Plot new graphs
+          for (let i = 0; i < final_traces.length; i++) {
+            const container = document.createElement('div');
+            container.id = `api_latency-container-${i + 1}`;
+            document.getElementById('api_latency-graph_container').appendChild(container);
+            Plotly.newPlot(container.id, final_traces[i], final_layouts[i]);
+          };
+        }
+        else {
+          var messageContainer = document.getElementById('message-container');
+          var paragraph = document.createElement('p');
+          paragraph.textContent = `Data Not found for the config [${nodeConfig} <> ${apiName} <> ${caVersion}]`;
+          messageContainer.appendChild(paragraph);
+        }
+        // Plot stat graphs
+        if ( statsToggle ) {
+            const stats_final_traces = [];
+            const stats_final_layouts = [];
+            var messageContainer = document.getElementById('message-container');
+            var paragraph = document.createElement('p');
+            statsForValues.forEach(item => {
+              if (item === 'load_average') {
+                iterItems = ['1', '5', '15']
+              }
+              else {
+                iterItems = ['cpu', 'mem']
+              }
+              iterItems.forEach(te => {
+                const traces = [];
+                const layout = {
+                  title: `${item} ${te}`,
+                  xaxis: {
+                    title: 'App Count'
+                  },
+                  yaxis: {}
+                }
+                for (let j = 0; j < statsTypeValues.length; j++) {
+                  for (let i = 0; i < data.system_stats.length; i ++ ) {
+                    const xValues = data.app_count_data[i].split(',').map(Number);
+                    const yName = `${item}_${te}_${statsTypeValues[j]}`
+                    const yValues = data.system_stats[i][yName].split(',').map(Number);
+                    const trace = {
+                      x: xValues,
+                      y: yValues,
+                      type: 'scatter',
+                      name: `${data.calm_versions[i]} ${statsTypeValues[j]}`,
+                    }
+                    traces.push(trace)
+                  }
+                  if (te === 'mem') {
+                    layout.yaxis.tickformat = '.2s'
+                    layout.yaxis.ticksuffix = 'B' 
+                    layout.yaxis.title = 'Memory' 
+                  }
+                  else if (te === 'cpu') {
+                    layout.yaxis.ticksuffix = '%'
+                    layout.yaxis.title = 'Percentage' 
+                  }
+                  else if (['1', '5', '15'].includes(te)) {
+                    layout.yaxis.title = `Load Average`
+                    layout.title = `Load Average ${te} min`
+                  }
+                }
+                stats_final_layouts.push(layout)
+                stats_final_traces.push(traces);
+              })
+              
+            })
+            for (let i = 0; i < stats_final_traces.length; i++) {
+              const container = document.createElement('div');
+              container.id = `stats-container-${i + 1}`;
+              document.getElementById('stats-graph_container').appendChild(container);
+              Plotly.newPlot(container.id, stats_final_traces[i], stats_final_layouts[i]);
+            };
+        }
+        if ( statsToggle ) {
+          const others_final_traces = [];
+          const others_final_layouts = [];
+          ['create_action'].forEach(action => {
+            const traces = []
+            const layout = {
+              title: `${action} `,
+              xaxis: {
+                title: 'App Count'
+              },
+              yaxis: {
+                title: 'Time (Min)',
+                ticksuffix : ' min'
+              }
+            }
+            if ( action === 'create_action' ) {
+              layout.title = 'App Provisioning (create_action)'
+            }
+            for (let i = 0; i < data.others_data.length; i ++ ) {
+              const xValues = data.app_count_data[i].split(',').map(Number);
+              const yName = `${action}`
+              yValues = data.others_data[i][yName].split(',').map(Number);
+              yValues = yValues.map( value => (value/60).toFixed(2))
+              const annotations = xValues.map((xValues, i) => ({
+                x: xValues,
+                y: yValues[i],
+                text: `(${xValues}, ${yValues[i]})`,
+                showarrow: false,
+                font: { color: 'black' },
+              }));
+              const trace = {
+                x: xValues,
+                y: yValues,
+                type: 'scatter',
+                name: `${data.calm_versions[i]} ${action}`,
+                text: yValues.map((value) => `${value} min`),
+                hoverinfo: 'none',
+                mode: 'lines+markers+text',
+                textposition: 'bottom',
+              }
+              traces.push(trace)
+            }
+              others_final_layouts.push(layout)
+              others_final_traces.push(traces);
+          })
+            
+          for (let i = 0; i < others_final_traces.length; i++) {
+            const container = document.createElement('div');
+            container.id = `others-container-${i + 1}`;
+            document.getElementById('others-graph_container').appendChild(container);
+            Plotly.newPlot(container.id, others_final_traces[i], others_final_layouts[i]);
+          };
+        }
+        document.getElementById('loader').style.display = 'none';  
+      }
+      )
+      .catch(error => console.error('Error fetching data:', error));
+    }
+    function togglePanel(panelHeader) {
+      const panelBody = panelHeader.nextElementSibling;
+      if (panelBody.style.display === 'none') {
+        panelBody.style.display = 'block';
+      } else {
+        panelBody.style.display = 'none';
+      }
+    }
+  </script>
+  
+</body>
+</html>

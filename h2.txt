@@ -1,0 +1,228 @@
+    1  docker build -t my-script-image .
+    2  sudo vi temp.yaml
+    3  sudo vi temp.yaml
+    4  kubectl apply -f temp.yaml 
+    5  kubectl get pods -A
+    6  kubectl get pods -A
+    7  docker build -t my-script-image .
+    8  vi temp.yaml 
+    9  kubectl apply -f temp.yaml 
+   10  kubectl get pods -A | grep defaulkt
+   11  kubectl get pods -A | grep default
+   12  kubectl get pods -A | grep default
+   13  kubectl describe pods -n default my-script-pod 
+   14  docker tag my-script-image your-dockerhub-username/my-script-image:latest
+   15  cd ../
+   16  cd stats_collection/temp/
+   17  kubectl get pods --all-namespaces -o=jsonpath="{..image}"
+   18  kubectl get pods --all-namespaces -o=jsonpath="{..image}\n"
+   19  kubectl get pods --all-namespaces -o=jsonpath="{..image}" | grep docker
+   20  vi temp.yaml 
+   21  kubectl create configmap myscript-config --from-file=myscript.sh
+   22  kubectl apply -f pod.yaml
+   23  kubectl apply -f temp.yaml.yaml
+   24  kubectl apply -f temp.yaml
+   25  kubectl logs alpine-script-pod
+   26  chmod 777 * /myscript.sh
+   27  kubectl describe configmap myscript-config
+   28  kubectl get pods -A | gre default
+   29  kubectl get pods -A | grep default
+   30  kubectl describe pods -n default                 alpine-script-pod
+   31  kubectl get pods -A | grep default
+   32  kubectl describe pods -n default                 alpine-script-pod
+   33  kubectl logs alpine-script-pod -c alpine-container
+   34  kubectl exec -it alpine-script-pod -- /bin/sh
+   35  ls -l /myscript.sh
+   36  chmod +x /myscript.sh
+   37  vi temp.yaml 
+   38  kubectl apply -f temp.yaml 
+   39  kubectl delete pod alpine-script-pod
+   40  kubectl apply -f temp.yaml
+   41  kubectl exec -it alpine-script-pod -- /bin/sh
+   42  kubectl get pods -A | grep default
+   43  kubectl get pods -A | grep default
+   44  kubectl describe pods -n default                 alpine-script-pod
+   45  kubectl logs alpine-script-pod -c alpine-container
+   46  kubectl logs alpine-script-pod -c alpine-container
+   47  kubectl describe pods -n default                 alpine-script-poddocker pull debian:latest
+   48  docker pull debian:latest
+   49  ls
+   50  vi Dockerfile 
+   51  docker build -t my-debian-script-image .
+   52  docker tag my-debian-script-image myregistry/my-debian-script-image:latest
+   53  docker push myregistry/my-debian-script-image:latest
+   54  docker login
+   55  docker push myregistry/my-debian-script-image:latest
+   56  docker tag my-debian-script-image johnsmith/my-debian-script-image:latest
+   57  docker tag my-debian-script-image nutanix/my-debian-script-image:latest
+   58  docker push nutnaix/my-debian-script-image:latest
+   59  docker push nutanix/my-debian-script-image:latest
+   60  kubectl get pods -A | grep grafana
+   61  cd ../
+   62  ls
+   63  vi grafana-deployment.yaml 
+   64  vi grafana-dashboardDatasources.yaml 
+   65  vi grafana-dashboardSources.yaml 
+   66  vi grafana-dashboardDefinitions.yaml 
+   67  docker stats | grep epsilon
+   68  exit
+   69  exit
+   70  docker pull ubuntu:latest
+   71  kubectl get pods -A | grep default
+   72  kubectl apply -f temp.yaml 
+   73  kubectl get pods -A | grep default
+   74  kubectl get pods -A | grep default
+   75  kubectl get pods -A | grep default
+   76  docker tag ubuntu:latest ubuntu:latest
+   77  sudo vi temp.yaml 
+   78  kubectl apply -f temp.yaml 
+   79  kubectl get pods -A | grep default
+   80  kubectl get pods -A | grep default
+   81  kubectl describe pods -n default                 ubuntu-pod
+   82  kubectl apply -f temp.yaml 
+   83  kubectl delete pod -n default                 ubuntu-pod
+   84  vi temp.yaml 
+   85  kubectl apply -f temp.yaml 
+   86  kubectl get pods -A | grep default
+   87  kubectl describe pods -n default                 ubuntu-pod
+   88  docker login
+   89  exit
+   90  exit
+   91  docker login
+   92  cat /root/.docker/config.json
+   93  kubectl delete pod -n default                 ubuntu-pod
+   94  docker images
+   95  docker inspect ubuntu:latest
+   96  vi temp.yaml 
+   97  kubectl get pods -A | grep default
+   98  kubectl apply -f temp.yaml 
+   99  kubectl get pods -A | grep default
+  100  kubectl get pods -A | grep default
+  101  kubectl exec -ti -n default                 ubuntu-pod bash
+  102  kubectl get pods -A 
+  103  docker images
+  104  cd stats_collection/temp/
+  105  vi temp.yaml 
+  106  exit
+  107  exit
+  108  docker run -it ubuntu:latest bash
+  109  docker ps  |grep ubuntu
+  110  docker run -it ubuntu:latest bash
+  111  docker commit 92516062fc6a ubuntu_pod:v1
+  112  docker images
+  113  docker images | grep ubuntu
+  114  exeit
+  115  exit
+  116  docker ps | grep ubuntu
+  117  exit
+  118  docker images | grep ubuntu
+  119  docker ps | grep ubuntu
+  120  docker commit 92516062fc6a ubuntu_pod:v2
+  121  docker images | grep ubuntu
+  122  exit
+  123  docker commit 92516062fc6a ubuntu_pod:v3
+  124  docker ps | grep ubuntu
+  125  docker commit b83cca4f169c ubuntu_pod:v3
+  126  docker images | grep ubuntu
+  127  docker images | grep ubuntu
+  128  docker images
+  129  exit
+  130  docker ps | grep ubuntu
+  131  docker commit f6ea13454ac5 ubuntu_pod:v4
+  132  docker ps | grep ubuntu
+  133  docker commit f6ea13454ac5 ubuntu_pod:v4
+  134  kubectl apply -f temp.yaml 
+  135  docker images
+  136  docker images | grep ubuntu
+  137  docker ps | grep ubuntu
+  138  docker ps 
+  139  docker images | grep images
+  140  vi temp.yaml 
+  141  vi temp.yaml 
+  142  kubectl apply -f temp.yaml 
+  143  kubectl apply -f temp.yaml 
+  144  kubectl apply -f temp.yaml 
+  145  sudo su
+  146  docker images | grep ubuntu
+  147  exit
+  148  docker inspect ubuntu_pod:v4 | jq '.[0].Config.Cmd'
+  149  kubectl get deployments
+  150  kubectl get replicasets
+  151  vi temp.yaml 
+  152  docker inspect ubuntu_pod:v4 | jq '.[0].Config.Cmd'
+  153  exit
+  154  docker ps | grep ubuntu
+  155  docker commit 1dd404be1e19 ubuntu:v5
+  156  exit
+  157  docker images | grep ubuntu
+  158  docker iamges
+  159  docker images | grep ubu
+  160  docker save -o downloadUbuntu.tar ubuntu:v1
+  161  crictl images
+  162  docker save -o downloadUbuntu.tar ubuntu:v5
+  163  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 bash
+  164  kubectl get pods -A
+  165  kubectl exec -ti -n ntnx-ncm-common ncm-epsilon-0 bash
+  166  docker images
+  167  sudo df -h
+  168  top
+  169  topM
+  170  top
+  171  ls
+  172  docker images  |grep ubuntu
+  173  docker ps | grep ubuntu
+  174  docker commit a94c2c646110 ubuntu:v6
+  175  docker images  |grep ubuntu
+  176  docker ps | grep ubuntu
+  177  docker commit a94c2c646110 ubuntu:v7
+  178  docker images  |grep ubuntu
+  179  docker ps | grep ubuntu
+  180  docker commit 1ddbfcd46e89 ubuntu:v8
+  181  docker ps | grep ubuntu
+  182  docker images  |grep ubuntu
+  183  docker ps | grep ubuntu
+  184  docker commit 93979ceab878 ubuntu:v9
+  185  docker images | grep buntu
+  186  docker ps | grep ubuntu
+  187  docker commit 4d26281a2fd7 ubuntu:10
+  188  docker ps | grep ubuntu
+  189  docker commit 77bd71e7c097 ubuntu:11
+  190  docker ps | grep ubuntu
+  191  docker images | grep buntu
+  192  docker ps | grep ubuntu
+  193  docker commit 73280e8dc872 ubuntu:11
+  194  docker images | grep ubuntu
+  195  docker commit 73280e8dc872 ubuntu:v12
+  196  docker images | grep ubuntu
+  197  docker images | grep ubuntu
+  198  docker ps | grep ubuntu
+  199  docker commit 6b69883b04f7 ubuntu:v13
+  200  docker images  |grep ubuntu
+  201  docker ps | grep ubuntu
+  202  docker commi 2a6fe1505238 ubuntu:v14
+  203  docker commit 2a6fe1505238 ubuntu:v14
+  204  docker images | grep ubuntu
+  205  docker ps  | grep ubuntu
+  206  docker commit 2a6fe1505238 ubuntu:v15
+  207  docker images | grep ubuntu
+  208  docker ps  | grep ubuntu
+  209  docker commit f647f448f622wq ubuntu:v16
+  210  docker commit f647f448f622 ubuntu:v16
+  211  docker images | grep ubuntu
+  212  docker ps  | grep ubuntu
+  213  docker commit f647f448f622 ubuntu:v16
+  214  docker images | grep ubuntu
+  215  docker ps  | grep ubuntu
+  216  docker commit 74ae7dfe533c ubuntu:17
+  217  docker images | grep ubuntu
+  218  docker ps  | grep ubuntu
+  219  docker commit 451752946da5 ubuntu:v18
+  220  docker ps  | grep ubuntu
+  221  docker images | grep ubuntu
+  222  docker commit 451752946da5 ubuntu:v19
+  223  docker images | grep ubuntu
+  224  docker ps  | grep ubuntu
+  225  docker commit 587117d8a491 ubuntu:v20
+  226  docker ps | grep ubuntu
+  227  docker images | grep ubuntu
+  228  history > h2.txt
