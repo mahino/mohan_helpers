@@ -3,3 +3,10 @@ bulk_snapshots_ui_backup_20260526_024914/
 bulk_snapshots_ui_copy/
 bulk_snapshots_ui_copy_2/
 micro-stats.tar
+
+# Temporary working directories - do not commit
+kubeconfigs/
+pc_logs/
+__pycache__/
+*.pyc
+*.pyo

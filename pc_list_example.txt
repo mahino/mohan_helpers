@@ -1,0 +1,24 @@
+# Prism Central List File
+# Format: <ip_address> [password] [custom_name]
+#
+# If password is omitted or set to "-", the PC_PASSWORD environment variable will be used
+# Custom name is optional and used for organizing output directories
+#
+# Examples:
+
+# With password and custom name
+10.114.55.128 nutanix/4u Production-PC
+
+# With password, no custom name (will use IP as directory name)
+10.114.55.129 nutanix/4u
+
+# No password specified (will use PC_PASSWORD env variable or prompt)
+10.114.55.130 - Dev-PC
+
+# Using dash to skip password field
+10.114.55.131 -
+
+# Multiple PCs without passwords (will use PC_PASSWORD)
+# 10.114.55.132
+# 10.114.55.133
+# 10.114.55.134
