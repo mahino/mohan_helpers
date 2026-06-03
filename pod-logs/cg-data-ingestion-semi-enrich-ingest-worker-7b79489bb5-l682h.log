@@ -1,0 +1,220 @@
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:05:56.132Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 14 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-06=values {
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/06/03/semi-enrich-02_12.csv.gz"
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/06/01/semi-enrich-01_12.csv.gz"
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/06/02/semi-enrich-03_12.csv.gz"
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:05:56] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:05:58] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:05:58.290Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 14 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+[2026-06-03 09:05:58] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]  DROP PARTITION 202606
+[2026-06-03 09:05:58] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:05:58.290Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 14 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp_distributed SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-dgce.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/06/{01,02,03}/semi-enrich-{03_12,02_12,01_12}.csv.gz', 'CSVWithNames') SETTINGS insert_distributed_sync = 1
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:06:02.218Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 14 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-05=values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/09/semi-enrich-16_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/07/semi-enrich-22_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/25/semi-enrich-28_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/04/semi-enrich-21_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/23/semi-enrich-11_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/10/semi-enrich-19_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/12/semi-enrich-06_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/17/semi-enrich-01_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/24/semi-enrich-29_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/27/semi-enrich-30_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/31/semi-enrich-26_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/15/semi-enrich-07_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/28/semi-enrich-25_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/18/semi-enrich-04_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/02/semi-enrich-15_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/19/semi-enrich-03_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/22/semi-enrich-12_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/30/semi-enrich-27_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/16/semi-enrich-02_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/21/semi-enrich-09_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/01/semi-enrich-13_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/03/semi-enrich-14_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/14/semi-enrich-08_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/20/semi-enrich-10_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/29/semi-enrich-24_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/08/semi-enrich-17_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/13/semi-enrich-05_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/26/semi-enrich-31_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/05/semi-enrich-20_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/06/semi-enrich-23_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/11/semi-enrich-18_11.csv.gz"
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:02] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:06:06] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:06:06.390Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 14 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+[2026-06-03 09:06:06] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]  DROP PARTITION 202605
+[2026-06-03 09:06:06] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:06:06.391Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 14 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp_distributed SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-dgce.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/3a095656-2789-41c2-b43c-4353da11da0c/019e8cbb-0b3e-7b98-bdbd-b7003631683e_47/2026/05/{22,23,01,02,24,03,25,04,26,05,27,28,06,07,29,08,09,30,31,10,11,12,13,14,15,16,17,18,19,20,21}/semi-enrich-{02_11,27_11,29_11,25_11,04_11,31_11,06_11,23_11,08_11,10_11,11_11,17_11,20_11,13_11,15_11,19_11,03_11,26_11,01_11,28_11,24_11,07_11,22_11,05_11,30_11,09_11,12_11,18_11,16_11,14_11,21_11}.csv.gz', 'CSVWithNames') SETTINGS insert_distributed_sync = 1
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:10:57.516Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 15 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-06=values {
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/06/01/semi-enrich-01_12.csv.gz"
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/06/02/semi-enrich-03_12.csv.gz"
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/06/03/semi-enrich-02_12.csv.gz"
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:10:57] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:10:58] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:10:58.902Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 15 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+[2026-06-03 09:10:58] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]  DROP PARTITION 202606
+[2026-06-03 09:10:58] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:10:58.902Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 15 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp_distributed SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-dgce.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/06/{01,02,03}/semi-enrich-{03_12,02_12,01_12}.csv.gz', 'CSVWithNames') SETTINGS insert_distributed_sync = 1
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:11:01.604Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 15 NxEnrichmentIngestion:26 Starting Nx ingestion for input files: {2026-05=values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/13/semi-enrich-05_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/07/semi-enrich-22_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/28/semi-enrich-25_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/11/semi-enrich-18_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/23/semi-enrich-11_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/21/semi-enrich-09_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/29/semi-enrich-24_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/14/semi-enrich-08_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/24/semi-enrich-29_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/25/semi-enrich-28_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/02/semi-enrich-15_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/26/semi-enrich-31_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/08/semi-enrich-17_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/12/semi-enrich-06_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/15/semi-enrich-07_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/05/semi-enrich-20_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/18/semi-enrich-04_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/27/semi-enrich-30_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/09/semi-enrich-16_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/10/semi-enrich-19_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/20/semi-enrich-10_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/01/semi-enrich-13_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/19/semi-enrich-03_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/30/semi-enrich-27_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/17/semi-enrich-01_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/22/semi-enrich-12_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/16/semi-enrich-02_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/04/semi-enrich-21_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/06/semi-enrich-23_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/31/semi-enrich-26_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] values {
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]   string_value: "s3://beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/03/semi-enrich-14_11.csv.gz"
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:01] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] }
+[2026-06-03 09:11:03] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:11:03.903Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 15 ClickhouseQueryExecutor:50 Executing query: ALTER TABLE cg_nx_billing_temp ON CLUSTER chcluster1 
+[2026-06-03 09:11:03] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h]  DROP PARTITION 202605
+[2026-06-03 09:11:03] [cg-data-ingestion-semi-enrich-ingest-worker-7b79489bb5-l682h] [2026-06-03T09:11:03.904Z] INFO Activity Executor taskQueue="semi-ingestion-worker-queue", namespace="ncm-cg": 15 ClickhouseQueryExecutor:68 Executing query: INSERT INTO cg_nx_billing_temp_distributed SELECT * FROM s3('http://objects-lite.ntnx-ncm-datastore.svc.nc.msp.pc-dgce.nutanix.com:7200/beam-billing-data-ingestion/nx/59d5de78-a964-5746-8c6e-677c4c7a79df/59d5de78-a964-5746-8c6e-677c4c7a79df/semi-enrich/month/9d54795a-ede4-4d04-98ab-4752c9f7880a/019e8cbf-abad-7a0a-9c4a-b9f717f2a79c_47/2026/05/{22,23,01,02,24,25,03,26,04,05,27,28,06,07,29,08,09,30,31,10,11,12,13,14,15,16,17,18,19,20,21}/semi-enrich-{27_11,02_11,29_11,25_11,04_11,31_11,06_11,23_11,08_11,10_11,11_11,17_11,20_11,13_11,15_11,19_11,03_11,26_11,28_11,01_11,24_11,07_11,22_11,30_11,05_11,09_11,12_11,18_11,16_11,14_11,21_11}.csv.gz', 'CSVWithNames') SETTINGS insert_distributed_sync = 1

@@ -21,7 +21,7 @@ logger = get_logger(__file__)
 requests = LoggedRequests(logger)
 
 # Configuration
-URL = "https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/config/rate-cards"
+URL = "https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/config/rate-cards"
 AUTH = ('admin', 'Nutanix.123')
 HEADERS = {'Content-Type': 'application/json'}
 

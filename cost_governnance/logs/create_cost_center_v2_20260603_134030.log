@@ -1,0 +1,1011 @@
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - ================================================================================
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - Script: create_cost_center_v2
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - Log file: /Users/mohan.as1/workspace/mohan_helpers/cost_governnance/logs/create_cost_center_v2_20260603_134030.log
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - ================================================================================
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - ================================================================================
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - Starting Cost Center Creation v2
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - ================================================================================
+2026-06-03 13:40:30 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-06-03 13:40:32 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/chargeback/availableAccounts
+2026-06-03 13:40:32 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:32 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.5020 seconds (2501.95 ms)
+2026-06-03 13:40:32 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:32 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "gcp": [],
+  "nx": [
+    "62383475-b7ea-4274-b70e-2e907edb67dc",
+    "fa540df2-110a-4094-a661-def6b5fd536e",
+    "962effe0-c31d-49bf-8ed3-1543fb4d7032",
+    "fd874af6-a9b0-4de7-ad17-85359c6d79aa",
+    "e7acaa10-7cf3-4358-86da-de45be60bff3"
+  ],
+  "aws": [],
+  "azure": []
+}
+2026-06-03 13:40:32 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/api/nutanix/v3/accounts/list
+2026-06-03 13:40:32 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"length": 250, "offset": 0, "filter": "state!=DELETED;type==nutanix_pc;offboarding==True"}
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/api/nutanix/v3/accounts/list
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.9608 seconds (2960.84 ms)
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "api_version": "3.0",
+  "metadata": {
+    "total_matches": 6,
+    "kind": "account"
+  },
+  "entities": [
+    {
+      "status": {
+        "name": "RemotepcAccount5",
+        "description": "",
+        "message_list": [],
+        "resources": {
+          "data": {
+            "type": "basic_auth",
+            "server": "10.122.27.36",
+            "port": 9440,
+            "pc_uuid": "028b6eba-7f69-4a42-b156-bf90fd4eb1b2",
+            "cluster_account_reference_list": [
+              {
+                "name": "auto_cluster_nested_68c9c58b360236a240bdb15e",
+                "description": "",
+                "message_list": [],
+                "resources": {
+                  "data": {
+                    "type": "",
+                    "cluster_uuid": "00063ef1-394b-75b9-05c9-e1fff49a6615",
+                    "cluster_name": "auto_cluster_nested_68c9c58b360236a240bdb15e",
+                    "pc_account_uuid": "daf6be0e-10bf-503b-b47b-2eafddf4803f"
+                  },
+                  "type": "nutanix",
+                  "state": "VERIFIED",
+                  "sync_interval_secs": 1200,
+                  "is_test_account": false
+                },
+                "uuid": "bc037704-f335-4ed2-a92d-e472cf0095be"
+              }
+            ],
+            "pc_version": "pc.7.6",
+            "host_pc": false,
+            "onboarding_operation": "Onboard",
+            "onboarding_operation_status": "ERROR",
+            "onboarding_workflow_id": "106c3feb-04de-4ef7-6584-cfe16daf55bb",
+            "management_pc": false,
+            "cred_type": "basic_auth",
+            "username": "admin",
+            "password": {
+              "attrs": {
+                "secret_reference": {},
+                "is_secret_modified": false
+              }
+            },
+            "provider_reference": {
+              "name": "Nutanix_PC",
+              "uuid": "516daf17-10cb-4d2b-b10f-d9fcc731d731",
+              "kind": "provider"
+            }
+          },
+          "type": "nutanix
+... (truncated)
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - Found 5 PCs: ['HomePCAccount', 'RemotepcAccount4', 'RemotepcAccount3', 'RemotepcAccount1', 'RemotepcAccount2']
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - 
+============================================================
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - Processing PC: HomePCAccount (62383475-b7ea-4274-b70e-2e907edb67dc)
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - ============================================================
+2026-06-03 13:40:35 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/chargeback/availableAccounts/usedTags?provider=nx&parentAccount=62383475-b7ea-4274-b70e-2e907edb67dc
+2026-06-03 13:40:38 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/chargeback/availableAccounts/usedTags?provider=nx&parentAccount=62383475-b7ea-4274-b70e-2e907edb67dc
+2026-06-03 13:40:38 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:38 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.4486 seconds (2448.63 ms)
+2026-06-03 13:40:38 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:38 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "00064ecc-5513-cb57-0000-0000000193db": [],
+  "00064e62-88b6-68bb-0000-00000001c483": [],
+  "00064e60-9eff-f23f-0000-0000000193e2": [],
+  "parentAccount": [],
+  "00064ec4-f785-7be9-0000-00000001c47f": []
+}
+2026-06-03 13:40:38 - create_cost_center_v2 - INFO -   Found 4 clusters
+2026-06-03 13:40:38 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tagKeys&resourceGroupType=billingAccount
+2026-06-03 13:40:39 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tagKeys&resourceGroupType=billingAccount
+2026-06-03 13:40:39 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:39 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.5902 seconds (1590.25 ms)
+2026-06-03 13:40:39 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:39 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "tagKeys": [
+    "nx:CalmApplication",
+    "nx:CalmProject",
+    "nx:CalmService",
+    "nx:CalmUsername",
+    "nx:OSType",
+    "nx:St_category_key10_U10h4",
+    "nx:St_category_key10_WQX6p",
+    "nx:St_category_key11_U10h4",
+    "nx:St_category_key11_WQX6p",
+    "nx:St_category_key12_U10h4",
+    "nx:St_category_key12_WQX6p",
+    "nx:St_category_key13_U10h4",
+    "nx:St_category_key13_WQX6p",
+    "nx:St_category_key14_U10h4",
+    "nx:St_category_key14_WQX6p",
+    "nx:St_category_key15_U10h4",
+    "nx:St_category_key15_WQX6p",
+    "nx:St_category_key16_U10h4",
+    "nx:St_category_key16_WQX6p",
+    "nx:St_category_key17_U10h4",
+    "nx:St_category_key17_WQX6p",
+    "nx:St_category_key18_U10h4",
+    "nx:St_category_key18_WQX6p",
+    "nx:St_category_key19_U10h4",
+    "nx:St_category_key19_WQX6p",
+    "nx:St_category_key1_U10h4",
+    "nx:St_category_key1_WQX6p",
+    "nx:St_category_key20_U10h4",
+    "nx:St_category_key20_WQX6p",
+    "nx:St_category_key21_WQX6p",
+    "nx:St_category_key22_WQX6p",
+    "nx:St_category_key23_WQX6p",
+    "nx:St_category_key24_WQX6p",
+    "nx:St_category_key25_WQX6p",
+    "nx:St_category_key26_WQX6p",
+    "nx:St_category_key27_WQX6p",
+    "nx:St_category_key28_WQX6p",
+    "nx:St_category_key29_WQX6p",
+    "nx:St_category_key2_U10h4",
+    "nx:St_category_key2_WQX6p",
+    "nx:St_category_key30_WQX6p",
+    "nx:St_category_key31_WQX6p",
+    "nx:St_category_key32_WQX6p",
+    "nx:St_category_key33_WQX6p",
+    "nx:St_category_key34_WQX6p",
+    "nx:St_category_key35_WQX6p",
+    "nx:St_category_key36_WQX6p",
+    "nx:St_category_key37_WQX6p",
+    "nx:St_category_key38_WQX6p",
+    "nx:St_category_key39_WQX6p",
+    "nx:St_category_key3_U10h4",
+    "nx:St_category_key3_WQX6p",
+    "nx:St_category_key40_WQX6p",
+    "nx:St_category_key41_WQX6p",
+    "nx:St_category_key42_WQX6p",
+    "nx:St_category_key43_WQX6p",
+    "nx:St_category_key44_WQX6p",
+    "nx:St_category_key45_WQX6p",
+    "nx:St_category_key46_WQX6p",
+    "nx:St_category_key47_WQX6p",
+    "nx:S
+... (truncated)
+2026-06-03 13:40:39 - create_cost_center_v2 - INFO -   Found 86 tag keys
+2026-06-03 13:40:40 - create_cost_center_v2 - INFO -   Already used tags: 0
+2026-06-03 13:40:40 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmApplication&resourceGroupType=billingAccount
+2026-06-03 13:40:41 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmApplication&resourceGroupType=billingAccount
+2026-06-03 13:40:41 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:41 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.8098 seconds (1809.79 ms)
+2026-06-03 13:40:41 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:41 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:CalmApplication": [
+    "AppTest2",
+    "nucalm_locust_AHV_single_vm_bp_j7t7qp3z_1",
+    "test_app_manual",
+    "test_new_1"
+  ]
+}
+2026-06-03 13:40:41 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:41 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_CalmApplication_AppTest2_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "in"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO - [TIME TAKEN] 8.4941 seconds (8494.08 ms)
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "ff832638-ddf9-47e3-847f-29421dddcd0a"
+}
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_CalmApplication_AppTest2_133910
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:50 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_CalmApplication_AppTest2_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "in"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO - [TIME TAKEN] 4.3737 seconds (4373.72 ms)
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "16e7b48d-3ad4-4508-ae31-18f556ff8a20"
+}
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_CalmApplication_AppTest2_133910
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:54 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_CalmApplication_AppTest2_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "in"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.4794 seconds (2479.42 ms)
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "fc29b74a-31a1-4f40-af79-06bb22f75f4f"
+}
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_CalmApplication_AppTest2_133910
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:57 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_CalmApplication_AppTest2_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "in"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:40:59 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:40:59 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:40:59 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.8104 seconds (2810.39 ms)
+2026-06-03 13:40:59 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:40:59 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "7b97d698-c988-4ddf-88d8-6dc157926b5e"
+}
+2026-06-03 13:40:59 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_CalmApplication_AppTest2_133910
+2026-06-03 13:40:59 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmProject&resourceGroupType=billingAccount
+2026-06-03 13:41:02 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmProject&resourceGroupType=billingAccount
+2026-06-03 13:41:02 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:02 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.3983 seconds (2398.32 ms)
+2026-06-03 13:41:02 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:02 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:CalmProject": [
+    "Nucalm_1ex6",
+    "Nucalm_50g1",
+    "Nucalm_kmko"
+  ]
+}
+2026-06-03 13:41:02 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:02 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_CalmProject_Nucalm_1ex6_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.9979 seconds (3997.89 ms)
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e482cd03-f3c6-4e34-9dbb-40d71281172e"
+}
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_CalmProject_Nucalm_1ex6_133910
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:06 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_CalmProject_Nucalm_1ex6_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.0980 seconds (3098.01 ms)
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "28d25f81-ab4c-4673-b122-e0386c07b371"
+}
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_CalmProject_Nucalm_1ex6_133910
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:09 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_CalmProject_Nucalm_1ex6_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.5456 seconds (3545.64 ms)
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "b2b3f4ef-d2a5-4a1b-82dc-d96a4c59e32e"
+}
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_CalmProject_Nucalm_1ex6_133910
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:13 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_CalmProject_Nucalm_1ex6_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:16 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:16 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:16 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.1775 seconds (3177.51 ms)
+2026-06-03 13:41:16 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:16 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "516e9243-1ed5-45ef-adaf-937cadf68b2b"
+}
+2026-06-03 13:41:16 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_CalmProject_Nucalm_1ex6_133910
+2026-06-03 13:41:16 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmService&resourceGroupType=billingAccount
+2026-06-03 13:41:17 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmService&resourceGroupType=billingAccount
+2026-06-03 13:41:17 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:17 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.7391 seconds (1739.08 ms)
+2026-06-03 13:41:17 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:17 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:CalmService": [
+    "Service1"
+  ]
+}
+2026-06-03 13:41:17 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:17 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_CalmService_Service1_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.4272 seconds (3427.17 ms)
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "05c7cd6b-7fa6-46f0-9ab9-4ee0fb6bc291"
+}
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_CalmService_Service1_133910
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:21 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_CalmService_Service1_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.7088 seconds (2708.82 ms)
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "a18320f7-dfe7-4b19-a540-ccbd2e760ba1"
+}
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_CalmService_Service1_133910
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:24 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_CalmService_Service1_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.1707 seconds (3170.66 ms)
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "a4143c64-0406-4459-8033-3ebb240478dd"
+}
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_CalmService_Service1_133910
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:27 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_CalmService_Service1_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:30 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:30 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:30 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.2184 seconds (3218.42 ms)
+2026-06-03 13:41:30 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:30 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "3ddda0d6-2cf0-481d-b7ec-bc4018178678"
+}
+2026-06-03 13:41:30 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_CalmService_Service1_133910
+2026-06-03 13:41:30 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmUsername&resourceGroupType=billingAccount
+2026-06-03 13:41:32 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ACalmUsername&resourceGroupType=billingAccount
+2026-06-03 13:41:32 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:32 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.3037 seconds (2303.72 ms)
+2026-06-03 13:41:32 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:32 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:CalmUsername": [
+    "admin"
+  ]
+}
+2026-06-03 13:41:32 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:32 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_CalmUsername_admin_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO - [TIME TAKEN] 4.0945 seconds (4094.52 ms)
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4fd3977b-bc08-48f3-a619-edf136cd2a34"
+}
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_CalmUsername_admin_133910
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:36 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_CalmUsername_admin_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.6931 seconds (2693.15 ms)
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "925efbb4-4c4e-413e-9fd4-f4c482adb8a1"
+}
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_CalmUsername_admin_133910
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:39 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_CalmUsername_admin_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.7243 seconds (2724.29 ms)
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "2f673a60-f2bf-40a8-9f66-061d510a8ed6"
+}
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_CalmUsername_admin_133910
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:42 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_CalmUsername_admin_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:44 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:44 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:44 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.6603 seconds (2660.31 ms)
+2026-06-03 13:41:44 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:44 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d18b3282-3372-4325-8d3d-bc5d5fae0296"
+}
+2026-06-03 13:41:44 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_CalmUsername_admin_133910
+2026-06-03 13:41:44 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253AOSType&resourceGroupType=billingAccount
+2026-06-03 13:41:47 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253AOSType&resourceGroupType=billingAccount
+2026-06-03 13:41:47 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:47 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.5902 seconds (2590.17 ms)
+2026-06-03 13:41:47 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:47 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:OSType": [
+    "Linux"
+  ]
+}
+2026-06-03 13:41:47 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:47 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_OSType_Linux_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:OSType"], "values": ["Linux"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.7259 seconds (3725.87 ms)
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "01687148-3838-435f-9965-0e932a4b4a57"
+}
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_OSType_Linux_133910
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:51 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_OSType_Linux_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:OSType"], "values": ["Linux"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.8885 seconds (2888.49 ms)
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8713ec93-95be-43fc-8b30-8d800f0239ef"
+}
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_OSType_Linux_133910
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:54 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_OSType_Linux_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:OSType"], "values": ["Linux"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.0437 seconds (2043.74 ms)
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e06f968b-bc91-4565-aaed-11a779c8f36b"
+}
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_OSType_Linux_133910
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:56 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_OSType_Linux_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:OSType"], "values": ["Linux"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:41:59 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:41:59 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:41:59 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.1270 seconds (3127.02 ms)
+2026-06-03 13:41:59 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:41:59 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d6d5858d-1c33-4e1b-8517-a6a1985c71d9"
+}
+2026-06-03 13:41:59 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_OSType_Linux_133910
+2026-06-03 13:41:59 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key10_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:42:00 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key10_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:42:00 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:00 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.5678 seconds (1567.82 ms)
+2026-06-03 13:42:00 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:00 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key10_U10h4": [
+    "St_category_value10_1_U10h4",
+    "St_category_value10_2_U10h4",
+    "St_category_value10_3_U10h4",
+    "St_category_value10_4_U10h4",
+    "St_category_value10_5_U10h4"
+  ]
+}
+2026-06-03 13:42:00 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:00 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key10_U10h4_St_category_value10_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.0772 seconds (3077.22 ms)
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f01abcd3-b271-4ee6-9034-6a1f4394f309"
+}
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key10_U10h4_St_category_value10_1_U10h4_133910
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:04 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key10_U10h4_St_category_value10_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.4515 seconds (2451.52 ms)
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "59324f16-71ce-405e-92d9-29a4f9f2260b"
+}
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key10_U10h4_St_category_value10_1_U10h4_133910
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:06 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key10_U10h4_St_category_value10_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.3898 seconds (3389.80 ms)
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "0faeeb08-7a99-47f2-a55f-3a6a951f6570"
+}
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key10_U10h4_St_category_value10_1_U10h4_133910
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:09 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key10_U10h4_St_category_value10_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:13 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:13 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:13 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.2638 seconds (3263.75 ms)
+2026-06-03 13:42:13 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:13 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "0edd2592-141b-4f08-a312-c872362630cd"
+}
+2026-06-03 13:42:13 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key10_U10h4_St_category_value10_1_U10h4_133910
+2026-06-03 13:42:13 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key10_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:42:14 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key10_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:42:14 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:14 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.6343 seconds (1634.34 ms)
+2026-06-03 13:42:14 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:14 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key10_WQX6p": [
+    "St_category_value10_1_WQX6p",
+    "St_category_value10_2_WQX6p",
+    "St_category_value10_3_WQX6p",
+    "St_category_value10_4_WQX6p",
+    "St_category_value10_5_WQX6p"
+  ]
+}
+2026-06-03 13:42:14 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:14 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.6573 seconds (2657.32 ms)
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "5a168a6e-e8f9-4d01-80ee-c596c429fa3f"
+}
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:17 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.1385 seconds (2138.51 ms)
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "767514aa-26aa-4ea1-a1de-ee6e9e94f369"
+}
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:19 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.9943 seconds (2994.29 ms)
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "60944589-026b-4096-ab0f-a65127e3cfc9"
+}
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:22 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:25 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:25 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:25 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.5377 seconds (2537.70 ms)
+2026-06-03 13:42:25 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:25 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f97d2c53-9771-4212-bcba-4a252a1c31e5"
+}
+2026-06-03 13:42:25 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910
+2026-06-03 13:42:25 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key11_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:42:26 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key11_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:42:26 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:26 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.8336 seconds (1833.62 ms)
+2026-06-03 13:42:26 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:26 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key11_U10h4": [
+    "St_category_value11_1_U10h4",
+    "St_category_value11_2_U10h4",
+    "St_category_value11_3_U10h4",
+    "St_category_value11_4_U10h4",
+    "St_category_value11_5_U10h4"
+  ]
+}
+2026-06-03 13:42:26 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:26 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key11_U10h4_St_category_value11_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key11_U10h4"], "values": ["St_category_value11_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.3256 seconds (2325.61 ms)
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d0564517-8f67-4613-af38-33dc22633042"
+}
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key11_U10h4_St_category_value11_1_U10h4_133910
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:29 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key11_U10h4_St_category_value11_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key11_U10h4"], "values": ["St_category_value11_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.3832 seconds (2383.25 ms)
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "cbade521-9359-4e97-9722-398ab2875fa0"
+}
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key11_U10h4_St_category_value11_1_U10h4_133910
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:31 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key11_U10h4_St_category_value11_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key11_U10h4"], "values": ["St_category_value11_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.4965 seconds (2496.48 ms)
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "c0adb442-e764-458a-a417-01852edf2be3"
+}
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key11_U10h4_St_category_value11_1_U10h4_133910
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:34 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key11_U10h4_St_category_value11_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key11_U10h4"], "values": ["St_category_value11_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}]}}], "permissions": {}, "months": ["2026-06"]}
+2026-06-03 13:42:38 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:38 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:38 - create_cost_center_v2 - INFO - [TIME TAKEN] 4.1508 seconds (4150.76 ms)
+2026-06-03 13:42:38 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:38 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "49d48f8d-5002-4cab-ad5a-902f60850d6f"
+}
+2026-06-03 13:42:38 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key11_U10h4_St_category_value11_1_U10h4_133910
+2026-06-03 13:42:38 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key11_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:42:41 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key11_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:42:41 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:41 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.1427 seconds (3142.74 ms)
+2026-06-03 13:42:41 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:41 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key11_WQX6p": [
+    "St_category_value11_1_WQX6p",
+    "St_category_value11_2_WQX6p",
+    "St_category_value11_3_WQX6p",
+    "St_category_value11_4_WQX6p",
+    "St_category_value11_5_WQX6p"
+  ]
+}
+2026-06-03 13:42:41 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:41 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key11_WQX6p"], "values": ["St_category_value11_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.8073 seconds (2807.28 ms)
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8da4bbf4-c506-4af3-8bf9-a925affb879b"
+}
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:44 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key11_WQX6p"], "values": ["St_category_value11_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.8094 seconds (2809.45 ms)
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d7227359-c575-4c2b-b37c-6a20cec2210b"
+}
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:47 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key11_WQX6p"], "values": ["St_category_value11_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.3808 seconds (3380.76 ms)
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "1a3d0ae6-40a2-4bff-90e7-121260447f36"
+}
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:50 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key11_WQX6p"], "values": ["St_category_value11_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:42:53 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:53 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:53 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.0879 seconds (3087.90 ms)
+2026-06-03 13:42:53 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:53 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "63cd702c-f6dc-41fa-8d4d-521f70c336ef"
+}
+2026-06-03 13:42:53 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910
+2026-06-03 13:42:53 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key12_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:42:55 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key12_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:42:55 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:55 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.7529 seconds (1752.89 ms)
+2026-06-03 13:42:55 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:55 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key12_U10h4": [
+    "St_category_value12_1_U10h4",
+    "St_category_value12_2_U10h4",
+    "St_category_value12_3_U10h4",
+    "St_category_value12_4_U10h4",
+    "St_category_value12_5_U10h4"
+  ]
+}
+2026-06-03 13:42:55 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:55 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key12_U10h4_St_category_value12_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key12_U10h4"], "values": ["St_category_value12_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.7607 seconds (2760.73 ms)
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "1dc7c8d4-12c3-4aa5-9b3e-177a33152220"
+}
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key12_U10h4_St_category_value12_1_U10h4_133910
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:42:58 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key12_U10h4_St_category_value12_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key12_U10h4"], "values": ["St_category_value12_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.8915 seconds (2891.52 ms)
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "53dc0adb-cd58-40ee-9683-538ef37524f8"
+}
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key12_U10h4_St_category_value12_1_U10h4_133910
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:01 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key12_U10h4_St_category_value12_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key12_U10h4"], "values": ["St_category_value12_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.9860 seconds (2985.98 ms)
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "cf4dd102-743a-4430-af50-c45cb63e60c5"
+}
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key12_U10h4_St_category_value12_1_U10h4_133910
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:03 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key12_U10h4_St_category_value12_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key12_U10h4"], "values": ["St_category_value12_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:06 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:06 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:06 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.6036 seconds (2603.56 ms)
+2026-06-03 13:43:06 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:06 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e735dceb-ae01-43d4-9718-c87f8a6c9e58"
+}
+2026-06-03 13:43:06 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key12_U10h4_St_category_value12_1_U10h4_133910
+2026-06-03 13:43:06 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key12_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:43:09 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key12_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:43:09 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:09 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.4631 seconds (2463.12 ms)
+2026-06-03 13:43:09 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:09 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key12_WQX6p": [
+    "St_category_value12_1_WQX6p",
+    "St_category_value12_2_WQX6p",
+    "St_category_value12_3_WQX6p",
+    "St_category_value12_4_WQX6p",
+    "St_category_value12_5_WQX6p"
+  ]
+}
+2026-06-03 13:43:09 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:09 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key12_WQX6p"], "values": ["St_category_value12_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.0679 seconds (3067.88 ms)
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f9e98ebd-084b-4b49-a0e5-b7e8b5c5c831"
+}
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:12 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key12_WQX6p"], "values": ["St_category_value12_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.9644 seconds (2964.44 ms)
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8015825d-e95a-4340-be9b-f2a0b094edd3"
+}
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:15 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key12_WQX6p"], "values": ["St_category_value12_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.2869 seconds (2286.94 ms)
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f29a9c9f-7df8-4e3c-8995-d3da80c3d22f"
+}
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:17 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key12_WQX6p"], "values": ["St_category_value12_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:19 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:19 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:19 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.2957 seconds (2295.71 ms)
+2026-06-03 13:43:19 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:19 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f86d6233-f0c9-4feb-97e3-7d8c031412d1"
+}
+2026-06-03 13:43:19 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910
+2026-06-03 13:43:19 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key13_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:43:21 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key13_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:43:21 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:21 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.7072 seconds (1707.22 ms)
+2026-06-03 13:43:21 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:21 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key13_U10h4": [
+    "St_category_value13_1_U10h4",
+    "St_category_value13_2_U10h4",
+    "St_category_value13_3_U10h4",
+    "St_category_value13_4_U10h4",
+    "St_category_value13_5_U10h4"
+  ]
+}
+2026-06-03 13:43:21 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:21 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key13_U10h4_St_category_value13_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key13_U10h4"], "values": ["St_category_value13_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.7115 seconds (2711.50 ms)
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "3f56fad2-53e2-4854-931e-413f82fa7842"
+}
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key13_U10h4_St_category_value13_1_U10h4_133910
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:24 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key13_U10h4_St_category_value13_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key13_U10h4"], "values": ["St_category_value13_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.7554 seconds (2755.44 ms)
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "6a1d5d59-7068-48ba-aec7-6a6efd4aba47"
+}
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key13_U10h4_St_category_value13_1_U10h4_133910
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:26 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key13_U10h4_St_category_value13_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key13_U10h4"], "values": ["St_category_value13_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.8149 seconds (2814.92 ms)
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "548037e4-f44c-4f9b-8209-e5a448821f7c"
+}
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key13_U10h4_St_category_value13_1_U10h4_133910
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:29 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key13_U10h4_St_category_value13_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key13_U10h4"], "values": ["St_category_value13_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:32 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:32 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:32 - create_cost_center_v2 - INFO - [TIME TAKEN] 2.4884 seconds (2488.36 ms)
+2026-06-03 13:43:32 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:32 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d31e55de-735f-4df2-b9e4-48d24a981dec"
+}
+2026-06-03 13:43:32 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key13_U10h4_St_category_value13_1_U10h4_133910
+2026-06-03 13:43:32 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key13_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:43:34 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key13_WQX6p&resourceGroupType=billingAccount
+2026-06-03 13:43:34 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:34 - create_cost_center_v2 - INFO - [TIME TAKEN] 1.9580 seconds (1958.02 ms)
+2026-06-03 13:43:34 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:34 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key13_WQX6p": [
+    "St_category_value13_1_WQX6p",
+    "St_category_value13_2_WQX6p",
+    "St_category_value13_3_WQX6p",
+    "St_category_value13_4_WQX6p",
+    "St_category_value13_5_WQX6p"
+  ]
+}
+2026-06-03 13:43:34 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:34 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key13_WQX6p"], "values": ["St_category_value13_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.4791 seconds (3479.11 ms)
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "093a326a-1314-4bd8-9e31-ba9c76bc684f"
+}
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:37 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key13_WQX6p"], "values": ["St_category_value13_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.4522 seconds (3452.20 ms)
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4ca09a02-5f4c-4e89-aab8-10cd6ba9f8a7"
+}
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:41 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key13_WQX6p"], "values": ["St_category_value13_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO - [TIME TAKEN] 4.8942 seconds (4894.22 ms)
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "792ed441-c0e6-46de-8be3-90f4e69e9268"
+}
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:45 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key13_WQX6p"], "values": ["St_category_value13_1_WQX6p"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:43:49 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:49 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:49 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.4179 seconds (3417.92 ms)
+2026-06-03 13:43:49 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:49 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "63331432-3ce1-4099-9079-d0f9f31e11f4"
+}
+2026-06-03 13:43:49 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c47f_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910
+2026-06-03 13:43:49 - create_cost_center_v2 - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key14_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:43:52 - create_cost_center_v2 - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/nx/analysis/dimensions/values?resourceGroupIds=62383475-b7ea-4274-b70e-2e907edb67dc&dimensions=tag.nx%253ASt_category_key14_U10h4&resourceGroupType=billingAccount
+2026-06-03 13:43:52 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:43:52 - create_cost_center_v2 - INFO - [TIME TAKEN] 3.4774 seconds (3477.39 ms)
+2026-06-03 13:43:52 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:43:52 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "nx:St_category_key14_U10h4": [
+    "St_category_value14_1_U10h4",
+    "St_category_value14_2_U10h4",
+    "St_category_value14_3_U10h4",
+    "St_category_value14_4_U10h4",
+    "St_category_value14_5_U10h4"
+  ]
+}
+2026-06-03 13:43:52 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:43:52 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193db_St_category_key14_U10h4_St_category_value14_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ecc-5513-cb57-0000-0000000193db"], "tags": [{"keys": ["nx:St_category_key14_U10h4"], "values": ["St_category_value14_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO - [TIME TAKEN] 7.9009 seconds (7900.86 ms)
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "2e835983-ba1f-4388-a651-8cd4846a25f7"
+}
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193db_St_category_key14_U10h4_St_category_value14_1_U10h4_133910
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:44:00 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c483_St_category_key14_U10h4_St_category_value14_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e62-88b6-68bb-0000-00000001c483"], "tags": [{"keys": ["nx:St_category_key14_U10h4"], "values": ["St_category_value14_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO - [TIME TAKEN] 52.1928 seconds (52192.78 ms)
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "b28a8705-5c75-4ab6-b7c4-4d7efd49602d"
+}
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_1c483_St_category_key14_U10h4_St_category_value14_1_U10h4_133910
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:44:52 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_193e2_St_category_key14_U10h4_St_category_value14_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064e60-9eff-f23f-0000-0000000193e2"], "tags": [{"keys": ["nx:St_category_key14_U10h4"], "values": ["St_category_value14_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO - [STATUS CODE] 200
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO - [TIME TAKEN] 14.6902 seconds (14690.16 ms)
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "5aebfefe-da8a-480d-b8a4-1412fa0d2f1b"
+}
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO -   ✓ Created: CC_HomePCAccount_193e2_St_category_key14_U10h4_St_category_value14_1_U10h4_133910
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:45:07 - create_cost_center_v2 - INFO - [REQUEST DATA PAYLOAD] {"name": "CC_HomePCAccount_1c47f_St_category_key14_U10h4_St_category_value14_1_U10h4_133910", "definitions": [{"provider": "nx", "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc", "filters": {"childAccounts": ["00064ec4-f785-7be9-0000-00000001c47f"], "tags": [{"keys": ["nx:St_category_key14_U10h4"], "values": ["St_category_value14_1_U10h4"], "operator": "in"}, {"keys": ["nx:CalmApplication"], "values": ["AppTest2"], "operator": "notIn"}, {"keys": ["nx:CalmProject"], "values": ["Nucalm_1ex6"], "operator": "notIn"}, {"keys": ["nx:CalmService"], "values": ["Service1"], "operator": "notIn"}, {"keys": ["nx:CalmUsername"], "values": ["admin"], "operator": "notIn"}, {"keys": ["nx:OSType"], "values": ["Linux"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_U10h4"], "values": ["St_category_value10_1_U10h4"], "operator": "notIn"}, {"keys": ["nx:St_category_key10_WQX6p"], "values": ["St_category_value10_1_WQX6p"], "operator": "notIn"}, {"keys": ["nx:St_category_key11_U10h4"], "value... (truncated)
+2026-06-03 13:45:38 - create_cost_center_v2 - ERROR - [API ERROR] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenter
+2026-06-03 13:45:38 - create_cost_center_v2 - ERROR - [ERROR MESSAGE] HTTPSConnectionPool(host='ncm.services.nconprem-10-36-199-8.ccpnx.com', port=443): Read timed out. (read timeout=30)
+2026-06-03 13:45:38 - create_cost_center_v2 - ERROR - [TIME TAKEN] 30.5238 seconds (30523.79 ms)
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - 
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - API METRICS CONSOLIDATED REPORT
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - POST     | /v1/cg/global/costCenter                           |      56 |      - |    2043.74 |   52192.78 |    4894.22 |   14690.16 |   30523.79
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - GET      | /v1/cg/nx/analysis/dimensions/values               |      15 |      - |    1567.82 |    3477.39 |    3142.74 |    3477.39 |    3477.39
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - GET      | /v1/cg/global/chargeback/availableAccounts         |       1 |      - |    2501.95 |    2501.95 |    2501.95 |    2501.95 |    2501.95
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - POST     | /api/nutanix/v3/accounts/list                      |       1 |      - |    2960.84 |    2960.84 |    2960.84 |    2960.84 |    2960.84
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - GET      | /v1/cg/global/chargeback/availableAccounts/usedT.. |       1 |      - |    2448.63 |    2448.63 |    2448.63 |    2448.63 |    2448.63
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - Total API Calls: 74 | Unique Endpoints: 5 | Total Failures (non-200/202): 0 | Exceptions: 1
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - ================================================================================================================================================================
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - 
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - STATUS CODE BREAKDOWN:
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - ----------------------------------------------------------------------------------------------------
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - POST   /v1/cg/global/costCenter                   | 200: 55
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - GET    /v1/cg/nx/analysis/dimensions/values       | 200: 15
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - GET    /v1/cg/global/chargeback/availableAccoun.. | 200: 1
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - POST   /api/nutanix/v3/accounts/list              | 200: 1
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - GET    /v1/cg/global/chargeback/availableAccoun.. | 200: 1
+2026-06-03 13:45:38 - create_cost_center_v2 - INFO - ================================================================================================================================================================

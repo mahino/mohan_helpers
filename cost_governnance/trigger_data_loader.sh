@@ -390,8 +390,8 @@ check_job_completion() {
     
     # Check each job type for completion
     for job_type in "${job_types[@]}"; do
-        if echo "$logs" | grep -q "$job_type completed successfully" || \
-           ([ "$job_type" = "NX_ROUTINE_WORKFLOW" ] && echo "$logs" | grep -q "Updating service backfill status for Service :\[NX_ROUTINE_WORKFLOW\]"); then
+        if grep -q "$job_type completed successfully" <<< "$logs" || \
+           ([ "$job_type" = "NX_ROUTINE_WORKFLOW" ] && grep -q "Updating service backfill status for Service :\[NX_ROUTINE_WORKFLOW\]" <<< "$logs"); then
             completed_jobs+=("$job_type")
             
             # Log completion message only once
@@ -453,7 +453,7 @@ display_job_progress() {
         # Milestone 1: Processing job started (Pattern: "Processing job: CATEGORIES_CONFIG")
         local processing_key="${job_type}_processing"
         if [ -z "${LOGGED_MILESTONES[$processing_key]}" ]; then
-            if echo "$logs" | grep -q "Processing job: $job_type"; then
+            if grep -q "Processing job: $job_type" <<< "$logs"; then
                 echo -e "  ${CYAN}▶${NC} Started processing: ${YELLOW}$job_type${NC}"
                 LOGGED_MILESTONES[$processing_key]=1
             fi
@@ -462,7 +462,7 @@ display_job_progress() {
         # Milestone 2: Fetching data for dates (Pattern: "Fetching data for date: 2025-12-21 for : CATEGORIES_CONFIG")
         local fetching_key="${job_type}_fetching"
         if [ -z "${LOGGED_MILESTONES[$fetching_key]}" ]; then
-            local dates=$(echo "$logs" | grep "Fetching data for date:.*for : $job_type" | sed 's/.*Fetching data for date: \([0-9-]*\) for.*/\1/' | sort -u | tr '\n' ',' | sed 's/,$//')
+            local dates=$(grep "Fetching data for date:.*for : $job_type" <<< "$logs" | sed 's/.*Fetching data for date: \([0-9-]*\) for.*/\1/' | sort -u | tr '\n' ',' | sed 's/,$//')
             if [ -n "$dates" ]; then
                 echo -e "  ${CYAN}📅${NC} $job_type fetching dates: ${GREEN}$dates${NC}"
                 LOGGED_MILESTONES[$fetching_key]=1
@@ -472,7 +472,7 @@ display_job_progress() {
         # Milestone 3: Dropping partition data (Pattern: "dropping partition data for backfill job [CATEGORIES_CONFIG]")
         local dropping_key="${job_type}_dropping"
         if [ -z "${LOGGED_MILESTONES[$dropping_key]}" ]; then
-            if echo "$logs" | grep -q "dropping partition data for backfill job \[$job_type\]"; then
+            if grep -q "dropping partition data for backfill job \[$job_type\]" <<< "$logs"; then
                 echo -e "  ${CYAN}🗑${NC}  $job_type: Dropping partition data"
                 LOGGED_MILESTONES[$dropping_key]=1
             fi
@@ -488,7 +488,7 @@ display_job_progress() {
                 "CLUSTER_HARDWARE_CONFIG") write_pattern="Start writing to Cluster Hardware Metrics Tables" ;;
                 "CLUSTER_CONFIG") write_pattern="Start writing to Cluster Metrics Tables" ;;
             esac
-            if echo "$logs" | grep -q "$write_pattern"; then
+            if grep -q "$write_pattern" <<< "$logs"; then
                 echo -e "  ${CYAN}✍${NC}  $job_type: Writing to ClickHouse tables"
                 LOGGED_MILESTONES[$writing_key]=1
             fi
@@ -505,7 +505,7 @@ display_job_progress() {
                 "CLUSTER_CONFIG") write_pattern="Start writing to Cluster Metrics Tables" ;;
             esac
             # Look for the Written line after the Start writing line
-            local written_count=$(echo "$logs" | grep -A10 "$write_pattern" | grep "Written.*to clickhouse" | head -1 | sed 's/.*Written \([0-9]*\) to clickhouse.*/\1/')
+            local written_count=$(grep -A10 "$write_pattern" <<< "$logs" | grep "Written.*to clickhouse" | head -1 | sed 's/.*Written \([0-9]*\) to clickhouse.*/\1/')
             if [ -n "$written_count" ] && [ "$written_count" -gt 0 ] 2>/dev/null; then
                 echo -e "  ${CYAN}💾${NC} $job_type: Written ${GREEN}$(printf "%'d" $written_count)${NC} records to ClickHouse"
                 LOGGED_MILESTONES[$written_key]=1
@@ -515,7 +515,7 @@ display_job_progress() {
         # Milestone 6: Marked as completed in PG (Pattern: "Updating service backfill status for Service :[CATEGORIES_CONFIG]")
         local completed_key="${job_type}_pg_completed"
         if [ -z "${LOGGED_MILESTONES[$completed_key]}" ]; then
-            if echo "$logs" | grep -q "Updating service backfill status for Service :\[$job_type\]"; then
+            if grep -q "Updating service backfill status for Service :\[$job_type\]" <<< "$logs"; then
                 echo -e "  ${CYAN}✅${NC} $job_type: Backfill status updated in PG"
                 LOGGED_MILESTONES[$completed_key]=1
             fi
@@ -524,7 +524,7 @@ display_job_progress() {
         # Milestone 7: Marked as completed (Pattern: "1 marked as completed updated in PG")
         local marked_key="${job_type}_marked"
         if [ -z "${LOGGED_MILESTONES[$marked_key]}" ] && [ -n "${LOGGED_MILESTONES[${job_type}_pg_completed]}" ]; then
-            if echo "$logs" | grep -q "marked as completed updated in PG"; then
+            if grep -q "marked as completed updated in PG" <<< "$logs"; then
                 echo -e "  ${CYAN}📝${NC} $job_type: Marked as completed in PG"
                 LOGGED_MILESTONES[$marked_key]=1
             fi
@@ -533,7 +533,7 @@ display_job_progress() {
         # Milestone 8: Temp file deleted (Pattern: "temp file for executor CATEGORIES_CONFIG deleted successfully")
         local cleanup_key="${job_type}_cleanup"
         if [ -z "${LOGGED_MILESTONES[$cleanup_key]}" ]; then
-            if echo "$logs" | grep -q "temp file for executor $job_type deleted successfully"; then
+            if grep -q "temp file for executor $job_type deleted successfully" <<< "$logs"; then
                 echo -e "  ${CYAN}🧹${NC} $job_type: Cleanup complete"
                 LOGGED_MILESTONES[$cleanup_key]=1
             fi
@@ -544,7 +544,7 @@ display_job_progress() {
     # Track NX_ROUTINE_WORKFLOW milestones separately (it's a special job type)
     local nx_routine_key="NX_ROUTINE_WORKFLOW_processing"
     if [ -z "${LOGGED_MILESTONES[$nx_routine_key]}" ]; then
-        if echo "$logs" | grep -q "Processing job: NX_ROUTINE_WORKFLOW\|Starting NX_ROUTINE_WORKFLOW"; then
+        if grep -q "Processing job: NX_ROUTINE_WORKFLOW\|Starting NX_ROUTINE_WORKFLOW" <<< "$logs"; then
             echo -e "  ${CYAN}▶${NC} Started processing: ${YELLOW}NX_ROUTINE_WORKFLOW${NC}"
             LOGGED_MILESTONES[$nx_routine_key]=1
         fi
@@ -553,7 +553,7 @@ display_job_progress() {
     # Also track Number of backfill jobs
     local backfill_jobs_key="backfill_jobs_count"
     if [ -z "${LOGGED_MILESTONES[$backfill_jobs_key]}" ]; then
-        local job_count=$(echo "$logs" | grep "Number of backfill jobs to process in workflow:" | sed 's/.*workflow: \([0-9]*\).*/\1/' | head -1)
+        local job_count=$(grep "Number of backfill jobs to process in workflow:" <<< "$logs" | sed 's/.*workflow: \([0-9]*\).*/\1/' | head -1)
         if [ -n "$job_count" ] && [ "$job_count" != "0" ]; then
             echo -e "  ${CYAN}📋${NC} Backfill jobs to process: ${YELLOW}$job_count${NC}"
             LOGGED_MILESTONES[$backfill_jobs_key]=1
