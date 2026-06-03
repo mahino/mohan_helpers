@@ -1,0 +1,2741 @@
+2026-06-03 14:02:38 - create_business_unit - INFO - ================================================================================
+2026-06-03 14:02:38 - create_business_unit - INFO - Script: create_business_unit
+2026-06-03 14:02:38 - create_business_unit - INFO - Log file: /Users/mohan.as1/workspace/mohan_helpers/cost_governnance/logs/create_business_unit_20260603_140238.log
+2026-06-03 14:02:38 - create_business_unit - INFO - ================================================================================
+2026-06-03 14:02:38 - create_business_unit - INFO - ================================================================================
+2026-06-03 14:02:38 - create_business_unit - INFO - Starting Business Unit Creation Process
+2026-06-03 14:02:38 - create_business_unit - INFO - ================================================================================
+2026-06-03 14:02:38 - create_business_unit - INFO - Configuration:
+2026-06-03 14:02:38 - create_business_unit - INFO -   - Base URL: https://ncm.services.nconprem-10-36-199-8.ccpnx.com
+2026-06-03 14:02:38 - create_business_unit - INFO -   - Business Units to create: 30
+2026-06-03 14:02:38 - create_business_unit - INFO -   - Cost Centers per BU: 2
+2026-06-03 14:02:38 - create_business_unit - INFO - ================================================================================
+2026-06-03 14:02:38 - create_business_unit - INFO - 
+[1/30] Processing Business Unit...
+2026-06-03 14:02:38 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=1
+2026-06-03 14:02:42 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=1
+2026-06-03 14:02:42 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:42 - create_business_unit - INFO - [TIME TAKEN] 3.6813 seconds (3681.29 ms)
+2026-06-03 14:02:42 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:42 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "ff832638-ddf9-47e3-847f-29421dddcd0a",
+      "name": "CC_HomePCAccount_193db_CalmApplication_AppTest2_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "in"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:10:49.646+00:00",
+      "lastUpdatedAt": "2026-06-03T08:10:49.646+00:00"
+    },
+    {
+      "id": "e482cd03-f3c6-4e34-9dbb-40d71281172e",
+      "name": "CC_HomePCAccount_193db_CalmProject_Nucalm_1ex6_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+    
+... (truncated)
+2026-06-03 14:02:42 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:42 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_1", "permissions": {}, "costCenters": ["ff832638-ddf9-47e3-847f-29421dddcd0a", "e482cd03-f3c6-4e34-9dbb-40d71281172e"]}
+2026-06-03 14:02:46 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:46 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:46 - create_business_unit - INFO - [TIME TAKEN] 4.1657 seconds (4165.68 ms)
+2026-06-03 14:02:46 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:46 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e17dd8dd-1181-45b2-9469-c27501de4cf3"
+}
+2026-06-03 14:02:46 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_1 with 2 cost centers
+2026-06-03 14:02:46 - create_business_unit - INFO - 
+[2/30] Processing Business Unit...
+2026-06-03 14:02:46 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=3
+2026-06-03 14:02:48 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=3
+2026-06-03 14:02:48 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:48 - create_business_unit - INFO - [TIME TAKEN] 2.0254 seconds (2025.38 ms)
+2026-06-03 14:02:48 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:48 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "05c7cd6b-7fa6-46f0-9ab9-4ee0fb6bc291",
+      "name": "CC_HomePCAccount_193db_CalmService_Service1_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:20.945+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:20.945+00:00"
+    },
+    {
+      "id": "4fd3977b-bc08-48f3-a619-edf136cd2a34",
+      "name": "CC_HomePCAccount_193db_CalmUsername_admin_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+               
+... (truncated)
+2026-06-03 14:02:48 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:48 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_2", "permissions": {}, "costCenters": ["05c7cd6b-7fa6-46f0-9ab9-4ee0fb6bc291", "4fd3977b-bc08-48f3-a619-edf136cd2a34"]}
+2026-06-03 14:02:50 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:50 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:50 - create_business_unit - INFO - [TIME TAKEN] 2.0039 seconds (2003.95 ms)
+2026-06-03 14:02:50 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:50 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "55e9f8dc-c2a7-4929-8d6c-a6a1dbab78b7"
+}
+2026-06-03 14:02:50 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_2 with 2 cost centers
+2026-06-03 14:02:50 - create_business_unit - INFO - 
+[3/30] Processing Business Unit...
+2026-06-03 14:02:50 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=5
+2026-06-03 14:02:52 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=5
+2026-06-03 14:02:52 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:52 - create_business_unit - INFO - [TIME TAKEN] 2.0918 seconds (2091.84 ms)
+2026-06-03 14:02:52 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:52 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "01687148-3838-435f-9965-0e932a4b4a57",
+      "name": "CC_HomePCAccount_193db_OSType_Linux_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:51.141+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:51.141+00:00"
+    },
+    {
+      "id": "f01abcd3-b271-4ee6-9034-6a1f4394f309",
+      "name": "CC_HomePCAccount_193db_St_category_key10_U10h4_St_category_value10_1_U10h4_1
+... (truncated)
+2026-06-03 14:02:52 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:52 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_3", "permissions": {}, "costCenters": ["01687148-3838-435f-9965-0e932a4b4a57", "f01abcd3-b271-4ee6-9034-6a1f4394f309"]}
+2026-06-03 14:02:54 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:54 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:54 - create_business_unit - INFO - [TIME TAKEN] 1.8178 seconds (1817.85 ms)
+2026-06-03 14:02:54 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:54 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "b94afeef-d2e1-4e3e-84e5-74b0d0948cd0"
+}
+2026-06-03 14:02:54 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_3 with 2 cost centers
+2026-06-03 14:02:54 - create_business_unit - INFO - 
+[4/30] Processing Business Unit...
+2026-06-03 14:02:54 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=7
+2026-06-03 14:02:56 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=7
+2026-06-03 14:02:56 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:56 - create_business_unit - INFO - [TIME TAKEN] 1.7292 seconds (1729.16 ms)
+2026-06-03 14:02:56 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:56 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "5a168a6e-e8f9-4d01-80ee-c596c429fa3f",
+      "name": "CC_HomePCAccount_193db_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key10_WQX6p"
+                ],
+                "values": [
+                  "St_category_value10_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:02:56 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:56 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_4", "permissions": {}, "costCenters": ["5a168a6e-e8f9-4d01-80ee-c596c429fa3f", "d0564517-8f67-4613-af38-33dc22633042"]}
+2026-06-03 14:02:58 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:02:58 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:02:58 - create_business_unit - INFO - [TIME TAKEN] 2.1373 seconds (2137.34 ms)
+2026-06-03 14:02:58 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:02:58 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "31ae79d6-9343-4ecc-9384-c389c1ceeebe"
+}
+2026-06-03 14:02:58 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_4 with 2 cost centers
+2026-06-03 14:02:58 - create_business_unit - INFO - 
+[5/30] Processing Business Unit...
+2026-06-03 14:02:58 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=9
+2026-06-03 14:03:00 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=9
+2026-06-03 14:03:00 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:00 - create_business_unit - INFO - [TIME TAKEN] 1.5092 seconds (1509.25 ms)
+2026-06-03 14:03:00 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:00 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "8da4bbf4-c506-4af3-8bf9-a925affb879b",
+      "name": "CC_HomePCAccount_193db_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key11_WQX6p"
+                ],
+                "values": [
+                  "St_category_value11_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:00 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:00 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_5", "permissions": {}, "costCenters": ["8da4bbf4-c506-4af3-8bf9-a925affb879b", "1dc7c8d4-12c3-4aa5-9b3e-177a33152220"]}
+2026-06-03 14:03:03 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:03 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:03 - create_business_unit - INFO - [TIME TAKEN] 3.1326 seconds (3132.56 ms)
+2026-06-03 14:03:03 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:03 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "41a15811-d4f8-4e04-af48-bfe547961a91"
+}
+2026-06-03 14:03:03 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_5 with 2 cost centers
+2026-06-03 14:03:03 - create_business_unit - INFO - 
+[6/30] Processing Business Unit...
+2026-06-03 14:03:03 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=11
+2026-06-03 14:03:04 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=11
+2026-06-03 14:03:04 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:04 - create_business_unit - INFO - [TIME TAKEN] 1.4886 seconds (1488.58 ms)
+2026-06-03 14:03:04 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:04 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "f9e98ebd-084b-4b49-a0e5-b7e8b5c5c831",
+      "name": "CC_HomePCAccount_193db_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key12_WQX6p"
+                ],
+                "values": [
+                  "St_category_value12_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:04 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:04 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_6", "permissions": {}, "costCenters": ["f9e98ebd-084b-4b49-a0e5-b7e8b5c5c831", "3f56fad2-53e2-4854-931e-413f82fa7842"]}
+2026-06-03 14:03:06 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:06 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:06 - create_business_unit - INFO - [TIME TAKEN] 2.0657 seconds (2065.71 ms)
+2026-06-03 14:03:06 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:06 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "e6e55590-2bc5-4551-9332-eb2bc95384a3"
+}
+2026-06-03 14:03:06 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_6 with 2 cost centers
+2026-06-03 14:03:06 - create_business_unit - INFO - 
+[7/30] Processing Business Unit...
+2026-06-03 14:03:06 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=13
+2026-06-03 14:03:08 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=13
+2026-06-03 14:03:08 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:08 - create_business_unit - INFO - [TIME TAKEN] 1.9082 seconds (1908.18 ms)
+2026-06-03 14:03:08 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:08 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "093a326a-1314-4bd8-9e31-ba9c76bc684f",
+      "name": "CC_HomePCAccount_193db_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ecc-5513-cb57-0000-0000000193db"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key13_WQX6p"
+                ],
+                "values": [
+                  "St_category_value13_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:08 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:08 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_7", "permissions": {}, "costCenters": ["093a326a-1314-4bd8-9e31-ba9c76bc684f", "2e835983-ba1f-4388-a651-8cd4846a25f7"]}
+2026-06-03 14:03:10 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:10 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:10 - create_business_unit - INFO - [TIME TAKEN] 1.9219 seconds (1921.95 ms)
+2026-06-03 14:03:10 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:10 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "2779cae2-1b27-4e4c-8e1d-862758d82488"
+}
+2026-06-03 14:03:10 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_7 with 2 cost centers
+2026-06-03 14:03:10 - create_business_unit - INFO - 
+[8/30] Processing Business Unit...
+2026-06-03 14:03:10 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=15
+2026-06-03 14:03:12 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=15
+2026-06-03 14:03:12 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:12 - create_business_unit - INFO - [TIME TAKEN] 1.9690 seconds (1968.98 ms)
+2026-06-03 14:03:12 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:12 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "fc29b74a-31a1-4f40-af79-06bb22f75f4f",
+      "name": "CC_HomePCAccount_193e2_CalmApplication_AppTest2_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "in"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:10:56.842+00:00",
+      "lastUpdatedAt": "2026-06-03T08:10:56.842+00:00"
+    },
+    {
+      "id": "b2b3f4ef-d2a5-4a1b-82dc-d96a4c59e32e",
+      "name": "CC_HomePCAccount_193e2_CalmProject_Nucalm_1ex6_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+    
+... (truncated)
+2026-06-03 14:03:12 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:12 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_8", "permissions": {}, "costCenters": ["fc29b74a-31a1-4f40-af79-06bb22f75f4f", "b2b3f4ef-d2a5-4a1b-82dc-d96a4c59e32e"]}
+2026-06-03 14:03:14 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:14 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:14 - create_business_unit - INFO - [TIME TAKEN] 1.6966 seconds (1696.59 ms)
+2026-06-03 14:03:14 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:14 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "27d5baf6-ecee-4349-867b-82d15d2b61ce"
+}
+2026-06-03 14:03:14 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_8 with 2 cost centers
+2026-06-03 14:03:14 - create_business_unit - INFO - 
+[9/30] Processing Business Unit...
+2026-06-03 14:03:14 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=17
+2026-06-03 14:03:16 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=17
+2026-06-03 14:03:16 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:16 - create_business_unit - INFO - [TIME TAKEN] 1.7972 seconds (1797.22 ms)
+2026-06-03 14:03:16 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:16 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "a4143c64-0406-4459-8033-3ebb240478dd",
+      "name": "CC_HomePCAccount_193e2_CalmService_Service1_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:26.942+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:26.942+00:00"
+    },
+    {
+      "id": "2f673a60-f2bf-40a8-9f66-061d510a8ed6",
+      "name": "CC_HomePCAccount_193e2_CalmUsername_admin_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+               
+... (truncated)
+2026-06-03 14:03:16 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:16 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_9", "permissions": {}, "costCenters": ["a4143c64-0406-4459-8033-3ebb240478dd", "2f673a60-f2bf-40a8-9f66-061d510a8ed6"]}
+2026-06-03 14:03:18 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:18 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:18 - create_business_unit - INFO - [TIME TAKEN] 2.2125 seconds (2212.48 ms)
+2026-06-03 14:03:18 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:18 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "8fda8c06-79fb-43f2-888a-555b8b6970af"
+}
+2026-06-03 14:03:18 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_9 with 2 cost centers
+2026-06-03 14:03:18 - create_business_unit - INFO - 
+[10/30] Processing Business Unit...
+2026-06-03 14:03:18 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=19
+2026-06-03 14:03:20 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=19
+2026-06-03 14:03:20 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:20 - create_business_unit - INFO - [TIME TAKEN] 2.0703 seconds (2070.33 ms)
+2026-06-03 14:03:20 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:20 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "e06f968b-bc91-4565-aaed-11a779c8f36b",
+      "name": "CC_HomePCAccount_193e2_OSType_Linux_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:55.944+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:55.944+00:00"
+    },
+    {
+      "id": "0faeeb08-7a99-47f2-a55f-3a6a951f6570",
+      "name": "CC_HomePCAccount_193e2_St_category_key10_U10h4_St_category_value10_1_U10h4_1
+... (truncated)
+2026-06-03 14:03:20 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:20 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_10", "permissions": {}, "costCenters": ["e06f968b-bc91-4565-aaed-11a779c8f36b", "0faeeb08-7a99-47f2-a55f-3a6a951f6570"]}
+2026-06-03 14:03:23 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:23 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:23 - create_business_unit - INFO - [TIME TAKEN] 2.8105 seconds (2810.49 ms)
+2026-06-03 14:03:23 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:23 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "be1d1890-43ac-49ac-af11-0ff9cc3854c3"
+}
+2026-06-03 14:03:23 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_10 with 2 cost centers
+2026-06-03 14:03:23 - create_business_unit - INFO - 
+[11/30] Processing Business Unit...
+2026-06-03 14:03:23 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=21
+2026-06-03 14:03:24 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=21
+2026-06-03 14:03:24 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:24 - create_business_unit - INFO - [TIME TAKEN] 1.7843 seconds (1784.34 ms)
+2026-06-03 14:03:24 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:24 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "60944589-026b-4096-ab0f-a65127e3cfc9",
+      "name": "CC_HomePCAccount_193e2_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key10_WQX6p"
+                ],
+                "values": [
+                  "St_category_value10_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:24 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:24 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_11", "permissions": {}, "costCenters": ["60944589-026b-4096-ab0f-a65127e3cfc9", "c0adb442-e764-458a-a417-01852edf2be3"]}
+2026-06-03 14:03:27 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:27 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:27 - create_business_unit - INFO - [TIME TAKEN] 2.0968 seconds (2096.83 ms)
+2026-06-03 14:03:27 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:27 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "55dd71c5-c3a8-4acb-950c-21f7d946a907"
+}
+2026-06-03 14:03:27 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_11 with 2 cost centers
+2026-06-03 14:03:27 - create_business_unit - INFO - 
+[12/30] Processing Business Unit...
+2026-06-03 14:03:27 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=23
+2026-06-03 14:03:29 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=23
+2026-06-03 14:03:29 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:29 - create_business_unit - INFO - [TIME TAKEN] 2.0245 seconds (2024.47 ms)
+2026-06-03 14:03:29 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:29 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "1a3d0ae6-40a2-4bff-90e7-121260447f36",
+      "name": "CC_HomePCAccount_193e2_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key11_WQX6p"
+                ],
+                "values": [
+                  "St_category_value11_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:29 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:29 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_12", "permissions": {}, "costCenters": ["1a3d0ae6-40a2-4bff-90e7-121260447f36", "cf4dd102-743a-4430-af50-c45cb63e60c5"]}
+2026-06-03 14:03:31 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:31 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:31 - create_business_unit - INFO - [TIME TAKEN] 2.1720 seconds (2172.03 ms)
+2026-06-03 14:03:31 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:31 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "4356b4ad-07c8-4e05-af7d-5f79136b0889"
+}
+2026-06-03 14:03:31 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_12 with 2 cost centers
+2026-06-03 14:03:31 - create_business_unit - INFO - 
+[13/30] Processing Business Unit...
+2026-06-03 14:03:31 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=25
+2026-06-03 14:03:32 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=25
+2026-06-03 14:03:32 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:32 - create_business_unit - INFO - [TIME TAKEN] 1.7001 seconds (1700.10 ms)
+2026-06-03 14:03:32 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:32 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "f29a9c9f-7df8-4e3c-8995-d3da80c3d22f",
+      "name": "CC_HomePCAccount_193e2_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key12_WQX6p"
+                ],
+                "values": [
+                  "St_category_value12_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:32 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:32 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_13", "permissions": {}, "costCenters": ["f29a9c9f-7df8-4e3c-8995-d3da80c3d22f", "548037e4-f44c-4f9b-8209-e5a448821f7c"]}
+2026-06-03 14:03:34 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:34 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:34 - create_business_unit - INFO - [TIME TAKEN] 1.4812 seconds (1481.18 ms)
+2026-06-03 14:03:34 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:34 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "d00daf99-4de5-4170-9918-10dbb9bac763"
+}
+2026-06-03 14:03:34 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_13 with 2 cost centers
+2026-06-03 14:03:34 - create_business_unit - INFO - 
+[14/30] Processing Business Unit...
+2026-06-03 14:03:34 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=27
+2026-06-03 14:03:35 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=27
+2026-06-03 14:03:35 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:35 - create_business_unit - INFO - [TIME TAKEN] 1.3031 seconds (1303.14 ms)
+2026-06-03 14:03:35 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:35 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "792ed441-c0e6-46de-8be3-90f4e69e9268",
+      "name": "CC_HomePCAccount_193e2_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e60-9eff-f23f-0000-0000000193e2"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key13_WQX6p"
+                ],
+                "values": [
+                  "St_category_value13_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:35 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:35 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_14", "permissions": {}, "costCenters": ["792ed441-c0e6-46de-8be3-90f4e69e9268", "5aebfefe-da8a-480d-b8a4-1412fa0d2f1b"]}
+2026-06-03 14:03:37 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:37 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:37 - create_business_unit - INFO - [TIME TAKEN] 1.5990 seconds (1599.01 ms)
+2026-06-03 14:03:37 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:37 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "68b4c544-9b1a-4860-a5d1-e9a563c8e4cf"
+}
+2026-06-03 14:03:37 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_14 with 2 cost centers
+2026-06-03 14:03:37 - create_business_unit - INFO - 
+[15/30] Processing Business Unit...
+2026-06-03 14:03:37 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=29
+2026-06-03 14:03:39 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=29
+2026-06-03 14:03:39 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:39 - create_business_unit - INFO - [TIME TAKEN] 1.9920 seconds (1991.95 ms)
+2026-06-03 14:03:39 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:39 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "7b97d698-c988-4ddf-88d8-6dc157926b5e",
+      "name": "CC_HomePCAccount_1c47f_CalmApplication_AppTest2_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "in"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:10:59.742+00:00",
+      "lastUpdatedAt": "2026-06-03T08:10:59.742+00:00"
+    },
+    {
+      "id": "516e9243-1ed5-45ef-adaf-937cadf68b2b",
+      "name": "CC_HomePCAccount_1c47f_CalmProject_Nucalm_1ex6_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+    
+... (truncated)
+2026-06-03 14:03:39 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:39 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_15", "permissions": {}, "costCenters": ["7b97d698-c988-4ddf-88d8-6dc157926b5e", "516e9243-1ed5-45ef-adaf-937cadf68b2b"]}
+2026-06-03 14:03:40 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:40 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:40 - create_business_unit - INFO - [TIME TAKEN] 1.3092 seconds (1309.20 ms)
+2026-06-03 14:03:40 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:40 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "72d632ed-219a-4886-8b55-68f2a6ce3111"
+}
+2026-06-03 14:03:40 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_15 with 2 cost centers
+2026-06-03 14:03:40 - create_business_unit - INFO - 
+[16/30] Processing Business Unit...
+2026-06-03 14:03:40 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=31
+2026-06-03 14:03:42 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=31
+2026-06-03 14:03:42 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:42 - create_business_unit - INFO - [TIME TAKEN] 1.9047 seconds (1904.69 ms)
+2026-06-03 14:03:42 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:42 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "3ddda0d6-2cf0-481d-b7ec-bc4018178678",
+      "name": "CC_HomePCAccount_1c47f_CalmService_Service1_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:30.245+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:30.245+00:00"
+    },
+    {
+      "id": "d18b3282-3372-4325-8d3d-bc5d5fae0296",
+      "name": "CC_HomePCAccount_1c47f_CalmUsername_admin_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+               
+... (truncated)
+2026-06-03 14:03:42 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:42 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_16", "permissions": {}, "costCenters": ["3ddda0d6-2cf0-481d-b7ec-bc4018178678", "d18b3282-3372-4325-8d3d-bc5d5fae0296"]}
+2026-06-03 14:03:44 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:44 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:44 - create_business_unit - INFO - [TIME TAKEN] 1.5757 seconds (1575.74 ms)
+2026-06-03 14:03:44 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:44 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "20948749-70d1-47be-979e-389f1a465daa"
+}
+2026-06-03 14:03:44 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_16 with 2 cost centers
+2026-06-03 14:03:44 - create_business_unit - INFO - 
+[17/30] Processing Business Unit...
+2026-06-03 14:03:44 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=33
+2026-06-03 14:03:45 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=33
+2026-06-03 14:03:45 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:45 - create_business_unit - INFO - [TIME TAKEN] 1.4968 seconds (1496.79 ms)
+2026-06-03 14:03:45 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:45 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "d6d5858d-1c33-4e1b-8517-a6a1985c71d9",
+      "name": "CC_HomePCAccount_1c47f_OSType_Linux_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:59.141+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:59.141+00:00"
+    },
+    {
+      "id": "0edd2592-141b-4f08-a312-c872362630cd",
+      "name": "CC_HomePCAccount_1c47f_St_category_key10_U10h4_St_category_value10_1_U10h4_1
+... (truncated)
+2026-06-03 14:03:45 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:45 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_17", "permissions": {}, "costCenters": ["d6d5858d-1c33-4e1b-8517-a6a1985c71d9", "0edd2592-141b-4f08-a312-c872362630cd"]}
+2026-06-03 14:03:47 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:47 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:47 - create_business_unit - INFO - [TIME TAKEN] 1.4158 seconds (1415.78 ms)
+2026-06-03 14:03:47 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:47 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "a0d095a8-e523-4f5d-9501-f4c0a1d8d134"
+}
+2026-06-03 14:03:47 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_17 with 2 cost centers
+2026-06-03 14:03:47 - create_business_unit - INFO - 
+[18/30] Processing Business Unit...
+2026-06-03 14:03:47 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=35
+2026-06-03 14:03:48 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=35
+2026-06-03 14:03:48 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:48 - create_business_unit - INFO - [TIME TAKEN] 1.6133 seconds (1613.27 ms)
+2026-06-03 14:03:48 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:48 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "f97d2c53-9771-4212-bcba-4a252a1c31e5",
+      "name": "CC_HomePCAccount_1c47f_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key10_WQX6p"
+                ],
+                "values": [
+                  "St_category_value10_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:48 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:48 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_18", "permissions": {}, "costCenters": ["f97d2c53-9771-4212-bcba-4a252a1c31e5", "49d48f8d-5002-4cab-ad5a-902f60850d6f"]}
+2026-06-03 14:03:50 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:50 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:50 - create_business_unit - INFO - [TIME TAKEN] 2.0587 seconds (2058.68 ms)
+2026-06-03 14:03:50 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:50 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "82a192a3-1500-4838-a2b9-ae497403e483"
+}
+2026-06-03 14:03:50 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_18 with 2 cost centers
+2026-06-03 14:03:50 - create_business_unit - INFO - 
+[19/30] Processing Business Unit...
+2026-06-03 14:03:50 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=37
+2026-06-03 14:03:52 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=37
+2026-06-03 14:03:52 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:52 - create_business_unit - INFO - [TIME TAKEN] 1.7243 seconds (1724.25 ms)
+2026-06-03 14:03:52 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:52 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "63cd702c-f6dc-41fa-8d4d-521f70c336ef",
+      "name": "CC_HomePCAccount_1c47f_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key11_WQX6p"
+                ],
+                "values": [
+                  "St_category_value11_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:52 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:52 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_19", "permissions": {}, "costCenters": ["63cd702c-f6dc-41fa-8d4d-521f70c336ef", "e735dceb-ae01-43d4-9718-c87f8a6c9e58"]}
+2026-06-03 14:03:54 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:54 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:54 - create_business_unit - INFO - [TIME TAKEN] 1.5715 seconds (1571.50 ms)
+2026-06-03 14:03:54 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:54 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "458ad766-6b53-4bc3-8381-6a73e4a6b37c"
+}
+2026-06-03 14:03:54 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_19 with 2 cost centers
+2026-06-03 14:03:54 - create_business_unit - INFO - 
+[20/30] Processing Business Unit...
+2026-06-03 14:03:54 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=39
+2026-06-03 14:03:55 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=39
+2026-06-03 14:03:55 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:55 - create_business_unit - INFO - [TIME TAKEN] 1.6979 seconds (1697.94 ms)
+2026-06-03 14:03:55 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:55 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "f86d6233-f0c9-4feb-97e3-7d8c031412d1",
+      "name": "CC_HomePCAccount_1c47f_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key12_WQX6p"
+                ],
+                "values": [
+                  "St_category_value12_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:55 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:55 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_20", "permissions": {}, "costCenters": ["f86d6233-f0c9-4feb-97e3-7d8c031412d1", "d31e55de-735f-4df2-b9e4-48d24a981dec"]}
+2026-06-03 14:03:57 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:57 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:57 - create_business_unit - INFO - [TIME TAKEN] 2.0136 seconds (2013.56 ms)
+2026-06-03 14:03:57 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:57 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "ad2b9ba6-dacc-40ad-a902-4688598c10d0"
+}
+2026-06-03 14:03:57 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_20 with 2 cost centers
+2026-06-03 14:03:57 - create_business_unit - INFO - 
+[21/30] Processing Business Unit...
+2026-06-03 14:03:57 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=41
+2026-06-03 14:03:59 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=41
+2026-06-03 14:03:59 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:03:59 - create_business_unit - INFO - [TIME TAKEN] 1.3806 seconds (1380.62 ms)
+2026-06-03 14:03:59 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:03:59 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "63331432-3ce1-4099-9079-d0f9f31e11f4",
+      "name": "CC_HomePCAccount_1c47f_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064ec4-f785-7be9-0000-00000001c47f"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key13_WQX6p"
+                ],
+                "values": [
+                  "St_category_value13_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:03:59 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:03:59 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_21", "permissions": {}, "costCenters": ["63331432-3ce1-4099-9079-d0f9f31e11f4", "0582b95c-5e67-43cd-be9d-46582b250bd9"]}
+2026-06-03 14:04:01 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:01 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:01 - create_business_unit - INFO - [TIME TAKEN] 2.0141 seconds (2014.05 ms)
+2026-06-03 14:04:01 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:01 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "f8e8a295-4347-48bd-83fc-9286b0f101d0"
+}
+2026-06-03 14:04:01 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_21 with 2 cost centers
+2026-06-03 14:04:01 - create_business_unit - INFO - 
+[22/30] Processing Business Unit...
+2026-06-03 14:04:01 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=43
+2026-06-03 14:04:02 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=43
+2026-06-03 14:04:02 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:02 - create_business_unit - INFO - [TIME TAKEN] 1.8503 seconds (1850.35 ms)
+2026-06-03 14:04:02 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:02 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "16e7b48d-3ad4-4508-ae31-18f556ff8a20",
+      "name": "CC_HomePCAccount_1c483_CalmApplication_AppTest2_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "in"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:10:54.448+00:00",
+      "lastUpdatedAt": "2026-06-03T08:10:54.448+00:00"
+    },
+    {
+      "id": "28d25f81-ab4c-4673-b122-e0386c07b371",
+      "name": "CC_HomePCAccount_1c483_CalmProject_Nucalm_1ex6_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+    
+... (truncated)
+2026-06-03 14:04:02 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:02 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_22", "permissions": {}, "costCenters": ["16e7b48d-3ad4-4508-ae31-18f556ff8a20", "28d25f81-ab4c-4673-b122-e0386c07b371"]}
+2026-06-03 14:04:04 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:04 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:04 - create_business_unit - INFO - [TIME TAKEN] 1.3585 seconds (1358.52 ms)
+2026-06-03 14:04:04 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:04 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "50c4709b-f77d-4bfe-b37b-066c69eb4a86"
+}
+2026-06-03 14:04:04 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_22 with 2 cost centers
+2026-06-03 14:04:04 - create_business_unit - INFO - 
+[23/30] Processing Business Unit...
+2026-06-03 14:04:04 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=45
+2026-06-03 14:04:06 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=45
+2026-06-03 14:04:06 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:06 - create_business_unit - INFO - [TIME TAKEN] 1.7651 seconds (1765.15 ms)
+2026-06-03 14:04:06 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:06 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "a18320f7-dfe7-4b19-a540-ccbd2e760ba1",
+      "name": "CC_HomePCAccount_1c483_CalmService_Service1_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:23.842+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:23.842+00:00"
+    },
+    {
+      "id": "925efbb4-4c4e-413e-9fd4-f4c482adb8a1",
+      "name": "CC_HomePCAccount_1c483_CalmUsername_admin_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+               
+... (truncated)
+2026-06-03 14:04:06 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:06 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_23", "permissions": {}, "costCenters": ["a18320f7-dfe7-4b19-a540-ccbd2e760ba1", "925efbb4-4c4e-413e-9fd4-f4c482adb8a1"]}
+2026-06-03 14:04:08 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:08 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:08 - create_business_unit - INFO - [TIME TAKEN] 2.0192 seconds (2019.19 ms)
+2026-06-03 14:04:08 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:08 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "0cc883ec-9215-4316-8e2b-00409a8a4cd2"
+}
+2026-06-03 14:04:08 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_23 with 2 cost centers
+2026-06-03 14:04:08 - create_business_unit - INFO - 
+[24/30] Processing Business Unit...
+2026-06-03 14:04:08 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=47
+2026-06-03 14:04:09 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=47
+2026-06-03 14:04:09 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:09 - create_business_unit - INFO - [TIME TAKEN] 1.6787 seconds (1678.67 ms)
+2026-06-03 14:04:09 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:09 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "8713ec93-95be-43fc-8b30-8d800f0239ef",
+      "name": "CC_HomePCAccount_1c483_OSType_Linux_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "owners": [],
+        "viewers": []
+      },
+      "businessUnit": null,
+      "createdBy": "",
+      "lastUpdatedBy": "",
+      "createdAt": "2026-06-03T08:11:53.943+00:00",
+      "lastUpdatedAt": "2026-06-03T08:11:53.943+00:00"
+    },
+    {
+      "id": "59324f16-71ce-405e-92d9-29a4f9f2260b",
+      "name": "CC_HomePCAccount_1c483_St_category_key10_U10h4_St_category_value10_1_U10h4_1
+... (truncated)
+2026-06-03 14:04:09 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:09 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_24", "permissions": {}, "costCenters": ["8713ec93-95be-43fc-8b30-8d800f0239ef", "59324f16-71ce-405e-92d9-29a4f9f2260b"]}
+2026-06-03 14:04:11 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:11 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:11 - create_business_unit - INFO - [TIME TAKEN] 1.6905 seconds (1690.53 ms)
+2026-06-03 14:04:11 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:11 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "2c9209bf-4b2a-4326-a684-c3511132b84f"
+}
+2026-06-03 14:04:11 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_24 with 2 cost centers
+2026-06-03 14:04:11 - create_business_unit - INFO - 
+[25/30] Processing Business Unit...
+2026-06-03 14:04:11 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=49
+2026-06-03 14:04:13 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=49
+2026-06-03 14:04:13 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:13 - create_business_unit - INFO - [TIME TAKEN] 1.9879 seconds (1987.87 ms)
+2026-06-03 14:04:13 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:13 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "767514aa-26aa-4ea1-a1de-ee6e9e94f369",
+      "name": "CC_HomePCAccount_1c483_St_category_key10_WQX6p_St_category_value10_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key10_WQX6p"
+                ],
+                "values": [
+                  "St_category_value10_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:04:13 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:13 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_25", "permissions": {}, "costCenters": ["767514aa-26aa-4ea1-a1de-ee6e9e94f369", "cbade521-9359-4e97-9722-398ab2875fa0"]}
+2026-06-03 14:04:15 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:15 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:15 - create_business_unit - INFO - [TIME TAKEN] 1.8001 seconds (1800.13 ms)
+2026-06-03 14:04:15 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:15 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "bd10ca18-c421-4cbc-a69e-3ca02b3de808"
+}
+2026-06-03 14:04:15 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_25 with 2 cost centers
+2026-06-03 14:04:15 - create_business_unit - INFO - 
+[26/30] Processing Business Unit...
+2026-06-03 14:04:15 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=51
+2026-06-03 14:04:16 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=51
+2026-06-03 14:04:16 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:16 - create_business_unit - INFO - [TIME TAKEN] 1.6097 seconds (1609.69 ms)
+2026-06-03 14:04:16 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:16 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "d7227359-c575-4c2b-b37c-6a20cec2210b",
+      "name": "CC_HomePCAccount_1c483_St_category_key11_WQX6p_St_category_value11_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key11_WQX6p"
+                ],
+                "values": [
+                  "St_category_value11_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:04:16 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:16 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_26", "permissions": {}, "costCenters": ["d7227359-c575-4c2b-b37c-6a20cec2210b", "53dc0adb-cd58-40ee-9683-538ef37524f8"]}
+2026-06-03 14:04:18 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:18 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:18 - create_business_unit - INFO - [TIME TAKEN] 1.4837 seconds (1483.70 ms)
+2026-06-03 14:04:18 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:18 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "67d94e81-6d10-4048-bca8-a197348a7f06"
+}
+2026-06-03 14:04:18 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_26 with 2 cost centers
+2026-06-03 14:04:18 - create_business_unit - INFO - 
+[27/30] Processing Business Unit...
+2026-06-03 14:04:18 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=53
+2026-06-03 14:04:19 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=53
+2026-06-03 14:04:19 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:19 - create_business_unit - INFO - [TIME TAKEN] 1.3030 seconds (1303.01 ms)
+2026-06-03 14:04:19 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:19 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "8015825d-e95a-4340-be9b-f2a0b094edd3",
+      "name": "CC_HomePCAccount_1c483_St_category_key12_WQX6p_St_category_value12_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key12_WQX6p"
+                ],
+                "values": [
+                  "St_category_value12_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:04:19 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:19 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_27", "permissions": {}, "costCenters": ["8015825d-e95a-4340-be9b-f2a0b094edd3", "6a1d5d59-7068-48ba-aec7-6a6efd4aba47"]}
+2026-06-03 14:04:21 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:21 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:21 - create_business_unit - INFO - [TIME TAKEN] 1.7885 seconds (1788.47 ms)
+2026-06-03 14:04:21 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:21 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "b8490ec2-3ee2-40ba-9649-fe915a88c7d2"
+}
+2026-06-03 14:04:21 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_27 with 2 cost centers
+2026-06-03 14:04:21 - create_business_unit - INFO - 
+[28/30] Processing Business Unit...
+2026-06-03 14:04:21 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=55
+2026-06-03 14:04:22 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=55
+2026-06-03 14:04:22 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:22 - create_business_unit - INFO - [TIME TAKEN] 1.3925 seconds (1392.46 ms)
+2026-06-03 14:04:22 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:22 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [
+    {
+      "id": "4ca09a02-5f4c-4e89-aab8-10cd6ba9f8a7",
+      "name": "CC_HomePCAccount_1c483_St_category_key13_WQX6p_St_category_value13_1_WQX6p_133910",
+      "definitions": [
+        {
+          "provider": "nx",
+          "parentAccount": "62383475-b7ea-4274-b70e-2e907edb67dc",
+          "filters": {
+            "childAccounts": [
+              "00064e62-88b6-68bb-0000-00000001c483"
+            ],
+            "tags": [
+              {
+                "keys": [
+                  "nx:St_category_key13_WQX6p"
+                ],
+                "values": [
+                  "St_category_value13_1_WQX6p"
+                ],
+                "operator": "in"
+              },
+              {
+                "keys": [
+                  "nx:CalmApplication"
+                ],
+                "values": [
+                  "AppTest2"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmProject"
+                ],
+                "values": [
+                  "Nucalm_1ex6"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmService"
+                ],
+                "values": [
+                  "Service1"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:CalmUsername"
+                ],
+                "values": [
+                  "admin"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:OSType"
+                ],
+                "values": [
+                  "Linux"
+                ],
+                "operator": "notIn"
+              },
+              {
+                "keys": [
+                  "nx:St_category_key10_U10h4"
+                ],
+                "values": [
+                  "St_category
+... (truncated)
+2026-06-03 14:04:22 - create_business_unit - INFO - [API REQUEST] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:22 - create_business_unit - INFO - [REQUEST DATA PAYLOAD] {"name": "Business_Unit_28", "permissions": {}, "costCenters": ["4ca09a02-5f4c-4e89-aab8-10cd6ba9f8a7", "b28a8705-5c75-4ab6-b7c4-4d7efd49602d"]}
+2026-06-03 14:04:24 - create_business_unit - INFO - [API RESPONSE] POST https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/businessUnit
+2026-06-03 14:04:24 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:24 - create_business_unit - INFO - [TIME TAKEN] 1.5240 seconds (1524.03 ms)
+2026-06-03 14:04:24 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:24 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "id": "de908bb4-1782-44b3-be9b-279862858b94"
+}
+2026-06-03 14:04:24 - create_business_unit - INFO - ✓ Created Business Unit: Business_Unit_28 with 2 cost centers
+2026-06-03 14:04:24 - create_business_unit - INFO - 
+[29/30] Processing Business Unit...
+2026-06-03 14:04:24 - create_business_unit - INFO - [API REQUEST] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=57
+2026-06-03 14:04:27 - create_business_unit - INFO - [API RESPONSE] GET https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/global/costCenters?limit=2&offset=57
+2026-06-03 14:04:27 - create_business_unit - INFO - [STATUS CODE] 200
+2026-06-03 14:04:27 - create_business_unit - INFO - [TIME TAKEN] 2.9894 seconds (2989.43 ms)
+2026-06-03 14:04:27 - create_business_unit - INFO - [RESPONSE CONTENT-TYPE] application/json
+2026-06-03 14:04:27 - create_business_unit - INFO - [RESPONSE PAYLOAD]
+{
+  "count": 56,
+  "items": [],
+  "nextLink": ""
+}
+2026-06-03 14:04:27 - create_business_unit - WARNING - No cost centers found at offset 57, stopping.
+2026-06-03 14:04:27 - create_business_unit - INFO - 
+================================================================================
+2026-06-03 14:04:27 - create_business_unit - INFO - EXECUTION SUMMARY
+2026-06-03 14:04:27 - create_business_unit - INFO - ================================================================================
+2026-06-03 14:04:27 - create_business_unit - INFO -   Business Units created:     28
+2026-06-03 14:04:27 - create_business_unit - INFO -   Business Units failed:      0
+2026-06-03 14:04:27 - create_business_unit - INFO -   Total Cost Centers assigned: 56
+2026-06-03 14:04:27 - create_business_unit - INFO -   Success rate:               28/28 (100.0%)
+2026-06-03 14:04:27 - create_business_unit - INFO -   Total execution time:       108.60s (1.81 min)
+2026-06-03 14:04:27 - create_business_unit - INFO - ================================================================================
+2026-06-03 14:04:27 - create_business_unit - INFO - 
+2026-06-03 14:04:27 - create_business_unit - INFO - ================================================================================================================================================================
+2026-06-03 14:04:27 - create_business_unit - INFO - API METRICS CONSOLIDATED REPORT
+2026-06-03 14:04:27 - create_business_unit - INFO - ================================================================================================================================================================
+2026-06-03 14:04:27 - create_business_unit - INFO - Method   | Endpoint                                           |   Count |   Fail |    Min(ms) |    Max(ms) |    P90(ms) |    P95(ms) |    P98(ms)
+2026-06-03 14:04:27 - create_business_unit - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-06-03 14:04:27 - create_business_unit - INFO - GET      | /v1/cg/global/costCenters                          |      29 |      - |    1303.01 |    3681.29 |    2091.84 |    2989.43 |    3681.29
+2026-06-03 14:04:27 - create_business_unit - INFO - POST     | /v1/cg/global/businessUnit                         |      28 |      - |    1309.20 |    4165.68 |    2810.49 |    3132.56 |    4165.68
+2026-06-03 14:04:27 - create_business_unit - INFO - ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2026-06-03 14:04:27 - create_business_unit - INFO - Total API Calls: 57 | Unique Endpoints: 2 | Total Failures (non-200/202): 0 | Exceptions: 0
+2026-06-03 14:04:27 - create_business_unit - INFO - ================================================================================================================================================================
+2026-06-03 14:04:27 - create_business_unit - INFO - 
+2026-06-03 14:04:27 - create_business_unit - INFO - STATUS CODE BREAKDOWN:
+2026-06-03 14:04:27 - create_business_unit - INFO - ----------------------------------------------------------------------------------------------------
+2026-06-03 14:04:27 - create_business_unit - INFO - GET    /v1/cg/global/costCenters                  | 200: 29
+2026-06-03 14:04:27 - create_business_unit - INFO - POST   /v1/cg/global/businessUnit                 | 200: 28
+2026-06-03 14:04:27 - create_business_unit - INFO - ================================================================================================================================================================
