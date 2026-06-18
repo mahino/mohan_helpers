@@ -19,7 +19,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ========================== CONFIGURATION ==========================
 # Update these values for your environment
-PRISM_IP = "10.46.117.165"
+PRISM_IP = "10.46.208.63"
 PRISM_PORT = "9440"
 USERNAME = "admin"
 PASSWORD = "Nutanix.123"
@@ -140,7 +140,6 @@ def get_vms_using_v1_api():
                 break
             
             page += 1
-            return all_vms    
         except requests.exceptions.RequestException as e:
             log(f"Error fetching VMs: {e}", "ERROR")
             if hasattr(e, 'response') and e.response:

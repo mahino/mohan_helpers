@@ -140,7 +140,6 @@ def get_vms_using_v1_api():
                 break
             
             page += 1
-            return all_vms    
         except requests.exceptions.RequestException as e:
             log(f"Error fetching VMs: {e}", "ERROR")
             if hasattr(e, 'response') and e.response:

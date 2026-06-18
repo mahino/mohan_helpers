@@ -1,560 +1,83 @@
-[2025-12-26T06:26:44.891Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:32 Generating backfill job pojo: CATEGORIES_CONFIG, startTime: 2025-12-21T00:00:00.000, endTime: 2025-12-26T06:26:44.891
-[2025-12-26T06:26:44.892Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:32 Generating backfill job pojo: VM_CONFIG, startTime: 2025-12-21T00:00:00.000, endTime: 2025-12-26T06:26:44.892
-[2025-12-26T06:26:44.892Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:32 Generating backfill job pojo: CLUSTER_HARDWARE_CONFIG, startTime: 2025-12-21T00:00:00.000, endTime: 2025-12-26T06:26:44.892
-[2025-12-26T06:26:44.892Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:32 Generating backfill job pojo: CLUSTER_CONFIG, startTime: 2025-12-21T00:00:00.000, endTime: 2025-12-26T06:26:44.892
-[2025-12-26T06:26:44.893Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:32 Generating backfill job pojo: NX_ROUTINE_WORKFLOW, startTime: 2025-12-21T00:00:00.000, endTime: 2025-12-26T06:26:44.892
-[2025-12-26T06:26:44.893Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:37 backfill jobs : [4]
-[2025-12-26T06:26:45.019Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:34 Number of backfill jobs to process in workflow: 4
-[2025-12-26T06:26:45.019Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:38 Processing job: CATEGORIES_CONFIG
-[2025-12-26T06:26:45.131Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-21 for : CATEGORIES_CONFIG
-[2025-12-26T06:26:45.131Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 0 and limit 2000
-[2025-12-26T06:26:45.424Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:45.690Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 2000 and limit 2000
-[2025-12-26T06:26:46.786Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:46.986Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 4000 and limit 2000
-[2025-12-26T06:26:47.229Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:47.426Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 6000 and limit 2000
-[2025-12-26T06:26:47.700Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:47.915Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 8000 and limit 2000
-[2025-12-26T06:26:48.191Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:48.390Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 10000 and limit 2000
-[2025-12-26T06:26:48.611Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:48.903Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 12000 and limit 2000
-[2025-12-26T06:26:49.186Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:49.299Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 14000 and limit 2000
-[2025-12-26T06:26:49.588Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:49.740Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 16000 and limit 2000
-[2025-12-26T06:26:49.956Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:50.079Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 18000 and limit 2000
-[2025-12-26T06:26:50.294Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:50.786Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 20000 and limit 2000
-[2025-12-26T06:26:51.489Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:51.890Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 22000 and limit 2000
-[2025-12-26T06:26:52.195Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:52.368Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 24000 and limit 2000
-[2025-12-26T06:26:52.550Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:52.691Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 26000 and limit 2000
-[2025-12-26T06:26:52.987Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:53.189Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 28000 and limit 2000
-[2025-12-26T06:26:53.371Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:53.487Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 30000 and limit 2000
-[2025-12-26T06:26:53.689Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:53.797Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 32000 and limit 2000
-[2025-12-26T06:26:53.975Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [548]
-[2025-12-26T06:26:54.045Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-21 in batch with offset 34000 and limit 2000
-[2025-12-26T06:26:54.216Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [0]
-[2025-12-26T06:26:54.217Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-22 for : CATEGORIES_CONFIG
-[2025-12-26T06:26:54.217Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 0 and limit 2000
-[2025-12-26T06:26:54.399Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:54.698Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 2000 and limit 2000
-[2025-12-26T06:26:55.084Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:55.195Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 4000 and limit 2000
-[2025-12-26T06:26:55.388Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:55.588Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 6000 and limit 2000
-[2025-12-26T06:26:55.777Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:55.991Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 8000 and limit 2000
-[2025-12-26T06:26:56.586Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:57.095Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 10000 and limit 2000
-[2025-12-26T06:26:57.336Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:57.586Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 12000 and limit 2000
-[2025-12-26T06:26:57.888Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:58.099Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 14000 and limit 2000
-[2025-12-26T06:26:58.393Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:58.600Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 16000 and limit 2000
-[2025-12-26T06:26:59.187Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:59.411Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 18000 and limit 2000
-[2025-12-26T06:26:59.686Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:26:59.888Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 20000 and limit 2000
-[2025-12-26T06:27:00.122Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:00.330Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 22000 and limit 2000
-[2025-12-26T06:27:00.715Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:00.922Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 24000 and limit 2000
-[2025-12-26T06:27:01.293Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:01.696Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 26000 and limit 2000
-[2025-12-26T06:27:02.586Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:03.394Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 28000 and limit 2000
-[2025-12-26T06:27:04.086Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:04.290Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 30000 and limit 2000
-[2025-12-26T06:27:04.597Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:04.897Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 32000 and limit 2000
-[2025-12-26T06:27:05.181Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [548]
-[2025-12-26T06:27:05.298Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-22 in batch with offset 34000 and limit 2000
-[2025-12-26T06:27:05.642Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [0]
-[2025-12-26T06:27:05.642Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-23 for : CATEGORIES_CONFIG
-[2025-12-26T06:27:05.642Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 0 and limit 2000
-[2025-12-26T06:27:06.050Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:06.244Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 2000 and limit 2000
-[2025-12-26T06:27:06.595Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:06.887Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 4000 and limit 2000
-[2025-12-26T06:27:07.317Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:07.794Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 6000 and limit 2000
-[2025-12-26T06:27:08.796Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:09.290Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 8000 and limit 2000
-[2025-12-26T06:27:09.896Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:10.293Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 10000 and limit 2000
-[2025-12-26T06:27:10.698Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:11.097Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 12000 and limit 2000
-[2025-12-26T06:27:11.506Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:11.898Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 14000 and limit 2000
-[2025-12-26T06:27:12.995Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:13.289Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 16000 and limit 2000
-[2025-12-26T06:27:13.687Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:13.840Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 18000 and limit 2000
-[2025-12-26T06:27:14.392Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:15.390Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 20000 and limit 2000
-[2025-12-26T06:27:15.904Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:16.091Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 22000 and limit 2000
-[2025-12-26T06:27:16.400Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:16.686Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 24000 and limit 2000
-[2025-12-26T06:27:17.097Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:17.493Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 26000 and limit 2000
-[2025-12-26T06:27:17.899Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:18.186Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 28000 and limit 2000
-[2025-12-26T06:27:18.591Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:18.727Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 30000 and limit 2000
-[2025-12-26T06:27:19.088Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:19.301Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 32000 and limit 2000
-[2025-12-26T06:27:19.679Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [639]
-[2025-12-26T06:27:19.776Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-23 in batch with offset 34000 and limit 2000
-[2025-12-26T06:27:20.085Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [0]
-[2025-12-26T06:27:20.087Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-24 for : CATEGORIES_CONFIG
-[2025-12-26T06:27:20.087Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 0 and limit 2000
-[2025-12-26T06:27:20.590Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:20.788Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 2000 and limit 2000
-[2025-12-26T06:27:20.990Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:21.195Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 4000 and limit 2000
-[2025-12-26T06:27:21.486Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:21.895Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 6000 and limit 2000
-[2025-12-26T06:27:22.693Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:23.062Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 8000 and limit 2000
-[2025-12-26T06:27:23.488Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:23.602Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 10000 and limit 2000
-[2025-12-26T06:27:23.780Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:23.997Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 12000 and limit 2000
-[2025-12-26T06:27:24.290Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:24.491Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 14000 and limit 2000
-[2025-12-26T06:27:24.794Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:24.998Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 16000 and limit 2000
-[2025-12-26T06:27:25.296Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:25.597Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 18000 and limit 2000
-[2025-12-26T06:27:25.986Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:26.303Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 20000 and limit 2000
-[2025-12-26T06:27:26.789Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:27.022Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 22000 and limit 2000
-[2025-12-26T06:27:27.390Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:27.590Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 24000 and limit 2000
-[2025-12-26T06:27:28.188Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:28.898Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 26000 and limit 2000
-[2025-12-26T06:27:29.393Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:29.601Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 28000 and limit 2000
-[2025-12-26T06:27:29.888Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:30.091Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 30000 and limit 2000
-[2025-12-26T06:27:30.492Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:30.629Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 32000 and limit 2000
-[2025-12-26T06:27:30.896Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [639]
-[2025-12-26T06:27:30.999Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-24 in batch with offset 34000 and limit 2000
-[2025-12-26T06:27:31.186Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [0]
-[2025-12-26T06:27:31.186Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-25 for : CATEGORIES_CONFIG
-[2025-12-26T06:27:31.187Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 0 and limit 2000
-[2025-12-26T06:27:31.486Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:31.695Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 2000 and limit 2000
-[2025-12-26T06:27:31.989Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:32.302Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 4000 and limit 2000
-[2025-12-26T06:27:33.194Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:33.704Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 6000 and limit 2000
-[2025-12-26T06:27:34.190Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:34.692Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 8000 and limit 2000
-[2025-12-26T06:27:35.288Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:35.887Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 10000 and limit 2000
-[2025-12-26T06:27:36.292Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:36.891Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 12000 and limit 2000
-[2025-12-26T06:27:37.489Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:37.710Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 14000 and limit 2000
-[2025-12-26T06:27:37.999Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:38.208Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 16000 and limit 2000
-[2025-12-26T06:27:38.594Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:38.787Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 18000 and limit 2000
-[2025-12-26T06:27:38.987Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:39.190Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 20000 and limit 2000
-[2025-12-26T06:27:39.488Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:39.634Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 22000 and limit 2000
-[2025-12-26T06:27:39.990Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:40.889Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 24000 and limit 2000
-[2025-12-26T06:27:41.488Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:41.690Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 26000 and limit 2000
-[2025-12-26T06:27:41.995Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:42.288Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 28000 and limit 2000
-[2025-12-26T06:27:42.491Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:42.789Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 30000 and limit 2000
-[2025-12-26T06:27:43.095Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:43.386Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 32000 and limit 2000
-[2025-12-26T06:27:43.563Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [639]
-[2025-12-26T06:27:43.649Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-25 in batch with offset 34000 and limit 2000
-[2025-12-26T06:27:43.859Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [0]
-[2025-12-26T06:27:43.859Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-26 for : CATEGORIES_CONFIG
-[2025-12-26T06:27:43.859Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 0 and limit 2000
-[2025-12-26T06:27:44.050Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:44.286Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 2000 and limit 2000
-[2025-12-26T06:27:44.587Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:44.801Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 4000 and limit 2000
-[2025-12-26T06:27:45.017Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:45.200Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 6000 and limit 2000
-[2025-12-26T06:27:45.489Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:45.604Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 8000 and limit 2000
-[2025-12-26T06:27:45.791Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:45.932Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 10000 and limit 2000
-[2025-12-26T06:27:46.386Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:47.190Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 12000 and limit 2000
-[2025-12-26T06:27:47.402Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:47.596Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 14000 and limit 2000
-[2025-12-26T06:27:47.786Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:47.903Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 16000 and limit 2000
-[2025-12-26T06:27:48.192Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:48.450Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 18000 and limit 2000
-[2025-12-26T06:27:48.895Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:49.153Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 20000 and limit 2000
-[2025-12-26T06:27:49.499Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:49.718Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 22000 and limit 2000
-[2025-12-26T06:27:49.933Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:50.196Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 24000 and limit 2000
-[2025-12-26T06:27:50.488Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:50.688Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 26000 and limit 2000
-[2025-12-26T06:27:50.889Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:51.018Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 28000 and limit 2000
-[2025-12-26T06:27:51.269Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:51.394Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 30000 and limit 2000
-[2025-12-26T06:27:51.989Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [2000]
-[2025-12-26T06:27:52.693Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 32000 and limit 2000
-[2025-12-26T06:27:53.188Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [639]
-[2025-12-26T06:27:53.290Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:53 Fetching data for date 2025-12-26 in batch with offset 34000 and limit 2000
-[2025-12-26T06:27:53.462Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:83 executed label config query [0]
-[2025-12-26T06:27:53.463Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:53 startDate [2025-12-21], endTime [2025-12-26], startOfWeek [2025-12-21], previousWeekStart [2025-12-14]
-[2025-12-26T06:27:53.463Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:56 dropping partition data for backfill job [CATEGORIES_CONFIG]
-[2025-12-26T06:27:54.172Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:27:54.618Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:27:55.042Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:27:55.622Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:27:56.249Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:27:56.635Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:27:56.866Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:27:57.496Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:27:58.181Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:27:58.596Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:27:59.207Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:27:59.860Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:28:00.509Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:28:01.210Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:28:01.889Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:28:02.614Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:28:03.364Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:28:04.023Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:28:04.430Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:28:04.810Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:28:05.195Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:28:05.632Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:28:06.022Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:28:06.383Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:28:06.801Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:28:07.185Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:28:07.566Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:28:08.192Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:28:08.598Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:28:08.990Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:28:09.401Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:28:10.032Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:28:10.234Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:28:10.871Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:28:11.558Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:28:11.970Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:28:12.375Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:28:12.747Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:28:13.173Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:28:13.834Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:28:14.589Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:28:15.002Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:28:15.204Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:28:15.438Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:28:15.864Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:28:16.306Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:28:16.743Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:28:17.171Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:28:17.435Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:28:17.634Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:28:18.017Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:28:18.410Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:28:18.797Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:28:19.173Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:28:19.551Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:28:19.995Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:132 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:28:19.995Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.CategoryConfigExecutor:109 Start writing to Category Metrics Tables : cg_nx_metrics_categories_config
-[2025-12-26T06:28:21.802Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.c.ClickhouseClient:42 Written 25781464 to clickhouse
-[2025-12-26T06:28:21.802Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.d.NutanixBackfillDao:29 Updating service backfill status for Service :[CATEGORIES_CONFIG] to epoch :[1766730404891]
-[2025-12-26T06:28:21.813Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:79 1 marked as completed updated in PG for service name nutanix_service_jobs 
-[2025-12-26T06:28:21.813Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.FileHelper:30 File deleted successfully.
-[2025-12-26T06:28:21.813Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:79 temp file for executor CATEGORIES_CONFIG deleted successfully
-[2025-12-26T06:28:21.894Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:40 NDP Data fetching: CATEGORIES_CONFIG completed successfully
-[2025-12-26T06:28:21.894Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:38 Processing job: VM_CONFIG
-[2025-12-26T06:28:21.969Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-21 for : VM_CONFIG
-[2025-12-26T06:28:21.969Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-21 in batch with offset 0 and limit 2000
-[2025-12-26T06:28:22.139Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-21 in batch with offset 2000 and limit 2000
-[2025-12-26T06:28:22.255Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-22 for : VM_CONFIG
-[2025-12-26T06:28:22.255Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-22 in batch with offset 0 and limit 2000
-[2025-12-26T06:28:22.789Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-22 in batch with offset 2000 and limit 2000
-[2025-12-26T06:28:23.492Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-22 in batch with offset 4000 and limit 2000
-[2025-12-26T06:28:23.694Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-22 in batch with offset 6000 and limit 2000
-[2025-12-26T06:28:23.929Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-23 for : VM_CONFIG
-[2025-12-26T06:28:23.930Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-23 in batch with offset 0 and limit 2000
-[2025-12-26T06:28:25.390Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-23 in batch with offset 2000 and limit 2000
-[2025-12-26T06:28:26.005Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-23 in batch with offset 4000 and limit 2000
-[2025-12-26T06:28:26.291Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-23 in batch with offset 6000 and limit 2000
-[2025-12-26T06:28:26.464Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-24 for : VM_CONFIG
-[2025-12-26T06:28:26.464Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-24 in batch with offset 0 and limit 2000
-[2025-12-26T06:28:27.689Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-24 in batch with offset 2000 and limit 2000
-[2025-12-26T06:28:28.897Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-24 in batch with offset 4000 and limit 2000
-[2025-12-26T06:28:29.387Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-24 in batch with offset 6000 and limit 2000
-[2025-12-26T06:28:29.563Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-25 for : VM_CONFIG
-[2025-12-26T06:28:29.563Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-25 in batch with offset 0 and limit 2000
-[2025-12-26T06:28:32.587Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-25 in batch with offset 2000 and limit 2000
-[2025-12-26T06:28:34.594Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-25 in batch with offset 4000 and limit 2000
-[2025-12-26T06:28:35.496Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-25 in batch with offset 6000 and limit 2000
-[2025-12-26T06:28:35.743Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-26 for : VM_CONFIG
-[2025-12-26T06:28:35.743Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-26 in batch with offset 0 and limit 2000
-[2025-12-26T06:28:36.302Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-26 in batch with offset 2000 and limit 2000
-[2025-12-26T06:28:37.999Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-26 in batch with offset 4000 and limit 2000
-[2025-12-26T06:28:38.215Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:49 Fetching data for date 2025-12-26 in batch with offset 6000 and limit 2000
-[2025-12-26T06:28:38.340Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:53 startDate [2025-12-21], endTime [2025-12-26], startOfWeek [2025-12-21], previousWeekStart [2025-12-14]
-[2025-12-26T06:28:38.340Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:56 dropping partition data for backfill job [VM_CONFIG]
-[2025-12-26T06:28:39.469Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:28:39.835Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:28:40.197Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:28:40.551Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:28:40.952Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:28:41.380Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:28:41.772Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:28:42.123Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:28:42.390Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:28:42.795Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:28:43.181Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:28:43.566Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:28:43.938Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:28:44.330Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:28:44.580Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:28:44.799Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:28:45.139Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:28:45.545Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:28:45.942Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:28:46.353Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:28:46.578Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:28:46.804Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:28:47.208Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:28:47.627Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:28:48.275Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:28:48.676Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:28:49.067Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:28:49.468Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:28:49.849Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:28:50.211Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:28:50.607Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:28:51.021Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:28:51.270Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:28:51.634Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:28:52.015Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:28:52.467Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:28:52.839Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:28:53.216Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:28:53.601Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:28:54.213Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:28:54.643Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:28:55.054Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:28:55.423Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:28:55.805Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:28:56.251Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:28:56.667Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:28:57.068Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:28:57.487Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:28:58.188Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:28:58.603Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:28:59.002Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:28:59.450Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:29:00.186Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:29:00.583Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:29:01.293Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:29:01.985Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:108 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:29:01.985Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.VmConfigExecutor:60 Start writing to Vm Metrics Tables : cg_nx_metrics_vm_config
-[2025-12-26T06:29:03.886Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.c.ClickhouseClient:42 Written 3068724 to clickhouse
-[2025-12-26T06:29:03.887Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.d.NutanixBackfillDao:29 Updating service backfill status for Service :[VM_CONFIG] to epoch :[1766730404892]
-[2025-12-26T06:29:03.895Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:79 1 marked as completed updated in PG for service name nutanix_service_jobs 
-[2025-12-26T06:29:03.896Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.FileHelper:30 File deleted successfully.
-[2025-12-26T06:29:03.896Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:79 temp file for executor VM_CONFIG deleted successfully
-[2025-12-26T06:29:03.986Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:40 NDP Data fetching: VM_CONFIG completed successfully
-[2025-12-26T06:29:03.986Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:38 Processing job: CLUSTER_HARDWARE_CONFIG
-[2025-12-26T06:29:04.090Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-21 for : CLUSTER_HARDWARE_CONFIG
-[2025-12-26T06:29:04.395Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-22 for : CLUSTER_HARDWARE_CONFIG
-[2025-12-26T06:29:04.492Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-23 for : CLUSTER_HARDWARE_CONFIG
-[2025-12-26T06:29:04.589Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-24 for : CLUSTER_HARDWARE_CONFIG
-[2025-12-26T06:29:04.695Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-25 for : CLUSTER_HARDWARE_CONFIG
-[2025-12-26T06:29:04.889Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-26 for : CLUSTER_HARDWARE_CONFIG
-[2025-12-26T06:29:05.090Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:53 startDate [2025-12-21], endTime [2025-12-26], startOfWeek [2025-12-21], previousWeekStart [2025-12-14]
-[2025-12-26T06:29:05.090Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:56 dropping partition data for backfill job [CLUSTER_HARDWARE_CONFIG]
-[2025-12-26T06:29:05.986Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:29:06.396Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:29:06.778Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:29:07.411Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:29:07.840Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:29:08.476Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:29:09.135Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:29:09.549Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:29:10.170Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:29:10.793Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:29:11.485Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:29:11.883Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:29:12.271Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:29:12.965Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:29:13.906Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:29:14.534Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:29:14.949Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:29:15.590Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:29:16.302Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:29:16.693Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:29:17.341Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:29:17.963Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:29:18.374Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:29:18.775Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:29:19.179Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:29:19.561Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:29:19.919Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:29:20.268Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:29:20.699Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:29:21.310Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:29:21.958Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:29:22.347Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:29:22.739Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:29:23.118Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:29:23.507Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:29:24.124Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:29:24.752Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:29:25.134Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:29:25.521Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:29:26.152Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:29:26.599Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:29:27.028Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:29:27.621Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:29:28.027Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:29:28.403Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:29:28.832Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:29:29.275Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:29:29.896Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:29:30.289Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:29:30.478Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:29:30.865Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:29:31.285Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:29:31.670Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:29:32.268Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:29:32.689Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:29:33.313Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:94 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:29:33.313Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterHardwareExecutor:55 Start writing to Cluster Hardware Metrics Tables : cg_nx_metrics_cluster_hardware_config
-[2025-12-26T06:29:34.504Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.c.ClickhouseClient:42 Written 17109 to clickhouse
-[2025-12-26T06:29:34.505Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.d.NutanixBackfillDao:29 Updating service backfill status for Service :[CLUSTER_HARDWARE_CONFIG] to epoch :[1766730404892]
-[2025-12-26T06:29:34.519Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:79 1 marked as completed updated in PG for service name nutanix_service_jobs 
-[2025-12-26T06:29:34.519Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.FileHelper:30 File deleted successfully.
-[2025-12-26T06:29:34.520Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:79 temp file for executor CLUSTER_HARDWARE_CONFIG deleted successfully
-[2025-12-26T06:29:34.589Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:40 NDP Data fetching: CLUSTER_HARDWARE_CONFIG completed successfully
-[2025-12-26T06:29:34.589Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:38 Processing job: CLUSTER_CONFIG
-[2025-12-26T06:29:34.814Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-21 for : CLUSTER_CONFIG
-[2025-12-26T06:29:35.088Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-21 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:35.177Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-21 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:35.258Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-21 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:35.387Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-21 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:35.486Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-22 for : CLUSTER_CONFIG
-[2025-12-26T06:29:35.589Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-22 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:35.658Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-22 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:35.748Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-22 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:35.834Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-22 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:36.086Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-23 for : CLUSTER_CONFIG
-[2025-12-26T06:29:36.188Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-23 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:36.240Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-23 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:36.368Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-23 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:36.442Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-23 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:36.599Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-24 for : CLUSTER_CONFIG
-[2025-12-26T06:29:36.689Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-24 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:36.786Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-24 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:36.881Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-24 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:36.987Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-24 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:37.088Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-25 for : CLUSTER_CONFIG
-[2025-12-26T06:29:37.193Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-25 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:37.289Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-25 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:37.395Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-25 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:37.486Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-25 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:37.686Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:46 Fetching data for date: 2025-12-26 for : CLUSTER_CONFIG
-[2025-12-26T06:29:37.890Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-26 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:38.011Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-26 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:38.182Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-26 in batch with offset 0 and limit 2000
-[2025-12-26T06:29:38.287Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.JoinHelper:117 Fetching data for date 2025-12-26 in batch with offset 2000 and limit 2000
-[2025-12-26T06:29:38.345Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:53 startDate [2025-12-21], endTime [2025-12-26], startOfWeek [2025-12-21], previousWeekStart [2025-12-14]
-[2025-12-26T06:29:38.345Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:56 dropping partition data for backfill job [CLUSTER_CONFIG]
-[2025-12-26T06:29:39.606Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:29:40.316Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e1a69b0a-3a6e-467a-8901-d0d952484d55
-[2025-12-26T06:29:40.824Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:29:41.261Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: aae32ed5-6212-4352-97dd-b273666a299a
-[2025-12-26T06:29:41.635Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:29:42.014Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e67b6636-6d60-4984-aed0-2734455c3801
-[2025-12-26T06:29:42.667Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:29:43.277Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8f905fdd-4362-435d-b8d8-1273fc06116c
-[2025-12-26T06:29:43.652Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:29:44.029Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1a9d8e27-b27b-4815-8b07-c625fa2e9fe6
-[2025-12-26T06:29:44.265Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:29:44.650Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 24d557be-b78d-4537-8435-38d43912e699
-[2025-12-26T06:29:45.266Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:29:45.969Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e773220b-db8f-48f7-873e-fb3c9a26c394
-[2025-12-26T06:29:46.384Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:29:46.686Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 965f4daa-673e-4017-b3ca-5a200f8e5da5
-[2025-12-26T06:29:46.894Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:29:47.284Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3f83b16b-78d2-43e6-9362-5d00f82ee5d1
-[2025-12-26T06:29:47.691Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:29:48.347Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0b4dc30a-2377-4b2d-a987-b8842cd4e83a
-[2025-12-26T06:29:48.769Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:29:49.186Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 38dbd7ac-82b0-415d-9245-e908dec6283b
-[2025-12-26T06:29:49.564Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:29:49.985Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 5d60824f-1ea7-4bd8-aa3d-71d65fd5e71a
-[2025-12-26T06:29:50.486Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:29:50.914Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 73873927-dbff-478f-a842-c91817ad7514
-[2025-12-26T06:29:51.396Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:29:51.983Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 79f25c38-ceac-4de8-91e9-e35084b24a01
-[2025-12-26T06:29:52.375Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:29:52.739Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 05db0081-a79a-4483-b94a-f62fc1802178
-[2025-12-26T06:29:53.179Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:29:53.781Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8d8d6798-9a9b-45b8-b4b6-fa1b8ea2aae1
-[2025-12-26T06:29:54.173Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:29:54.566Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: b76659fe-abbd-4dfd-b1d1-54708cab6ace
-[2025-12-26T06:29:54.990Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:29:55.381Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e78c1e1d-32ac-467d-904c-9cdb64cc772a
-[2025-12-26T06:29:55.792Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:29:56.400Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 3ea505e9-ae9b-4391-85e0-cf3ef5b88b4e
-[2025-12-26T06:29:56.774Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:29:57.174Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 657f0876-7661-465d-b2f4-9e290b8717d0
-[2025-12-26T06:29:57.764Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:29:58.409Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: bd39e0a8-f3c7-4636-95d7-27ca3a7ec418
-[2025-12-26T06:29:59.050Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:29:59.680Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 08e888d0-4d1f-4313-b248-40987943ddc8
-[2025-12-26T06:30:00.095Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:30:00.519Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 0a0e8cb8-de6f-4902-b900-8031949f18bb
-[2025-12-26T06:30:01.198Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:30:02.208Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 43ab8bf9-0868-49d4-8a4d-50ee3ca5308f
-[2025-12-26T06:30:03.204Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:30:03.868Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 1bec4d40-1ad2-4cb8-8f5c-8b8931cecab8
-[2025-12-26T06:30:04.519Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:30:05.183Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: e52f0e17-7a20-45b3-b2c4-783e53452898
-[2025-12-26T06:30:05.604Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:30:06.287Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: cc3b6441-8915-49f4-938f-009259ebb967
-[2025-12-26T06:30:06.668Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-14 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:30:07.263Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:225 Partition dropped for date: 2025-12-21 and sourcePcClusterId: 8e8025a2-a807-4da6-b15d-5c04ac092779
-[2025-12-26T06:30:07.263Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.e.ClusterConfigExecutor:108 Start writing to Cluster Metrics Tables : cg_nx_metrics_cluster_config
-[2025-12-26T06:30:08.008Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.c.ClickhouseClient:42 Written 14223 to clickhouse
-[2025-12-26T06:30:08.010Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.d.NutanixBackfillDao:29 Updating service backfill status for Service :[CLUSTER_CONFIG] to epoch :[1766730404892]
-[2025-12-26T06:30:08.020Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:79 1 marked as completed updated in PG for service name nutanix_service_jobs 
-[2025-12-26T06:30:08.020Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.h.FileHelper:30 File deleted successfully.
-[2025-12-26T06:30:08.020Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.t.a.ConfigHistoryActivitiesImpl:79 temp file for executor CLUSTER_CONFIG deleted successfully
-[2025-12-26T06:30:08.091Z] INFO workflow-method-nx_billing-3f91658d-9781-4bec-a84a-7a765525fe86 c.n.b.t.w.NxBillingWorkflowImpl:40 NDP Data fetching: CLUSTER_CONFIG completed successfully
-[2025-12-26T06:30:08.237Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 27 c.n.b.u.BackfillJobTimeUtils:32 Generating backfill job pojo: NX_ROUTINE_WORKFLOW, startTime: 2025-12-21T00:00:00.000, endTime: 2025-12-26T06:30:08.237
-[2025-12-26T06:58:41.036Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 28 c.n.b.d.NutanixBackfillDao:29 Updating service backfill status for Service :[NX_ROUTINE_WORKFLOW] to epoch :[1766730608237]
-[2025-12-26T06:58:41.041Z] INFO Activity Executor taskQueue="nx_billing_workflow", namespace="ncm-cg": 28 c.n.b.u.BackfillJobTimeUtils:79 1 marked as completed updated in PG for service name nutanix_service_jobs 
+Storage Questions – English Version
+Background
+The customer observed that Recovery Points usage in Prism Element storage details is high, especially in one environment compared to another, and asked:
+
+What can be deleted to reduce Recovery Points usage?
+What is the impact/effect of enabling deduplication on a storage container?
+If deduplication is enabled, can it be disabled later?
+1) What contributes to Recovery Points usage
+Recovery Points usage can include multiple data types, not just one snapshot category:
+
+VM-level Acropolis snapshots
+Protection Domain (PD)-based snapshots (local/remote)
+Prism Central recovery points (policy/manual)
+Third-party backup snapshots (for example, names with third_party_backup_snapshot_)
+Images/ISOs and clone-related storage usage
+Deletion candidates to reduce usage
+You can reduce usage by deleting unneeded items such as:
+
+old PD snapshots
+old Prism Central recovery points
+expired/orphan third-party backup snapshots (after validating ownership/retention)
+Always confirm retention requirements and restore requirements before deletion.
+
+2) How to check Recovery Point breakdown
+Recommended (most accurate)
+Use ss_exclusive_usage.py to check exclusive/reclaimable usage per recovery point/entity.
+
+UI-based (easiest to view)
+Use Prism Central:
+
+Data Protection → VM Recovery Points
+Check reclaimable space and per-item details
+CLI alternatives (useful, but less precise for reclaimable space)
+Use ncli to inspect:
+
+PD list
+PD snapshots
+Entity-centric PD/snapshot details
+ncli gives useful size indicators (for example Snapshot Size), but does not always equal exact reclaimable space shown by dedicated tooling/UI calculations.
+
+3) Deduplication impact on storage containers
+Benefits
+Can reduce physical storage usage significantly where duplicate blocks are common (for example, full clones, similar datasets).
+Considerations / risks
+CVM resource requirements (memory and metadata overhead considerations)
+Possible replication performance impact in some DR/protection scenarios
+Workload suitability matters; some clone workflows may not gain meaningful additional benefit
+4) Can deduplication be turned off later?
+Yes, deduplication can be disabled later.
+
+Important behavior:
+
+Disabling dedupe affects new writes going forward
+Existing already-deduplicated data is not automatically “un-deduped”
+To fully return data to non-deduped placement behavior, data migration to a non-dedup container may be required
+5) “Data Disk Space Usage High” capacity validation
+For disk-space-high alert risk evaluation, do not rely only on total cluster capacity.
+
+Check per-disk usage in Prism Element:
+
+Hardware → Table → Disk
+Look for imbalanced/high individual disks approaching threshold
+This is the correct operational way to assess alert risk.
+
+6) Cases where UI does not show expected recovery points
+There can be cases where Prism Central UI does not visibly map certain recovery-point remnants (for example, if related VM objects are no longer present, third-party artifacts, or stale internal mappings).
+
+In such situations:
+
+validate via CVM CLI (ncli PD/snapshot inspection)
+then remove only verified stale/unneeded objects with care
+Practical Recommendation
+Use this order:
+
+Prism Central UI for quick visibility and reclaim candidates
+ss_exclusive_usage.py for precise reclaimable usage
+ncli for backend validation and mapping gaps
+Delete only after retention/ownership confirmation
+For disk-high alerts, always check per-disk usage in PE Hardware view
+If you want, I can also provide this as:
+
+a customer-facing polished response email (professional tone), or
+a short SOP/checklist version for engineers.

@@ -11,7 +11,7 @@ PG_POD="cg-pg-1"
 DATABASE="cg_nx"
 CRONJOB_NAME="cron-nx-cg-data-loader"
 DATA_LOADER_DEPLOYMENT="nx-cg-data-loader"
-ITERATIONS=20
+ITERATIONS=2
 SLEEP_DURATION=10800  # 180 minutes (3 hours)
 BACKFILL_HOURS=8      # Hours to backfill
 WAIT_AFTER_COMPLETION=300  # 5 minutes after job completion
@@ -25,17 +25,28 @@ COMPLETION_PATTERNS=(
     "CATEGORIES_CONFIG completed successfully"
     "VM_CONFIG completed successfully"
     "CLUSTER_HARDWARE_CONFIG completed successfully"
+    "VM_RECOVERY_POINT_CONFIG completed successfully"
     # Backfill status updates (indicates data persisted)
     "Updating service backfill status for Service :\[CLUSTER_CONFIG\]"
     "Updating service backfill status for Service :\[NX_ROUTINE_WORKFLOW\]"
     "Updating service backfill status for Service :\[CATEGORIES_CONFIG\]"
     "Updating service backfill status for Service :\[VM_CONFIG\]"
     "Updating service backfill status for Service :\[CLUSTER_HARDWARE_CONFIG\]"
+    "Updating service backfill status for Service :\[VM_RECOVERY_POINT_CONFIG\]"
     # # Temp file cleanup (indicates job finished processing)
     # "temp file for executor CATEGORIES_CONFIG deleted successfully"
     # "temp file for executor VM_CONFIG deleted successfully"
     # "temp file for executor CLUSTER_HARDWARE_CONFIG deleted successfully"
     # "temp file for executor CLUSTER_CONFIG deleted successfully"
+)
+
+# Post-completion checks (observed downstream workflow after data-loader completion)
+# Format: "pod_prefix|label|grep_pattern"
+POST_COMPLETION_PATTERNS=(
+    "nx-cg-precalculate-worker-v2-|Precalculate workflow kicked off|TCO Job Starting for jobId"
+    "nx-cg-precalculate-worker-v2-|Cluster TCO recalculation started|Starting Cluster TCO calculation"
+    "nx-cg-precalculate-worker-v2-|RAM cost recalculation started|Starting RAM cost calculation"
+    "nx-cg-inventory-manager-service-|Inventory cost config persisted|Updated cost config"
 )
 
 # Global variable to store job start timestamp (ISO 8601 format for --since-time)
@@ -361,6 +372,23 @@ get_data_loader_pod() {
     echo "$pod_name"
 }
 
+# Get first pod name matching prefix in namespace
+get_pod_by_prefix() {
+    local namespace=$1
+    local prefix=$2
+    local pod_name=""
+
+    pod_name=$(kubectl get pods -n "$namespace" --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}' 2>/dev/null \
+        | tr ' ' '\n' | grep "^$prefix" | head -1)
+
+    if [ -z "$pod_name" ]; then
+        pod_name=$(kubectl get pods -n "$namespace" -o jsonpath='{.items[*].metadata.name}' 2>/dev/null \
+            | tr ' ' '\n' | grep "^$prefix" | head -1)
+    fi
+
+    echo "$pod_name"
+}
+
 # Check if all completion patterns are found in logs since job started
 check_job_completion() {
     local pod_name=$1
@@ -384,7 +412,7 @@ check_job_completion() {
     fi
     
     # Job types to track for completion status
-    local job_types=("CLUSTER_CONFIG" "CATEGORIES_CONFIG" "VM_CONFIG" "CLUSTER_HARDWARE_CONFIG" "NX_ROUTINE_WORKFLOW")
+    local job_types=("CLUSTER_CONFIG" "CATEGORIES_CONFIG" "VM_CONFIG" "CLUSTER_HARDWARE_CONFIG" "VM_RECOVERY_POINT_CONFIG" "NX_ROUTINE_WORKFLOW")
     local completed_jobs=()
     local pending_jobs=()
     
@@ -447,7 +475,7 @@ display_job_progress() {
     fi
     
     # Job types to track
-    local job_types=("CATEGORIES_CONFIG" "VM_CONFIG" "CLUSTER_HARDWARE_CONFIG" "CLUSTER_CONFIG")
+    local job_types=("CATEGORIES_CONFIG" "VM_CONFIG" "CLUSTER_HARDWARE_CONFIG" "CLUSTER_CONFIG" "VM_RECOVERY_POINT_CONFIG")
     
     for job_type in "${job_types[@]}"; do
         # Milestone 1: Processing job started (Pattern: "Processing job: CATEGORIES_CONFIG")
@@ -487,6 +515,7 @@ display_job_progress() {
                 "VM_CONFIG") write_pattern="Start writing to Vm Metrics Tables" ;;
                 "CLUSTER_HARDWARE_CONFIG") write_pattern="Start writing to Cluster Hardware Metrics Tables" ;;
                 "CLUSTER_CONFIG") write_pattern="Start writing to Cluster Metrics Tables" ;;
+                "VM_RECOVERY_POINT_CONFIG") write_pattern="Start writing to VM Recovery Point Metrics Tables" ;;
             esac
             if grep -q "$write_pattern" <<< "$logs"; then
                 echo -e "  ${CYAN}✍${NC}  $job_type: Writing to ClickHouse tables"
@@ -503,6 +532,7 @@ display_job_progress() {
                 "VM_CONFIG") write_pattern="Start writing to Vm Metrics Tables" ;;
                 "CLUSTER_HARDWARE_CONFIG") write_pattern="Start writing to Cluster Hardware Metrics Tables" ;;
                 "CLUSTER_CONFIG") write_pattern="Start writing to Cluster Metrics Tables" ;;
+                "VM_RECOVERY_POINT_CONFIG") write_pattern="Start writing to VM Recovery Point Metrics Tables" ;;
             esac
             # Look for the Written line after the Start writing line
             local written_count=$(grep -A10 "$write_pattern" <<< "$logs" | grep "Written.*to clickhouse" | head -1 | sed 's/.*Written \([0-9]*\) to clickhouse.*/\1/')
@@ -558,6 +588,70 @@ display_job_progress() {
             echo -e "  ${CYAN}📋${NC} Backfill jobs to process: ${YELLOW}$job_count${NC}"
             LOGGED_MILESTONES[$backfill_jobs_key]=1
         fi
+    fi
+}
+
+# Monitor downstream workflows that run after data-loader completion and are needed
+# for TCO/cost persistence updates.
+monitor_post_completion_workflows() {
+    local start_time=$(date +%s)
+    local elapsed=0
+    local found_count=0
+    local total_patterns=${#POST_COMPLETION_PATTERNS[@]}
+    local all_patterns_seen=0
+
+    log_section "Monitoring Post-Completion Workflows"
+    log_info "Watching downstream pods for DB/cost-update signals for $WAIT_AFTER_COMPLETION seconds"
+    log_info "Note: script will wait full window before next iteration"
+
+    while [ $elapsed -lt $WAIT_AFTER_COMPLETION ]; do
+        for pattern_entry in "${POST_COMPLETION_PATTERNS[@]}"; do
+            local pod_prefix label pattern
+            IFS='|' read -r pod_prefix label pattern <<< "$pattern_entry"
+
+            local safe_label
+            safe_label=$(echo "$label" | tr ' ' '_' | tr -cd '[:alnum:]_-')
+            local check_key="post_completion_${pod_prefix}_${safe_label}"
+            if [ -n "${LOGGED_MILESTONES[$check_key]}" ]; then
+                continue
+            fi
+
+            local pod_name
+            pod_name=$(get_pod_by_prefix "$NAMESPACE" "$pod_prefix")
+            if [ -z "$pod_name" ]; then
+                continue
+            fi
+
+            local logs
+            logs=$(kubectl logs -n "$NAMESPACE" "$pod_name" --since-time="$JOB_START_TIMESTAMP" 2>/dev/null)
+            if [ -z "$logs" ]; then
+                continue
+            fi
+
+            if grep -q "$pattern" <<< "$logs"; then
+                LOGGED_MILESTONES[$check_key]=1
+                found_count=$((found_count + 1))
+                echo -e "  ${CYAN}🔄${NC} ${GREEN}$label${NC} (${pod_name})"
+            fi
+        done
+
+        if [ $found_count -eq $total_patterns ] && [ $all_patterns_seen -eq 0 ]; then
+            all_patterns_seen=1
+            log_success "All downstream post-completion workflow signals were observed."
+            log_info "Continuing to wait until full post-completion window ends..."
+        fi
+
+        sleep $LOG_CHECK_INTERVAL
+        elapsed=$(( $(date +%s) - start_time ))
+    done
+
+    if [ $found_count -eq $total_patterns ]; then
+        log_success "Post-completion wait window ended with all signals observed ($found_count/$total_patterns)."
+        return 0
+    else
+        log_warn "Post-completion monitoring window ended before all downstream signals were seen."
+        log_warn "Observed $found_count/$total_patterns post-completion patterns."
+        return 1
     fi
 }
 
@@ -647,8 +741,8 @@ wait_for_job_completion() {
             echo -e "${CYAN}═══════════════════════════════════════════════════════════════════${NC}"
             log_success "All data loader jobs completed successfully!"
             echo ""
-            log_info "Waiting $WAIT_AFTER_COMPLETION seconds ($(( WAIT_AFTER_COMPLETION / 60 )) min) before next iteration..."
-            sleep $WAIT_AFTER_COMPLETION
+            monitor_post_completion_workflows
+            log_info "Completed post-completion monitoring window. Proceeding to next iteration..."
             return 0
         fi
         
