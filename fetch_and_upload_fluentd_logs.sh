@@ -88,7 +88,7 @@ print_warning() {
 check_requirements() {
     local missing=0
     
-    for cmd in kubectl ssh scp; do
+    for cmd in kubectl ssh scp tar; do
         if ! command -v $cmd &> /dev/null; then
             print_error "$cmd is not installed"
             missing=1
@@ -101,6 +101,12 @@ check_requirements() {
     
     if [ -n "$FILER_PASSWORD" ] && ! command -v sshpass &> /dev/null; then
         print_warning "sshpass not installed - will require manual password entry for filer"
+    fi
+    
+    # Optional but recommended for better upload reliability
+    if ! command -v rsync &> /dev/null; then
+        print_warning "rsync not installed - falling back to scp (slower, no resume support)"
+        print_info "    Install rsync for better upload reliability: yum install rsync"
     fi
     
     return $missing
@@ -186,21 +192,112 @@ create_filer_folder() {
     fi
 }
 
+compress_logs() {
+    local source_dir=$1
+    local output_file=$2
+    
+    print_info "Compressing logs for faster upload..."
+    
+    local dir_size=$(du -sh "$source_dir" 2>/dev/null | cut -f1)
+    print_info "  Original size: $dir_size"
+    
+    if tar -czf "$output_file" -C "$(dirname "$source_dir")" "$(basename "$source_dir")" 2>/dev/null; then
+        local compressed_size=$(du -sh "$output_file" 2>/dev/null | cut -f1)
+        print_success "Logs compressed: $compressed_size"
+        return 0
+    else
+        print_error "Failed to compress logs"
+        return 1
+    fi
+}
+
 upload_to_filer() {
     local local_path=$1
     local filer_path=$2
+    local max_retries=3
+    local retry_count=0
     
-    print_info "Uploading logs to filer..."
-    print_info "  Source: $local_path"
-    print_info "  Destination: ${FILER_HOST}:${filer_path}"
-    
-    if scp_upload "$local_path" "$FILER_HOST" "$FILER_USER" "$FILER_PASSWORD" "$filer_path"; then
-        print_success "Logs uploaded to filer successfully"
-        return 0
-    else
-        print_error "Failed to upload logs to filer"
-        return 1
+    # Compress logs first
+    local compressed_file="${local_path}.tar.gz"
+    if ! compress_logs "$local_path" "$compressed_file"; then
+        print_warning "Compression failed, uploading uncompressed (slower)"
+        compressed_file=""
     fi
+    
+    # Use compressed file if available, otherwise use original
+    local upload_source="${compressed_file:-$local_path}"
+    local upload_name=$(basename "$upload_source")
+    
+    print_info "Uploading to filer..."
+    print_info "  Source: $upload_source"
+    print_info "  Destination: ${FILER_HOST}:${filer_path}"
+    print_info "  Size: $(du -sh "$upload_source" 2>/dev/null | cut -f1)"
+    
+    # Try with rsync first (supports resume and progress)
+    if command -v rsync &> /dev/null && command -v sshpass &> /dev/null && [ -n "$FILER_PASSWORD" ]; then
+        print_info "Using rsync for reliable transfer with progress..."
+        
+        while [ $retry_count -lt $max_retries ]; do
+            if [ $retry_count -gt 0 ]; then
+                print_warning "Retry attempt $retry_count/$max_retries..."
+                sleep 5
+            fi
+            
+            if sshpass -p "$FILER_PASSWORD" rsync -avz --progress --timeout=300 \
+                -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR" \
+                "$upload_source" "${FILER_USER}@${FILER_HOST}:${filer_path}/" 2>&1 | \
+                grep -v "StrictHostKeyChecking" | grep -v "Warning"; then
+                
+                print_success "Logs uploaded successfully via rsync"
+                
+                # Cleanup compressed file if used
+                if [ -n "$compressed_file" ] && [ -f "$compressed_file" ]; then
+                    rm -f "$compressed_file"
+                    print_info "Cleaned up compressed file"
+                fi
+                
+                return 0
+            fi
+            
+            retry_count=$((retry_count + 1))
+        done
+        
+        print_error "rsync upload failed after $max_retries attempts"
+    fi
+    
+    # Fallback to scp with retries
+    print_warning "Falling back to scp (no resume support)..."
+    retry_count=0
+    
+    while [ $retry_count -lt $max_retries ]; do
+        if [ $retry_count -gt 0 ]; then
+            print_warning "Retry attempt $retry_count/$max_retries..."
+            sleep 5
+        fi
+        
+        if scp_upload "$upload_source" "$FILER_HOST" "$FILER_USER" "$FILER_PASSWORD" "$filer_path"; then
+            print_success "Logs uploaded successfully via scp"
+            
+            # Cleanup compressed file if used
+            if [ -n "$compressed_file" ] && [ -f "$compressed_file" ]; then
+                rm -f "$compressed_file"
+                print_info "Cleaned up compressed file"
+            fi
+            
+            return 0
+        fi
+        
+        retry_count=$((retry_count + 1))
+    done
+    
+    print_error "Upload failed after $max_retries attempts"
+    
+    # Cleanup compressed file on failure
+    if [ -n "$compressed_file" ] && [ -f "$compressed_file" ]; then
+        rm -f "$compressed_file"
+    fi
+    
+    return 1
 }
 
 verify_filer_upload() {
@@ -209,6 +306,23 @@ verify_filer_upload() {
     
     print_info "Verifying upload on filer..."
     
+    # Check if compressed file exists
+    local compressed_name="${folder_name}.tar.gz"
+    local compressed_exists=$(ssh_exec "$FILER_HOST" "$FILER_USER" "$FILER_PASSWORD" \
+        "[ -f '$filer_path/$compressed_name' ] && echo 'yes' || echo 'no'" 2>/dev/null)
+    
+    if [ "$compressed_exists" = "yes" ]; then
+        print_success "Verified: Compressed archive uploaded"
+        
+        local size=$(ssh_exec "$FILER_HOST" "$FILER_USER" "$FILER_PASSWORD" \
+            "du -sh '$filer_path/$compressed_name' 2>/dev/null | cut -f1" 2>/dev/null || echo "unknown")
+        print_info "Archive size on filer: $size"
+        print_info "Archive name: $compressed_name"
+        
+        return 0
+    fi
+    
+    # Check if uncompressed folder exists
     local file_count=$(ssh_exec "$FILER_HOST" "$FILER_USER" "$FILER_PASSWORD" \
         "find '$filer_path/$folder_name' -type f 2>/dev/null | wc -l" 2>/dev/null || echo "0")
     
@@ -221,7 +335,7 @@ verify_filer_upload() {
         
         return 0
     else
-        print_error "Upload verification failed"
+        print_error "Upload verification failed - no files found on filer"
         return 1
     fi
 }
@@ -381,19 +495,45 @@ echo ""
 # Final summary
 print_header "✅ Success - All Operations Completed"
 echo ""
+
+# Determine what was uploaded (compressed or uncompressed)
+UPLOADED_NAME="${LOG_FOLDER_NAME}.tar.gz"
+UPLOADED_COMPRESSED=$(ssh_exec "$FILER_HOST" "$FILER_USER" "$FILER_PASSWORD" \
+    "[ -f '$FILER_TARGET_PATH/$UPLOADED_NAME' ] && echo 'yes' || echo 'no'" 2>/dev/null)
+
 echo "📁 Files:"
 echo "  Kubeconfig:      ${KUBECONFIG_FILE}"
-echo "  Filer Location:  ${FILER_HOST}:${FILER_TARGET_PATH}/${LOG_FOLDER_NAME}"
+if [ "$UPLOADED_COMPRESSED" = "yes" ]; then
+    echo "  Filer Location:  ${FILER_HOST}:${FILER_TARGET_PATH}/${UPLOADED_NAME}"
+    echo "  Format:          Compressed (tar.gz)"
+else
+    echo "  Filer Location:  ${FILER_HOST}:${FILER_TARGET_PATH}/${LOG_FOLDER_NAME}/"
+    echo "  Format:          Uncompressed directory"
+fi
 echo ""
 echo "🌐 Access URL:"
-FILER_URL=$(get_filer_url "$BUG_FOLDER/$LOG_FOLDER_NAME")
+if [ "$UPLOADED_COMPRESSED" = "yes" ]; then
+    FILER_URL=$(get_filer_url "$BUG_FOLDER/$UPLOADED_NAME")
+else
+    FILER_URL=$(get_filer_url "$BUG_FOLDER/$LOG_FOLDER_NAME")
+fi
 echo "  ${FILER_URL}"
 echo ""
 echo "📊 Summary:"
 echo "  ✓ Kubeconfig fetched from PC"
 echo "  ✓ Logs copied from fluentd pod"
+if [ "$UPLOADED_COMPRESSED" = "yes" ]; then
+    echo "  ✓ Logs compressed for faster transfer"
+fi
 echo "  ✓ Logs uploaded to filer"
 echo "  ✓ Upload verified"
 echo "  ✓ Local logs cleaned up"
+echo ""
+echo "💡 Tips:"
+if [ "$UPLOADED_COMPRESSED" = "yes" ]; then
+    echo "  - Download and extract: tar -xzf ${UPLOADED_NAME}"
+fi
+echo "  - Use the URL above to access files via browser"
+echo "  - Kubeconfig saved locally for future use"
 echo ""
 print_header "Done"

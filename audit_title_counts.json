@@ -1,0 +1,23 @@
+{
+  "PC_10.114.55.128": {
+    "Failed to authenticate user {username} from {ip_port} for issuing token": 123
+  },
+  "PC_10.122.27.231": {
+    "Token for user {username} from {ip_port} has been created": 52
+  },
+  "PC_10.122.28.122": {
+    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 116,
+    "Token for user {username} from {ip_port} has been created": 74
+  },
+  "PC_10.122.28.159": {
+    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 89,
+    "Token for user {username} from {ip_port} has been created": 55
+  },
+  "PC_10.122.28.162": {
+    "Failed to authenticate user {username} from {ip_port} for issuing token": 93,
+    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 39
+  },
+  "PC_10.122.28.237": {
+    "Failed to authenticate user {username} from {ip_port} for issuing token": 109
+  }
+}
