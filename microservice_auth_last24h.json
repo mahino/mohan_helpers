@@ -1,0 +1,44 @@
+{
+  "cutoff_utc": "2026-06-18T03:50:44.930113+00:00",
+  "now_utc": "2026-06-19T03:50:44.930113+00:00",
+  "files_scanned": 249,
+  "matched_lines": 2001,
+  "counts": {
+    "calm": {
+      "calm.common.jove_interface": 2
+    },
+    "epsilon": {
+      "auth_failure_other": 1350,
+      "ListRecoveryPlanJobs V4 API failed": 258,
+      "recovery_plan_jobs/list api failed": 258,
+      "VM list failed with error": 77,
+      "Groups call failed": 56
+    }
+  },
+  "first_last": {
+    "epsilon::auth_failure_other": {
+      "first": "2026-06-18T22:46:18+00:00",
+      "last": "2026-06-19T03:38:15+00:00"
+    },
+    "epsilon::ListRecoveryPlanJobs V4 API failed": {
+      "first": "2026-06-18T22:46:25+00:00",
+      "last": "2026-06-19T03:03:26+00:00"
+    },
+    "epsilon::recovery_plan_jobs/list api failed": {
+      "first": "2026-06-18T22:46:25+00:00",
+      "last": "2026-06-19T03:03:26+00:00"
+    },
+    "epsilon::Groups call failed": {
+      "first": "2026-06-18T22:47:13+00:00",
+      "last": "2026-06-19T03:17:14+00:00"
+    },
+    "epsilon::VM list failed with error": {
+      "first": "2026-06-18T10:23:44+00:00",
+      "last": "2026-06-19T03:05:28+00:00"
+    },
+    "calm::calm.common.jove_interface": {
+      "first": "2026-06-18T09:01:03+00:00",
+      "last": "2026-06-18T09:01:03+00:00"
+    }
+  }
+}

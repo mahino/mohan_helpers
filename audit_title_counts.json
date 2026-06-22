@@ -1,23 +1,47 @@
 {
-  "PC_10.114.55.128": {
-    "Failed to authenticate user {username} from {ip_port} for issuing token": 123
-  },
-  "PC_10.122.27.231": {
-    "Token for user {username} from {ip_port} has been created": 52
-  },
-  "PC_10.122.28.122": {
-    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 116,
-    "Token for user {username} from {ip_port} has been created": 74
-  },
-  "PC_10.122.28.159": {
-    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 89,
-    "Token for user {username} from {ip_port} has been created": 55
-  },
-  "PC_10.122.28.162": {
-    "Failed to authenticate user {username} from {ip_port} for issuing token": 93,
-    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 39
-  },
-  "PC_10.122.28.237": {
-    "Failed to authenticate user {username} from {ip_port} for issuing token": 109
+  "start_time_utc": "2026-06-22T03:21:33Z",
+  "end_time_utc": "2026-06-22T03:22:48Z",
+  "counts": {
+    "PC_10.114.55.128": {
+      "Token for user {username} from {ip_port} has been created": 19,
+      "Session for user {username} from 10.111.51.186,10.114.55.127 has been updated": 2,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1825": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1828": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1829": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1831": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1832": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1833": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1836": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1837": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1838": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1840": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1841": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1846": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1852": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1853": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1855": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1859": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1862": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1864": 1,
+      "Updated categories for vm_recovery_point bulk_2026-06-22_014617_1866": 1
+    },
+    "PC_10.122.27.231": {
+      "Token for user {username} from {ip_port} has been created": 18
+    },
+    "PC_10.122.28.122": {
+      "Failed to authenticate user {uuid} from {ip_port} for issuing token": 30,
+      "Token for user {username} from {ip_port} has been created": 24
+    },
+    "PC_10.122.28.159": {
+      "Failed to authenticate user {uuid} from {ip_port} for issuing token": 26,
+      "Token for user {username} from {ip_port} has been created": 17
+    },
+    "PC_10.122.28.162": {
+      "Failed to authenticate user {username} from {ip_port} for issuing token": 19,
+      "Failed to authenticate user {uuid} from {ip_port} for issuing token": 14
+    },
+    "PC_10.122.28.237": {
+      "Failed to authenticate user {username} from {ip_port} for issuing token": 24
+    }
   }
 }

@@ -10,3 +10,4 @@ pc_logs/
 __pycache__/
 *.pyc
 *.pyo
+microservice_live_logs_*/

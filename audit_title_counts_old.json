@@ -17988,3 +17988,26 @@
   "Session for user {username} from 10.100.2.107,10.114.55.194,10.114.55.127,10.114.55.127 has been updated": 1,
   "User {username} has logged out from 10.138.108.210,10.114.55.127": 1
 }
+{
+  "PC_10.114.55.128": {
+    "Failed to authenticate user {username} from {ip_port} for issuing token": 20
+  },
+  "PC_10.122.27.231": {
+    "Token for user {username} from {ip_port} has been created": 9
+  },
+  "PC_10.122.28.122": {
+    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 24,
+    "Token for user {username} from {ip_port} has been created": 14
+  },
+  "PC_10.122.28.159": {
+    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 20,
+    "Token for user {username} from {ip_port} has been created": 8
+  },
+  "PC_10.122.28.162": {
+    "Failed to authenticate user {username} from {ip_port} for issuing token": 9,
+    "Failed to authenticate user {uuid} from {ip_port} for issuing token": 6
+  },
+  "PC_10.122.28.237": {
+    "Failed to authenticate user {username} from {ip_port} for issuing token": 13
+  }
+}
