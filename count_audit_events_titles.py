@@ -16,7 +16,8 @@ from typing import Any
 
 import requests
 import urllib3
-from requests.auth import HTTPBasicAuth
+
+from pc_cookie_auth import PrismCookieClient
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -25,22 +26,22 @@ BASE_URL = "https://ncm.services.nconprem-10-114-55-128.ccpnx.com/"
 GROUPS_API = BASE_URL + "api/nutanix/v3/groups"
 USERNAME = "admin"
 PASSWORD = "Nutanix.123"
-GROUP_MEMBER_COUNT = 60
+GROUP_MEMBER_COUNT = 500
 REQUEST_TIMEOUT_SEC = 120
 VERIFY_SSL = False
 AUDIT_OUTPUT_FILE = "audit_title_counts.json"
 EVENT_OUTPUT_FILE = "event_title_counts.json"
 MAX_RETRIES_PER_PAGE = 5
 RETRY_BACKOFF_SEC = 3
-PAUSE_EVERY_PAGES = 100
+PAUSE_EVERY_PAGES = 20
 PAUSE_SECONDS = 5
 # Default behavior: normalize dynamic parts (UUID/time) so duplicate patterns collapse.
 ENABLE_TITLE_NORMALIZATION = True
 # Group counts by cluster_name (cluster -> title -> count).
 GROUP_BY_CLUSTER_NAME = True
 # Optional behavior: count only records from the last N hours as of script start.
-LAST_N_HOURS_ONLY_ENABLED = True
-LAST_N_HOURS = 0.5
+LAST_N_HOURS_ONLY_ENABLED = False
+LAST_N_HOURS = 8
 # Adaptive skip while scanning ASCENDING data and still far older than cutoff.
 ENABLE_DYNAMIC_OFFSET_SKIP = True
 MAX_DYNAMIC_SKIP_PAGES = 500
@@ -59,11 +60,20 @@ RESUME_OFFSET_BY_ENTITY = {
 }
 # If resuming and output file exists, preload old counts.
 RESUME_FROM_EXISTING_OUTPUT = True
+COOKIE_REFRESH_SEC = 300
 
 client = requests.Session()
-client.auth = HTTPBasicAuth(USERNAME, PASSWORD)
 client.headers = {"content-type": "application/json"}
 client.verify = VERIFY_SSL
+cookie_client = PrismCookieClient(
+    session=client,
+    base_url=BASE_URL,
+    username=USERNAME,
+    password=PASSWORD,
+    verify_ssl=VERIFY_SSL,
+    timeout_sec=REQUEST_TIMEOUT_SEC,
+    refresh_sec=COOKIE_REFRESH_SEC,
+)
 
 UUID_RE = re.compile(
     r"\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b"
@@ -82,6 +92,36 @@ POOL_RE = re.compile(r"\bdefault-storage-pool-\d+\b", re.IGNORECASE)
 CONTAINER_RE = re.compile(r"(\bStorage Container\s+)([A-Za-z0-9_.:-]+)", re.IGNORECASE)
 PUBLIC_KEY_RE = re.compile(r"(\bPublic Key\s+)([A-Za-z0-9_.:-]+)(\s+added to Cluster\b)", re.IGNORECASE)
 SOFTWARE_VER_RE = re.compile(r"(\bSoftware\s+)([A-Za-z0-9_.-]+)(\s+prism_central_deploy upload started\b)", re.IGNORECASE)
+CREATED_IMAGE_RE = re.compile(r"^Created Image\s+.+$", re.IGNORECASE)
+DELETED_IMAGE_RE = re.compile(r"^Deleted Image\s+.+$", re.IGNORECASE)
+UPDATED_MARKETPLACE_ITEM_RE = re.compile(r"^Updated categories for marketplace_item\s+.+$", re.IGNORECASE)
+ALERT_SCHEMA_CREATED_RE = re.compile(r"^Alert Schema\s+.+\s+Created by\s+.+$", re.IGNORECASE)
+ALERT_SCHEMA_DELETED_RE = re.compile(r"^Alert Schema\s+.+\s+Deleted by\s+.+$", re.IGNORECASE)
+CATEGORY_VALUE_CREATED_RE = re.compile(r"^Category\s+([A-Za-z0-9_.-]+):([A-Za-z0-9_.$-]+)\s+has been created$", re.IGNORECASE)
+CATEGORY_KEY_CREATED_RE = re.compile(r"^Category key\s+.+\s+has been created$", re.IGNORECASE)
+CATEGORY_KEY_VALUE_EXTID_CREATED_RE = re.compile(
+    r"^Category\s+[^/\s]+/[^\s]+\s+with extId\s+\{uuid\}\s+has been Created$",
+    re.IGNORECASE,
+)
+CATEGORY_CALMAPP_CREATED_RE = re.compile(
+    r"^Category\s+CalmApplication/.+\s+with extId\s+\{uuid\}\s+has been Created$",
+    re.IGNORECASE,
+)
+CATEGORY_CALMPROJECT_CREATED_RE = re.compile(
+    r"^Category\s+CalmProject/.+\s+with extId\s+\{uuid\}\s+has been Created$",
+    re.IGNORECASE,
+)
+UPDATED_VM_RP_RE = re.compile(r"^Updated categories for vm_recovery_point\s+.+$", re.IGNORECASE)
+ADDED_NIC_TO_VM_RE = re.compile(r"^Added NIC\s+.+\s+to VM\s+.+\}?\s*$", re.IGNORECASE)
+ADDED_DISK_TO_VM_RE = re.compile(r"^Added disk\s+.+\s+to VM\s+.+$", re.IGNORECASE)
+CREATED_DASHBOARD_RE = re.compile(
+    r"^User\s+\{username\}\s+has created a new dashboard\s+.+$",
+    re.IGNORECASE,
+)
+UPDATED_DASHBOARD_RE = re.compile(
+    r"^User\s+\{username\}\s+has updated the dashboard\s+.+$",
+    re.IGNORECASE,
+)
 
 
 def _iso_utc(ts: float | None = None) -> str:
@@ -255,6 +295,60 @@ def normalize_title(title: str) -> str:
     text = CONTAINER_RE.sub(r"\1{container_name}", text)
     text = PUBLIC_KEY_RE.sub(r"\1{public_key_name}\3", text)
     text = SOFTWARE_VER_RE.sub(r"\1{software_version}\3", text)
+    text = CREATED_IMAGE_RE.sub("Created Image {image_name}", text)
+    text = DELETED_IMAGE_RE.sub("Deleted Image {image_name}", text)
+    text = UPDATED_MARKETPLACE_ITEM_RE.sub(
+        "Updated categories for marketplace_item {marketplace_item}",
+        text,
+    )
+    text = ALERT_SCHEMA_CREATED_RE.sub(
+        "Alert Schema {alert_schema} Created by {service_name}",
+        text,
+    )
+    text = ALERT_SCHEMA_DELETED_RE.sub(
+        "Alert Schema {alert_schema} Deleted by {service_name}",
+        text,
+    )
+    text = CATEGORY_VALUE_CREATED_RE.sub(
+        r"Category \1:{category_value} has been created",
+        text,
+    )
+    text = CATEGORY_KEY_CREATED_RE.sub(
+        "Category key {key} has been created",
+        text,
+    )
+    text = CATEGORY_KEY_VALUE_EXTID_CREATED_RE.sub(
+        "Category {key}/{value} with extId {uuid} has been Created",
+        text,
+    )
+    text = CATEGORY_CALMAPP_CREATED_RE.sub(
+        "Category CalmApplication/{app_name} with extId {uuid} has been Created",
+        text,
+    )
+    text = CATEGORY_CALMPROJECT_CREATED_RE.sub(
+        "Category CalmProject/{project_name} with extId {uuid} has been Created",
+        text,
+    )
+    text = UPDATED_VM_RP_RE.sub(
+        "Updated categories for vm_recovery_point {bulk_operation}",
+        text,
+    )
+    text = ADDED_NIC_TO_VM_RE.sub(
+        "Added NIC {suitalbe_name} to VM {vm_name}",
+        text,
+    )
+    text = ADDED_DISK_TO_VM_RE.sub(
+        "Added disk {disc_name} to VM {vm_name}",
+        text,
+    )
+    text = CREATED_DASHBOARD_RE.sub(
+        "User {username} has created a new dashboard {dashboard_name}",
+        text,
+    )
+    text = UPDATED_DASHBOARD_RE.sub(
+        "User {username} has updated the dashboard {dashboard_name}",
+        text,
+    )
 
     # Generic anomaly shape: "<entity> : <metric> anomaly" -> "{entity_name} : <metric> anomaly"
     m = ENTITY_PREFIX_ANOMALY_RE.match(text)
@@ -287,7 +381,8 @@ def fetch_page(
     last_error: Exception | None = None
     for attempt in range(1, MAX_RETRIES_PER_PAGE + 1):
         try:
-            resp = client.post(
+            resp = cookie_client.request(
+                "POST",
                 GROUPS_API,
                 data=json.dumps(payload),
                 timeout=timeout,
@@ -474,15 +569,24 @@ def run_title_count_job(
     def build_result_snapshot(end_time_iso: str | None = None) -> dict[str, Any]:
         if end_time_iso is None:
             end_time_iso = _iso_utc()
+        overall_total = int(sum(counter.values()))
+        title_totals_obj: dict[str, int] = dict(counter.most_common())
         if not GROUP_BY_CLUSTER_NAME:
             counts_obj: dict[str, Any] = dict(counter.most_common())
+            cluster_totals_obj: dict[str, int] = {}
         else:
             counts_obj = {}
+            cluster_totals_obj = {}
             for cluster_name in sorted(cluster_counters.keys()):
-                counts_obj[cluster_name] = dict(cluster_counters[cluster_name].most_common())
+                cluster_counter = cluster_counters[cluster_name]
+                counts_obj[cluster_name] = dict(cluster_counter.most_common())
+                cluster_totals_obj[cluster_name] = int(sum(cluster_counter.values()))
         return {
             "start_time_utc": run_start_iso,
             "end_time_utc": end_time_iso,
+            "total": overall_total,
+            "title_totals": title_totals_obj,
+            "cluster_totals": cluster_totals_obj,
             "counts": counts_obj,
         }
 

@@ -10,4 +10,5 @@ pc_logs/
 __pycache__/
 *.pyc
 *.pyo
-microservice_live_logs_*/
+microservice-live-logs_*/
+temp_log 
