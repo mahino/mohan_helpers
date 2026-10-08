@@ -25,7 +25,7 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Configuration
-BASE_URL = "https://ncm.services.nconprem-10-36-199-8.ccpnx.com"
+BASE_URL = "https://ncm.services.nconprem-10-53-60-173.ccpnx.com"
 REQUEST_TIMEOUT = 30
 MAX_CC_PER_ACCOUNT = 80  # Limit cost centers per account (set to None for unlimited)
 MAX_ACCOUNTS = 6  # Limit accounts to process (set to None for all)

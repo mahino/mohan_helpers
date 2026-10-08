@@ -22,7 +22,7 @@ from pc_cookie_auth import PrismCookieClient
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Hardcoded config (as requested)
-BASE_URL = "https://ncm.services.nconprem-10-114-55-128.ccpnx.com/"
+BASE_URL = "https://ncm.services.nconprem-10-53-55-33.nxncm.com/"
 GROUPS_API = BASE_URL + "api/nutanix/v3/groups"
 USERNAME = "admin"
 PASSWORD = "Nutanix.123"

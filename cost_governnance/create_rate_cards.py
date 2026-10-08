@@ -21,7 +21,7 @@ logger = get_logger(__file__)
 requests = LoggedRequests(logger)
 
 # Configuration
-URL = "https://ncm.services.nconprem-10-36-199-8.ccpnx.com/v1/cg/config/rate-cards"
+URL = "https://ncm.services.nconprem-10-53-60-173.ccpnx.com/v1/cg/config/rate-cards"
 AUTH = ('admin', 'Nutanix.123')
 HEADERS = {'Content-Type': 'application/json'}
 
@@ -61,13 +61,13 @@ def main():
 
     for i in range(10000):
         rc_payload['rateCards'][0]['rateCardName'] = rate_card_name + str(i)
-        rc_payload['rateCards'][0]['meteringRates']['vm']['vCpu']['rate'] = random.randint(1, 100)
-        rc_payload['rateCards'][0]['meteringRates']['vm']['vRam']['rate'] = random.randint(1, 100)
-        rc_payload['rateCards'][0]['meteringRates']['vm']['vStorage']['rate'] = random.randint(1, 100)
+        rc_payload['rateCards'][0]['meteringRates']['vm']['vCpu']['rate'] = random.randint(100, 10000)
+        rc_payload['rateCards'][0]['meteringRates']['vm']['vRam']['rate'] = random.randint(100, 10000)
+        rc_payload['rateCards'][0]['meteringRates']['vm']['vStorage']['rate'] = random.randint(100, 10000)
         
         for j in range(5):
             rc_payload['rateCards'][0]['meteringRates']['vm']['customConfigs'][j]['description'] = rate_card_name + str(j)
-            rc_payload['rateCards'][0]['meteringRates']['vm']['customConfigs'][j]['value']['rate'] = random.randint(1, 100)
+            rc_payload['rateCards'][0]['meteringRates']['vm']['customConfigs'][j]['value']['rate'] = random.randint(100, 10000)
         
         resp = requests.post(URL, json=rc_payload, headers=HEADERS, auth=AUTH, verify=False)
         

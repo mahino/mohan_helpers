@@ -5,17 +5,17 @@ set -o pipefail  # Exit on pipe failures
 # ============================================
 # Configuration
 # ============================================
-NAMESPACE="ncm-cg"
-DATASTORE_NAMESPACE="ntnx-ncm-datastore"
-PG_POD="cg-pg-1"
-DATABASE="cg_nx"
-CRONJOB_NAME="cron-nx-cg-data-loader"
-DATA_LOADER_DEPLOYMENT="nx-cg-data-loader"
-ITERATIONS=2
-SLEEP_DURATION=10800  # 180 minutes (3 hours)
-BACKFILL_HOURS=8      # Hours to backfill
-WAIT_AFTER_COMPLETION=300  # 5 minutes after job completion
-LOG_CHECK_INTERVAL=15  # Check logs every 15 seconds for more responsive updates
+NAMESPACE="${NAMESPACE:-ncm-cg}"
+DATASTORE_NAMESPACE="${DATASTORE_NAMESPACE:-ntnx-ncm-datastore}"
+PG_POD="${PG_POD:-cg-pg-1}"
+DATABASE="${DATABASE:-cg_nx}"
+CRONJOB_NAME="${CRONJOB_NAME:-cron-nx-cg-data-loader}"
+DATA_LOADER_DEPLOYMENT="${DATA_LOADER_DEPLOYMENT:-nx-cg-data-loader}"
+ITERATIONS="${ITERATIONS:-2}"
+SLEEP_DURATION="${SLEEP_DURATION:-10800}"  # 180 minutes (3 hours)
+BACKFILL_HOURS="${BACKFILL_HOURS:-8}"      # Hours to backfill
+WAIT_AFTER_COMPLETION="${WAIT_AFTER_COMPLETION:-300}"  # 5 minutes after job completion
+LOG_CHECK_INTERVAL="${LOG_CHECK_INTERVAL:-15}"  # Check logs every 15 seconds for more responsive updates
 
 # Completion patterns to monitor (all must be present for job to be considered complete)
 # These patterns indicate the final stages of each job type

@@ -26,7 +26,7 @@ requests = LoggedRequests(logger)
 # =============================================================================
 # Configuration
 # =============================================================================
-BASE_URL = "https://ncm.services.nconprem-10-122-27-229.ccpnx.com"
+BASE_URL = "https://ncm.services.nconprem-10-53-55-33.nxncm.com"
 REQUEST_TIMEOUT = 30  # seconds
 
 HEADERS = {
@@ -36,7 +36,7 @@ HEADERS = {
 
 # Filter configuration - modify these to target specific configs
 DELETE_TEST_CONFIGS_ONLY = True  # Set to False to delete all configs
-TEST_CONFIG_PATTERN = "test_rc"  # Pattern to identify test rate cards
+TEST_CONFIG_PATTERN = "st_testing"  # Pattern to identify test rate cards
 
 
 # =============================================================================

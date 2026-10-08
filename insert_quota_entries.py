@@ -19,7 +19,7 @@ URL = "https://{}:9440/api/calm/v3.0/quotas".format(sys.argv[1])
 for i in range(int(sys.argv[2])):
   project_uuid = str(uuid.uuid4())
   quota_uuid = str(uuid.uuid4())
-  payload = json.dumps({
+  payload = json.dumps({n
     "metadata": {
       "kind": "quota",
       "project_reference": {

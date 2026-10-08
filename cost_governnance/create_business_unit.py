@@ -27,7 +27,7 @@ requests = LoggedRequests(logger)
 # =============================================================================
 # Configuration
 # =============================================================================
-BASE_URL = "https://ncm.services.nconprem-10-36-199-8.ccpnx.com"
+BASE_URL = "https://ncm.services.nconprem-10-53-60-173.ccpnx.com"
 REQUEST_TIMEOUT = 3000  # seconds
 
 HEADERS = {
